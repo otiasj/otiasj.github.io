@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signing Out...</title>
+
+    <!-- Modified script tag with onload and onerror -->
+    <script id="clerkScript" async crossorigin="anonymous"
+        data-clerk-publishable-key="pk_test_a25vd24tc2hhcmstMTQuY2xlcmsuYWNjb3VudHMuZGV2JA"
+        src="https://known-shark-14.accounts.dev/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
+        type="text/javascript" onload="handleClerkScriptLoad()" onerror="handleClerkScriptError()" defer>
+        </script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .spinner-container {
+            display: flex;
+            /* Make this a flex container */
+            flex-direction: column;
+            /* Stack items vertically */
+            align-items: center;
+            /* Center items horizontally */
+        }
+
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: #09f;
+            animation: spin 1s ease infinite;
+            margin-bottom: 10px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .status-message {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spinner-container">
+        <div class="spinner"></div>
+        <p id="status-message" class="status-message">Loading authentication...</p>
+    </div>
+
+    <script>
+
+        console.log('🔍 [LOGOUT DEBUG] ClerkSignOut.html inline script block executing');
+
+        let clerk = null;
+        let clerkInitializationAttempted = false;
+        let domReady = false;
+
+        function callNativeSignOutSuccess() {
+            let isCallbackSuccessful = false;
+
+            // 1. Android Callback
+            if (typeof window.Android !== 'undefined' && typeof window.Android.onClerkSignOutSuccess === 'function') {
+                window.Android.onClerkSignOutSuccess();
+                isCallbackSuccessful = true;
+                console.log("Android callback successful!");
+            }
+
+            // 2. iOS Callback
+            else if (typeof window.webkit !== 'undefined' && typeof window.webkit.messageHandlers.clerkSignOutHandler !== 'undefined') {
+                window.webkit.messageHandlers.clerkSignOutHandler.postMessage();
+                isCallbackSuccessful = true;
+                console.log("iOS callback successful!");
+            }
+
+            // 3. Desktop Callback (using our custom bridge)
+            else if (typeof window.DesktopBridge !== 'undefined' && typeof window.DesktopBridge.onClerkSignOutSuccess === 'function') {
+                window.DesktopBridge.onClerkSignOutSuccess();
+                isCallbackSuccessful = true;
+                console.log("Desktop callback successful!");
+            }
+
+            // 4. WASM Callback (direct function call to Kotlin/WASM)
+            else if (typeof window.WasmApp !== 'undefined' && typeof window.WasmApp.onClerkSignOutSuccess === 'function') {
+                window.WasmApp.onClerkSignOutSuccess();
+                isCallbackSuccessful = true;
+                console.log("WASM callback successful!");
+            }
+
+            if (!isCallbackSuccessful) {
+                console.error("Native bridge not found or callback failed.");
+                console.log("Native bridge not found. Authentication might not be registered.", 'error');
+            }
+        }
+
+        function updateStatus(message) {
+            const statusElement = document.getElementById('status-message');
+            if (statusElement) {
+                statusElement.textContent = message;
+            }
+            console.log(`ℹ️ [LOGOUT DEBUG] Status: ${message}`);
+        }
+
+        function handleClerkScriptError() {
+            console.error('❌ [LOGOUT DEBUG] Failed to load Clerk.js script (onerror event).');
+            updateStatus('Error: Authentication library could not be loaded.');
+            completeLogout('Logout failed: Clerk.js script loading error');
+        }
+
+        function handleClerkScriptLoad() {
+            console.log('✅ [LOGOUT DEBUG] Clerk.js script loaded (onload event fired).');
+            if (domReady) {
+                initializeAndSignOut();
+            }
+        }
+
+        async function initializeAndSignOut() {
+            if (clerkInitializationAttempted) {
+                console.log('🔍 [LOGOUT DEBUG] Initialization already attempted or in progress.');
+                return;
+            }
+            clerkInitializationAttempted = true;
+
+            console.log('🔍 [LOGOUT DEBUG] Attempting to initialize Clerk for sign out...');
+            updateStatus('Initializing authentication...');
+
+            try {
+                if (window.Clerk) {
+                    clerk = window.Clerk;
+                    console.log('🔍 [LOGOUT DEBUG] window.Clerk found. Calling clerk.load()...');
+                    await clerk.load();
+                    console.log('✅ [LOGOUT DEBUG] Clerk.load() completed.');
+                    updateStatus('Signing out...');
+
+                    if (clerk.user) {
+                        console.log('🔍 [LOGOUT DEBUG] User is signed in. Calling clerk.signOut()...');
+                        await clerk.signOut();
+                        console.log('✅ [LOGOUT DEBUG] clerk.signOut() completed.');
+                        updateStatus('Successfully signed out.');
+                        completeLogout('Logout successful');
+                    } else {
+                        console.log('ℹ️ [LOGOUT DEBUG] No active user session found by Clerk.');
+                        updateStatus('No active session found.');
+                        completeLogout('No active session to sign out');
+                    }
+
+                } else {
+                    throw new Error('Clerk JS not available on window even after script onload.');
+                }
+            } catch (error) {
+                console.error('❌ [LOGOUT DEBUG] Error during sign out process:', error);
+                updateStatus(`Error: ${error.message || 'Unknown error during sign out'}`);
+                completeLogout(`Logout completed with errors: ${error.message || 'Unknown error'}`);
+            }
+        }
+
+        function completeLogout(message) {
+            console.log(`✅ [LOGOUT DEBUG] completeLogout called with message: "${message}"`);
+            updateStatus(message);
+
+            const resultPayload = { status: "LOGOUT_COMPLETED", detail: message };
+            const resultPayloadString = JSON.stringify(resultPayload);
+
+            callNativeSignOutSuccess()
+            console.log('📢 [LOGOUT DEBUG] Notified Android via onSignOutComplete');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('🔍 [LOGOUT DEBUG] DOMContentLoaded event fired.');
+            domReady = true;
+            if (window.Clerk && !clerkInitializationAttempted) {
+                console.log('🔍 [LOGOUT DEBUG] DOMContentLoaded: Clerk script already loaded. Initializing...');
+                initializeAndSignOut();
+            } else if (!window.Clerk) {
+                console.log('🔍 [LOGOUT DEBUG] DOMContentLoaded: Clerk script not yet loaded. Waiting for its onload event...');
+            }
+        });
+
+        window.addEventListener('error', function (event) {
+            console.error('❌ [LOGOUT DEBUG] Global JavaScript error:', event.filename, event.lineno, event.colno, event.error);
+            if (!clerkInitializationAttempted) {
+                updateStatus('A critical JavaScript error occurred.');
+                completeLogout(`Critical JS error: ${event.error ? event.error.message : 'Unknown global error'}`);
+            }
+        });
+
+        window.addEventListener('unhandledrejection', function (event) {
+            console.error('❌ [LOGOUT DEBUG] Global Unhandled promise rejection:', event.reason);
+            if (!clerkInitializationAttempted) {
+                updateStatus('An unexpected asynchronous error occurred.');
+                completeLogout(`Unhandled promise rejection: ${event.reason ? event.reason.message : 'Unknown unhandled rejection'}`);
+            }
+        });
+    </script>
+</body>
+
+</html>

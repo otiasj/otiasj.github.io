@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebView Test Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .feature h3 {
+            margin: 0 0 10px 0;
+            color: #4CAF50;
+        }
+        .interactive-section {
+            margin-top: 30px;
+        }
+        button {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .platform-info {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🌐 WebView Test</h1>
+            <p class="subtitle">Cross-Platform WebView Implementation</p>
+            
+            <div class="feature">
+                <h3>✅ Platform Support</h3>
+                <p>This WebView works across Android, iOS, Desktop, and WASM platforms</p>
+            </div>
+            
+            <div class="feature">
+                <h3>🔧 Features</h3>
+                <p>Loading indicators, navigation controls, error handling, and JavaScript support</p>
+            </div>
+            
+            <div class="feature">
+                <h3>📱 Responsive Design</h3>
+                <p>Adapts to different screen sizes and orientations</p>
+            </div>
+            
+            <div class="interactive-section">
+                <h3>Interactive Test</h3>
+                <button onclick="testJavaScript()">Test JavaScript</button>
+                <button onclick="changeBackground()">Change Background</button>
+                <button onclick="showAlert()">Show Alert</button>
+                
+                <div id="status" class="status">
+                    Ready for testing...
+                </div>
+            </div>
+            
+            <div class="platform-info">
+                <p>User Agent: <span id="userAgent"></span></p>
+                <p>Screen Size: <span id="screenSize"></span></p>
+                <p>Timestamp: <span id="timestamp"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize page info
+        document.getElementById('userAgent').textContent = navigator.userAgent;
+        document.getElementById('screenSize').textContent = `${screen.width}x${screen.height}`;
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+        
+        function testJavaScript() {
+            const status = document.getElementById('status');
+            status.innerHTML = '✅ JavaScript is working! Time: ' + new Date().toLocaleTimeString();
+            status.style.background = 'rgba(76, 175, 80, 0.3)';
+        }
+        
+        function changeBackground() {
+            const colors = [
+                'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+                'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+                'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+                'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'
+            ];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.background = randomColor;
+            
+            const status = document.getElementById('status');
+            status.innerHTML = '🎨 Background changed!';
+            status.style.background = 'rgba(255, 193, 7, 0.3)';
+        }
+        
+        function showAlert() {
+            alert('Hello from WebView! 👋\n\nThis demonstrates JavaScript alert functionality.');
+            const status = document.getElementById('status');
+            status.innerHTML = '🚨 Alert was shown!';
+            status.style.background = 'rgba(255, 87, 34, 0.3)';
+        }
+        
+        // Auto-update timestamp every second
+        setInterval(() => {
+            document.getElementById('timestamp').textContent = new Date().toLocaleString();
+        }, 1000);
+        
+        // Log page load
+        console.log('WebView Test page loaded successfully!');
+    </script>
+</body>
+</html>
