@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revivle Sign in</title>
+    <script id="clerkScript" async crossorigin="anonymous"
+        data-clerk-publishable-key="pk_test_a25vd24tc2hhcmstMTQuY2xlcmsuYWNjb3VudHMuZGV2JA"
+        src="https://known-shark-14.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js"
+        onload="handleClerkScriptLoad()" onerror="handleClerkScriptError()" defer>
+        </script>
+    <style>
+        body {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           min-height: 100vh;
+           margin: 0;
+           font-family: sans-serif;
+           background-color: #f0f0f0;
+       }
+       #clerk-auth-container {
+           width: 100%;
+           max-width: 400px;
+           flex: 1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+       }
+    </style>
+</head>
+
+<body>
+
+    <div id="clerk-auth-container"></div>
+
+    <script>
+
+        console.log('🔍 [LOGIN  DEBUG] ClerkSignIn.html inline script block executing');
+
+        let clerk = null;
+        let clerkInitializationAttempted = false;
+        let domReady = false;
+
+        function callNativeSignInSuccess(token) {
+            let isCallbackSuccessful = false;
+
+            // 1. Android Callback
+            if (typeof window.Android !== 'undefined' && typeof window.Android.onClerkSignInSuccess === 'function') {
+                window.Android.onClerkSignInSuccess(token);
+                isCallbackSuccessful = true;
+                console.log("Android callback successful!");
+            }
+
+            // 2. iOS Callback
+            else if (typeof window.webkit !== 'undefined' && typeof window.webkit.messageHandlers.clerkSignInHandler !== 'undefined') {
+                window.webkit.messageHandlers.clerkSignInHandler.postMessage(token);
+                isCallbackSuccessful = true;
+                console.log("iOS callback successful!");
+            }
+
+            // 3. Desktop Callback (using our custom bridge)
+            else if (typeof window.DesktopBridge !== 'undefined' && typeof window.DesktopBridge.onClerkSignInSuccess === 'function') {
+                window.DesktopBridge.onClerkSignInSuccess(token);
+                isCallbackSuccessful = true;
+                console.log("Desktop callback successful!");
+            }
+
+            // 4. WASM Callback (direct function call to Kotlin/WASM)
+            else if (typeof window.WasmApp !== 'undefined' && typeof window.WasmApp.onClerkSignInSuccess === 'function') {
+                window.WasmApp.onClerkSignInSuccess(token);
+                isCallbackSuccessful = true;
+                console.log("WASM callback successful!");
+            }
+
+            if (!isCallbackSuccessful) {
+                console.error("Native bridge not found or callback failed.");
+                console.log("Native bridge not found. Authentication might not be registered.", 'error');
+            }
+        }
+
+        function callNativeError(errorMessage) {
+            let isCallbackSuccessful = false;
+
+            // 1. Android Callback
+            if (typeof window.Android !== 'undefined' && typeof window.Android.onClerkSignInError === 'function') {
+                window.Android.onClerkSignInError(errorMessage);
+                isCallbackSuccessful = true;
+                console.log("Android callback successful!");
+            }
+
+            // 2. iOS Callback
+            else if (typeof window.webkit !== 'undefined' && typeof window.webkit.messageHandlers.clerkSignInHandler !== 'undefined') {
+                window.webkit.messageHandlers.clerkSignInHandler.postMessage(errorMessage);
+                isCallbackSuccessful = true;
+                console.log("iOS callback successful!");
+            }
+
+            // 3. Desktop Callback (using our custom bridge)
+            else if (typeof window.DesktopBridge !== 'undefined' && typeof window.DesktopBridge.onClerkSignInError === 'function') {
+                window.DesktopBridge.onClerkSignInError(errorMessage);
+                isCallbackSuccessful = true;
+                console.log("Desktop callback successful!");
+            }
+
+            // 4. WASM Callback (direct function call to Kotlin/WASM)
+            else if (typeof window.WasmApp !== 'undefined' && typeof window.WasmApp.onClerkSignInError === 'function') {
+                window.WasmApp.onClerkSignInError(errorMessage);
+                isCallbackSuccessful = true;
+                console.log("WASM callback successful!");
+            }
+
+            if (!isCallbackSuccessful) {
+                console.error("Native bridge not found or callback failed.");
+                console.log("Native bridge not found. Authentication might not be registered.", 'error');
+            }
+        }
+
+        function handleClerkScriptError() {
+            console.error('❌ [LOGIN DEBUG] Failed to load Clerk.js script (onerror event).');
+            onError('Login failed: Clerk.js script loading error');
+        }
+
+        function handleClerkScriptLoad() {
+            console.log('✅ [LOGIN DEBUG] Clerk.js script loaded (onload event fired).');
+            if (domReady) {
+                initializeAndSignIn();
+            }
+        }
+
+        async function checkForToken() {
+            try {
+                if (clerk && clerk.session) {
+                    const jwtToken = await clerk.session.getToken();
+                    if (jwtToken) {
+                        console.log("✅ [HTML DEBUG] Clerk JWT Token obtained.");
+                        callNativeSignInSuccess(jwtToken);
+                    } else {
+                        console.warn("⚠️ [HTML DEBUG] Session active, but could not retrieve JWT token.");
+                    }
+                } else {
+                    console.warn("⚠️ [HTML DEBUG] No active session found.");
+                }
+            } catch (error) {
+                console.error("❌ [HTML DEBUG] Error retrieving JWT token:", error);
+            }
+        }
+
+        function loadSigninContainer() {
+            console.log("🔍 [HTML DEBUG] Window load event fired");
+
+            const clerkAuthContainer = document.getElementById('clerk-auth-container');
+
+            if (!clerkAuthContainer) {
+                console.error("❌ [HTML DEBUG] Clerk authentication container not found.");
+                return;
+            }
+
+            console.log("✅ [HTML DEBUG] Clerk container found");
+
+            // Check if user is already signed in
+            if (clerk.user) {
+                console.log("✅ [HTML DEBUG] User already signed in, getting token...");
+                checkForToken();
+                return;
+            }
+
+            try {
+                Clerk.mountSignIn(clerkAuthContainer,
+                  {
+                    afterSignInUrl: "/post-auth",
+                    afterSignUpUrl: "/new-user",
+                    signUpUrl: "/clerk-signup",
+                    appearance: {
+                      elements: {
+                        card: { margin: "0 auto" },
+                        formButtonPrimary: {
+                          backgroundColor: "#D6943D",
+                          "&:hover": { backgroundColor: "#c2853a" },
+                        },
+                      },
+                    },
+                  });
+                console.log("✅ [HTML DEBUG] Sign-in component mounted successfully");
+            } catch (mountError) {
+                console.warn(`⚠️ [HTML DEBUG] Mount attempt failed:`, mountError);
+                callNativeError(`Mount error: ${mountError.message}`);
+            }
+        }
+
+        function setClerkListener() {
+            Clerk.addListener(async ({ user, session }) => {
+                console.log("[HTML DEBUG] Clerk Listener Triggered. User:", user, "Session:", session);
+                if (session && user) {
+                    try {
+                        const jwtToken = await session.getToken();
+                        if (jwtToken) {
+                            console.log("✅ [HTML DEBUG] Clerk JWT Token obtained via listener.");
+                            callNativeSignInSuccess(jwtToken);
+                        } else {
+                            console.warn("⚠️ [HTML DEBUG] Session active (listener), but could not retrieve JWT token.");
+                        }
+                    } catch (error) {
+                        console.error("❌ [HTML DEBUG] Error retrieving JWT token in listener:", error);
+                    }
+                } else {
+                    console.log("ℹ️ [HTML DEBUG] Clerk Listener: No active session or user.");
+                }
+            });
+        }
+
+        async function initializeAndSignIn() {
+            if (clerkInitializationAttempted) {
+                console.log('🔍 [LOGIN DEBUG] Initialization already attempted or in progress.');
+                return;
+            }
+            clerkInitializationAttempted = true;
+
+            console.log('🔍 [LOGIN DEBUG] Attempting to initialize Clerk for sign in...');
+
+            try {
+                if (window.Clerk) {
+                    clerk = window.Clerk;
+                    console.log('🔍 [LOGIN DEBUG] window.Clerk found. Calling clerk.load()...');
+                    await clerk.load();
+                    console.log('✅ [LOGIN DEBUG] Clerk.load() completed.');
+                    setClerkListener();
+                    loadSigninContainer();
+                    console.log('✅ [LOGIN DEBUG] loadSigninContainer completed.');
+                } else {
+                    throw new Error('Clerk JS not available on window even after script onload.');
+                }
+            } catch (error) {
+                console.error('❌ [LOGIN DEBUG] Error during sign in process:', error);
+                onError(`Login completed with errors: ${error.message || 'Unknown error'}`);
+            }
+        }
+
+        function onError(message) {
+            console.log(`❌ [LOGIN DEBUG] onError called with message: "${message}"`);
+            callNativeError(message);
+            console.log('📢 [LOGIN DEBUG] Error reported to native bridge');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('🔍 [LOGIN DEBUG] DOMContentLoaded event fired.');
+            domReady = true;
+            if (window.Clerk && !clerkInitializationAttempted) {
+                console.log('🔍 [LOGIN DEBUG] DOMContentLoaded: Clerk script already loaded. Initializing...');
+                initializeAndSignIn();
+            } else if (!window.Clerk) {
+                console.log('🔍 [LOGIN DEBUG] DOMContentLoaded: Clerk script not yet loaded. Waiting for its onload event...');
+            }
+        });
+
+        window.addEventListener('error', function (event) {
+            console.error('❌ [LOGIN DEBUG] Global JavaScript error:', event.filename, event.lineno, event.colno, event.error);
+            if (!clerkInitializationAttempted) {
+                onError(`Critical JS error: ${event.error ? event.error.message : 'Unknown global error'}`);
+            }
+        });
+
+        window.addEventListener('unhandledrejection', function (event) {
+            console.error('❌ [LOGIN DEBUG] Global Unhandled promise rejection:', event.reason);
+            if (!clerkInitializationAttempted) {
+                onError(`Unhandled promise rejection: ${event.reason ? event.reason.message : 'Unknown unhandled rejection'}`);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
