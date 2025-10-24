@@ -1,12 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>demo3</title>
     <link type="text/css" rel="stylesheet" href="styles.css">
     <script type="application/javascript" src="composeApp.js"></script>
+
+    <!-- Clerk.js Integration -->
+    <script id="clerkScript" async crossorigin="anonymous"
+        data-clerk-publishable-key="pk_test_c21vb3RoLWNvZC01MC5jbGVyay5hY2NvdW50cy5kZXYk"
+        src="https://smooth-cod-50.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js"
+        onload="handleClerkScriptLoad()" onerror="handleClerkScriptError()" defer>
+        </script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #app-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        #compose-app {
+            width: 100%;
+            height: 100%;
+        }
+
+        #clerk-auth-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #clerk-auth-container {
+            width: 100%;
+            max-width: 400px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
 </head>
+
 <body>
+    <div id="app-container">
+        <div id="compose-app"></div>
+        <div id="clerk-auth-overlay">
+            <div id="clerk-auth-container"></div>
+        </div>
+    </div>
+
+    <script>
+        console.log('🔍 [WASM AUTH] Initializing WASM Clerk integration');
+
+        let clerk = null;
+        let clerkInitializationAttempted = false;
+        let domReady = false;
+        let showingAuth = false;
+
+        // Initialize the WASM app bridge
+        window.WasmApp = {
+            onClerkSignInSuccess: function (token) {
+                console.log('✅ [WASM AUTH] Sign in successful, token received');
+                hideClerkAuth();
+
+                // Store token in localStorage for WASM to pick up
+                console.log('💾 [WASM AUTH] Storing token in localStorage');
+                localStorage.setItem('clerk_auth_token', token);
+                localStorage.setItem('clerk_auth_timestamp', Date.now().toString());
+
+                // Dispatch event to notify WASM
+                const event = new CustomEvent('clerkAuthSuccess', {
+                    detail: { token: token, timestamp: Date.now() }
+                });
+                window.dispatchEvent(event);
+            },
+
+            onClerkSignInError: function (error) {
+                console.error('❌ [WASM AUTH] Sign in error:', error);
+                // Could show error UI or retry
+            },
+
+            onClerkSignOutSuccess: function () {
+                console.log('✅ [WASM AUTH] Sign out successful');
+                // Clear stored token
+                localStorage.removeItem('clerk_auth_token');
+                localStorage.removeItem('clerk_auth_timestamp');
+                showClerkAuth();
+            }
+        };
+
+        function showClerkAuth() {
+            console.log('🔍 [WASM AUTH] Showing Clerk auth overlay');
+            const overlay = document.getElementById('clerk-auth-overlay');
+            if (overlay) {
+                overlay.style.display = 'flex';
+                showingAuth = true;
+                loadSigninContainer();
+            }
+        }
+
+        function hideClerkAuth() {
+            console.log('🔍 [WASM AUTH] Hiding Clerk auth overlay');
+            const overlay = document.getElementById('clerk-auth-overlay');
+            if (overlay) {
+                overlay.style.display = 'none';
+                showingAuth = false;
+            }
+        }
+
+        function handleClerkScriptError() {
+            console.error('❌ [WASM AUTH] Failed to load Clerk.js script');
+        }
+
+        function handleClerkScriptLoad() {
+            console.log('✅ [WASM AUTH] Clerk.js script loaded');
+            if (domReady) {
+                initializeClerk();
+            }
+        }
+
+        async function initializeClerk() {
+            if (clerkInitializationAttempted) {
+                console.log('🔍 [WASM AUTH] Clerk initialization already attempted');
+                return;
+            }
+            clerkInitializationAttempted = true;
+
+            console.log('🔍 [WASM AUTH] Initializing Clerk...');
+
+            try {
+                if (window.Clerk) {
+                    clerk = window.Clerk;
+                    await clerk.load();
+                    console.log('✅ [WASM AUTH] Clerk loaded successfully');
+                    console.log('🔍 [WASM AUTH] Clerk user:', clerk.user);
+                    console.log('🔍 [WASM AUTH] Clerk session:', clerk.session);
+
+                    // Set up Clerk listener for auth state changes
+                    clerk.addListener(async ({ user, session }) => {
+                        console.log('[WASM AUTH] Clerk state changed. User:', !!user, 'Session:', !!session);
+                        if (session && user) {
+                            try {
+                                const jwtToken = await session.getToken();
+                                if (jwtToken) {
+                                    console.log('✅ [WASM AUTH] JWT token obtained via listener');
+                                    window.WasmApp.onClerkSignInSuccess(jwtToken);
+                                }
+                            } catch (error) {
+                                console.error('❌ [WASM AUTH] Error getting JWT token:', error);
+                            }
+                        } else {
+                            console.log('🔍 [WASM AUTH] User signed out or no session');
+                        }
+                    });
+
+                    // Check if user is already authenticated
+                    if (clerk.user && clerk.session) {
+                        console.log('✅ [WASM AUTH] User already authenticated');
+                        try {
+                            const token = await clerk.session.getToken();
+                            window.WasmApp.onClerkSignInSuccess(token);
+                        } catch (error) {
+                            console.error('❌ [WASM AUTH] Error getting existing token:', error);
+                        }
+                    } else {
+                        console.log('🔍 [WASM AUTH] No existing authentication found');
+                    }
+
+                } else {
+                    throw new Error('Clerk not available on window');
+                }
+            } catch (error) {
+                console.error('❌ [WASM AUTH] Error initializing Clerk:', error);
+            }
+        }
+
+        function loadSigninContainer() {
+            if (!clerk || !showingAuth) return;
+
+            console.log('🔍 [WASM AUTH] Loading sign-in container');
+            const clerkAuthContainer = document.getElementById('clerk-auth-container');
+
+            if (!clerkAuthContainer) {
+                console.error('❌ [WASM AUTH] Clerk auth container not found');
+                return;
+            }
+
+            // Check if user is already signed in
+            if (clerk.user) {
+                console.log('✅ [WASM AUTH] User already signed in');
+                return;
+            }
+
+            try {
+                // Clear any existing content
+                clerkAuthContainer.innerHTML = '';
+
+                // Mount sign-in with minimal configuration to avoid redirect issues
+                clerk.mountSignIn(clerkAuthContainer, {
+                    appearance: {
+                        elements: {
+                            card: { margin: "0 auto" },
+                            formButtonPrimary: {
+                                backgroundColor: "#D6943D",
+                                "&:hover": { backgroundColor: "#c2853a" },
+                            },
+                        },
+                    },
+                });
+                console.log('✅ [WASM AUTH] Sign-in component mounted');
+            } catch (error) {
+                console.error('❌ [WASM AUTH] Error mounting sign-in:', error);
+                window.WasmApp.onClerkSignInError(error.message);
+            }
+        }
+
+        function loadSignupContainer() {
+            if (!clerk || !showingAuth) return;
+
+            console.log('🔍 [WASM AUTH] Loading sign-up container');
+            const clerkAuthContainer = document.getElementById('clerk-auth-container');
+
+            if (!clerkAuthContainer) {
+                console.error('❌ [WASM AUTH] Clerk auth container not found');
+                return;
+            }
+
+            try {
+                // Clear any existing content
+                clerkAuthContainer.innerHTML = '';
+
+                clerk.mountSignUp(clerkAuthContainer, {
+                    appearance: {
+                        elements: {
+                            card: { margin: "0 auto" },
+                            formButtonPrimary: {
+                                backgroundColor: "#D6943D",
+                                "&:hover": { backgroundColor: "#c2853a" },
+                            },
+                        },
+                    },
+                });
+                console.log('✅ [WASM AUTH] Sign-up component mounted');
+            } catch (error) {
+                console.error('❌ [WASM AUTH] Error mounting sign-up:', error);
+                window.WasmApp.onClerkSignInError(error.message);
+            }
+        }
+
+        // Listen for custom events from WASM
+        window.addEventListener('showClerkAuth', function (event) {
+            console.log('🔍 [WASM AUTH] Received showClerkAuth event');
+            showClerkAuth();
+        });
+
+        window.addEventListener('showClerkSignup', function (event) {
+            console.log('🔍 [WASM AUTH] Received showClerkSignup event');
+            const overlay = document.getElementById('clerk-auth-overlay');
+            if (overlay) {
+                overlay.style.display = 'flex';
+                showingAuth = true;
+                loadSignupContainer();
+            }
+        });
+
+        window.addEventListener('hideClerkAuth', function (event) {
+            console.log('🔍 [WASM AUTH] Received hideClerkAuth event');
+            hideClerkAuth();
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('🔍 [WASM AUTH] DOM ready');
+            domReady = true;
+            if (window.Clerk && !clerkInitializationAttempted) {
+                initializeClerk();
+            }
+        });
+
+        window.addEventListener('error', function (event) {
+            console.error('❌ [WASM AUTH] Global error:', event.error);
+        });
+
+        window.addEventListener('unhandledrejection', function (event) {
+            console.error('❌ [WASM AUTH] Unhandled rejection:', event.reason);
+        });
+
+        // Debug function - you can call this from browser console
+        window.debugClerkState = function () {
+            console.log('🔍 [DEBUG] Clerk object:', clerk);
+            console.log('🔍 [DEBUG] Clerk user:', clerk?.user);
+            console.log('🔍 [DEBUG] Clerk session:', clerk?.session);
+            console.log('🔍 [DEBUG] Showing auth:', showingAuth);
+            console.log('🔍 [DEBUG] DOM ready:', domReady);
+            console.log('🔍 [DEBUG] Initialization attempted:', clerkInitializationAttempted);
+        };
+
+        // Debug function to test user data retrieval
+        window.debugClerkUserData = function () {
+            if (clerk && clerk.user) {
+                console.log('👤 [DEBUG] User ID:', clerk.user.id);
+                console.log('👤 [DEBUG] Username:', clerk.user.username);
+                console.log('👤 [DEBUG] First Name:', clerk.user.firstName);
+                console.log('👤 [DEBUG] Last Name:', clerk.user.lastName);
+                console.log('👤 [DEBUG] Email Addresses:', clerk.user.emailAddresses);
+                console.log('👤 [DEBUG] Primary Email:', clerk.user.primaryEmailAddress?.emailAddress);
+                console.log('👤 [DEBUG] Full User Object:', clerk.user);
+            } else {
+                console.log('❌ [DEBUG] No user data available');
+            }
+        };
+
+        // Test the WASM user data integration
+        window.testWasmUserData = function () {
+            console.log('🧪 [DEBUG] Testing WASM user data integration...');
+
+            // Test individual functions
+            window.checkClerkAuthentication((isAuth) => {
+                console.log('🔍 [DEBUG] Authentication check:', isAuth);
+
+                if (isAuth) {
+                    window.getClerkUserIdFromJS((userId) => {
+                        console.log('👤 [DEBUG] User ID from WASM:', userId);
+                    });
+
+                    window.getClerkUsernameFromJS((username) => {
+                        console.log('👤 [DEBUG] Username from WASM:', username);
+                    });
+
+                    window.getClerkUserEmailFromJS((email) => {
+                        console.log('👤 [DEBUG] Email from WASM:', email);
+                    });
+
+                    window.getClerkUserFirstNameFromJS((firstName) => {
+                        console.log('👤 [DEBUG] First name from WASM:', firstName);
+                    });
+
+                    window.getClerkUserLastNameFromJS((lastName) => {
+                        console.log('👤 [DEBUG] Last name from WASM:', lastName);
+                    });
+                }
+            });
+        };
+
+        // Test the token integration
+        window.testClerkToken = function () {
+            console.log('🔑 [DEBUG] Testing Clerk token integration...');
+
+            window.getClerkToken((token) => {
+                if (token) {
+                    console.log('✅ [DEBUG] Token retrieved from Clerk:', token.substring(0, 20) + '...');
+                } else {
+                    console.log('❌ [DEBUG] No token available from Clerk');
+                }
+            });
+        };
+
+        // Test both auth flows
+        window.testAuthFlows = function () {
+            console.log('🧪 [DEBUG] Testing auth flows...');
+
+            console.log('📝 [DEBUG] Testing sign-up flow...');
+            window.dispatchEvent(new CustomEvent('showClerkSignup'));
+
+            setTimeout(() => {
+                hideClerkAuth();
+                console.log('🔑 [DEBUG] Testing sign-in flow...');
+                window.dispatchEvent(new CustomEvent('showClerkAuth'));
+            }, 3000);
+        };
+
+        // Force show auth for debugging
+        window.forceShowAuth = function () {
+            console.log('🔍 [DEBUG] Force showing auth');
+            showClerkAuth();
+        };
+
+        // Clerk user data functions for WASM integration
+        window.checkClerkAuthentication = function (callback) {
+            try {
+                if (clerk && clerk.user && clerk.session) {
+                    callback(true);
+                } else {
+                    callback(false);
+                }
+            } catch (error) {
+                console.error('❌ [CLERK WASM] Error checking authentication:', error);
+                callback(false);
+            }
+        };
+
+        window.getClerkUserIdFromJS = function (callback) {
+            try {
+                if (clerk && clerk.user) {
+                    callback(clerk.user.id || null);
+                } else {
+                    callback(null);
+                }
+            } catch (error) {
+                console.error('❌ [CLERK WASM] Error getting user ID:', error);
+                callback(null);
+            }
+        };
+
+        window.getClerkUsernameFromJS = function (callback) {
+            try {
+                if (clerk && clerk.user) {
+                    // Try different username fields
+                    const username = clerk.user.username ||
+                        clerk.user.firstName ||
+                        clerk.user.emailAddresses?.[0]?.emailAddress?.split('@')[0] ||
+                        'User';
+                    callback(username);
+                } else {
+                    callback(null);
+                }
+            } catch (error) {
+                console.error('❌ [CLERK WASM] Error getting username:', error);
+                callback(null);
+            }
+        };
+
+        window.getClerkUserEmailFromJS = function (callback) {
+            try {
+                if (clerk && clerk.user) {
+                    const email = clerk.user.primaryEmailAddress?.emailAddress ||
+                        clerk.user.emailAddresses?.[0]?.emailAddress ||
+                        null;
+                    callback(email);
+                } else {
+                    callback(null);
+                }
+            } catch (error) {
+                console.error('❌ [CLERK WASM] Error getting email:', error);
+                callback(null);
+            }
+        };
+
+        window.getClerkUserFirstNameFromJS = function (callback) {
+            try {
+                if (clerk && clerk.user) {
+                    callback(clerk.user.firstName || null);
+                } else {
+                    callback(null);
+                }
+            } catch (error) {
+                console.error('❌ [CLERK WASM] Error getting first name:', error);
+                callback(null);
+            }
+        };
+
+        window.getClerkUserLastNameFromJS = function (callback) {
+            try {
+                if (clerk && clerk.user) {
+                    callback(clerk.user.lastName || null);
+                } else {
+                    callback(null);
+                }
+            } catch (error) {
+                console.error('❌ [CLERK WASM] Error getting last name:', error);
+                callback(null);
+            }
+        };
+
+        window.signOutFromClerk = function (callback) {
+            try {
+                if (clerk) {
+                    clerk.signOut().then(() => {
+                        console.log('✅ [CLERK WASM] Sign out successful');
+                        callback(true);
+                    }).catch((error) => {
+                        console.error('❌ [CLERK WASM] Sign out error:', error);
+                        callback(false);
+                    });
+                } else {
+                    console.error('❌ [CLERK WASM] Clerk not available for sign out');
+                    callback(false);
+                }
+            } catch (error) {
+                console.error('❌ [CLERK WASM] Error during sign out:', error);
+                callback(false);
+            }
+        };
+
+        // Additional functions for TokenLocalDataSource integration
+        window.getClerkToken = function (callback) {
+            try {
+                if (clerk && clerk.session) {
+                    clerk.session.getToken().then((token) => {
+                        console.log('🔑 [CLERK WASM] Retrieved token from Clerk session');
+                        callback(token);
+                    }).catch((error) => {
+                        console.error('❌ [CLERK WASM] Error getting token from session:', error);
+                        callback(null);
+                    });
+                } else if (clerk && clerk.user) {
+                    // Fallback: try to get token directly from user
+                    console.log('⚠️ [CLERK WASM] No session, trying to get token from user');
+                    callback(null); // Let it fall back to localStorage
+                } else {
+                    console.log('ℹ️ [CLERK WASM] No Clerk session or user available');
+                    callback(null);
+                }
+            } catch (error) {
+                console.error('❌ [CLERK WASM] Error getting Clerk token:', error);
+                callback(null);
+            }
+        };
+
+        window.signOutFromClerkJS = function (callback) {
+            // Alias for consistency with TokenLocalDataSource
+            window.signOutFromClerk(callback);
+        };
+    </script>
 </body>
+
 </html>
