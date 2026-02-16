@@ -12,23 +12,23 @@
         // Configuration injection point for environment-specific values
         // These values are substituted at build time with actual configuration
         window.APP_CONFIG = {
-            CLERK_PUBLISHABLE_KEY: 'pk_test_YmVsb3ZlZC1qYXdmaXNoLTIzLmNsZXJrLmFjY291bnRzLmRldiQ',
-            CLERK_SIGN_IN_URL: 'https://smooth-cod-50.clerk.accounts.dev/sign-in',
-            CLERK_SIGN_UP_URL: 'https://smooth-cod-50.clerk.accounts.dev/sign-up',
+            CLERK_PUBLISHABLE_KEY: '${CLERK_PUBLISHABLE_KEY}',
+            CLERK_SIGN_IN_URL: '${CLERK_SIGN_IN_URL}',
+            CLERK_SIGN_UP_URL: '${CLERK_SIGN_UP_URL}',
             
-            FIREBASE_API_KEY: 'AIzaSyCQ97YmlSEg78T8OcIgMP_FPjB3EVBNR8E',
-            FIREBASE_PROJECT_ID: 'demo3-a6b50',
-            FIREBASE_WEB_APP_ID: '1:792941412813:web:b5d9db98d44a79deff8484',
+            FIREBASE_API_KEY: '${FIREBASE_API_KEY}',
+            FIREBASE_PROJECT_ID: '${FIREBASE_PROJECT_ID}',
+            FIREBASE_WEB_APP_ID: '${FIREBASE_WEB_APP_ID}',
             
-            POSTHOG_API_KEY: 'phc_CRf144UGV6WHaILqgQCv6qQYRsnWoqc4MMXHKcvdjGP',
-            POSTHOG_HOST: 'https://us.i.posthog.com',
-            PIXABAY_API_KEY: '14021238-2be07bcb9fa9622437aa79c5b',
+            POSTHOG_API_KEY: '${POSTHOG_API_KEY}',
+            POSTHOG_HOST: '${POSTHOG_HOST}',
+            PIXABAY_API_KEY: '${PIXABAY_API_KEY}',
             
-            APOLLO_GRAPHQL_ENDPOINT: 'https://apollo-fullstack-tutorial.herokuapp.com/graphql',
-            APOLLO_WEBSOCKET_ENDPOINT: 'wss://apollo-fullstack-tutorial.herokuapp.com/graphql',
+            APOLLO_GRAPHQL_ENDPOINT: '${APOLLO_GRAPHQL_ENDPOINT}',
+            APOLLO_WEBSOCKET_ENDPOINT: '${APOLLO_WEBSOCKET_ENDPOINT}',
             
-            MYCLOSET_API_BASE_URL: 'https://revivle-staging-f9d021f34b0e.herokuapp.com/api/v2',
-            MYCLOSET_DEV_OVERRIDE_JWT_TOKEN: 'eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDIyMkFBQSIsImtpZCI6Imluc18zMXlLeXJtWEJGTDBIczkwUUNPbjUzS1ptc20iLCJ0eXAiOiJKV1QifQ.eyJhenAiOiJodHRwczovL3Jldml2bGUtc3RhZ2luZy1mOWQwMjFmMzRiMGUuaGVyb2t1YXBwLmNvbSIsImV4cCI6MTc5MDM2NTc4OCwiaWF0IjoxNzU4ODI5Nzg4LCJpc3MiOiJodHRwczovL2tub3duLXNoYXJrLTE0LmNsZXJrLmFjY291bnRzLmRldiIsImp0aSI6ImJkMTA2MWZmODdkM2M1MjdkNzZjIiwibmJmIjoxNzU4ODI5NzgzLCJzdWIiOiJ1c2VyXzMzQ242SEhEckVhUFB4U1A4S2h0cHFuMUp4OCJ9.gplIag-4Xg3lMBziW9g1qe-di9XyySm_DvjUkk9GPNcnkGM21R6OmBpyQHmmJPLBoq_0wwRpPwvGS9PubesCkTTTVYnM0gFB4IXnx-uB3ipAJE3W_kgjRSX6xFDEyVdWCrAyb_K2FkzEx8brLWa2sohPwVwOu8QfZ0GIyz1_diZprZsMdoDr2e8c8sQp_Nc0JnTaWecV_6YubWKlH_MjD5063l5IvtRaQ2a11TqqZ7KVcZuEMFhS24JYB-mlJHEbmN3b6pVav_KndCTwrq4FvBwh7Ws6sJZbU4023XRoFLNxiYVrJ6g-Vi7ur5gUonog7snEYE7jEA3GjhRtVAkVfw'
+            MYCLOSET_API_BASE_URL: '${MYCLOSET_API_BASE_URL}',
+            MYCLOSET_DEV_OVERRIDE_JWT_TOKEN: '${MYCLOSET_DEV_OVERRIDE_JWT_TOKEN}'
         };
 
         // BEGIN_DEV_ONLY

@@ -118,10 +118,10 @@ const PostHogJsAPI = {
     
     // Check if PostHog is loaded and capturing is enabled (basic check)
     // For a more robust check, you might want to see if posthog.__loaded is true or use the 'loaded' callback.
-    if (!posthog || !POSTHOG_API_KEY.startsWith("phc_")) { 
+    if (!posthog || !POSTHOG_API_KEY || POSTHOG_API_KEY === '' || !POSTHOG_API_KEY.startsWith("phc_")) { 
         // A simple check if API key looks like a real PostHog key (client-side keys start with phc_)
-      console.error("[POSTHOG-ANALYTICS.JS] PostHog not initialized or API key is a placeholder. Cannot send event.");
-      return "Error: PostHog not initialized or API key is a placeholder.";
+      console.error("[POSTHOG-ANALYTICS.JS] PostHog not initialized or API key is missing/invalid. Cannot send event.");
+      return "Error: PostHog not initialized or API key is missing/invalid.";
     }
 
     try {
