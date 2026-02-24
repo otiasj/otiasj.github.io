@@ -7,8 +7,8 @@
 
     <!-- Modified script tag with onload and onerror -->
     <script id="clerkScript" async crossorigin="anonymous"
-        data-clerk-publishable-key="pk_test_YmVsb3ZlZC1qYXdmaXNoLTIzLmNsZXJrLmFjY291bnRzLmRldiQ"
-        src="https://smooth-cod-50.clerk.accounts.dev/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
+        data-clerk-publishable-key="{{CLERK_PUBLISHABLE_KEY}}"
+        src="https://{{CLERK_DOMAIN}}/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
         type="text/javascript" onload="handleClerkScriptLoad()" onerror="handleClerkScriptError()" defer>
         </script>
     <style>
