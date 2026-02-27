@@ -53,6 +53,9 @@ string|closet_undo_archived|JTEkZCBpdGVtcyBhcmNoaXZlZA==
 string|closet_undo_kept|JTEkZCBpdGVtcyBrZXB0
 string|closet_undo_listed|JTEkZCBpdGVtcyBsaXN0ZWQ=
 string|closet_undo_unlisted|JTEkZCBpdGVtcyB1bmxpc3RlZA==
+string|common_back|QmFjaw==
+string|common_offline_banner|WW91IGFyZSBjdXJyZW50bHkgb2ZmbGluZS4=
+string|common_retry|UmV0cnk=
 string|config_editor_clear_search|Q2xlYXI=
 string|config_editor_dialog_cancel|Q2FuY2Vs
 string|config_editor_dialog_reset|UmVzZXQgRGVmYXVsdA==
@@ -310,6 +313,9 @@ string|sort_order_section_title|U29ydCBvcmRlcg==
 string|sort_order_symbol_asc|4oaR
 string|sort_order_symbol_desc|4oaT
 string|sort_order_toggle_desc|VG9nZ2xlIHNvcnQgb3JkZXI=
+string|template_empty_state|Tm8gaXRlbXMgYXZhaWxhYmxl
+string|template_error_message|RmFpbGVkIHRvIGxvYWQgaXRlbXM=
+string|template_screen_title|VGVtcGxhdGUgRmVhdHVyZQ==
 string|time_relative_am_pm|JTEkZDolMiRzICUzJHM=
 string|time_relative_am|QU0=
 string|time_relative_date_format|JTEkcyAlMiRk
