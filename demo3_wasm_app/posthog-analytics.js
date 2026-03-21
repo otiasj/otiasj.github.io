@@ -94,7 +94,7 @@ try {
     },
     // Provide fallbacks for missing web APIs
     bootstrap: {
-      distinctId: 'wasm-user-' + Math.random().toString(36).substr(2, 9)
+      distinctId: 'wasm-user-' + (typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substr(2, 9))
     }
   });
   
