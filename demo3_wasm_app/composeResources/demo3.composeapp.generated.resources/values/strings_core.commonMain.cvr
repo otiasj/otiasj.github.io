@@ -1,4 +1,5 @@
 version:0
+string|alert_dialog_example_icon_description|RXhhbXBsZSBJY29u
 string|already_signed_up|SSBhbHJlYWR5IGhhdmUgYW4gYWNjb3VudA==
 string|app_name|UmV2aXZsZQ==
 string|category_all_categories|QWxsIENhdGVnb3JpZXM=
@@ -44,9 +45,12 @@ string|filter_search_label|U2VhcmNoIGZpbHRlcg==
 string|filter_selected_description|JTEkcyBmaWx0ZXI6ICUyJHMuIFRhcCB0byBjaGFuZ2Ugb3IgY2xlYXIu
 string|filter_size_label|U2l6ZQ==
 string|filter_unselected_description|JTEkcyBmaWx0ZXIuIFRhcCB0byBzZWxlY3QgYSAlMSRzLg==
+string|filter_year_label|WWVhcg==
 string|forgot_password|Rm9yZ290IHBhc3N3b3JkPw==
+string|google_logo_content_description|R29vZ2xlIGxvZ28=
 string|hide_password|SGlkZSBwYXNzd29yZA==
 string|i_agree_to|SSBhZ3JlZSB0byA=
+string|landing_page_image_content_description|TGFuZGluZyBwYWdlIGltYWdl
 string|landing_text|QnVpbGQgeW91ciBkaWdpdGFsIGNsb3NldCBpbnN0YW50bHk=
 string|login|TG9naW4=
 string|password_confirm_label|Q29uZmlybSBwYXNzd29yZA==
@@ -59,6 +63,7 @@ string|select_color_title|U2VsZWN0IENvbG9y
 string|select_gender_title|U2VsZWN0IEdlbmRlcg==
 string|select_price_title|U2VsZWN0IFByaWNl
 string|select_size_title|U2VsZWN0IFNpemU=
+string|select_year_title|U2VsZWN0IFllYXI=
 string|selection_dialog_cancel_button|Q2FuY2Vs
 string|selection_dialog_clear_search_desc|Q2xlYXIgc2VhcmNo
 string|selection_dialog_done_button|RG9uZQ==
@@ -69,6 +74,7 @@ string|selection_dialog_unselected_desc|U2VsZWN0ICUxJHM=
 string|share_link_copied|TGluayB0byB5b3VyIG91dGZpdCBjb3BpZWQ=
 string|share|U2hhcmU=
 string|show_password|U2hvdyBwYXNzd29yZA==
+string|sign_in_with_google|U2lnbiBpbiB3aXRoIEdvb2dsZQ==
 string|sign_in|U2lnbiBpbiBEZW1vMw==
 string|sign_up_button|U2lnbiB1cA==
 string|sign_up|U2lnbiB1cCBmb3IgRGVtbzM=
