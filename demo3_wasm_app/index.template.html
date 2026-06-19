@@ -255,6 +255,59 @@
     </script>
 
     <!-- Load WASM app AFTER configuration is set up -->
+    <script>
+        // Load the Go Tailscale WASM module and expose its JS API on globalThis.
+        // window.__tailscaleReady resolves once tailscaleStart/Stop/Status are registered.
+        window.__tailscaleReady = (async () => {
+            if (typeof WebAssembly === 'undefined') return;
+            // Pre-install a `process` polyfill BEFORE loading wasm_exec.js. Go's wasm_exec.js
+            // skips installing its own when `globalThis.process` already exists. Kotlin/WASM's
+            // env detector evaluates `process.release.name === 'node'` (uninstantiated.mjs:5181);
+            // Go's polyfill omits `release`, which throws "Cannot read properties of undefined
+            // (reading 'name')" during Compose instantiation. We provide `release.name='browser'`
+            // so Kotlin falls through to the browser branch, plus the methods Go's syscalls call.
+            if (!globalThis.process) {
+                const enosys = () => { const e = new Error('not implemented'); e.code = 'ENOSYS'; return e; };
+                globalThis.process = {
+                    release: { name: 'browser' },
+                    getuid: () => -1, getgid: () => -1, geteuid: () => -1, getegid: () => -1,
+                    getgroups: () => { throw enosys(); },
+                    pid: -1, ppid: -1,
+                    umask: () => { throw enosys(); },
+                    cwd: () => { throw enosys(); },
+                    chdir: () => { throw enosys(); },
+                };
+            }
+            await new Promise((resolve, reject) => {
+                const s = document.createElement('script');
+                s.src = 'wasm_exec.js';
+                s.onload = resolve;
+                s.onerror = () => reject(new Error('Failed to load wasm_exec.js'));
+                document.head.appendChild(s);
+            });
+            if (typeof Go === 'undefined') return;
+            const go = new Go();
+            const result = await WebAssembly.instantiateStreaming(fetch('tailscale.wasm'), go.importObject);
+            // go.run() blocks until the Go runtime exits (it never does — main() parks on a channel).
+            // We intentionally do NOT await it; instead we return a Promise that resolves once Go's
+            // main() has registered the JS functions, which happens synchronously before it parks.
+            // We detect readiness by polling until tailscaleStart is visible on globalThis.
+            go.run(result.instance);
+            await new Promise((resolve, reject) => {
+                let attempts = 0;
+                const maxAttempts = 100; // 5 seconds total
+                const check = setInterval(() => {
+                    if (typeof tailscaleStart === 'function') {
+                        clearInterval(check);
+                        resolve();
+                    } else if (++attempts >= maxAttempts) {
+                        clearInterval(check);
+                        reject(new Error('tailscaleStart was not registered after WASM load'));
+                    }
+                }, 50);
+            });
+        })();
+    </script>
     <script type="application/javascript" src="composeApp.js"></script>
 
     <!-- Clerk.js Integration will be initialized after configuration validation -->
@@ -616,13 +669,7 @@
             waitForClerk();
         }
 
-        // Extended fallback: only show auth after 10 seconds if no interaction
-        setTimeout(() => {
-            if (!showingAuth && (!clerk || !clerk.user)) {
-                console.log('🔍 [WASM AUTH] Extended fallback: No auth shown after 10s, forcing auth dialog');
-                showClerkAuth();
-            }
-        }, 10000);
+        // Auth is triggered exclusively by the Kotlin app via WasmAuthBridge events.
     });
 
     window.addEventListener('error', function (event) {
@@ -872,6 +919,24 @@
     window.signOutFromClerkJS = function (callback) {
         // Alias for consistency with TokenLocalDataSource
         window.signOutFromClerk(callback);
+    };
+
+    window.getClerkUnsafeMetadataFromJS = function (callback) {
+        try {
+            if (clerk && clerk.user) {
+                const metadata = clerk.user.unsafeMetadata;
+                if (metadata && typeof metadata === 'object') {
+                    callback(JSON.stringify(metadata));
+                } else {
+                    callback(null);
+                }
+            } else {
+                callback(null);
+            }
+        } catch (error) {
+            console.error('❌ [CLERK WASM] Error getting unsafeMetadata:', error);
+            callback(null);
+        }
     };
 </script>
 </body>

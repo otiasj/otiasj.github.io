@@ -4,10 +4,14 @@ string|jules_activity_progress_updated|SW4gUHJvZ3Jlc3M=
 string|jules_activity_session_completed|U2Vzc2lvbiBDb21wbGV0ZWQ=
 string|jules_activity_session_failed|U2Vzc2lvbiBGYWlsZWQ=
 string|jules_approve_plan|QXBwcm92ZSBQbGFu
+string|jules_archive_session|QXJjaGl2ZSBzZXNzaW9u
 string|jules_archive|QXJjaGl2ZQ==
+string|jules_artifact_no_changed_files|Tm8gY2hhbmdlZCBmaWxlcw==
+string|jules_artifact_open_pr|T3BlbiBQUg==
 string|jules_artifact_viewer_title|Q2hhbmdlZCBGaWxlcw==
 string|jules_branch_label|QnJhbmNo
 string|jules_cancel|Q2FuY2Vs
+string|jules_dashboard_no_sessions|Tm8gc2Vzc2lvbnM=
 string|jules_dashboard_title|SnVsZXM=
 string|jules_error_approve_plan|RmFpbGVkIHRvIGFwcHJvdmUgcGxhbg==
 string|jules_error_archive_sessions|RmFpbGVkIHRvIGFyY2hpdmUgb25lIG9yIG1vcmUgc2Vzc2lvbnM=
@@ -26,6 +30,8 @@ string|jules_open_pull_request|T3BlbiBwdWxsIHJlcXVlc3Q=
 string|jules_plan_collapse_step|Q29sbGFwc2Ugc3RlcA==
 string|jules_plan_expand_step|RXhwYW5kIHN0ZXA=
 string|jules_plan_label|UGxhbg==
+string|jules_pr_closed|VGhlIFBSIGhhcyBiZWVuIGNsb3NlZA==
+string|jules_pr_merged|VGhlIFBSIGhhcyBiZWVuIG1lcmdlZA==
 string|jules_pr_ready_for_review|UmVhZHkgZm9yIHJldmlldyDwn46J
 string|jules_pr_time|VGltZTogJTEkcw==
 string|jules_publish_pr|UHVibGlzaCBQUg==

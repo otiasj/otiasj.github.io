@@ -3,6 +3,29 @@ import {  POSTHOG_API_KEY, POSTHOG_API_HOST } from './posthog-config.js';
 
 console.log("[POSTHOG-ANALYTICS.JS] File loaded and parsed.");
 
+/**
+ * Generates a cryptographically strong random identifier.
+ * Uses crypto.randomUUID() if available, falls back to crypto.getRandomValues().
+ */
+function generateSecureId() {
+  try {
+    if (typeof crypto !== 'undefined') {
+      if (typeof crypto.randomUUID === 'function') {
+        return crypto.randomUUID();
+      }
+      if (typeof crypto.getRandomValues === 'function') {
+        const array = new Uint8Array(16);
+        crypto.getRandomValues(array);
+        return Array.from(array, (b) => b.toString(16).padStart(2, '0')).join('');
+      }
+    }
+  } catch (e) {
+    console.warn('[POSTHOG-ANALYTICS.JS] Secure random generation failed:', e);
+  }
+  // Last resort fallback if crypto API is completely unavailable or fails
+  return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
+}
+
 // Provide comprehensive fallbacks for missing web APIs that PostHog might try to access
 if (typeof window !== 'undefined') {
   // Provide fallback for web vitals APIs if they don't exist
@@ -94,7 +117,7 @@ try {
     },
     // Provide fallbacks for missing web APIs
     bootstrap: {
-      distinctId: 'wasm-user-' + (typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substr(2, 9))
+      distinctId: 'wasm-user-' + generateSecureId()
     }
   });
   

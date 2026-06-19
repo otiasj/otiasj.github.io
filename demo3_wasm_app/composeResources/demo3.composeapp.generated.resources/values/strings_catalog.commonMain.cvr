@@ -1,0 +1,8 @@
+version:0
+string|catalog_upload_button_format|VXBsb2FkICglMSRkIGltYWdlcyk=
+string|catalog_upload_cancel|Q2FuY2Vs
+string|catalog_upload_description|UGxlYXNlIHdhaXQgd2hpbGUgeW91ciBpbWFnZXMgYXJlIGJlaW5nIHVwbG9hZGVkLg==
+string|catalog_upload_failed_format|VXBsb2FkIGZhaWxlZDogJTEkcw==
+string|catalog_upload_progress_format|VXBsb2FkaW5nICUxJGQvJTIkZA==
+string|catalog_upload_success|VXBsb2FkIGNvbXBsZXRlZCBzdWNjZXNzZnVsbHkh
+string|catalog_upload|VXBsb2Fk
