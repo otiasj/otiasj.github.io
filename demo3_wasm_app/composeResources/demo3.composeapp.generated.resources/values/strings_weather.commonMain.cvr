@@ -34,3 +34,7 @@ string|weather_uv_very_high|VmVyeSBIaWdo
 string|weather_visibility_status_clear|Q2xlYXI=
 string|weather_visibility_status_hazy|SGF6eQ==
 string|weather_visibility|VmlzaWJpbGl0eQ==
+string|weather_wind_status_breezy|QnJlZXp5
+string|weather_wind_status_calm|Q2FsbQ==
+string|weather_wind_status_windy|V2luZHk=
+string|weather_wind|V2luZA==
