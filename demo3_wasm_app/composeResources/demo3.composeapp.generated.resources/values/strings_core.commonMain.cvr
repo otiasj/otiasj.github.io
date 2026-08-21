@@ -5,7 +5,6 @@ string|alert_dialog_example_icon_description|RXhhbXBsZSBJY29u
 string|alert_dialog_example_text|VGhpcyBpcyBhbiBleGFtcGxlIG9mIGFuIGFsZXJ0IGRpYWxvZy4=
 string|alert_dialog_example_title|QWxlcnQgRGlhbG9n
 string|already_signed_up|SSBhbHJlYWR5IGhhdmUgYW4gYWNjb3VudA==
-string|app_name|S29ib3Rl
 string|app_scaffold_pane_preview_content|UGFuZSBjb250ZW50IChub3RlIGNsb3NlLVggaW4gdG9wIGJhcik=
 string|app_scaffold_pane_preview_title|RW1iZWRkZWQgUGFuZQ==
 string|app_scaffold_preview_content|U2NyZWVuIGNvbnRlbnQ=
@@ -92,6 +91,8 @@ string|item_detail_remove_image|UmVtb3ZlIGltYWdl
 string|item_detail_tap_to_add_photo|VGFwIHRvIGFkZCBhIHBob3Rv
 string|landing_page_image_content_description|TGFuZGluZyBwYWdlIGltYWdl
 string|login|TG9naW4=
+string|no_connection_message|WW914oCZcmUgb2ZmbGluZS4gQ2hlY2sgeW91ciBpbnRlcm5ldCBjb25uZWN0aW9uIGFuZCB0cnkgYWdhaW4u
+string|no_connection_title|Tm8gY29ubmVjdGlvbg==
 string|paging_grid_loading|TG9hZGluZyAuLi4=
 string|password_confirm_label|Q29uZmlybSBwYXNzd29yZA==
 string|password_field_label|UGFzc3dvcmQ=
@@ -119,9 +120,7 @@ string|selection_dialog_unselected_desc|U2VsZWN0ICUxJHM=
 string|share_link_copied|TGluayB0byB5b3VyIG91dGZpdCBjb3BpZWQ=
 string|share|U2hhcmU=
 string|show_password|U2hvdyBwYXNzd29yZA==
-string|sign_in|U2lnbiBpbiBLb2JvdGU=
 string|sign_up_button|U2lnbiB1cA==
-string|sign_up|U2lnbiB1cCBmb3IgS29ib3Rl
 string|skip|U2tpcA==
 string|sort_apply_button|QXBwbHk=
 string|sort_by_section_title|U29ydCBieQ==
