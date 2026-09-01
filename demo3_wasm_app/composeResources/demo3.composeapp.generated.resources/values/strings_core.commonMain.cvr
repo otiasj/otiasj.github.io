@@ -35,6 +35,7 @@ string|compose_dialog_preview_content|VGhpcyBpcyB0aGUgY29udGVudCBvZiB0aGUgZGlhbG
 string|compose_dialog_preview_title|RGlhbG9nIFRpdGxl
 string|continue_with_google|Q29udGludWUgd2l0aCBHb29nbGU=
 string|copied_to_clipboard|Q29waWVkIHRvIGNsaXBib2FyZA==
+string|copyable_text_preview|SGVsbG8sIHdvcmxkISBDbGljayB0byBjb3B5Lg==
 string|core_action_add_item|QWRkIEl0ZW0=
 string|core_action_archive|QXJjaGl2ZQ==
 string|core_action_keep|S2VlcA==
