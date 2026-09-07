@@ -44,6 +44,7 @@ string|core_action_unlist|VW5saXN0
 string|core_user_avatar_content_description|VXNlciBhdmF0YXI=
 string|core_user_banner_following|Rm9sbG93aW5n
 string|core_user_banner_follow|Rm9sbG93
+string|currency_symbol|JA==
 string|cursor_pagination_error_icon_desc|UGFnaW5hdGlvbiBlcnJvcg==
 string|cursor_pagination_error_title|RmFpbGVkIHRvIGxvYWQgbW9yZSBpdGVtcw==
 string|cursor_pagination_loading_more|TG9hZGluZyBtb3JlIGl0ZW1zLi4u
