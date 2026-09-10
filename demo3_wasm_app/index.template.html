@@ -938,6 +938,24 @@
             callback(null);
         }
     };
+
+    window.getClerkPublicMetadataFromJS = function (callback) {
+        try {
+            if (clerk && clerk.user) {
+                const metadata = clerk.user.publicMetadata;
+                if (metadata && typeof metadata === 'object') {
+                    callback(JSON.stringify(metadata));
+                } else {
+                    callback(null);
+                }
+            } else {
+                callback(null);
+            }
+        } catch (error) {
+            console.error('❌ [CLERK WASM] Error getting publicMetadata:', error);
+            callback(null);
+        }
+    };
 </script>
 </body>
 
