@@ -29,7 +29,7 @@ Location: `features/calisthenics/`
 object CalisthenicsRoute
 ```
 
-Embedded as a tab within the AiLift collection; accessed via `DailyScreen` (Habits feature). Navigation is internal to the feature — no standalone route. Exposed via `CalisthenicsPane(isMomentumTab)` composable that checks session state to determine which phase to render.
+Embedded as a tab within the Daily collection; accessed via `DailyScreen` (`features/daily`). Navigation is internal to the feature — no standalone route. Exposed via `CalisthenicsPane(isMomentumTab)` composable that checks session state to determine which phase to render.
 
 ## Key Types
 

@@ -7,7 +7,7 @@ description: 'Full-featured weather display: fetches current conditions, hourly 
 sources: [Applications/Demo3/composeApp/src/commonMain/kotlin/com/otiasj/features/weather/]
 tags: [demo3, feature, weather]
 timestamp: '2026-06-19T00:00:00Z'
-last_commit: efd61c16658e04ccfe78c84efacd17d67c35d241
+last_commit: f2cd6e83bd1a4d41a96f04fe677922bcdf7b2558
 category: feature
 ---
 
@@ -20,7 +20,7 @@ Location: `features/weather/`
 
 ## Responsibility
 
-Owns the full weather data pipeline, geocoding, location persistence, and UI. Fetches weather from the Open-Meteo free API for a user-selected location and exposes it via `StateFlow`-backed ViewModel. Does NOT own the Daily screen — it is consumed by `features/habits/ui/DailyScreen`.
+Owns the full weather data pipeline, geocoding, location persistence, and UI. Fetches weather from the Open-Meteo free API for a user-selected location and exposes it via `StateFlow`-backed ViewModel. Does NOT own the Daily screen — it is consumed by `features/daily/ui/DailyScreen`.
 
 **Owns:** location selection (city search via Open-Meteo geocoding + reverse geocoding via BigDataCloud), weather fetching, location persistence via `LocalDataSource`, all weather UI composables, Lottie weather animations.
 
@@ -148,7 +148,7 @@ City search is tracked separately via `citySearchState`:
 
 - **Core**: `LoggingHttpClient`, `createLocalDataSource`, `DiProvider`
 - **Platform**: `platform/location` (`LocationRequester`) for device GPS
-- **Features consuming this**: `features/habits` (DailyScreen + DailyPlugin)
+- **Features consuming this**: `features/daily` (DailyScreen + DailyPlugin)
 - No cross-feature imports from other feature modules.
 
 ## Tests (`commonTest`)
@@ -169,7 +169,7 @@ City search is tracked separately via `citySearchState`:
 
 ## See Also
 
-- [habits](habits.md) — the Daily screen that embeds `WeatherWidget`
+- [daily](daily.md) — the Daily screen that embeds `WeatherWidget`
 - [demo3-platform.md](../platform.md) — `LocationRequester` platform interface
 - [demo3-app-shell.md](../app-shell.md) — `DailyPlugin` that registers `WeatherComponent`
 

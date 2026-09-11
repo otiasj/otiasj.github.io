@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+  <!-- Awning roof and 3 scallops -->
+  <path
+      android:strokeWidth="2"
+      android:pathData="M7,6 H25 L28,14 C27,17.5 23,17.5 21.33,14.5 C19.67,17.5 15.67,17.5 14,14.5 C12.33,17.5 8.33,17.5 4,14 L7,6 Z"
+      android:strokeColor="#FF000000"
+      android:fillColor="#00000000"
+      android:strokeLineCap="round"
+      android:strokeLineJoin="round"/>
+  <!-- Storefront building base -->
+  <path
+      android:strokeWidth="2"
+      android:pathData="M6,17 V25 C6,26.657 7.343,28 9,28 H23 C24.657,28 26,26.657 26,25 V17"
+      android:strokeColor="#FF000000"
+      android:fillColor="#00000000"
+      android:strokeLineCap="round"
+      android:strokeLineJoin="round"/>
+</vector>

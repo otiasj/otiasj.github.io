@@ -1,0 +1,35 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+  <!-- T-shirt (top-left) -->
+  <path
+      android:strokeWidth="1.8"
+      android:pathData="M8,4 C9.2,5.2 11.3,5.2 12.5,4 L16.8,6.5 L18.2,9.5 L15.5,11 L15,16.5 H5.5 L5,11 L2.3,9.5 L3.7,6.5 Z"
+      android:strokeColor="#FF000000"
+      android:fillColor="#00000000"
+      android:strokeLineCap="round"
+      android:strokeLineJoin="round"/>
+  <!-- Jeans (bottom-right) -->
+  <path
+      android:strokeWidth="1.8"
+      android:pathData="M14.5,12 H27.5 C28.3,12 29,12.7 29,13.5 V27.5 C29,28.3 28.3,29 27.5,29 H23 C22.4,29 22,28.6 22,28 V19.5 H20 V28 C20,28.6 19.6,29 19,29 H14.5 C13.7,29 13,28.3 13,27.5 V13.5 C13,12.7 13.7,12 14.5,12 Z"
+      android:strokeColor="#FF000000"
+      android:fillColor="#00000000"
+      android:strokeLineCap="round"
+      android:strokeLineJoin="round"/>
+  <!-- Waistband tie / details -->
+  <path
+      android:strokeWidth="1.8"
+      android:pathData="M18,14.5 L19,17.5"
+      android:strokeColor="#FF000000"
+      android:fillColor="#00000000"
+      android:strokeLineCap="round"/>
+  <path
+      android:strokeWidth="1.8"
+      android:pathData="M24,14.5 L23,17.5"
+      android:strokeColor="#FF000000"
+      android:fillColor="#00000000"
+      android:strokeLineCap="round"/>
+</vector>

@@ -1,0 +1,34 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+  <!-- Left person head -->
+  <path
+      android:strokeWidth="2"
+      android:pathData="M10.25,5.25 A5,5 0 1,0 10.25,15.25 A5,5 0 1,0 10.25,5.25 Z"
+      android:strokeColor="#FF000000"
+      android:fillColor="#00000000"
+      android:strokeLineCap="round"/>
+  <!-- Right person head -->
+  <path
+      android:strokeWidth="2"
+      android:pathData="M21.75,5.25 A5,5 0 1,0 21.75,15.25 A5,5 0 1,0 21.75,5.25 Z"
+      android:strokeColor="#FF000000"
+      android:fillColor="#00000000"
+      android:strokeLineCap="round"/>
+  <!-- Left person torso -->
+  <path
+      android:strokeWidth="2"
+      android:pathData="M3,28 C3,21.925 6.246,17 10.25,17 C14.254,17 17.5,21.925 17.5,28"
+      android:strokeColor="#FF000000"
+      android:fillColor="#00000000"
+      android:strokeLineCap="round"/>
+  <!-- Right person torso -->
+  <path
+      android:strokeWidth="2"
+      android:pathData="M14.5,28 C14.5,21.925 17.746,17 21.75,17 C25.754,17 29,21.925 29,28"
+      android:strokeColor="#FF000000"
+      android:fillColor="#00000000"
+      android:strokeLineCap="round"/>
+</vector>
