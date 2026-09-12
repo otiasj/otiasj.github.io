@@ -24,3 +24,5 @@ string|revivle_step_completed|Q29tcGxldGVk
 string|revivle_step_connect|Q29ubmVjdA==
 string|revivle_step_pay|UGF5IFNlbGxlcg==
 string|revivle_step_reserve|UmVzZXJ2ZQ==
+string|revivle_webapp_description|UmV2aXZsZSB3ZWIgYXBwbGljYXRpb24=
+string|revivle_webapp_title|UmV2aXZsZSBXZWI=
