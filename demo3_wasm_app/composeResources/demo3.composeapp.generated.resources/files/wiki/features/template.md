@@ -59,7 +59,7 @@ The template now ships the **route/pane/content split** as the canonical pattern
 | `TemplateItem` | Domain model: `id: String`, `title: String`, `description: String`, `isCompleted: Boolean = false`, `createdAt: Long` (defaults to `TimeUtils.now()`) |
 | `TemplateItemUiModel` | UI projection of `TemplateItem` with an added `isSelected: Boolean`; produced by `TemplateItem.toUiModel()` |
 | `TemplateComponent` (composable) | `ui/components/TemplateComponent.kt`; renders an item row with checkbox, selection, delete action |
-| `IOSTemplateScreenBridge` | (`iosMain`) Kotlin/Swift bridge. Subscribes to `TemplateViewModel.uiState` and forwards state changes to an `IOSTemplateScreenDelegate`. Exposes `refresh()`, `selectItem()`, `toggleItemCompletion()`, `deleteItem()`, `updateSearchQuery()`, `updateSortOrder()` to Swift callers. |
+| `IOSTemplateScreenBridge` | (`iosMain`) Kotlin/Swift bridge. Subscribes to `TemplateViewModel.uiState` and forwards state changes to an `IOSTemplateScreenDelegate`. Exposes `refresh()`, `loadMore()`, `retryPagination()`, `clearPaginationError()`, `selectItem()`, `toggleItemCompletion()`, `deleteItem()`, `updateSearchQuery()`, `updateSortOrder()`, `createItem()` to Swift callers. |
 | `NativeScreen` | (`platform/nativescreen/`) KMP expect/actual. On iOS, delegates to the registered native SwiftUI screen by `screenName`; on Android/Desktop/wasmJs, renders the `fallback` Compose composable. |
 
 ## Architecture
