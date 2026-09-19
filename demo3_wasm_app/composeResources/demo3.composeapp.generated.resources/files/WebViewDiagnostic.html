@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebView Diagnostic & Layer Inspector</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --border-color: #334155;
+            --text-color: #f8fafc;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-blue: #3b82f6;
+            --accent-yellow: #f59e0b;
+        }
+
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px 20px 40px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            box-sizing: border-box;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Pixel rulers */
+        .ruler-h {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 25px;
+            background: #111827;
+            border-bottom: 1px solid var(--border-color);
+            z-index: 999;
+            font-family: monospace;
+            font-size: 9px;
+            color: #9ca3af;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .ruler-v {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 25px;
+            background: #111827;
+            border-right: 1px solid var(--border-color);
+            z-index: 999;
+            font-family: monospace;
+            font-size: 9px;
+            color: #9ca3af;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        /* Containers & Grid */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 1024px) {
+            .grid {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            color: #cbd5e1;
+        }
+
+        /* Metrics Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: monospace;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight-ok {
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        .highlight-err {
+            color: var(--accent-red);
+            font-weight: bold;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .badge-blue { background-color: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .badge-green { background-color: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+        .badge-yellow { background-color: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+        /* Breakpoints Tracker */
+        .breakpoints {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .bp-indicator {
+            flex: 1;
+            text-align: center;
+            padding: 8px;
+            background-color: #111827;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #64748b;
+        }
+
+        /* Active Breakpoint via Media Queries */
+        @media (max-width: 639.98px) { #bp-xs { background-color: rgba(59, 130, 246, 0.2); border-color: var(--accent-blue); color: #60a5fa; } }
+        @media (min-width: 640px) and (max-width: 767.98px) { #bp-sm { background-color: rgba(16, 185, 129, 0.2); border-color: var(--accent-green); color: #34d399; } }
+        @media (min-width: 768px) and (max-width: 1023.98px) { #bp-md { background-color: rgba(245, 158, 11, 0.2); border-color: var(--accent-yellow); color: #fbbf24; } }
+        @media (min-width: 1024px) { #bp-lg { background-color: rgba(239, 68, 68, 0.2); border-color: var(--accent-red); color: #f87171; } }
+
+        /* Calibration Box */
+        .calibration-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .cal-box {
+            border: 2px dashed #475569;
+            background-color: rgba(255, 255, 255, 0.02);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-family: monospace;
+            color: #94a3b8;
+            box-sizing: border-box;
+        }
+
+        .cal-100 { width: 100px; height: 100px; }
+        .cal-200 { width: 200px; height: 200px; }
+        .cal-50pct { width: 50%; height: 60px; }
+        .cal-100pct { width: 100%; height: 60px; }
+    </style>
+</head>
+<body>
+
+    <!-- Horizontal Ruler -->
+    <div id="ruler-h" class="ruler-h"></div>
+    <!-- Vertical Ruler -->
+    <div id="ruler-v" class="ruler-v"></div>
+
+    <div class="container">
+        <h1>🌐 WebView Metric Scaling Inspector</h1>
+        
+        <div class="grid">
+            <!-- Left Side: Metrics Tables -->
+            <div class="card">
+                <div class="card-title">Live 4-Layer Measurement Dashboard</div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Layer / Metric</th>
+                            <th style="width: 35%">Property</th>
+                            <th style="width: 40%">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Layer 1: Compose -->
+                        <tr>
+                            <td><span class="badge badge-blue">L1: Compose</span></td>
+                            <td>Compose Density</td>
+                            <td id="l1-density">-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Density Scale Factor</td>
+                            <td id="l1-density-scale">-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Compose Bounds (dp)</td>
+                            <td id="l1-dp-size">-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Compose Bounds (px)</td>
+                            <td id="l1-px-size">-</td>
+                        </tr>
+
+                        <!-- Layer 2: Swing -->
+                        <tr>
+                            <td><span class="badge badge-green">L2: Swing AWT</span></td>
+                            <td>Panel Bounds (Points)</td>
+                            <td id="l2-panel-bounds">-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Retina Scale (AWT transform)</td>
+                            <td id="l2-awt-scale">-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Location On Screen</td>
+                            <td id="l2-screen-loc">-</td>
+                        </tr>
+
+                        <!-- Layer 3: CEF JCEF -->
+                        <tr>
+                            <td><span class="badge badge-yellow">L3: CEF</span></td>
+                            <td>getViewRect (DIPs)</td>
+                            <td id="l3-view-rect">-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Screen Device Scale</td>
+                            <td id="l3-cef-scale">-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>OnPaint Render Buffer Size</td>
+                            <td id="l3-paint-size">-</td>
+                        </tr>
+
+                        <!-- Layer 4: DOM -->
+                        <tr>
+                            <td><span class="badge badge-blue">L4: Web DOM</span></td>
+                            <td>window.innerWidth x innerHeight</td>
+                            <td id="dom-inner-size">-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>window.devicePixelRatio</td>
+                            <td id="dom-dpr">-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>screen.width x screen.height</td>
+                            <td id="dom-screen-size">-</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>document.documentElement clientSize</td>
+                            <td id="dom-client-size">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="card-title">Real-Time Scaling Analyzer</div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="width: 50%">DIP-to-CSS Pixel Consistency (DOM Width vs Compose DP Width)</td>
+                            <td id="analysis-dip-css">-</td>
+                        </tr>
+                        <tr>
+                            <td>Buffer-to-Physical Pixel Consistency (DOM Physical vs Paint Buffer)</td>
+                            <td id="analysis-buffer-physical">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Right Side: Breakpoints & Calibration -->
+            <div class="grid-col-right">
+                <div class="card" style="margin-bottom: 20px;">
+                    <div class="card-title">Active CSS Media Breakpoint</div>
+                    <div class="breakpoints">
+                        <div class="bp-indicator" id="bp-xs">xs (&lt;640px)</div>
+                        <div class="bp-indicator" id="bp-sm">sm (640px+)</div>
+                        <div class="bp-indicator" id="bp-md">md (768px+)</div>
+                        <div class="bp-indicator" id="bp-lg">lg (1024px+)</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Calibration Blocks</div>
+                    <div class="calibration-container">
+                        <div class="cal-box cal-100">100 x 100 CSS px</div>
+                        <div class="cal-box cal-200">200 x 200 CSS px</div>
+                        <div class="cal-box cal-50pct">50% CSS Width</div>
+                        <div class="cal-box cal-100pct">100% CSS Width</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Update Rulers
+        function drawRulers() {
+            const rulerH = document.getElementById('ruler-h');
+            const rulerV = document.getElementById('ruler-v');
+            
+            let htmlH = '';
+            for (let i = 0; i < window.innerWidth; i += 50) {
+                const isMajor = i % 100 === 0;
+                const height = isMajor ? '15px' : '8px';
+                const label = isMajor ? `<span style="position:absolute;left:${i + 4}px;top:2px;">${i}</span>` : '';
+                htmlH += `<div style="position:absolute;left:${i}px;top:0;width:1px;height:${height};background:#4b5563;"></div>${label}`;
+            }
+            rulerH.innerHTML = htmlH;
+
+            let htmlV = '';
+            for (let i = 0; i < window.innerHeight; i += 50) {
+                const isMajor = i % 100 === 0;
+                const width = isMajor ? '15px' : '8px';
+                const label = isMajor ? `<span style="position:absolute;top:${i + 2}px;left:2px;writing-mode:vertical-lr;">${i}</span>` : '';
+                htmlV += `<div style="position:absolute;top:${i}px;left:0;height:1px;width:${width};background:#4b5563;"></div>${label}`;
+            }
+            rulerV.innerHTML = htmlV;
+        }
+
+        // Live DOM Metrics
+        function updateDomMetrics() {
+            document.getElementById('dom-inner-size').innerText = `${window.innerWidth} x ${window.innerHeight} px`;
+            document.getElementById('dom-dpr').innerText = window.devicePixelRatio;
+            document.getElementById('dom-screen-size').innerText = `${screen.width} x ${screen.height} px`;
+            document.getElementById('dom-client-size').innerText = `${document.documentElement.clientWidth} x ${document.documentElement.clientHeight} px`;
+            drawRulers();
+            runAnalyzer();
+        }
+
+        // Global native metrics callback
+        window.updateNativeMetrics = function(jsonStr) {
+            try {
+                const m = JSON.parse(jsonStr);
+                
+                // L1: Compose
+                if (m.compose) {
+                    document.getElementById('l1-density').innerText = m.compose.density || '-';
+                    document.getElementById('l1-density-scale').innerText = m.compose.densityScale || '-';
+                    document.getElementById('l1-dp-size').innerText = m.compose.widthDp && m.compose.heightDp ? `${m.compose.widthDp} x ${m.compose.heightDp} dp` : '-';
+                    document.getElementById('l1-px-size').innerText = m.compose.widthPx && m.compose.heightPx ? `${m.compose.widthPx} x ${m.compose.heightPx} px` : '-';
+                }
+
+                // L2: Swing
+                if (m.swing) {
+                    document.getElementById('l2-panel-bounds').innerText = m.swing.width && m.swing.height ? `${m.swing.width} x ${m.swing.height} pts` : '-';
+                    document.getElementById('l2-awt-scale').innerText = m.swing.scaleX && m.swing.scaleY ? `${m.swing.scaleX} x ${m.swing.scaleY}` : '-';
+                    document.getElementById('l2-screen-loc').innerText = m.swing.screenX !== undefined ? `(${m.swing.screenX}, ${m.swing.screenY})` : '-';
+                }
+
+                // L3: CEF
+                if (m.cef) {
+                    document.getElementById('l3-view-rect').innerText = m.cef.rectWidth && m.cef.rectHeight ? `${m.cef.rectWidth} x ${m.cef.rectHeight}` : '-';
+                    document.getElementById('l3-cef-scale').innerText = m.cef.deviceScale || '-';
+                    document.getElementById('l3-paint-size').innerText = m.cef.paintWidth && m.cef.paintHeight ? `${m.cef.paintWidth} x ${m.cef.paintHeight} px` : '-';
+                }
+                
+                runAnalyzer();
+            } catch (e) {
+                console.error("Failed to parse native metrics", e);
+            }
+        };
+
+        function runAnalyzer() {
+            // Check L4 DOM width against L1 Compose width (dp)
+            const composeDpElem = document.getElementById('l1-dp-size');
+            const dipCssElem = document.getElementById('analysis-dip-css');
+            
+            if (composeDpElem && composeDpElem.innerText !== '-') {
+                const composeWidthDp = parseFloat(composeDpElem.innerText.split('x')[0]);
+                const domWidthCss = window.innerWidth;
+                const ratio = domWidthCss / composeWidthDp;
+                
+                if (Math.abs(ratio - 1.0) < 0.01) {
+                    dipCssElem.innerHTML = `<span class="highlight-ok">MATCH (1:1 Ratio)</span><br><span style="font-size:10px;color:#94a3b8">DOM CSS width (${domWidthCss}px) matches Compose DP width (${composeWidthDp}dp)</span>`;
+                } else {
+                    dipCssElem.innerHTML = `<span class="highlight-err">MISMATCH (${ratio.toFixed(3)}x Ratio)</span><br><span style="font-size:10px;color:#94a3b8">DOM CSS width (${domWidthCss}px) vs Compose DP width (${composeWidthDp}dp). Sizing discrepancy is ${(100 * Math.abs(1 - ratio)).toFixed(1)}%</span>`;
+                }
+            }
+
+            // Check Paint Buffer size against DOM physical size (innerWidth * dpr)
+            const paintSizeElem = document.getElementById('l3-paint-size');
+            const bufferPhysElem = document.getElementById('analysis-buffer-physical');
+            
+            if (paintSizeElem && paintSizeElem.innerText !== '-') {
+                const paintWidth = parseInt(paintSizeElem.innerText.split('x')[0]);
+                const physicalDomWidth = Math.round(window.innerWidth * window.devicePixelRatio);
+                const ratio = paintWidth / physicalDomWidth;
+                
+                if (Math.abs(ratio - 1.0) < 0.01) {
+                    bufferPhysElem.innerHTML = `<span class="highlight-ok">MATCH (1:1 Buffer)</span><br><span style="font-size:10px;color:#94a3b8">CEF Paint Buffer width (${paintWidth}px) matches DOM physical width (${physicalDomWidth}px)</span>`;
+                } else {
+                    bufferPhysElem.innerHTML = `<span class="highlight-err">MISMATCH (${ratio.toFixed(3)}x Buffer Ratio)</span><br><span style="font-size:10px;color:#94a3b8">CEF Paint Buffer width (${paintWidth}px) vs DOM physical width (${physicalDomWidth}px)</span>`;
+                }
+            }
+        }
+
+        // Listeners
+        window.addEventListener('resize', updateDomMetrics);
+        window.addEventListener('load', updateDomMetrics);
+        
+        // Polling loop for safety
+        setInterval(updateDomMetrics, 1000);
+    </script>
+</body>
+</html>
