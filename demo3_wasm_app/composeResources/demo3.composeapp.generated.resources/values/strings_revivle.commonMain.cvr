@@ -1,4 +1,11 @@
 version:0
+string|parity_back|QmFjaw==
+string|parity_native_desc|Q29tcG9zZSBNdWx0aXBsYXRmb3JtIGludGVncmF0aW9uIHBvaW50
+string|parity_native_pane|TmF0aXZlIFZ4IFBhbmU=
+string|parity_native_vx|TmF0aXZlIFZ4
+string|parity_webapp_desc|UmVhY3QgLyBOZXh0LmpzIGludGVncmF0aW9uIHBvaW50
+string|parity_webapp_pane|V2ViQXBwIFBhbmU=
+string|parity_webapp|V2ViQXBw
 string|revivle_action_archive|QXJjaGl2ZQ==
 string|revivle_action_keep|S2VlcA==
 string|revivle_action_list|TGlzdA==
@@ -14,6 +21,7 @@ string|revivle_nav_community|Q29tbXVuaXR5
 string|revivle_nav_inbox|SW5ib3g=
 string|revivle_nav_resale|UmVzYWxl
 string|revivle_nav_styling|U3R5bGluZw==
+string|revivle_parity_studio|UmV2aXZsZSBQYXJpdHkgU3R1ZGlv
 string|revivle_pill_all|QWxs
 string|revivle_pill_closet|Q2xvc2V0
 string|revivle_pill_listed|TGlzdGVk
