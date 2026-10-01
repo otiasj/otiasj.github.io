@@ -22,6 +22,8 @@ string|audit_tree_legend_passed|UGFzc2Vk
 string|audit_tree_no_matches_description|Tm8gcGFja2FnZSBvciBmaWxlIGZhaWxzIHRoZSBzZWxlY3RlZCBjaGVja3Mu
 string|audit_tree_no_matches_title|Tm90aGluZyBtYXRjaGVz
 string|audit_tree_screen_title|RmVhdHVyZSBBdWRpdA==
+string|audit_tree_tab_dependencies|RGVwZW5kZW5jaWVz
+string|audit_tree_tab_package|UGFja2FnZSBUcmVl
 string|audit_tree_tag_failed|JTEkczogZmFpbGVk
 string|audit_tree_tag_passed|JTEkczogcGFzc2Vk
 string|audit_tree_zoom_in|Wm9vbSBpbg==
