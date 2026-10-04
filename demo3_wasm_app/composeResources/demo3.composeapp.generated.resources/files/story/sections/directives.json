@@ -1,0 +1,14 @@
+{
+  "id": "directives",
+  "title": "Directives & Constraints",
+  "selection": "multi",
+  "promptLabel": "Directives",
+  "options": [
+    { "id": "fast_paced", "label": "Fast Paced", "prompt": "Fast Paced" },
+    { "id": "worldbuilding", "label": "Atmospheric Worldbuilding", "prompt": "Atmospheric Worldbuilding" },
+    { "id": "philosophical_dialogue", "label": "Philosophical Dialogue", "prompt": "Philosophical Dialogue" },
+    { "id": "high_stakes", "label": "High Stakes", "prompt": "High Stakes" },
+    { "id": "moral_ambiguity", "label": "Moral Ambiguity", "prompt": "Moral Ambiguity" },
+    { "id": "surprise_twists", "label": "Surprise Twists", "prompt": "Surprise Twists" }
+  ]
+}

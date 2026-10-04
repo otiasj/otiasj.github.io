@@ -1,0 +1,14 @@
+{
+  "id": "tone",
+  "title": "Tones (Multi-select)",
+  "selection": "multi",
+  "promptLabel": "Tone",
+  "options": [
+    { "id": "dark_gritty", "label": "Dark & Gritty", "prompt": "Dark & Gritty" },
+    { "id": "lighthearted", "label": "Lighthearted & Whimsical", "prompt": "Lighthearted & Whimsical" },
+    { "id": "suspenseful", "label": "Suspenseful & Tense", "prompt": "Suspenseful & Tense" },
+    { "id": "philosophical", "label": "Philosophical & Reflective", "prompt": "Philosophical & Reflective" },
+    { "id": "humorous", "label": "Humorous & Satirical", "prompt": "Humorous & Satirical" },
+    { "id": "epic", "label": "Epic & Grand", "prompt": "Epic & Grand" }
+  ]
+}

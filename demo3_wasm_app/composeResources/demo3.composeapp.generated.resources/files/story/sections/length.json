@@ -1,0 +1,40 @@
+{
+  "id": "length",
+  "title": "Target Length",
+  "selection": "single",
+  "promptLabel": "Length",
+  "options": [
+    {
+      "id": "flash",
+      "label": "Flash Fiction (~500 words)",
+      "prompt": "Flash Fiction (~500 words)",
+      "minWords": 400,
+      "maxWords": 600,
+      "paragraphGuidance": "3–5 rich paragraphs"
+    },
+    {
+      "id": "short",
+      "label": "Short Story (~2,000 words)",
+      "prompt": "Short Story (~2,000 words)",
+      "minWords": 1500,
+      "maxWords": 2500,
+      "paragraphGuidance": "8–15 developed paragraphs"
+    },
+    {
+      "id": "novelette",
+      "label": "Novelette (~7,500 words)",
+      "prompt": "Novelette (~7,500 words)",
+      "minWords": 3500,
+      "maxWords": 6000,
+      "paragraphGuidance": "20–35 immersive paragraphs"
+    },
+    {
+      "id": "chapter",
+      "label": "Opening Chapter (~3,000 words)",
+      "prompt": "Opening Chapter (~3,000 words)",
+      "minWords": 600,
+      "maxWords": 1200,
+      "paragraphGuidance": "5–8 rich, well-developed paragraphs"
+    }
+  ]
+}

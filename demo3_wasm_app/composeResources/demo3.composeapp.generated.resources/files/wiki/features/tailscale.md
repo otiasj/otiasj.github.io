@@ -7,8 +7,8 @@ description: Embeds a KMP Tailscale node into the app, exposing a connection das
 sources: [Applications/Demo3/composeApp/src/commonMain/kotlin/com/otiasj/features/tailscale/,
   Applications/Demo3/composeApp/src/commonMain/kotlin/com/otiasj/platform/tailscale/]
 tags: [demo3, feature, tailscale]
-timestamp: '2026-06-19T00:00:00Z'
-last_commit: efd61c16658e04ccfe78c84efacd17d67c35d241
+timestamp: '2026-08-28T11:06:00Z'
+last_commit: f2cd6e83bd1a4d41a96f04fe677922bcdf7b2558
 category: feature
 ---
 
@@ -221,10 +221,10 @@ No system-level library installation is needed on any of these platforms. `Nativ
 - [`../demo3-app-shell.md`](../app-shell.md) — `Features.DEMO3_COLLECTION` and DI registration.
 - [`../demo3-core.md`](../core.md) — `DiProvider`, `AuthTokenProvider`.
 
-_Last updated: 2026-07-05 — Windows desktop Tailscale support: `libtailscale.dll` bundled for `windows-amd64` and `windows-arm64`; `NativeLibraryExtractionTest` expanded with `testExtractionWindowsAmd64` and `testExtractionWindowsArm64`. `tailscale-kmp` bumped from `0.4.0` to `0.6.0`. `NativeLibExtractor` (in `main.kt`) now correctly routes Windows ARM64 (`aarch64`) to `windows-arm64` before the `amd64` branch._
-_Previous: 2026-07-04 — Native library bundled for three platforms: `darwin-arm64`, `darwin-amd64` (Intel Mac), and `linux-amd64`. `NativeLibraryExtractor.extractTailscale(userHome, osName, osArch)` selects the correct resource; `NativeLibraryExtractionTest` expanded with coverage for macOS Intel, Linux x86-64, and unsupported-platform cases._
-_Previous: 2026-07-03 — `libtailscale.dylib` bundled in `desktopMain/resources/natives/darwin-arm64/`; `NativeLibraryExtractionTest` added. `TailscaleDashboard` + `TailscaleDashboardViewModel` moved to `commonMain`. `DashboardUiState` gains per-peer `peerStates` map with `PeerBackendInfo` (latency, speed) for LLM backend benchmarking. `LlmLatencyIndicator` component added. `TailscaleTcpProxyE2ETest` added to `desktopTest`._
-_Previous: 2026-06-19 — Added `ClientAutoConnectCoordinator`: 5-step auto-connect flow for client platforms (start node → wait connected → discover desktop via exponential-backoff probing → register FCM → warm LLM backend cache). Complements the existing `TailscaleWarmupCoordinator` (desktop)._
-_Previous: 2026-06-05 — Refactored TailscaleHttpClientEngine to support progressive streaming responses and chunked transfer encoding decoding, bypassing the connection-blocking readAll read. Fixed newline boundary-parsing bug._
-_Last updated: 2026-06-04 — Added `TailscaleWarmupCoordinator`: auto-starts node on login, awaits `Connected`, runs parallel peer discovery probe, saves desktop address; stops node on logout. `TailscaleWarmupCoordinatorTest` added to `commonTest`._
-_Last updated: 2026-06-02 — `TailscalePlugin` now binds `HttpEngineProvider` DI key to `TailscaleHttpEngineProvider`, routing all `LoggingHttpClient` traffic through Tailscale for 100.x/ts.net hosts; desktop server confirmed working over Tailscale; Tailscale HTTP client refactored_
+_Last updated: 2026-08-28 — Windows desktop Tailscale support: `libtailscale.dll` bundled for `windows-amd64` and `windows-arm64`; `NativeLibraryExtractionTest` expanded with `testExtractionWindowsAmd64` and `testExtractionWindowsArm64`. `tailscale-kmp` bumped from `0.4.0` to `0.6.0`. `NativeLibExtractor` (in `main.kt`) now correctly routes Windows ARM64 (`aarch64`) to `windows-arm64` before the `amd64` branch._
+_Previous: 2026-08-28 — Native library bundled for three platforms: `darwin-arm64`, `darwin-amd64` (Intel Mac), and `linux-amd64`. `NativeLibraryExtractor.extractTailscale(userHome, osName, osArch)` selects the correct resource; `NativeLibraryExtractionTest` expanded with coverage for macOS Intel, Linux x86-64, and unsupported-platform cases._
+_Previous: 2026-08-28 — `libtailscale.dylib` bundled in `desktopMain/resources/natives/darwin-arm64/`; `NativeLibraryExtractionTest` added. `TailscaleDashboard` + `TailscaleDashboardViewModel` moved to `commonMain`. `DashboardUiState` gains per-peer `peerStates` map with `PeerBackendInfo` (latency, speed) for LLM backend benchmarking. `LlmLatencyIndicator` component added. `TailscaleTcpProxyE2ETest` added to `desktopTest`._
+_Previous: 2026-08-28 — Added `ClientAutoConnectCoordinator`: 5-step auto-connect flow for client platforms (start node → wait connected → discover desktop via exponential-backoff probing → register FCM → warm LLM backend cache). Complements the existing `TailscaleWarmupCoordinator` (desktop)._
+_Previous: 2026-08-28 — Refactored TailscaleHttpClientEngine to support progressive streaming responses and chunked transfer encoding decoding, bypassing the connection-blocking readAll read. Fixed newline boundary-parsing bug._
+_Last updated: 2026-08-28 — Added `TailscaleWarmupCoordinator`: auto-starts node on login, awaits `Connected`, runs parallel peer discovery probe, saves desktop address; stops node on logout. `TailscaleWarmupCoordinatorTest` added to `commonTest`._
+_Last updated: 2026-08-28 — `TailscalePlugin` now binds `HttpEngineProvider` DI key to `TailscaleHttpEngineProvider`, routing all `LoggingHttpClient` traffic through Tailscale for 100.x/ts.net hosts; desktop server confirmed working over Tailscale; Tailscale HTTP client refactored_

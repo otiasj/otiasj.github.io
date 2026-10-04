@@ -7,7 +7,7 @@ description: 'Multi-provider AI coding assistant integration: manages coding age
 sources: [Applications/Demo3/composeApp/src/commonMain/kotlin/com/otiasj/features/jules/]
 tags: [demo3, feature, jules]
 timestamp: '2026-06-19T00:00:00Z'
-last_commit: efd61c16658e04ccfe78c84efacd17d67c35d241
+last_commit: f2cd6e83bd1a4d41a96f04fe677922bcdf7b2558
 category: feature
 ---
 

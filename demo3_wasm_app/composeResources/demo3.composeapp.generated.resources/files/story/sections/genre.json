@@ -1,0 +1,18 @@
+{
+  "id": "genre",
+  "title": "Genres (Multi-select)",
+  "selection": "multi",
+  "promptLabel": "Genre",
+  "options": [
+    { "id": "scifi", "label": "Sci-Fi", "prompt": "Sci-Fi" },
+    { "id": "fantasy", "label": "Fantasy", "prompt": "Fantasy" },
+    { "id": "mystery", "label": "Mystery", "prompt": "Mystery" },
+    { "id": "cyberpunk", "label": "Cyberpunk", "prompt": "Cyberpunk" },
+    { "id": "horror", "label": "Horror", "prompt": "Horror" },
+    { "id": "thriller", "label": "Thriller", "prompt": "Thriller" },
+    { "id": "romance", "label": "Romance", "prompt": "Romance" },
+    { "id": "historical", "label": "Historical", "prompt": "Historical" },
+    { "id": "adventure", "label": "Adventure", "prompt": "Adventure" },
+    { "id": "comedy", "label": "Comedy", "prompt": "Comedy" }
+  ]
+}

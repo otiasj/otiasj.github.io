@@ -6,8 +6,8 @@ description: Canonical blank feature scaffold that new features are copied from,
   search, sort, deletion, and an iOS native SwiftUI bridge.
 sources: [Applications/Demo3/composeApp/src/commonMain/kotlin/com/otiasj/features/template/]
 tags: [demo3, feature, template]
-timestamp: '2026-08-10T00:00:00Z'
-last_commit: f07ac24224b8bb6a150b46420a259f287e23077e
+timestamp: '2026-08-28T11:06:00Z'
+last_commit: f2cd6e83bd1a4d41a96f04fe677922bcdf7b2558
 category: feature
 ---
 
@@ -59,7 +59,7 @@ The template now ships the **route/pane/content split** as the canonical pattern
 | `TemplateItem` | Domain model: `id: String`, `title: String`, `description: String`, `isCompleted: Boolean = false`, `createdAt: Long` (defaults to `TimeUtils.now()`) |
 | `TemplateItemUiModel` | UI projection of `TemplateItem` with an added `isSelected: Boolean`; produced by `TemplateItem.toUiModel()` |
 | `TemplateComponent` (composable) | `ui/components/TemplateComponent.kt`; renders an item row with checkbox, selection, delete action |
-| `IOSTemplateScreenBridge` | (`iosMain`) Kotlin/Swift bridge. Subscribes to `TemplateViewModel.uiState` and forwards state changes to an `IOSTemplateScreenDelegate`. Exposes `refresh()`, `loadMore()`, `retryPagination()`, `clearPaginationError()`, `selectItem()`, `toggleItemCompletion()`, `deleteItem()`, `updateSearchQuery()`, `updateSortOrder()`, `createItem()` to Swift callers. |
+| `IOSTemplateScreenBridge` | (`iosMain`) Kotlin/Swift bridge. Subscribes to `TemplateViewModel.uiState` and forwards state changes to an `IOSTemplateScreenDelegate`. Exposes `refresh()`, `selectItem()`, `toggleItemCompletion()`, `deleteItem()`, `updateSearchQuery()`, `updateSortOrder()` to Swift callers. |
 | `NativeScreen` | (`platform/nativescreen/`) KMP expect/actual. On iOS, delegates to the registered native SwiftUI screen by `screenName`; on Android/Desktop/wasmJs, renders the `fallback` Compose composable. |
 
 ## Architecture
@@ -131,4 +131,4 @@ template/
 - [linear](linear.md) — counter-example: does not follow this template's patterns
 - `docs/new_feature_template_agent.md` — agent workflow for scaffolding from this template
 
-_Last updated: 2026-08-10 — Added checklist checkboxes (`isCompleted`), search, sort (`SortOrder`), deletion, `Empty` as first-class state, and iOS native SwiftUI bridge (`IOSTemplateScreenBridge` + `NativeScreen` expect/actual). `TemplateViewModelTest` extended to cover new surface._
+_Last updated: 2026-08-28 — Added checklist checkboxes (`isCompleted`), search, sort (`SortOrder`), deletion, `Empty` as first-class state, and iOS native SwiftUI bridge (`IOSTemplateScreenBridge` + `NativeScreen` expect/actual). `TemplateViewModelTest` extended to cover new surface._

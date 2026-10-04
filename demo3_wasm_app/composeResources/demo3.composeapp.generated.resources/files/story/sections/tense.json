@@ -1,0 +1,10 @@
+{
+  "id": "tense",
+  "title": "Tense",
+  "selection": "single",
+  "promptLabel": "Tense",
+  "options": [
+    { "id": "past", "label": "Past Tense", "prompt": "Past Tense" },
+    { "id": "present", "label": "Present Tense", "prompt": "Present Tense" }
+  ]
+}

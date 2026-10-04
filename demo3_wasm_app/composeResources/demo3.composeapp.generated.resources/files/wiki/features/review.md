@@ -7,7 +7,7 @@ description: 'GitHub PR review browser: lists your repositories and their open p
 sources: [Applications/Demo3/composeApp/src/commonMain/kotlin/com/otiasj/features/review/]
 tags: [demo3, feature, review]
 timestamp: '2026-06-19T00:00:00Z'
-last_commit: efd61c16658e04ccfe78c84efacd17d67c35d241
+last_commit: f2cd6e83bd1a4d41a96f04fe677922bcdf7b2558
 category: feature
 ---
 

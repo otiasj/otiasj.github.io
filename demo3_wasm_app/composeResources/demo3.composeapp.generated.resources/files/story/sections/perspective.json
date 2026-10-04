@@ -1,0 +1,11 @@
+{
+  "id": "perspective",
+  "title": "Perspective (POV)",
+  "selection": "single",
+  "promptLabel": "Perspective",
+  "options": [
+    { "id": "third_limited", "label": "Third-Person Limited", "prompt": "Third-Person Limited" },
+    { "id": "third_omniscient", "label": "Third-Person Omniscient", "prompt": "Third-Person Omniscient" },
+    { "id": "first", "label": "First-Person", "prompt": "First-Person" }
+  ]
+}

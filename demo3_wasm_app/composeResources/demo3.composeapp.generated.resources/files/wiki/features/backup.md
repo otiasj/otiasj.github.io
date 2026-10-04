@@ -10,7 +10,7 @@ sources: [Applications/Demo3/composeApp/src/commonMain/kotlin/com/otiasj/feature
   Applications/Demo3/composeApp/src/wasmJsMain/kotlin/com/otiasj/features/backup/,
   Applications/Demo3/composeApp/src/desktopMain/kotlin/com/otiasj/features/desktopserver/backup/]
 tags: [demo3, feature, backup, tailscale, sync]
-timestamp: '2026-08-08T00:00:00Z'
+timestamp: '2026-08-30T00:00:00Z'
 category: feature
 ---
 

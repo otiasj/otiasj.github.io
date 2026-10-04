@@ -7,8 +7,9 @@ sources: [Applications/Demo3/composeApp/src/commonMain/kotlin/com/otiasj/feature
   Applications/Demo3/composeApp/src/desktopMain/kotlin/com/otiasj/features/desktopserver/codingsession/,
   Applications/Demo3/docs/features/AiCodingSession_TRD.md]
 tags: [demo3, feature, codingsession, kobote, desktop-server]
-timestamp: '2026-07-15T00:00:00Z'
+timestamp: '2026-08-28T11:06:00Z'
 category: feature
+last_commit: f2cd6e83bd1a4d41a96f04fe677922bcdf7b2558
 ---
 
 # Coding Session
@@ -164,4 +165,4 @@ branchName, baseRef, isStarting)` / `Error`. The new-session flow progresses ins
 - [../desktop-server.md](../desktop-server.md) — the Ktor server hosting the router.
 - [tailscale] Server Detail screen — entry point + OTA Updates card where session APKs land.
 
-_Last updated: 2026-07-15 — Initial page: M0–M4 implemented (skeleton, ticket picker, orchestrator + Kobote local sources, build → OTA, merge & close)._
+_Last updated: 2026-08-28 — Initial page: M0–M4 implemented (skeleton, ticket picker, orchestrator + Kobote local sources, build → OTA, merge & close)._

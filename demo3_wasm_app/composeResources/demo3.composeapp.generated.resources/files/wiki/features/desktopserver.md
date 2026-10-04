@@ -62,9 +62,12 @@ This feature has **no `@Serializable` route of its own** — its Compose surface
 | `DatabaseRouter` + `DatabaseRepository` | `/api/database` — in-memory K/V store for dev tooling. |
 | `BackupRouter` | `/api/backup` — encrypted `AppDatabase` snapshot upload/download. |
 | `WorkspaceRepository` | Backs the `/api/tools` file/gradle tools with the markdown-tracked `~/.kobote/workspace_folders.md` list. |
-| `AndroidStudioDirectClient` + `AndroidStudioClientState` | HTTP client + serializable state for the local Android Studio MCP server. `AndroidStudioClientState { url, status: Connected/Connecting/Disconnected, message, tools, projects }` is what mobile receives on `/api/ai/as-status`. |
-| `TailscaleTcpProxy` / `TailscaleTcpProxyHandle` | Bridges `TailscaleNode.listen(port)` → `127.0.0.1:port`. Handle-based so `close()` can shut the listener socket *first* to unblock the native, non-cancellable `accept()` call, then join the coroutine. Resilient: accept failures back off and, past a threshold, the listener is torn down and recreated. |
+| `TailscaleTcpProxy` / `TailscaleTcpProxyHandle` | Bridges `TailscaleNode.listen(port)` → `127.0.0.1:port`. Handle-based so `close()` can shut the listener socket *first* to unblock the native, non-cancellable `accept()` call, then join the coroutine. Resilient: enables TCP keepAlive and tcpNoDelay, retries on transient errors, and logs to NetworkLogRepository. |
+| `HeadlessServerRunner` | Standalone CLI entrypoint (`com.otiasj.features.desktopserver.headless.HeadlessServerRunnerKt`) that boots `DesktopServerComponent` without Compose UI. Supports `--port`, `--tailscale-key`, `--tailscale-hostname`, `--ota-dir`, `--workspace`, `--no-tailscale`. |
+| `StatusRouter` | Exposes `GET /` and `GET /status` serving an HTML dashboard and typed JSON `StatusPayload` with live server status, IPs, uptime, and active routes. |
+| `TailscaleStateDir` | Multiplatform state directory resolver saving node keys/state to `~/.demo3/tailscale_state` across daemon restarts. |
 | `AndroidStudioConnectionCard`, `AdvancedOptionsCard`, `ToolInfoRow`, `LabelValueRow`, `AndroidStudioClientStatusBadge` | Reusable Compose cards used by `PeerDetailScreen`. |
+
 
 ## UI
 
@@ -156,6 +159,8 @@ Startup flow: `TailscalePlugin.registerComponents` registers `DesktopServerCompo
 
 | File | What it tests |
 |------|---------------|
+| `desktopTest/.../headless/HeadlessServerRunnerTest.kt` | CLI argument parsing, port flags, tailscale keys, custom hostnames, and flag defaults. |
+| `commonTest/.../tailscale/PeerSessionManagerTest.kt` | Non-blocking HTTP `/health` probe verification and session status state transitions. |
 | `desktopTest/.../TailscaleTcpProxyE2ETest.kt` | Userspace `TailscaleNode.listen` → `127.0.0.1:port` → Ktor round-trip; exercises the accept-failure recovery loop and listener recreation. |
 | `desktopTest/.../codingsession/CodingSessionOrchestratorTest.kt` | State-machine transitions of `CodingSessionOrchestrator` (create → coding → building → apk-ready → merging → done, plus failure paths). |
 | `desktopTest/.../codingsession/CodingSessionBuildTest.kt` | `BuildRunner` gradle invocation and APK detection. |
@@ -168,6 +173,7 @@ Startup flow: `TailscalePlugin.registerComponents` registers `DesktopServerCompo
 | `desktopTest/.../mcp/AndroidStudioDirectClientTest.kt` | HTTP probe + tool-definition parsing against a mocked `127.0.0.1:9092`. |
 | `desktopTest/.../ota/OtaRepositoryTest.kt` | APK folder scan, semver parse, session-APK matching. |
 | `desktopTest/.../aiproxy/ProxyToolConfirmationCoordinatorTest.kt` | Client-side confirmation coordinator that the `/api/ai/sessions/{id}/confirmations` route drives. |
+| `Scripts/test_headless_tailscale_proxy.py` | Automated streaming soak and load test script for headless tailscale proxy. |
 
 `commonTest` coverage for `DesktopMcpViewModel` is missing.
 
@@ -179,4 +185,5 @@ Startup flow: `TailscalePlugin.registerComponents` registers `DesktopServerCompo
 - [`../app-plugin.md`](../app-plugin.md), [`../app-shell.md`](../app-shell.md) — `TailscalePlugin` is what registers `DesktopServerComponent`.
 - [Architecture Overview](../../../ARCHITECTURE.md)
 
-_Last updated: 2026-08-01_
+_Last updated: 2026-10-02_
+
