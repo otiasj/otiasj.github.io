@@ -8,6 +8,7 @@ string|story_action_generate|R2VuZXJhdGUgU3Rvcnkgd2l0aCBMTSBTdHVkaW8=
 string|story_action_generating|R2VuZXJhdGluZy4uLg==
 string|story_action_refine_story|SXRlcmF0ZSAvIFJlZmluZSBTdG9yeQ==
 string|story_action_reset|UmVzZXQgRm9ybQ==
+string|story_action_settings|TE0gU3R1ZGlvIHNldHRpbmdz
 string|story_action_suggest_character|4pyoIFN1Z2dlc3QgQ2hhcmFjdGVy
 string|story_action_suggest_scene|4pyoIFN1Z2dlc3QgTmV4dCBCZWF0
 string|story_action_test_connection|8J+UjSBEZXRlY3QgTW9kZWxz
@@ -15,6 +16,7 @@ string|story_action_view_prompt|8J+UjSBWaWV3IFByb21wdA==
 string|story_character_add|QWRkIENoYXJhY3Rlcg==
 string|story_character_default_name|Q2hhcmFjdGVyICglMSRzKQ==
 string|story_character_edit_button|RWRpdCBEZXRhaWxz
+string|story_character_edit_done|RG9uZQ==
 string|story_character_edit_title|RWRpdCBDaGFyYWN0ZXI=
 string|story_character_flaw_label|RmxhdyAvIENvbmZsaWN0
 string|story_character_flaw_placeholder|UmVsdWN0YW50IHRvIHRydXN0IGFuZHJvaWRz
@@ -129,9 +131,9 @@ string|story_section_lmstudio|TE0gU3R1ZGlvIFNldHRpbmdz
 string|story_section_parameters|U3RvcnkgUGFyYW1ldGVycw==
 string|story_section_scenes|UGxvdCAmIFNjZW5lcw==
 string|story_tab_beats|U2NlbmUgQmVhdHM=
-string|story_tab_cast|Q2FzdCAmIFJhZGFy
-string|story_tab_premise|UHJlbWlzZSAmIFRhZ3M=
-string|story_tab_tropes|8J+TmiBUcm9wZXM=
+string|story_tab_cast|Q2FzdA==
+string|story_tab_premise|UHJlbWlzZQ==
+string|story_tab_tropes|VHJvcGVz
 string|story_tree_add_node|KyBBZGQgQ2hhcHRlciBOb2Rl
 string|story_tree_apply_refine|UmVmaW5lIHdpdGggQUk=
 string|story_tree_branch_choice|8J+MsSBCcmFuY2ggTmV4dCBDaG9pY2U=
