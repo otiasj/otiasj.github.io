@@ -1,4 +1,8 @@
 version:0
+string|as_action_build_apk|QnVpbGQgQVBLIChPVEEp
+string|as_action_build_failed|QnVpbGQgZmFpbGVkOiAlMSRz
+string|as_action_build_success|QVBLIGJ1aWx0OiAlMSRz
+string|as_action_building_apk|QnVpbGRpbmcgQVBLLi4u
 string|desktop_server_address_copied|QWRkcmVzcyBjb3BpZWQgdG8gY2xpcGJvYXJk
 string|desktop_server_android_studio_connection|QW5kcm9pZCBTdHVkaW8gQ29ubmVjdGlvbg==
 string|desktop_server_badge_error|RXJyb3I=
@@ -54,6 +58,7 @@ string|git_action_fetch|RmV0Y2g=
 string|git_action_new_worktree|TmV3IFdvcmt0cmVl
 string|git_action_pull|UHVsbA==
 string|git_action_push|UHVzaA==
+string|git_action_success_title|U3VjY2Vzcw==
 string|git_action_switch_branch|U3dpdGNoIEJyYW5jaA==
 string|git_action_undo_commit|VW5kbw==
 string|git_branch_dialog_title|U3dpdGNoIEJyYW5jaA==
