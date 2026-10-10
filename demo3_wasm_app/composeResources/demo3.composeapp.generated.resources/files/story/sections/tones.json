@@ -1,0 +1,14 @@
+{
+  "id": "tones",
+  "title": "Tones",
+  "selection": "multi",
+  "promptLabel": "Tone",
+  "options": [
+    { "id": "dark_gritty", "label": "Dark & Gritty", "prompt": "Dark & Gritty", "description": "Raw, visceral atmosphere exploring moral ambiguity, harsh realism, and shadow.", "category": "tones" },
+    { "id": "lighthearted", "label": "Lighthearted & Whimsical", "prompt": "Lighthearted & Whimsical", "description": "Playful, buoyant, optimistic storytelling full of wonder and charm.", "category": "tones" },
+    { "id": "suspenseful", "label": "Suspenseful & Tense", "prompt": "Suspenseful & Tense", "description": "Nail-biting anticipation, lingering tension, and acute psychological anxiety.", "category": "tones" },
+    { "id": "philosophical", "label": "Philosophical & Reflective", "prompt": "Philosophical & Reflective", "description": "Deep thematic inquiry, existential questions, and meditative contemplation.", "category": "tones" },
+    { "id": "humorous", "label": "Humorous & Satirical", "prompt": "Humorous & Satirical", "description": "Sharp wit, playful irony, and insightful social satire.", "category": "tones" },
+    { "id": "epic", "label": "Epic & Grand", "prompt": "Epic & Grand", "description": "Sweeping scope, mythic stakes, and momentous historical or cosmic clashes.", "category": "tones" }
+  ]
+}

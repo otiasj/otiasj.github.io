@@ -1,0 +1,18 @@
+{
+  "id": "genres",
+  "title": "Genres",
+  "selection": "multi",
+  "promptLabel": "Genre",
+  "options": [
+    { "id": "scifi", "label": "Sci-Fi", "prompt": "Sci-Fi", "description": "Speculative narrative exploring futuristic technology, space exploration, or alternate realities.", "category": "genres" },
+    { "id": "fantasy", "label": "Fantasy", "prompt": "Fantasy", "description": "Magical worlds, mythical creatures, supernatural forces, and epic quests.", "category": "genres" },
+    { "id": "mystery", "label": "Mystery", "prompt": "Mystery", "description": "Investigation of an unsolved crime, enigma, or unexplained secret.", "category": "genres" },
+    { "id": "cyberpunk", "label": "Cyberpunk", "prompt": "Cyberpunk", "description": "High tech and low life, neon dystopias, hackers, and corporate oppression.", "category": "genres" },
+    { "id": "horror", "label": "Horror", "prompt": "Horror", "description": "Atmosphere of dread, psychological terror, the uncanny, or macabre monsters.", "category": "genres" },
+    { "id": "thriller", "label": "Thriller", "prompt": "Thriller", "description": "High stakes, relentless suspense, ticking clocks, and intense psychological peril.", "category": "genres" },
+    { "id": "romance", "label": "Romance", "prompt": "Romance", "description": "Interpersonal connection, emotional intimacy, passion, and relationship arcs.", "category": "genres" },
+    { "id": "historical", "label": "Historical", "prompt": "Historical", "description": "Richly detailed historical periods with era-authentic social and political context.", "category": "genres" },
+    { "id": "adventure", "label": "Adventure", "prompt": "Adventure", "description": "Exhilarating journeys, uncharted frontiers, physical danger, and discovery.", "category": "genres" },
+    { "id": "comedy", "label": "Comedy", "prompt": "Comedy", "description": "Humor, wit, absurdity, satire, and lighthearted character banter.", "category": "genres" }
+  ]
+}

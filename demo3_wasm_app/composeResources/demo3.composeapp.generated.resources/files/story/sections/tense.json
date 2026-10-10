@@ -4,7 +4,7 @@
   "selection": "single",
   "promptLabel": "Tense",
   "options": [
-    { "id": "past", "label": "Past Tense", "prompt": "Past Tense" },
-    { "id": "present", "label": "Present Tense", "prompt": "Present Tense" }
+    { "id": "past", "label": "Past Tense", "prompt": "Past Tense", "description": "Classic literary storytelling style describing events that already occurred.", "category": "tense" },
+    { "id": "present", "label": "Present Tense", "prompt": "Present Tense", "description": "Immediate, visceral unfolding of events happening in the present moment.", "category": "tense" }
   ]
 }

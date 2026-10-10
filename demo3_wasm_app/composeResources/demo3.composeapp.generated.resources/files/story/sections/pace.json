@@ -1,0 +1,14 @@
+{
+  "id": "pace",
+  "title": "Pace & Directives",
+  "selection": "multi",
+  "promptLabel": "Directives",
+  "options": [
+    { "id": "fast_paced", "label": "Fast Paced", "prompt": "Fast Paced", "description": "Rapid narrative tempo, relentless momentum, and quick scene transitions.", "category": "pace" },
+    { "id": "worldbuilding", "label": "Atmospheric Worldbuilding", "prompt": "Atmospheric Worldbuilding", "description": "Lush, evocative descriptions of environment, culture, texture, and sensory details.", "category": "pace" },
+    { "id": "philosophical_dialogue", "label": "Philosophical Dialogue", "prompt": "Philosophical Dialogue", "description": "Meaningful conversations probing morality, destiny, and personal values.", "category": "pace" },
+    { "id": "high_stakes", "label": "High Stakes", "prompt": "High Stakes", "description": "Extreme consequences where a single mistake leads to irreversible ruin.", "category": "pace" },
+    { "id": "moral_ambiguity", "label": "Moral Ambiguity", "prompt": "Moral Ambiguity", "description": "No clear heroes or villains; complex gray choices and conflicting duties.", "category": "pace" },
+    { "id": "surprise_twists", "label": "Surprise Twists", "prompt": "Surprise Twists", "description": "Shocking narrative reversals that reframe earlier events in unexpected ways.", "category": "pace" }
+  ]
+}

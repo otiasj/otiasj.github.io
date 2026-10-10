@@ -4,8 +4,8 @@
   "selection": "single",
   "promptLabel": "Perspective",
   "options": [
-    { "id": "third_limited", "label": "Third-Person Limited", "prompt": "Third-Person Limited" },
-    { "id": "third_omniscient", "label": "Third-Person Omniscient", "prompt": "Third-Person Omniscient" },
-    { "id": "first", "label": "First-Person", "prompt": "First-Person" }
+    { "id": "third_limited", "label": "Third-Person Limited", "prompt": "Third-Person Limited", "description": "Narrated from outside through the close thoughts and perceptions of one character.", "category": "perspective" },
+    { "id": "third_omniscient", "label": "Third-Person Omniscient", "prompt": "Third-Person Omniscient", "description": "All-knowing perspective with insight into all characters, events, and world lore.", "category": "perspective" },
+    { "id": "first", "label": "First-Person", "prompt": "First-Person", "description": "Told directly from the protagonist's intimate 'I' voice and personal viewpoint.", "category": "perspective" }
   ]
 }

@@ -8,6 +8,8 @@
       "id": "flash",
       "label": "Flash Fiction (~500 words)",
       "prompt": "Flash Fiction (~500 words)",
+      "description": "Ultra-concise narrative delivering a sharp, focused emotional punch in under 600 words.",
+      "category": "length",
       "minWords": 400,
       "maxWords": 600,
       "paragraphGuidance": "3–5 rich paragraphs"
@@ -16,6 +18,8 @@
       "id": "short",
       "label": "Short Story (~2,000 words)",
       "prompt": "Short Story (~2,000 words)",
+      "description": "Full-fledged standalone story with introduction, rising tension, climax, and resolution.",
+      "category": "length",
       "minWords": 1500,
       "maxWords": 2500,
       "paragraphGuidance": "8–15 developed paragraphs"
@@ -24,6 +28,8 @@
       "id": "novelette",
       "label": "Novelette (~7,500 words)",
       "prompt": "Novelette (~7,500 words)",
+      "description": "Extended narrative allowing multiple subplots, deeper character arcs, and rich world lore.",
+      "category": "length",
       "minWords": 3500,
       "maxWords": 6000,
       "paragraphGuidance": "20–35 immersive paragraphs"
@@ -32,6 +38,8 @@
       "id": "chapter",
       "label": "Opening Chapter (~3,000 words)",
       "prompt": "Opening Chapter (~3,000 words)",
+      "description": "Engaging hook establishing the protagonist, central conflict, world, and inciting incident.",
+      "category": "length",
       "minWords": 600,
       "maxWords": 1200,
       "paragraphGuidance": "5–8 rich, well-developed paragraphs"

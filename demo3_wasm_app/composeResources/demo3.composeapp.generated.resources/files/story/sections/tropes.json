@@ -1,0 +1,176 @@
+{
+  "id": "tropes",
+  "title": "Literary Tropes & Motifs",
+  "selection": "multi",
+  "promptLabel": "Literary Tropes & Motifs",
+  "options": [
+    {
+      "id": "trope_coming_of_age",
+      "label": "Coming of Age",
+      "category": "tropes",
+      "description": "Protagonist transitions from youth and innocence into maturity through trial and awakening.",
+      "prompt": "Coming of Age (Plot): Protagonist transitions from youth and innocence into maturity through trial and awakening."
+    },
+    {
+      "id": "trope_road_trip",
+      "label": "The Road Trip / Odyssey",
+      "category": "tropes",
+      "description": "A transformative journey across physical space where the road reshapes the travelers.",
+      "prompt": "The Road Trip / Odyssey (Plot): A transformative journey across physical space where the road reshapes the travelers."
+    },
+    {
+      "id": "trope_the_heist",
+      "label": "The Heist / One Last Job",
+      "category": "tropes",
+      "description": "A specialized crew unites for an impossible infiltration or final high-stakes score.",
+      "prompt": "The Heist / One Last Job (Plot): A specialized crew unites for an impossible infiltration or final high-stakes score."
+    },
+    {
+      "id": "trope_fish_out_of_water",
+      "label": "Fish Out of Water",
+      "category": "tropes",
+      "description": "A character is thrust into a completely alien society, environment, or culture.",
+      "prompt": "Fish Out of Water (Plot): A character is thrust into a completely alien society, environment, or culture."
+    },
+    {
+      "id": "trope_locked_room",
+      "label": "Locked Room Mystery",
+      "category": "tropes",
+      "description": "A baffling crime or enigma occurs within a sealed, ostensibly impossible space.",
+      "prompt": "Locked Room Mystery (Plot): A baffling crime or enigma occurs within a sealed, ostensibly impossible space."
+    },
+    {
+      "id": "trope_rags_to_riches",
+      "label": "Rags to Riches",
+      "category": "tropes",
+      "description": "An underdog climbs from destitution to wealth and power, confronting new moral hazards.",
+      "prompt": "Rags to Riches (Plot): An underdog climbs from destitution to wealth and power, confronting new moral hazards."
+    },
+    {
+      "id": "trope_fall_from_grace",
+      "label": "The Fall from Grace",
+      "category": "tropes",
+      "description": "A high-standing figure is brought low through hubris, obsession, or tragic miscalculation.",
+      "prompt": "The Fall from Grace (Plot): A high-standing figure is brought low through hubris, obsession, or tragic miscalculation."
+    },
+    {
+      "id": "trope_revenge_arc",
+      "label": "Revenge Arc",
+      "category": "tropes",
+      "description": "A consuming quest for retribution that threatens the seeker's humanity.",
+      "prompt": "Revenge Arc (Plot): A consuming quest for retribution that threatens the seeker's humanity."
+    },
+    {
+      "id": "trope_boy_meets_girl",
+      "label": "Boy Meets Girl",
+      "category": "tropes",
+      "description": "The classic dynamic of initial encounter, complication, separation, and heartfelt union.",
+      "prompt": "Boy Meets Girl (Relationships): The classic dynamic of initial encounter, complication, separation, and heartfelt union."
+    },
+    {
+      "id": "trope_enemies_to_lovers",
+      "label": "Enemies to Lovers",
+      "category": "tropes",
+      "description": "Fierce rivals or ideological foes gradually find mutual respect, vulnerability, and passion.",
+      "prompt": "Enemies to Lovers (Relationships): Fierce rivals or ideological foes gradually find mutual respect, vulnerability, and passion."
+    },
+    {
+      "id": "trope_found_family",
+      "label": "Found Family",
+      "category": "tropes",
+      "description": "Unrelated outcasts and misfits forge bonds and loyalty far stronger than blood.",
+      "prompt": "Found Family (Relationships): Unrelated outcasts and misfits forge bonds and loyalty far stronger than blood."
+    },
+    {
+      "id": "trope_grumpy_sunshine",
+      "label": "Grumpy & Sunshine",
+      "category": "tropes",
+      "description": "A cynical, world-weary realist is paired with an irrepressibly hopeful optimist.",
+      "prompt": "Grumpy & Sunshine (Relationships): A cynical, world-weary realist is paired with an irrepressibly hopeful optimist."
+    },
+    {
+      "id": "trope_reluctant_mentor",
+      "label": "The Reluctant Mentor",
+      "category": "tropes",
+      "description": "A reclusive or disillusioned master is reluctantly coaxed into guiding an eager novice.",
+      "prompt": "The Reluctant Mentor (Relationships): A reclusive or disillusioned master is reluctantly coaxed into guiding an eager novice."
+    },
+    {
+      "id": "trope_mutual_survival",
+      "label": "Mutual Survival Pact",
+      "category": "tropes",
+      "description": "Opposing forces agree to an uneasy truce solely to survive a catastrophic common threat.",
+      "prompt": "Mutual Survival Pact (Relationships): Opposing forces agree to an uneasy truce solely to survive a catastrophic common threat."
+    },
+    {
+      "id": "trope_ticking_clock",
+      "label": "Ticking Clock",
+      "category": "tropes",
+      "description": "A strict, rapidly expiring deadline ratchets tension and forces increasingly desperate risks.",
+      "prompt": "Ticking Clock (Conflict): A strict, rapidly expiring deadline ratchets tension and forces increasingly desperate risks."
+    },
+    {
+      "id": "trope_corrupt_utopia",
+      "label": "Corrupt Utopia",
+      "category": "tropes",
+      "description": "A glistening paradise that conceals dark, authoritarian exploitation beneath its surface.",
+      "prompt": "Corrupt Utopia (Conflict): A glistening paradise that conceals dark, authoritarian exploitation beneath its surface."
+    },
+    {
+      "id": "trope_david_vs_goliath",
+      "label": "David vs. Goliath",
+      "category": "tropes",
+      "description": "An outmatched, under-resourced rebel faction wages battle against an overwhelming empire.",
+      "prompt": "David vs. Goliath (Conflict): An outmatched, under-resourced rebel faction wages battle against an overwhelming empire."
+    },
+    {
+      "id": "trope_faustian_bargain",
+      "label": "Faustian Bargain",
+      "category": "tropes",
+      "description": "Gaining immediate salvation or arcane knowledge at the price of one's soul or moral core.",
+      "prompt": "Faustian Bargain (Conflict): Gaining immediate salvation or arcane knowledge at the price of one's soul or moral core."
+    },
+    {
+      "id": "trope_subverted_chosen_one",
+      "label": "Subverted Chosen One",
+      "category": "tropes",
+      "description": "The prophesied champion fails, rejects the mantle, or is revealed to be a cataclysmic error.",
+      "prompt": "Subverted Chosen One (Conflict): The prophesied champion fails, rejects the mantle, or is revealed to be a cataclysmic error."
+    },
+    {
+      "id": "trope_unreliable_narrator",
+      "label": "Unreliable Narrator",
+      "category": "tropes",
+      "description": "The viewpoint character distorts, fabricates, or misremembers the narrative reality.",
+      "prompt": "Unreliable Narrator (Twists): The viewpoint character distorts, fabricates, or misremembers the narrative reality."
+    },
+    {
+      "id": "trope_double_agent",
+      "label": "The Double Agent / Mole",
+      "category": "tropes",
+      "description": "A trusted ally has been systematically feeding intelligence to the adversary all along.",
+      "prompt": "The Double Agent / Mole (Twists): A trusted ally has been systematically feeding intelligence to the adversary all along."
+    },
+    {
+      "id": "trope_pyrrhic_victory",
+      "label": "Pyrrhic Victory",
+      "category": "tropes",
+      "description": "The objective is achieved, but the losses incurred leave the victory hollow and devastating.",
+      "prompt": "Pyrrhic Victory (Twists): The objective is achieved, but the losses incurred leave the victory hollow and devastating."
+    },
+    {
+      "id": "trope_red_herring",
+      "label": "The Red Herring",
+      "category": "tropes",
+      "description": "A glaring clue or suspicious suspect designed to deflect attention from the true culprit.",
+      "prompt": "The Red Herring (Twists): A glaring clue or suspicious suspect designed to deflect attention from the true culprit."
+    },
+    {
+      "id": "trope_deal_with_the_devil",
+      "label": "Deal with the Devil",
+      "category": "tropes",
+      "description": "A transaction with a shadowy benefactor where the fine print exacts a horrifying toll.",
+      "prompt": "Deal with the Devil (Twists): A transaction with a shadowy benefactor where the fine print exacts a horrifying toll."
+    }
+  ]
+}
