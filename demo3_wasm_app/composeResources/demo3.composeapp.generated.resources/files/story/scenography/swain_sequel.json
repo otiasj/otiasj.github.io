@@ -1,0 +1,36 @@
+{
+  "id": "swain_sequel",
+  "title": "Swain Sequel (Reaction → Dilemma → Decision)",
+  "category": "Reflective",
+  "description": "Swain sequel scene: emotional reaction to a disaster, wrestling with an impossible dilemma, leading to a new decision.",
+  "systemPromptDirective": "Focus on internal processing following a setback: visceral emotional response, deliberate weighing of painful options, culminating in a resolute decision.",
+  "fields": [
+    {
+      "id": "reaction",
+      "label": "Emotional Reaction",
+      "placeholder": "e.g., Shock and grief as the safehouse burns, numbness giving way to panic",
+      "helperText": "Visceral, emotional, and physical aftermath of the previous disaster",
+      "promptPrefix": "Emotional Reaction",
+      "inputType": "MultiLine",
+      "isRequired": true
+    },
+    {
+      "id": "dilemma",
+      "label": "The Dilemma",
+      "placeholder": "e.g., Surrender to the authorities and lose the code, or dive into the radioactive sewers",
+      "helperText": "A choice between two bad alternatives or equally risky sacrifices",
+      "promptPrefix": "Core Dilemma",
+      "inputType": "MultiLine",
+      "isRequired": true
+    },
+    {
+      "id": "decision",
+      "label": "New Decision",
+      "placeholder": "e.g., Enter the sewers to find the rogue engineer before dawn",
+      "helperText": "The active commitment that propels the character into the next action scene",
+      "promptPrefix": "Committed Decision",
+      "inputType": "Text",
+      "isRequired": true
+    }
+  ]
+}

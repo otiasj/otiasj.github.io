@@ -1,0 +1,51 @@
+{
+  "id": "cinematic_staging",
+  "title": "Cinematic Staging",
+  "category": "Atmospheric",
+  "description": "Rich environmental sensory anchors, physical props, and unspoken subtext.",
+  "systemPromptDirective": "Ground the narrative in vivid sensory texture and physical interaction with environment and props.",
+  "fields": [
+    {
+      "id": "setting_atmosphere",
+      "label": "Setting & Atmosphere",
+      "placeholder": "e.g., Subterranean cantina at 3 AM; acid rain against neon glass",
+      "helperText": "Sensory mood, weather, architecture, and lighting",
+      "promptPrefix": "Setting & Mood",
+      "inputType": "Text",
+      "isRequired": true
+    },
+    {
+      "id": "sensory_cues",
+      "label": "Sensory Details",
+      "placeholder": "e.g., Smell of ozone, hum of cooling fans, flickering amber terminal",
+      "helperText": "Sounds, smells, textures, and ambient temperatures",
+      "promptPrefix": "Sensory Anchors",
+      "inputType": "Text"
+    },
+    {
+      "id": "props",
+      "label": "Key Props & Blocking",
+      "placeholder": "e.g., Cracked cipher chip, unlit cigarette, service pistol on table",
+      "helperText": "Physical objects characters handle, touch, or exchange",
+      "promptPrefix": "Interactive Props",
+      "inputType": "Text"
+    },
+    {
+      "id": "subtext",
+      "label": "Subtext & Unspoken Tension",
+      "placeholder": "e.g., Neither character mentions the bounty placed on Marcus",
+      "helperText": "Underlying motivations, secrets, or what remains unsaid",
+      "promptPrefix": "Subtext & Secrets",
+      "inputType": "MultiLine"
+    },
+    {
+      "id": "the_turn",
+      "label": "The Turn / Twist",
+      "placeholder": "e.g., The transmission is revealed to be a syndicate tracking ping",
+      "helperText": "The unexpected shift or pivot in the scene's momentum",
+      "promptPrefix": "Climactic Turn",
+      "inputType": "Text",
+      "isRequired": true
+    }
+  ]
+}

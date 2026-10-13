@@ -1,0 +1,36 @@
+{
+  "id": "swain_action",
+  "title": "Swain Action (Goal → Conflict → Disaster)",
+  "category": "Action",
+  "description": "Classic Swain action scene: a concrete goal, rising conflict, and an unexpected disaster or setback.",
+  "systemPromptDirective": "Drive the scene with high-stakes momentum, escalating conflict that resists the protagonist's goal, ending in an unforeseen disaster or setback.",
+  "fields": [
+    {
+      "id": "goal",
+      "label": "Immediate Goal",
+      "placeholder": "e.g., Extract the decrypted manifest before security reboots the subnet",
+      "helperText": "What the POV character desires right now (must be specific and immediate)",
+      "promptPrefix": "Character Goal",
+      "inputType": "Text",
+      "isRequired": true
+    },
+    {
+      "id": "conflict",
+      "label": "Obstacle & Conflict",
+      "placeholder": "e.g., Automated turrets engage; an old rival intercepts the comms",
+      "helperText": "The active opposition, physical hazards, or opposing force preventing success",
+      "promptPrefix": "Conflict & Opposition",
+      "inputType": "MultiLine",
+      "isRequired": true
+    },
+    {
+      "id": "disaster",
+      "label": "Disaster / Setback",
+      "placeholder": "e.g., The terminal fries, destroying the manifest and sealing the blast doors",
+      "helperText": "Swain's disaster: 'No' or 'Yes, but...' outcome leaving the protagonist in worse trouble",
+      "promptPrefix": "Disaster / Outcome",
+      "inputType": "Text",
+      "isRequired": true
+    }
+  ]
+}

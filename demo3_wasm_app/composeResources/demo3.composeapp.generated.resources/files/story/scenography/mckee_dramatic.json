@@ -1,0 +1,45 @@
+{
+  "id": "mckee_dramatic",
+  "title": "McKee Dramatic (Value Shift & Tactics)",
+  "category": "Dramatic",
+  "description": "McKee dramatic beat: shifting emotional/thematic charge (positive to negative or vice versa) driven by evolving character tactics.",
+  "systemPromptDirective": "Structure the scene around psychological negotiation and tactic shifts, pivoting the scene's core value charge from beginning to end.",
+  "fields": [
+    {
+      "id": "value_at_stake",
+      "label": "Value at Stake",
+      "placeholder": "e.g., Trust vs Betrayal, Freedom vs Captivity, Hope vs Despair",
+      "helperText": "The core human value that is tested and altered during this scene",
+      "promptPrefix": "Value at Stake",
+      "inputType": "Text",
+      "isRequired": true
+    },
+    {
+      "id": "starting_charge",
+      "label": "Opening Charge",
+      "placeholder": "e.g., Positive (+): Confident in their shared alliance",
+      "helperText": "The value state at the start of the scene (+ or -)",
+      "promptPrefix": "Opening Value Charge",
+      "inputType": "Text",
+      "isRequired": true
+    },
+    {
+      "id": "tactic_shifts",
+      "label": "Character Tactic Shifts",
+      "placeholder": "e.g., Starts with charm, shifts to guilt-tripping, escalates to overt blackmail",
+      "helperText": "How characters alter their approach as initial tactics fail to pierce defenses",
+      "promptPrefix": "Tactic Shifts",
+      "inputType": "MultiLine",
+      "isRequired": true
+    },
+    {
+      "id": "ending_charge",
+      "label": "Closing Charge",
+      "placeholder": "e.g., Negative (-): Absolute disillusionment and broken bond",
+      "helperText": "The transformed value state by scene end, signaling a true narrative turn",
+      "promptPrefix": "Closing Value Charge",
+      "inputType": "Text",
+      "isRequired": true
+    }
+  ]
+}

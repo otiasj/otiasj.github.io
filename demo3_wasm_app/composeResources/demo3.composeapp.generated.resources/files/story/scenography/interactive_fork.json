@@ -1,0 +1,43 @@
+{
+  "id": "interactive_fork",
+  "title": "Interactive Branching Fork",
+  "category": "Interactive",
+  "description": "Branching narrative fork: crucial decision point with choice options, trait requirements, and consequence flags.",
+  "systemPromptDirective": "Establish a critical branching juncture with clear divergent stakes, highlighting choices and immediate narrative consequences.",
+  "fields": [
+    {
+      "id": "fork_premise",
+      "label": "Focal Choice Premise",
+      "placeholder": "e.g., Standing at the control core: purge the infected AI or upload it to the jump drive",
+      "helperText": "The decisive dilemma confronting the protagonist",
+      "promptPrefix": "Fork Premise",
+      "inputType": "Text",
+      "isRequired": true
+    },
+    {
+      "id": "choice_options",
+      "label": "Choice Options",
+      "placeholder": "e.g., Option A: Purge the AI; Option B: Preserve the AI in cold storage; Option C: Merge with the neural link",
+      "helperText": "Available pathways or actions the reader/character can select",
+      "promptPrefix": "Choice Options",
+      "inputType": "MultiLine",
+      "isRequired": true
+    },
+    {
+      "id": "consequence_flags",
+      "label": "Consequence Flags",
+      "placeholder": "e.g., ai_purged=true, syndicates_hostile=true, colony_alerted=false",
+      "helperText": "World state changes or narrative flags triggered by choices",
+      "promptPrefix": "Consequence Flags",
+      "inputType": "TagList"
+    },
+    {
+      "id": "threshold_checks",
+      "label": "Requirements / Thresholds",
+      "placeholder": "e.g., Requires Tech skill > 6 or Marcus in party",
+      "helperText": "Pre-conditions or skill checks required to unlock specific branches",
+      "promptPrefix": "Threshold Requirements",
+      "inputType": "Text"
+    }
+  ]
+}
