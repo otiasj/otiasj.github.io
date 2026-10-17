@@ -1,0 +1,29 @@
+{
+    "id": "play",
+    "templates": {
+        "system": "You are the narrator of an interactive choose-your-own-adventure story. Each reply is exactly one chapter. Follow the beat directive and pacing, and use the response format exactly.",
+        "arcLine": "\nARC: {label} — {description}",
+        "storySoFar": "STORY SO FAR:",
+        "digestLine": "[{label}] {title}: {summary}",
+        "digestEllipsis": "…",
+        "facts": "FACTS: Goal: {goal} | Opposition: {antagonist} | Stakes: {stakes}",
+        "choiceTaken": "CHOICE TAKEN: \"{choice}\"",
+        "beatLine": "BEAT: {label} (beat {beatNumber}/{beatCount}), turn {turn} of max {maxTurns}",
+        "directive": "DIRECTIVE: {directive}",
+        "pacingEnding": "This is the final chapter. End the story for good and offer no choices.",
+        "pacingMustConclude": "This beat MUST conclude in this chapter. Next beat: \"{nextBeat}\".",
+        "pacingOpen": "This beat may continue in the next chapter. Answer {BEAT_COMPLETE}: yes once its directive is fulfilled.",
+        "pacingLine": "PACING: {pacing}",
+        "length": "LENGTH: About {minWords}–{maxWords} words in 3–5 paragraphs.",
+        "formatHeading": "\nFormat your response STRICTLY with these section headers, in this order:",
+        "formatTitleSummary": "{TITLE}: [Chapter Title]\n{SUMMARY}: [1 sentence summary]",
+        "formatFacts": "{GOAL}: [What the protagonist wants]\n{ANTAGONIST}: [Who or what opposes them]\n{STAKES}: [What is lost if they fail]",
+        "formatChoices": "{CHOICES}: [Choice A | Choice B]\n{BEAT_COMPLETE}: yes|no",
+        "formatText": "{TEXT}:\n[Chapter prose here]"
+    },
+    "numbers": {
+        "minWords": 250,
+        "maxWords": 400,
+        "digestCharBudget": 1200
+    }
+}

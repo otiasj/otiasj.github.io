@@ -1,0 +1,18 @@
+{
+    "id": "suggest_character",
+    "templates": {
+        "system": "You are a creative writing character designer. Respond strictly in KEY: VALUE format.",
+        "roleLine": "Role to create: {role}",
+        "existingLine": "Existing characters: {characters}",
+        "existingItem": "{name} ({role})",
+        "nameInstruction": "\nInvent a distinctive, concrete name appropriate for this story premise and role (e.g. Silas Vance, Lyra Chen, Jaxen Thorne, Dr. Patricia Ramos). Never output placeholders like [Character Name] or [companion name].",
+        "formatHeading": "Respond ONLY with the following lines (no preamble, no markdown asterisks):",
+        "hint.NAME": "{NAME}: An evocative character name",
+        "hint.TRAITS": "{TRAITS}: 2-3 distinctive personality traits",
+        "hint.MOTIVATION": "{MOTIVATION}: Core desire or goal",
+        "hint.FLAW": "{FLAW}: Significant internal conflict or fatal flaw",
+        "knownHeading": "\nDetails already chosen:",
+        "knownLine": "{key}: {value}",
+        "completeInstruction": "\nSome details of this character are missing. Decide only the missing ones so they fit the story and the details already chosen. Never output placeholders like [Character Name]."
+    }
+}

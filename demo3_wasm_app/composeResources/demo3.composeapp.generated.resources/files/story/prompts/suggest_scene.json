@@ -1,0 +1,16 @@
+{
+    "id": "suggest_scene",
+    "templates": {
+        "system": "You are a narrative outline architect. Design the next scene beat. Respond strictly in KEY: VALUE format.",
+        "currentScenesHeading": "Current Scenes:",
+        "sceneLine": "{number}. {title} ({setting}) - {description}",
+        "formatHeading": "\nSuggest the next dramatic scene beat. Respond ONLY with:",
+        "hint.TITLE": "{TITLE}: [Scene Title]",
+        "hint.SETTING": "{SETTING}: [Location/Setting]",
+        "hint.TWIST": "{TWIST}: [Obstacle, Mystery, or Confrontation]",
+        "hint.DESCRIPTION": "{DESCRIPTION}: [Action and events in this scene beat]",
+        "knownHeading": "\nScene beat so far:",
+        "knownLine": "{key}: {value}",
+        "completeInstruction": "\nSome details of this scene beat are missing. Decide only the missing ones so they fit the story and the details already chosen. Respond ONLY with:"
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "investigation",
+  "label": "Investigation",
+  "description": "Follow the clues, doubt the obvious, name the truth.",
+  "beats": [
+    { "id": "setup", "role": "SETUP", "label": "The Mystery", "minTurns": 1, "maxTurns": 1,
+      "directive": "Present the puzzling event, the protagonist's reason to solve it, and the force trying to keep it buried.",
+      "fallbackChoices": ["Examine the scene", "Question the first witness"] },
+    { "id": "leads", "role": "EARLY_QUEST", "label": "First Leads", "minTurns": 1, "maxTurns": 2,
+      "directive": "Gather a first clue and meet a source who knows more than they say.",
+      "fallbackChoices": ["Follow the physical clue", "Press the evasive source"] },
+    { "id": "redherring", "role": "COMPLICATION", "label": "False Trail", "minTurns": 1, "maxTurns": 2,
+      "directive": "A convincing lead turns out wrong and costs time, trust, or safety.",
+      "fallbackChoices": ["Double back to the overlooked detail", "Bait the suspect into a mistake"] },
+    { "id": "threat", "role": "COMPLICATION", "label": "Closing In", "minTurns": 1, "maxTurns": 2,
+      "directive": "The hidden culprit strikes back; a new fact reframes everything learned so far.",
+      "fallbackChoices": ["Go public with the theory", "Set a trap in secret"] },
+    { "id": "climax", "role": "CLIMAX", "label": "The Reveal", "minTurns": 1, "maxTurns": 1,
+      "directive": "Confront the culprit with the evidence. Choices are final, decisive moves.",
+      "fallbackChoices": ["Lay out every clue", "Force a confession"] },
+    { "id": "end", "role": "RESOLUTION", "label": "Case Closed", "minTurns": 1, "maxTurns": 1,
+      "directive": "Settle what justice, if any, is done; the outcome reflects the path taken. Offer no choices." }
+  ]
+}

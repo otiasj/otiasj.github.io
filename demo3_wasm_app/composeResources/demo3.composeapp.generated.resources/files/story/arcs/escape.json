@@ -1,0 +1,24 @@
+{
+  "id": "escape",
+  "label": "Escape",
+  "description": "Trapped, hunted, and running out of time.",
+  "beats": [
+    { "id": "setup", "role": "SETUP", "label": "Trapped", "minTurns": 1, "maxTurns": 1,
+      "directive": "Show where the protagonist is confined, why they must get out, and who or what holds them.",
+      "fallbackChoices": ["Test the weakest point", "Watch and learn the routine"] },
+    { "id": "plan", "role": "EARLY_QUEST", "label": "The Plan", "minTurns": 1, "maxTurns": 2,
+      "directive": "Find a way out and a means to use it; an ally or tool appears at a price.",
+      "fallbackChoices": ["Accept the ally's price", "Steal what you need"] },
+    { "id": "breakout", "role": "COMPLICATION", "label": "Breakout", "minTurns": 1, "maxTurns": 2,
+      "directive": "The escape starts and goes wrong; the alarm is raised or the route is cut.",
+      "fallbackChoices": ["Hide and wait it out", "Run for it now"] },
+    { "id": "pursuit", "role": "COMPLICATION", "label": "Pursuit", "minTurns": 1, "maxTurns": 2,
+      "directive": "The hunter closes in and reveals why they will never stop.",
+      "fallbackChoices": ["Lay a false trail", "Turn and face the pursuer"] },
+    { "id": "climax", "role": "CLIMAX", "label": "The Threshold", "minTurns": 1, "maxTurns": 1,
+      "directive": "One last barrier between the protagonist and freedom, with the hunter at their back. Choices are final, decisive moves.",
+      "fallbackChoices": ["Break through at any cost", "Outwit the hunter"] },
+    { "id": "end", "role": "RESOLUTION", "label": "Freedom's Price", "minTurns": 1, "maxTurns": 1,
+      "directive": "Show where the protagonist ends up and what was left behind; the outcome reflects the path taken. Offer no choices." }
+  ]
+}

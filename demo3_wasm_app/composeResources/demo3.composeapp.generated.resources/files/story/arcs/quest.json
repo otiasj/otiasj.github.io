@@ -1,0 +1,24 @@
+{
+  "id": "quest",
+  "label": "Quest",
+  "description": "Leave home, chase a goal, face its keeper.",
+  "beats": [
+    { "id": "setup", "role": "SETUP", "label": "Ordinary World", "minTurns": 1, "maxTurns": 1,
+      "directive": "Establish the protagonist's world, a clear goal, and who or what stands in the way.",
+      "fallbackChoices": ["Set out at once", "Gather help before leaving"] },
+    { "id": "errand", "role": "EARLY_QUEST", "label": "First Steps", "minTurns": 1, "maxTurns": 2,
+      "directive": "A low-stakes task that shows how this world works and plants an ally or useful item.",
+      "fallbackChoices": ["Trust the stranger", "Go it alone"] },
+    { "id": "setback", "role": "COMPLICATION", "label": "Setback", "minTurns": 1, "maxTurns": 3,
+      "directive": "Something goes wrong and the goal costs more. Earlier poor choices make it worse.",
+      "fallbackChoices": ["Push through the danger", "Retreat and find another way"] },
+    { "id": "darkest", "role": "COMPLICATION", "label": "Darkest Hour", "minTurns": 1, "maxTurns": 2,
+      "directive": "The plan collapses; reveal something new about the opposition.",
+      "fallbackChoices": ["Risk everything on a desperate plan", "Bargain with an unlikely source"] },
+    { "id": "climax", "role": "CLIMAX", "label": "Confrontation", "minTurns": 1, "maxTurns": 1,
+      "directive": "Direct confrontation with the opposition. Choices are final, decisive moves.",
+      "fallbackChoices": ["Strike directly", "Turn the opposition's strength against it"] },
+    { "id": "end", "role": "RESOLUTION", "label": "Aftermath", "minTurns": 1, "maxTurns": 1,
+      "directive": "Resolve the goal definitively; the outcome reflects the path taken. Offer no choices." }
+  ]
+}

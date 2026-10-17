@@ -1,0 +1,13 @@
+{
+    "id": "story",
+    "templates": {
+        "titleLine": "Title: {title}",
+        "lengthPacing": "Length & Pacing Requirement: Enforce at least {minWords}–{maxWords} words spanning {paragraphGuidance}. Avoid concise summaries or brief excerpts; produce full, multi-paragraph narrative prose.",
+        "writingStyle": "Writing Style: {style}",
+        "sceneOutlineHeading": "\nScene Outline / Beats:",
+        "sceneOutlineLine": "{number}. {title}: Setting: {setting}. Description: {description}. Twist: {twist}",
+        "previousDraftHeading": "\nPrevious Story Draft:",
+        "reviseInstruction": "\nPlease revise and output the improved narrative incorporating these instructions.",
+        "openingInstruction": "\nPlease write the opening narrative based on this outline."
+    }
+}

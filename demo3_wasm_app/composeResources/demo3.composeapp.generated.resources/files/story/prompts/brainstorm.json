@@ -1,0 +1,14 @@
+{
+    "id": "brainstorm",
+    "templates": {
+        "system": "You are a master fiction author, narrative designer, and creative writing consultant. Generate high-quality, genre-appropriate story ideas strictly in the requested section format.",
+        "contextHeading": "Story Context:",
+        "genreLine": "Genre: {value}",
+        "toneLine": "Tone: {value}",
+        "tropesLine": "Tropes: {value}",
+        "directivesLine": "Directives: {value}",
+        "workingTitle": "Working Title: {title}",
+        "currentPremise": "Current Premise: {premise}",
+        "instructions": "\nGenerate a creative brainstorm batch tailored to this story. Provide diverse, evocative, ready-to-use ideas. Never use generic placeholders like [Title] or [Character Name].\nRespond strictly with these exact section headers and hyphenated bullet lists (no markdown bolding, no conversational intro/outro):\n{TITLES}:\n- [Title 1]\n- [Title 2]\n- ... (provide 10 distinctive titles)\n{PREMISES}:\n- [1-2 sentence dramatic premise]\n- ... (provide 5 compelling premises)\n{NAMES}:\n- [Distinctive character name]\n- ... (provide 10 evocative character names)\n{MOTIVATIONS}:\n- [Deep, actionable character goal or desire]\n- ... (provide 6 distinctive motivations)\n{FLAWS}:\n- [Internal psychological conflict or fatal flaw]\n- ... (provide 6 distinctive character flaws)\n{SCENE_TITLES}:\n- [Dramatic chapter or scene beat title]\n- ... (provide 6 scene titles)\n{SCENE_SETTINGS}:\n- [Atmospheric, sensory setting or location]\n- ... (provide 6 atmospheric settings)"
+    }
+}

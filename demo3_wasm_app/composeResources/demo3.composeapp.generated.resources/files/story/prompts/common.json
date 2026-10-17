@@ -1,0 +1,28 @@
+{
+    "id": "common",
+    "templates": {
+        "authorSystem": "You are a master fiction author and storyteller. Write rich, captivating narrative with sharp dialogue, atmospheric worldbuilding, and compelling character conflict. Seamlessly weave in the requested literary tropes and respect each character's distinct personality traits and psychological profile.",
+        "untitledStory": "Untitled Story",
+        "unnamedCharacter": "Unnamed",
+        "labelGenre": "Genre",
+        "labelTone": "Tone",
+        "labelPerspective": "Perspective",
+        "labelTense": "Tense",
+        "labelLength": "Length",
+        "labelDirectives": "Directives",
+        "storyLine": "Story: {title}",
+        "premiseHeading": "\nPremise:",
+        "premiseQuoted": "Story Premise: \"{premise}\"",
+        "charactersHeading": "\nCharacters:",
+        "characterLine": "- {name} ({role}){marker}: Traits: {traits}. Personality: [{radar}]. Motivation: {motivation}. Flaw: {flaw}",
+        "personalityRadar": "Ruthlessness: {ruthlessness}%, Cynicism: {cynicism}%, Loyalty: {loyalty}%, Empathy: {empathy}%",
+        "tropesHeading": "\nLiterary Tropes & Motifs:",
+        "activeTropesHeading": "\nActive Literary Tropes:",
+        "tropeLine": "- {trope}",
+        "tropeFallbackLine": "- {title} ({category}): {description}",
+        "refinementHeading": "\nRefinement Request:",
+        "chapterLabel": "Chapter {number}",
+        "defaultCharacterPrompt": "Invent compelling characters with distinct personalities, motivations, flaws, and roles that naturally fit the story premise and genre.",
+        "defaultScenePrompt": "Structure engaging scene beats with rising tension, key revelations, dramatic pacing, and narrative twists that naturally fit the story premise and genre."
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "id": "scene",
+    "templates": {
+        "scenographySystem": "{system}\n\nScenography Directive: {directive}",
+        "contextHeading": "\nChapter & Scene Context:",
+        "chapterLine": "Chapter: {title} (Chapter {number})",
+        "sceneLabel": "Scene {number}",
+        "sceneLine": "Scene: {title} (Scene {number})",
+        "castHeading": "\nCharacters Present on Stage:",
+        "povMarker": " [POV Character]",
+        "stagingHeading": "\nScenography / Staging ({template}):",
+        "stagingLine": "- {prefix}: {value}",
+        "customDirectivesHeading": "\nCustom Directives:",
+        "continuity": "\nContinuity / Previous Scene Context: {summary}",
+        "previousDraftHeading": "\nPrevious Scene Draft:",
+        "reviseInstruction": "\nPlease revise and output the improved scene prose incorporating these instructions.",
+        "writeInstruction": "\nPlease write the complete narrative prose for this scene beat."
+    }
+}

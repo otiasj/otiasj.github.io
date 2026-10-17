@@ -1,0 +1,11 @@
+{
+    "id": "refine",
+    "templates": {
+        "system": "You are an expert fiction editor and writing consultant. Revise and enhance the chapter narrative strictly adhering to the user's instructions while preserving character voices, story continuity, and tone.",
+        "activeTropes": "Active Tropes: {tropes}",
+        "chapterLine": "\nChapter to Revise: {title} (Chapter {number})",
+        "originalTextHeading": "Original Text:",
+        "instructionHeading": "\nRefinement Instruction:",
+        "closing": "\nPlease provide the revised chapter narrative."
+    }
+}

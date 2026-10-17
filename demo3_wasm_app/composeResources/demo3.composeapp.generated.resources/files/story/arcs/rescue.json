@@ -1,0 +1,24 @@
+{
+  "id": "rescue",
+  "label": "Rescue",
+  "description": "Someone is taken. Bring them back before it's too late.",
+  "beats": [
+    { "id": "setup", "role": "SETUP", "label": "The Taking", "minTurns": 1, "maxTurns": 1,
+      "directive": "Show who is lost, what they mean to the protagonist, and who took them.",
+      "fallbackChoices": ["Give chase immediately", "Find out where they were taken"] },
+    { "id": "trail", "role": "EARLY_QUEST", "label": "The Trail", "minTurns": 1, "maxTurns": 2,
+      "directive": "Pick up the trail and win help or information from someone along the way.",
+      "fallbackChoices": ["Trade a favour for directions", "Track them alone"] },
+    { "id": "obstacle", "role": "COMPLICATION", "label": "Obstacle", "minTurns": 1, "maxTurns": 3,
+      "directive": "The way is blocked and time runs short; earlier choices decide what help is left.",
+      "fallbackChoices": ["Take the dangerous shortcut", "Spend time to go around"] },
+    { "id": "truth", "role": "COMPLICATION", "label": "Hard Truth", "minTurns": 1, "maxTurns": 2,
+      "directive": "Learn why the captive was really taken; the rescue now means facing something worse.",
+      "fallbackChoices": ["Change the plan to match the truth", "Press on regardless"] },
+    { "id": "climax", "role": "CLIMAX", "label": "The Rescue", "minTurns": 1, "maxTurns": 1,
+      "directive": "Reach the captive and face the captor. Choices are final, decisive moves.",
+      "fallbackChoices": ["Free the captive first", "Stop the captor first"] },
+    { "id": "end", "role": "RESOLUTION", "label": "Homecoming", "minTurns": 1, "maxTurns": 1,
+      "directive": "Show who comes home and how they are changed; the outcome reflects the path taken. Offer no choices." }
+  ]
+}

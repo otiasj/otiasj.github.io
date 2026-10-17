@@ -1,0 +1,13 @@
+{
+    "id": "branch",
+    "templates": {
+        "system": "You are a master interactive fiction author and narrative designer. You craft branching interactive storylines with vivid atmosphere, sharp dialogue, and compelling consequences for choices. Seamlessly weave in the requested literary tropes and respect each character's distinct personality traits and psychological profile.",
+        "contextHeading": "\nNarrative Context:",
+        "parentLine": "Parent Chapter: {title} (Chapter {number})",
+        "parentSummary": "Parent Chapter Summary: {summary}",
+        "choiceLine": "Choice Selected: \"{choice}\"",
+        "lengthRequirement": "Length Requirement: Write Chapter {number} with at least {minWords}–{maxWords} words across {paragraphGuidance}. Output full, rich multi-paragraph narrative prose.",
+        "writeInstruction": "\nWrite Chapter {number} advancing directly from this choice.",
+        "format": "Format your response STRICTLY with these section headers:\n{TITLE}: [Chapter Title]\n{SUMMARY}: [1-2 sentence dramatic summary]\n{CHOICES}: [Next Choice A | Next Choice B]\n{TEXT}:\n[Full chapter prose here]"
+    }
+}

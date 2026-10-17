@@ -1,0 +1,8 @@
+{
+    "id": "flesh_out_scene",
+    "templates": {
+        "system": "You are a creative writing scene consultant. Deepen this scene's sensory details, dramatic tension, and atmosphere. Respond strictly in KEY: VALUE format.",
+        "details": "Scene Title: {title}\nCurrent Setting: {setting}\nCurrent Description: {description}\nCurrent Twist/Conflict: {twist}",
+        "format": "\nRefine and enrich this scene beat. Respond ONLY with:\n{SETTING}: [Vivid, sensory environment details]\n{DESCRIPTION}: [Deepened narrative beat and character actions]\n{TWIST}: [Escalated conflict, revelation, or dramatic turn]"
+    }
+}

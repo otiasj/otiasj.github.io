@@ -1,0 +1,24 @@
+{
+  "id": "heist",
+  "label": "Heist",
+  "description": "Plan the impossible job, pull it off, survive the double-cross.",
+  "beats": [
+    { "id": "setup", "role": "SETUP", "label": "The Score", "minTurns": 1, "maxTurns": 1,
+      "directive": "Introduce the protagonist, the prize worth stealing, why they need it, and who guards it.",
+      "fallbackChoices": ["Take the job", "Name a price first"] },
+    { "id": "crew", "role": "EARLY_QUEST", "label": "Assembling the Crew", "minTurns": 1, "maxTurns": 2,
+      "directive": "Recruit a specialist or gather intel on the target; plant a tool or weakness that will matter later.",
+      "fallbackChoices": ["Recruit the risky expert", "Scout the target in person"] },
+    { "id": "inside", "role": "COMPLICATION", "label": "Going In", "minTurns": 1, "maxTurns": 2,
+      "directive": "The job begins and an unexpected obstacle forces improvisation. Earlier shortcuts now cost the crew.",
+      "fallbackChoices": ["Improvise a new route", "Stick to the plan and wait"] },
+    { "id": "doublecross", "role": "COMPLICATION", "label": "Double-Cross", "minTurns": 1, "maxTurns": 2,
+      "directive": "Someone's loyalty breaks or a hidden agenda surfaces; the prize or the crew is now at risk.",
+      "fallbackChoices": ["Confront the traitor", "Play along and turn the trap"] },
+    { "id": "climax", "role": "CLIMAX", "label": "The Getaway", "minTurns": 1, "maxTurns": 1,
+      "directive": "Everything converges: the prize, the guard, the traitor. Choices are final, decisive moves.",
+      "fallbackChoices": ["Grab the prize and run", "Sacrifice the prize to save the crew"] },
+    { "id": "end", "role": "RESOLUTION", "label": "The Split", "minTurns": 1, "maxTurns": 1,
+      "directive": "Show who walks away with what and what it cost; the outcome reflects the path taken. Offer no choices." }
+  ]
+}

@@ -59,7 +59,7 @@ Retrieves `TailscaleComponent` from `DiProvider` and passes `component.tailscale
 2. Wait for `ConnectionState.Connected`.
 3. Discover the desktop server by probing all online peers in parallel (with exponential backoff, 5s → 5min, indefinite retries).
 4. Register the FCM push token with the discovered desktop address via `SendTokenToDesktopUseCase`.
-5. Warm the LLM backend cache via `NetworkLlmBackendRegistry.tryCreate(address)?.loadAvailableAgents()`.
+5. Warm the LLM backend cache via `LlmServerRepository.probe(address)`.
 
 On logout: unregisters the FCM token and stops the Tailscale node.
 
