@@ -9,6 +9,18 @@
         "directivesLine": "Directives: {value}",
         "workingTitle": "Working Title: {title}",
         "currentPremise": "Current Premise: {premise}",
-        "instructions": "\nGenerate a creative brainstorm batch tailored to this story. Provide diverse, evocative, ready-to-use ideas. Never use generic placeholders like [Title] or [Character Name].\nRespond strictly with these exact section headers and hyphenated bullet lists (no markdown bolding, no conversational intro/outro):\n{TITLES}:\n- [Title 1]\n- [Title 2]\n- ... (provide 10 distinctive titles)\n{PREMISES}:\n- [1-2 sentence dramatic premise]\n- ... (provide 5 compelling premises)\n{NAMES}:\n- [Distinctive character name]\n- ... (provide 10 evocative character names)\n{MOTIVATIONS}:\n- [Deep, actionable character goal or desire]\n- ... (provide 6 distinctive motivations)\n{FLAWS}:\n- [Internal psychological conflict or fatal flaw]\n- ... (provide 6 distinctive character flaws)\n{SCENE_TITLES}:\n- [Dramatic chapter or scene beat title]\n- ... (provide 6 scene titles)\n{SCENE_SETTINGS}:\n- [Atmospheric, sensory setting or location]\n- ... (provide 6 atmospheric settings)"
+        "castLine": "Existing Characters (suggest new names that differ from these): {value}",
+        "sceneListLine": "Existing Scenes (in order): {value}",
+        "varietyHeading": "\nVariety constraints. Treat each as loose inspiration, not a rule: the genre, tone and premise above win if they clash. Give every item its own numbered constraint below, in order, so that no two items feel alike.",
+        "varietyTitles": "{TITLES} structures (one per title):",
+        "varietyNames": "{NAMES} inspirations (one per name):",
+        "varietyPremises": "{PREMISES} ingredients (one per premise):",
+        "varietyItem": "{number}. {value}",
+        "varietyNameValue": "{origin}-inspired, starting with the letter {letter}",
+        "varietyPremiseValue": "setting: {setting}; inciting incident: {incident}; central conflict: {conflict}; twist: {twist}",
+        "instructions": "\nGenerate a creative brainstorm batch tailored to this story. Provide diverse, evocative, ready-to-use ideas. Never use generic placeholders like [Title] or [Character Name].\nRespond strictly with these exact section headers and hyphenated bullet lists (no markdown bolding, no conversational intro/outro):",
+        "identitySections": "{TITLES}:\n- [Title 1]\n- [Title 2]\n- ... (provide 10 distinctive titles)\n{PREMISES}:\n- [1-2 sentence dramatic premise]\n- ... (provide 5 compelling premises)",
+        "castSections": "{NAMES}:\n- [Distinctive character name]\n- ... (provide 10 evocative character names)\n{MOTIVATIONS}:\n- [Deep, actionable character goal or desire]\n- ... (provide 6 distinctive motivations)\n{FLAWS}:\n- [Internal psychological conflict or fatal flaw]\n- ... (provide 6 distinctive character flaws)",
+        "sceneSections": "{SCENE_TITLES}:\n- [Dramatic chapter or scene beat title]\n- ... (provide 6 scene titles)\n{SCENE_SETTINGS}:\n- [Atmospheric, sensory setting or location]\n- ... (provide 6 atmospheric settings)"
     }
 }

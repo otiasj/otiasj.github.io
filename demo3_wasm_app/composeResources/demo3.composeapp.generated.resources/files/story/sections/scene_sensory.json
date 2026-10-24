@@ -1,0 +1,16 @@
+{
+  "id": "scene_sensory",
+  "title": "Sensory Details",
+  "selection": "multi",
+  "promptLabel": "Sensory Details",
+  "options": [
+    { "id": "scene_sen_ozone", "label": "Ozone & Metal", "prompt": "The smell of ozone, hot metal and machine oil", "description": "Electric, industrial, slightly dangerous.", "category": "scene_sensory" },
+    { "id": "scene_sen_hum", "label": "Low Hum", "prompt": "A constant low mechanical hum under every sound", "description": "Machinery or ventilation as an ever-present bed of noise.", "category": "scene_sensory" },
+    { "id": "scene_sen_silence", "label": "Heavy Silence", "prompt": "Heavy silence in which small sounds become enormous", "description": "A dropped cup, a breath, a footstep.", "category": "scene_sensory" },
+    { "id": "scene_sen_cold", "label": "Biting Cold", "prompt": "Biting cold: breath fogging, numb fingers, stiff joints", "description": "Temperature felt in the body.", "category": "scene_sensory" },
+    { "id": "scene_sen_heat", "label": "Stifling Heat", "prompt": "Stifling heat: sweat, sticky air and shortened tempers", "description": "Oppressive warmth that frays patience.", "category": "scene_sensory" },
+    { "id": "scene_sen_flicker", "label": "Flickering Light", "prompt": "Unstable, flickering light that makes shapes shift", "description": "Failing bulbs, screens, firelight.", "category": "scene_sensory" },
+    { "id": "scene_sen_food", "label": "Food & Smoke", "prompt": "The smell of cooking, smoke and stale drink", "description": "Warm, lived-in, human.", "category": "scene_sensory" },
+    { "id": "scene_sen_blood", "label": "Copper Taste", "prompt": "A coppery taste in the mouth and the sharp smell of blood", "description": "Fear and injury registered through taste and smell.", "category": "scene_sensory" }
+  ]
+}

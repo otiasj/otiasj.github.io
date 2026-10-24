@@ -1,0 +1,25 @@
+{
+  "id": "title_patterns",
+  "items": [
+    "A single evocative word",
+    "The [Noun] of [Place]",
+    "A question",
+    "Two words joined by 'and'",
+    "A verb phrase in the imperative",
+    "A place name that sounds ordinary but is not",
+    "A phrase of three words or fewer, with no 'The'",
+    "The [Adjective] [Noun]",
+    "A line someone could say out loud",
+    "An object that matters to the plot",
+    "A date, a time or a number",
+    "'[Name]'s [Noun]'",
+    "A contradiction in two words",
+    "A warning",
+    "A season or time of day plus a noun",
+    "A proverb twisted slightly",
+    "Something found, lost or left behind",
+    "A one-word title ending in -ing",
+    "A title with a colon and a subtitle",
+    "A negation, such as 'No ...' or 'Never ...'"
+  ]
+}

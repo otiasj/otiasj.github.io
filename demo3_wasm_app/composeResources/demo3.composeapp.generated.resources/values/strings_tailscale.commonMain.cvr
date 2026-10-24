@@ -1,10 +1,5 @@
 version:0
-string|send_token_dialog_cancel|Q2FuY2Vs
-string|send_token_dialog_confirm|U2VuZA==
-string|send_token_dialog_placeholder|RW50ZXIgSVAgb3IgaG9zdG5hbWU=
-string|send_token_dialog_title|U2VuZCBBdXRoIFRva2Vu
-string|send_token_manual_section_title|T3IgZW50ZXIgbWFudWFsbHk=
-string|send_token_peers_section_title|VGFpbHNjYWxlIFBlZXJz
+string|tailscale_advanced_options|QWR2YW5jZWQgT3B0aW9ucw==
 string|tailscale_ai_backends|QUkgQmFja2VuZHM=
 string|tailscale_auth_key_desc|Q29ubmVjdGluZyB0byBUYWlsc2NhbGUuIFRoaXMgdXN1YWxseSB0YWtlcyBhIGZldyBzZWNvbmRzLg==
 string|tailscale_auth_key_optional|QXV0aCBLZXkgKG9wdGlvbmFsKQ==
@@ -12,6 +7,7 @@ string|tailscale_authenticate_desc|QXV0aGVudGljYXRlIHdpdGggVGFpbHNjYWxlIHRvIGNvb
 string|tailscale_connecting|Q29ubmVjdGluZy4uLg==
 string|tailscale_connection|Q29ubmVjdGlvbg==
 string|tailscale_connect|Q29ubmVjdA==
+string|tailscale_desktop_server_proxy|RGVza3RvcCBzZXJ2ZXIgcHJveHk=
 string|tailscale_desktop_server|RGVza3RvcCBTZXJ2ZXI=
 string|tailscale_direct|RGlyZWN0
 string|tailscale_disconnect|RGlzY29ubmVjdA==
@@ -53,6 +49,7 @@ string|tailscale_peers_hidden_format|JTEkZCBpbmFjdGl2ZSBwZWVycyBoaWRkZW4gKG5vdCB
 string|tailscale_port_label|UG9ydA==
 string|tailscale_refresh|UmVmcmVzaCBwZWVycw==
 string|tailscale_register_token|UmVnaXN0ZXIgVG9rZW4=
+string|tailscale_registered_server_format|UmVnaXN0ZXJlZCBzZXJ2ZXI6ICUxJHM=
 string|tailscale_relayed_via_format|UmVsYXllZCB2aWEgJTEkcw==
 string|tailscale_relay|UmVsYXk=
 string|tailscale_retry|UmV0cnk=
@@ -64,5 +61,6 @@ string|tailscale_status_login_required|TG9naW4gcmVxdWlyZWQ=
 string|tailscale_status|U3RhdHVz
 string|tailscale_tailnet_format|VGFpbG5ldDogJTEkcw==
 string|tailscale_this_device_format|VGhpcyBkZXZpY2U6ICUxJHM=
+string|tailscale_toggle_advanced|VG9nZ2xlIEFkdmFuY2Vk
 string|tailscale_unknown|VW5rbm93bg==
 string|tailscale_unregister_token|VW5yZWdpc3RlciBUb2tlbg==

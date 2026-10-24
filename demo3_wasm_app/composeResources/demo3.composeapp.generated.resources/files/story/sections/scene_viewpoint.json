@@ -1,0 +1,10 @@
+{
+  "id": "scene_viewpoint",
+  "title": "Viewpoint",
+  "selection": "single",
+  "promptLabel": "Scene Viewpoint (overrides the story perspective for this scene only)",
+  "options": [
+    { "id": "scene_vp_neutral", "label": "Neutral", "prompt": "Neutral, objective narrator who observes from outside and does not enter any character's head", "description": "A detached camera-eye narrator reporting only what can be seen and heard.", "category": "scene_viewpoint" },
+    { "id": "scene_vp_omniscient", "label": "Omniscient", "prompt": "Omniscient narrator who may move freely between characters' thoughts and comment on events beyond their knowledge", "description": "A knowing narrator with access to every mind and to the wider world.", "category": "scene_viewpoint" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "scene_setting",
+  "title": "Setting & Atmosphere",
+  "selection": "multi",
+  "promptLabel": "Setting & Atmosphere",
+  "options": [
+    { "id": "scene_set_night", "label": "Deep Night", "prompt": "Deep night, pools of artificial light and long shadows", "description": "Late hours, few witnesses, light as a scarce resource.", "category": "scene_setting" },
+    { "id": "scene_set_rain", "label": "Rain & Neon", "prompt": "Rain against glass and neon reflections on wet surfaces", "description": "Wet streets, glowing signs, a city that never dries.", "category": "scene_setting" },
+    { "id": "scene_set_storm", "label": "Storm", "prompt": "A violent storm outside: wind, thunder and flickering light", "description": "Weather that presses on the scene from outside.", "category": "scene_setting" },
+    { "id": "scene_set_confined", "label": "Confined Space", "prompt": "A cramped, claustrophobic interior with no easy exit", "description": "Low ceilings, thin walls, nowhere to go.", "category": "scene_setting" },
+    { "id": "scene_set_vast", "label": "Vast & Empty", "prompt": "A vast, empty expanse that makes the characters feel small", "description": "Open land, wide halls, silence on all sides.", "category": "scene_setting" },
+    { "id": "scene_set_crowd", "label": "Crowded & Loud", "prompt": "A crowded, noisy public place where privacy is impossible", "description": "Bodies, voices, and the constant pressure of being watched.", "category": "scene_setting" },
+    { "id": "scene_set_derelict", "label": "Derelict & Decaying", "prompt": "A derelict, decaying place: peeling surfaces, dust and neglect", "description": "Abandonment and slow collapse.", "category": "scene_setting" },
+    { "id": "scene_set_dawn", "label": "Cold Dawn", "prompt": "Cold grey dawn light and the exhaustion of a night without sleep", "description": "The hour after everything has already gone wrong.", "category": "scene_setting" }
+  ]
+}

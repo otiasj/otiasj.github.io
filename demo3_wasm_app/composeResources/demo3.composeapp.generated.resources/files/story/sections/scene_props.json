@@ -1,0 +1,16 @@
+{
+  "id": "scene_props",
+  "title": "Key Props & Blocking",
+  "selection": "multi",
+  "promptLabel": "Key Props & Blocking",
+  "options": [
+    { "id": "scene_prop_weapon", "label": "Weapon in Reach", "prompt": "A weapon within reach that a character keeps glancing at", "description": "The threat of violence made physical.", "category": "scene_props" },
+    { "id": "scene_prop_letter", "label": "Letter / Document", "prompt": "A letter or document that changes hands or is read aloud", "description": "Information as an object.", "category": "scene_props" },
+    { "id": "scene_prop_device", "label": "Failing Device", "prompt": "A device or terminal that is failing or showing something it should not", "description": "Technology that betrays or reveals.", "category": "scene_props" },
+    { "id": "scene_prop_drink", "label": "Shared Drink", "prompt": "A shared drink or meal that gives the characters something to do with their hands", "description": "Ritual and cover for tension.", "category": "scene_props" },
+    { "id": "scene_prop_lock", "label": "Locked Door", "prompt": "A locked door or barrier that decides who can leave", "description": "Blocking that traps or separates characters.", "category": "scene_props" },
+    { "id": "scene_prop_keepsake", "label": "Keepsake", "prompt": "A small personal keepsake a character handles when lying or remembering", "description": "An object with history.", "category": "scene_props" },
+    { "id": "scene_prop_table", "label": "Table Between Them", "prompt": "Characters separated by a table or counter that frames the confrontation", "description": "Staging that shows distance and power.", "category": "scene_props" },
+    { "id": "scene_prop_vehicle", "label": "Vehicle in Motion", "prompt": "The scene unfolds inside a moving vehicle with no way to step away", "description": "Forced proximity and momentum.", "category": "scene_props" }
+  ]
+}

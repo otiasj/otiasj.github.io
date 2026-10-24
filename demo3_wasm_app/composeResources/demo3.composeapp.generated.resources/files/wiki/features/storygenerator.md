@@ -31,7 +31,7 @@ Does NOT own: LLM model training, multimodal vision features, or user authentica
 | `StoryGeneratorComponent.kt` | DI wiring; instantiates gateway, use cases, ViewModel. |
 | `StoryGeneratorViewModel.kt` | Lifecycle-aware state holder; orchestrates use cases; emits `UiState<StoryFormState>` and offline flag. |
 | `StoryGeneratorScreen.kt` | Route definition + navigation. Renders `StoryGeneratorPane` composable. |
-| `StoryGeneratorContent.kt` | Main multi-pane layout: outline, narrative tree, manuscript reader. |
+| `StoryGeneratorContent.kt` | Main multi-pane layout: outline, scene staging, manuscript reader. |
 | `domain/model/StoryModels.kt` | Enums: `StoryGenre`, `StoryTone`, `NarrativePerspective`, `NarrativeTense`, `StoryLength`, `CharacterRole`, `TropeCategory`. Data classes: `LiteraryTrope`, `StoryCharacter`, `StoryScene`, `StoryNode`, `StoryFormState`, `GenerateStoryRequest`. |
 | `domain/gateway/StoryLlmGateway.kt` | Interface: `generateStory()`, `branchChapter()`, `refineChapter()`, `suggestCharacter()`, `fleshOutCharacter()`, `suggestScene()`, `checkConnection()`. |
 | `data/LmStudioStoryService.kt` | `StoryLlmGateway` implementation using HTTP to LM Studio endpoint. Streaming response parsing; error handling for connection failures. |
@@ -50,7 +50,6 @@ Does NOT own: LLM model training, multimodal vision features, or user authentica
 | `ui/components/StoryTropesSection.kt` | Multi-select trope catalog by category (plot, relationships, conflict, twists). |
 | `ui/components/StoryExportDialog.kt` | Platform-aware export (Markdown, PDF, plaintext) with format options. |
 | `ui/components/StoryPromptInspectorDialog.kt` | Debug view: displays the full prompt sent to LLM before generation. |
-| `ui/components/StoryNarrativeTreePane.kt` | Interactive tree visualization of story branches and nodes. |
 | `ui/components/StoryManuscriptReaderPane.kt` | Scrollable manuscript display with line numbers and edit mode. |
 | `ui/components/StoryOutlinePane.kt` | Scene outline list; reorder, add/remove, edit metadata. |
 | `ui/components/StoryGeneratedSection.kt` | Display area for streaming generation progress and completion. |
@@ -101,7 +100,7 @@ StoryGeneratorViewModel.generateStory()
 StoryGeneratorUiState.Success(story, characters, scenes)
      │
      ▼
-UI renders manuscript, narrative tree, outline
+UI renders outline, scene staging, manuscript reader
      │
      ├─ user selects branch/refine/export
      │
@@ -112,7 +111,7 @@ UI renders manuscript, narrative tree, outline
 
 - **LLM Gateway abstraction** — `StoryLlmGateway` interface decouples UI from `LmStudioStoryService`; easy to swap backends (Ollama, Claude API) by implementing the interface.
 - **Streaming response parsing** — long-running operations emit incremental updates via Flow; UI shows live progress. `StoryResponseParser` deserializes streamed JSON chunks.
-- **Narrative tree state** — `StoryNode` represents each branch point; nodes form a DAG (directed acyclic graph) allowing branching and merging. Visualized by `StoryNarrativeTreePane`.
+- **Narrative tree state** — `StoryNode` represents each branch point; nodes form a DAG (directed acyclic graph) allowing branching and merging.
 - **Character radar** — radial chart of computed traits (derived from role, tropes, user edits) for quick personality assessment.
 - **Prompt building** — `StoryPromptBuilder` constructs a detailed LLM prompt from form state, characters, scenes, and tropes; inspectable via `StoryPromptInspectorDialog` for debugging.
 - **Multi-platform export** — `StoryExportEngine` + platform-specific `StoryFileWriter` actuals (Android, Desktop, iOS, Web) handle file I/O in the native way.

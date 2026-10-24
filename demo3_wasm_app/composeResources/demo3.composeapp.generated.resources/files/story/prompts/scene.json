@@ -6,14 +6,22 @@
         "chapterLine": "Chapter: {title} (Chapter {number})",
         "sceneLabel": "Scene {number}",
         "sceneLine": "Scene: {title} (Scene {number})",
+        "sceneSetting": "Setting: {setting}",
+        "sceneSummary": "What happens in this scene: {summary}",
+        "sceneTwist": "Twist: {twist}",
+        "storyLength": "{label}: {length} (whole story; this scene is only one part of it)",
         "castHeading": "\nCharacters Present on Stage:",
         "povMarker": " [POV Character]",
+        "descriptiveScene": "\nNo characters take part in this scene: write it as pure description and narration. Nobody speaks or acts, and no character's thoughts are shown.",
+        "otherCastHeading": "\nOther Characters in the Story (not in this scene — you may refer to them, but they must not appear, speak or act):",
+        "otherCharacterLine": "- {name} ({role})",
         "stagingHeading": "\nScenography / Staging ({template}):",
         "stagingLine": "- {prefix}: {value}",
-        "customDirectivesHeading": "\nCustom Directives:",
-        "continuity": "\nContinuity / Previous Scene Context: {summary}",
+        "customDirectivesHeading": "\nCustom Directives (these take precedence over every other instruction, including length):",
+        "continuity": "\nWhat just happened (end of the previous scene) — do not repeat or restate it; continue from here:\n{summary}",
         "previousDraftHeading": "\nPrevious Scene Draft:",
         "reviseInstruction": "\nPlease revise and output the improved scene prose incorporating these instructions.",
-        "writeInstruction": "\nPlease write the complete narrative prose for this scene beat."
+        "writeInstruction": "\nPlease write the narrative prose for this scene beat only. Do not recap or restate earlier scenes.",
+        "directivesReminder": "Follow the Custom Directives above exactly, including any length limit."
     }
 }

@@ -50,7 +50,7 @@ This feature has **no `@Serializable` route of its own** — its Compose surface
 | Type | Description |
 |------|-------------|
 | `DesktopServerComponent` (expect / actual) | Manual DI container. Common actual (Android/iOS/wasm): only `desktopMcpViewModel`. Desktop actual: also owns Ktor lifecycle, router list, `AndroidStudioDirectClient`, `CodingSessionOrchestrator`, `KoboteAgentService`, all desktop-side repositories, and `serverState: StateFlow<ServerState>`. |
-| `DesktopMcpViewModel` + `DesktopMcpUiState` | Client VM used from Peer Detail. Fetches `/api/ai/as-status` (`AndroidStudioClientState`), lists remote backends via `LlmServerRepository.probe(address)`, runs per-backend benchmarks, and registers/unregisters the FCM token against a peer through `SendTokenToDesktopUseCase`. |
+| `DesktopMcpViewModel` + `DesktopMcpUiState` | Client VM used from Peer Detail. Has no HTTP client of its own: everything goes through `LlmServerRepository` (`androidStudioStatus`, `probe`, `testInference`, `unloadModel`). Derives `localLlmState` (the `LocalLlmStatusPayload` the card renders) from the repository snapshot, and registers/unregisters the FCM token against a peer through `SendTokenToDesktopUseCase`. |
 | `DesktopServerManager` | Boots Ktor CIO on `0.0.0.0:{port}`, installs JSON `ContentNegotiation`, logs every request into `NetworkLogRepository`, resolves the Tailscale IPv4 (`100.x.x.x`), and hosts `attachTailscaleProxy(node)`. |
 | `ServerState` | Sealed interface: `Running(ip, port, tailscaleIp: String?)`, `Stopped`, `Error(message)`. |
 | `DesktopServerRouter` | SPI — `fun Application.registerRoutes()`. Implemented by every sub-router below. |
@@ -66,6 +66,7 @@ This feature has **no `@Serializable` route of its own** — its Compose surface
 | `HeadlessServerRunner` | Standalone CLI entrypoint (`com.otiasj.features.desktopserver.headless.HeadlessServerRunnerKt`) that boots `DesktopServerComponent` without Compose UI. Supports `--port`, `--tailscale-key`, `--tailscale-hostname`, `--ota-dir`, `--workspace`, `--no-tailscale`. |
 | `StatusRouter` | Exposes `GET /` and `GET /status` serving an HTML dashboard and typed JSON `StatusPayload` with live server status, IPs, uptime, and active routes. |
 | `TailscaleStateDir` | Multiplatform state directory resolver saving node keys/state to `~/.demo3/tailscale_state` across daemon restarts. |
+| `LocalLlmConnectionCard` | Peer-detail "Local LLM Daemon" card (stateless). Built on the shared `platform/ai/ui/components` pieces: `TargetPill` (online/offline), `LoadedIcon`, `ModelChoice` (dropdown rows) and `LlmTestBanner` (progress / pass / fail, also used by the global LLM dialog); colours come from `MaterialTheme`/`LlmStatusTone`, strings from `strings_llm_settings.xml` (`llm_card_*`). |
 | `AndroidStudioConnectionCard`, `AdvancedOptionsCard`, `ToolInfoRow`, `LabelValueRow`, `AndroidStudioClientStatusBadge` | Reusable Compose cards used by `PeerDetailScreen`. |
 
 
@@ -129,7 +130,7 @@ Startup flow: `TailscalePlugin.registerComponents` registers `DesktopServerCompo
 
 1. **Server up (desktop).** `TailscalePlugin` → `DesktopServerComponent.start()` → `DesktopServerManager.start()` binds Ktor `0.0.0.0:port`, writes MCP token to `~/.demo3/mcp_token`, `_serverState.value = Running(ip, port, tailscaleIp)`.
 2. **Attach tailnet.** `TailscaleWarmupCoordinator` → `component.attachTailscaleNode(node)` → `DesktopServerManager.attachTailscaleProxy(node)` → cancels the poller → `startTailscaleTcpProxy` listens on the userspace node and pipes bytes to `127.0.0.1:port`.
-3. **Client — status.** User taps a Tailscale peer → `PeerDetailScreen` calls `desktopMcpViewModel.fetchBackends(peer)`. VM composes `http://<peer.serverAddress(portInput)>` and fires `GET /api/ai/as-status` (populates `asClientState`) in parallel with `LlmServerRepository.probe(address)` (catalog-based); the resulting runners/models are mapped into `PeerBackendInfo`.
+3. **Client — status.** User taps a Tailscale peer → `PeerDetailScreen` calls `desktopMcpViewModel.fetchBackends(peer)`. VM composes `<peer.serverAddress(portInput)>` and calls `LlmServerRepository.androidStudioStatus(address)` (populates `asClientState`) in parallel with `LlmServerRepository.probe(address)` (catalog-based); the resulting runners/models are mapped into `PeerBackendInfo`.
 4. **Server — status.** `DesktopAiProxyRouter` calls `DesktopServerComponent.asClient.checkStatus()` → probes `http://127.0.0.1:9092/projects` → returns `AndroidStudioClientState { status, tools, projects }`.
 5. **Client — token.** Register/Unregister → `sendTokenUseCase(resolvedAddress)` POSTs the FCM token to the peer; on success `DesktopAddressRepository.saveAddress` persists the peer address for the "Registered server:" caption.
 6. **Client — benchmark.** `testBackendSpeed(peer, backend)` picks the first model and calls `registry.benchmarkBackend(...)`; the returned tokens/sec is written back into the matching `PeerBackendInfo.speedResult`.
@@ -152,8 +153,6 @@ Startup flow: `TailscalePlugin.registerComponents` registers `DesktopServerCompo
 - **`TokenRegistryRouter` is dead code.** Defined at `tokenregistry/TokenRegistryRouter.kt` but never `registerRouter(...)`-ed in `DesktopServerComponent.init { }`. The current token-registration path runs through `features/sendtoken` + `TailscaleComponent.sendTokenUseCase`.
 - **`DesktopMcpViewModel.asMcpPort`.** Public `val asMcpPort: Int` parsed from `BuildKonfig.ANDROID_STUDIO_MCP_URL` (lines 76–82) is unreferenced by any caller — dead surface area, likely leftover from an earlier port-picker UI.
 - **`AndroidStudioDirectClient` base URL is hard-coded** to `http://127.0.0.1:9092` in `DesktopServerComponent.asClient` (line 72), instead of reading the same `BuildKonfig.ANDROID_STUDIO_MCP_URL` that the ViewModel parses — the two can drift if that port changes.
-- **`DesktopMcpViewModel.httpClient` is never closed.** The `LoggingHttpClient` is created `by lazy` with no `onCleared` hook — minor leak on VM disposal.
-- **No `commonTest` for `DesktopMcpViewModel`.** All tests live in `desktopTest`; the shared client VM is uncovered.
 
 ## Tests
 
@@ -175,7 +174,7 @@ Startup flow: `TailscalePlugin.registerComponents` registers `DesktopServerCompo
 | `desktopTest/.../aiproxy/ProxyToolConfirmationCoordinatorTest.kt` | Client-side confirmation coordinator that the `/api/ai/sessions/{id}/confirmations` route drives. |
 | `Scripts/test_headless_tailscale_proxy.py` | Automated streaming soak and load test script for headless tailscale proxy. |
 
-`commonTest` coverage for `DesktopMcpViewModel` is missing.
+`DesktopMcpViewModel` is covered by `commonTest/.../desktopserver/ui/DesktopMcpViewModelTest.kt`; `LocalLlmConnectionCard` by `desktopTest/.../desktopserver/LocalLlmConnectionCardTest.kt` (state/behaviour) and `DesktopLocalLlmCardScreenshotTest` (PNGs under `build/test-screenshots/local_llm_card/`).
 
 ## See Also
 
