@@ -18,7 +18,16 @@
         "formatHeading": "\nFormat your response STRICTLY with these section headers, in this order:",
         "formatTitleSummary": "{TITLE}: [Chapter Title]\n{SUMMARY}: [1 sentence summary]",
         "formatFacts": "{GOAL}: [What the protagonist wants]\n{ANTAGONIST}: [Who or what opposes them]\n{STAKES}: [What is lost if they fail]",
-        "formatChoices": "{CHOICES}: [Choice A | Choice B]\n{BEAT_COMPLETE}: yes|no",
+        "viewpointNeutral": "VIEWPOINT: Neutral (objective). Narrate only what can be seen and heard. Any character on scene may be given suggested actions, but no character gets thoughts or inner states, in the prose or in the actions.",
+        "viewpointOmniscient": "VIEWPOINT: Omniscient. Any character on scene may be given suggested actions and thoughts.",
+        "viewpointPov": "VIEWPOINT: Point of view of {name}. Only {name} gets suggested actions and thoughts; no other character does, and the prose stays within {name}'s perception.",
+        "formatBeatComplete": "{BEAT_COMPLETE}: yes|no",
+        "formatActions": "After the prose, end with exactly one JSON object holding exactly 4 distinct suggested next actions, and nothing after it:\n{\"actions\":[{\"actor\":\"<character name>\",\"action\":\"<what they do next>\",\"thought\":\"<what they think, or empty>\"}]}",
+        "actionsActorList": "\"actor\" must be one of: {names}.",
+        "actionsActorPov": "\"actor\" must be \"{name}\" for all 4 actions.",
+        "actionsActorFree": "\"actor\" is the name of the acting character.",
+        "actionsThoughtNone": "Leave \"thought\" as an empty string in every action.",
+        "actionsThoughtAllowed": "\"thought\" is a short inner thought of the actor, or an empty string.",
         "formatText": "{TEXT}:\n[Chapter prose here]"
     },
     "numbers": {

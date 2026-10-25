@@ -1,0 +1,13 @@
+{
+  "id": "scene_arc",
+  "title": "Play Arc",
+  "selection": "single",
+  "promptLabel": "Interactive Play arc",
+  "options": [
+    { "id": "scene_arc_quest", "label": "Quest", "prompt": "Leave home, chase a goal, face its keeper.", "description": "Leave home, chase a goal, face its keeper.", "category": "scene_arc" },
+    { "id": "scene_arc_heist", "label": "Heist", "prompt": "Plan the impossible job, pull it off, survive the double-cross.", "description": "Plan the impossible job, pull it off, survive the double-cross.", "category": "scene_arc" },
+    { "id": "scene_arc_investigation", "label": "Investigation", "prompt": "Follow the clues, doubt the obvious, name the truth.", "description": "Follow the clues, doubt the obvious, name the truth.", "category": "scene_arc" },
+    { "id": "scene_arc_escape", "label": "Escape", "prompt": "Trapped, hunted, and running out of time.", "description": "Trapped, hunted, and running out of time.", "category": "scene_arc" },
+    { "id": "scene_arc_rescue", "label": "Rescue", "prompt": "Someone is taken. Bring them back before it's too late.", "description": "Someone is taken. Bring them back before it's too late.", "category": "scene_arc" }
+  ]
+}
