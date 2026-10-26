@@ -1,0 +1,29 @@
+{
+    "id": "spine",
+    "templates": {
+        "system": "You are a story architect. Plan the whole story before any scene is written: what it is about, how it ends, and what each chapter is for. Answer with ONE JSON object and nothing else.",
+        "castHeading": "\nCharacters:",
+        "castLine": "- {name} ({role}): {traits}. Wants: {motivation}. Flaw: {flaw}",
+        "arcsHeading": "\nStory arcs to choose from (pick the one that fits this story best; its beats become the story's structure):",
+        "arcLine": "{id}: {label} — {description}",
+        "beatLine": "  - {id} ({label}): {directive}",
+        "ask": "\nPlan the story in {chapters} chapters. Use every beat of the chosen arc exactly once, in order, spread across the chapters; the last chapter ends with the arc's last two beats. Give each chapter its own title (not \"Chapter 1\"). Answer with ONE JSON object:",
+        "shape": "{\"logline\": \"<one sentence: who wants what, and what stands in the way>\", \"conflict\": \"<the central conflict: the protagonist against the opposition>\", \"ending\": \"<how the story ends: the outcome of the climax and what it costs>\", \"arc\": \"<arc id from the list>\", \"chapters\": [{\"title\": \"<chapter title>\", \"goal\": \"<what this chapter must achieve in the story>\", \"beats\": [\"<beat id>\"]}]}",
+        "previousAnswerHeading": "\nYour previous plan:",
+        "fixInstruction": "\nThat plan breaks these rules: {problems}. Answer again with the complete JSON object, fixing them and keeping everything else.",
+        "chapterSystem": "You are a story architect. Break one chapter of a planned story into scenes. Answer with ONE JSON object and nothing else.",
+        "spineHeading": "\nStory spine:",
+        "loglineLine": "Logline: {value}",
+        "conflictLine": "Central conflict: {value}",
+        "endingLine": "Ending (build toward it; only the final scene reaches it): {value}",
+        "chaptersHeading": "\nChapters:",
+        "chapterLine": "Chapter {number}: {title} — {goal}",
+        "earlierScenesHeading": "\nScenes already planned in earlier chapters (continue from them, do not repeat them):",
+        "earlierSceneLine": "- {chapter}.{number} {title}: {summary}",
+        "thisChapter": "\nPlan Chapter {number}: {title}\nChapter goal: {goal}",
+        "chapterBeatsHeading": "This chapter's beats (each scene serves one, in order; every beat gets at least one scene):",
+        "chapterAsk": "\nWrite exactly {scenes} scenes. In each, a point-of-view character wants something, a conflict blocks it, and a turn leaves the situation changed; only 2-3 characters are present. Answer with ONE JSON object:",
+        "chapterShape": "{\"scenes\": [{\"title\": \"<scene title>\", \"beat\": \"<beat id from this chapter's beats>\", \"setting\": \"<where it happens>\", \"description\": \"<what the point-of-view character wants and what happens>\", \"conflict\": \"<what blocks them>\", \"turn\": \"<the shift that ends the scene in a new situation>\", \"subtext\": \"<what is left unsaid>\", \"pov\": \"<character name>\", \"cast\": [\"<names of the 2-3 characters present>\"]}]}",
+        "chapterRetry": "Your previous answer had {previous} complete scenes; write exactly {scenes}, each with a title and a description."
+    }
+}

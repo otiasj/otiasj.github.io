@@ -11,6 +11,23 @@
         "hint.DESCRIPTION": "{DESCRIPTION}: [Action and events in this scene beat]",
         "knownHeading": "\nScene beat so far:",
         "knownLine": "{key}: {value}",
-        "completeInstruction": "\nSome details of this scene beat are missing. Decide only the missing ones so they fit the story and the details already chosen. Respond ONLY with:"
+        "completeInstruction": "\nSome details of this scene beat are missing. Decide only the missing ones so they fit the story and the details already chosen. Respond ONLY with:",
+        "tagsSystem": "You are a narrative outline architect. Design the next scene beat, choose fitting scene tags from the catalog, and write the scene's subtext and turn. Answer with KEY: VALUE lines, then one JSON object.",
+        "castLine": "- {name} ({role}): {traits}",
+        "previousSceneHeading": "\nPrevious scene (continue from it, do not repeat it):",
+        "previousSceneLine": "{title} ({setting}) - {summary}",
+        "tagsIntro": "\nThen, on new lines, answer with ONE JSON object (section ids as keys, tag ids from the list as values):",
+        "completeTagsIntro": "\nSome parts of this scene are missing. Decide only the missing ones so they fit the story and the scene beat so far. Answer with ONE JSON object:",
+        "jsonPart.tags": "\"tags\": {\"<section id>\": [\"<tag id>\"]}",
+        "jsonPart.subtext": "\"subtext\": \"<what the characters leave unsaid: secrets and tension under the surface>\"",
+        "jsonPart.turn": "\"turn\": \"<the unexpected shift that changes this scene's momentum>\"",
+        "tagsRules": "Pick {min}-{max} tags in total that fit this story and this beat: at most {perSection} per section, none from a section where nothing fits. Copy each tag id exactly as written in the list above and use ONLY the ids listed above; never invent, shorten or reword tags.",
+        "tagsSectionLine": "{id} ({title}, {limit}): {options}",
+        "tagsLimitOne": "pick one",
+        "tagsLimitMany": "up to {perSection}",
+        "tagsOption": "{id} = {label}",
+        "tagsHeading": "\nScene tags you may choose from (id = label), by section:",
+        "jsonPart.pov": "\"pov\": \"<name of the point-of-view character, from the characters above>\"",
+        "jsonPart.cast": "\"cast\": [\"<names of the 2-3 characters present in this scene, the point-of-view character included>\"]"
     }
 }

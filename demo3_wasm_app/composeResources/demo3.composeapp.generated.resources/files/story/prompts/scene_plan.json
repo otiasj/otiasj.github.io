@@ -1,0 +1,26 @@
+{
+    "id": "scene_plan",
+    "templates": {
+        "system": "You are a scene architect. Plan one scene as a short sequence of segments before any prose is written. Answer with ONE JSON object and nothing else.",
+        "ask": "\nPlan this scene as {min}-{max} segments of about {words} words in total. The first opens in motion, inside the point-of-view character's goal; the middle escalates the conflict; one segment lands the turn; the last ends on a hook into what comes next. Point of view and characters come only from the characters present in this scene. Answer with ONE JSON object:",
+        "shape": "{\"segments\": [{\"role\": \"<opening | escalation | turn | hook>\", \"purpose\": \"<what happens in this segment and what it changes>\", \"pov\": \"<character name>\", \"cast\": [\"<names of the characters present in this segment>\"], \"words\": <number>}]}",
+        "retry": "Your previous answer was incomplete: give at least {min} segments, each with a purpose.",
+        "previousScene": "\nPrevious scene (already written; do not repeat it): {title} — {summary}",
+        "planHeading": "\nThis scene's plan:",
+        "planLine": "{number}. {role} — {purpose} (~{words} words)",
+        "planCurrent": "  ← write this one",
+        "role.OPENING": "Opening",
+        "role.ESCALATION": "Escalation",
+        "role.TURN": "Turn",
+        "role.HOOK": "Hook",
+        "tailHeading": "\nThe text so far ends like this (continue directly from it; do not repeat it):",
+        "write": "\nWrite segment {number} of {count} only: {purpose}. About {words} words.",
+        "writePov": "Point of view: {name}.",
+        "writeCast": "Characters present: {names}.",
+        "writeRole.OPENING": "Open in motion: start inside the action, not with a summary or the weather.",
+        "writeRole.ESCALATION": "Raise the pressure: the conflict gets harder or more personal.",
+        "writeRole.TURN": "Land the turn: something shifts and the situation is no longer what it was.",
+        "writeRole.HOOK": "End the scene on a hook that pulls into what comes next; do not summarise or reflect.",
+        "writeRules": "Write only this segment's prose: no headings, no segment numbers, no recap of earlier text, and do not write later segments."
+    }
+}

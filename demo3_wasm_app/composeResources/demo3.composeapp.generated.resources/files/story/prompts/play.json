@@ -28,11 +28,16 @@
         "actionsActorFree": "\"actor\" is the name of the acting character.",
         "actionsThoughtNone": "Leave \"thought\" as an empty string in every action.",
         "actionsThoughtAllowed": "\"thought\" is a short inner thought of the actor, or an empty string.",
-        "formatText": "{TEXT}:\n[Chapter prose here]"
+        "formatText": "{TEXT}:\n[Chapter prose here]",
+        "actionsOnlySystem": "You suggest what happens next in an interactive story. Reply with exactly one JSON object and nothing else.",
+        "actionsOnlyChapter": "CHAPTER JUST WRITTEN: {title}\n{SUMMARY}: {summary}\n{prose}",
+        "actionsOnlyRetry": "NOTE: your previous answer did not hold 4 valid actions. Reply again with exactly 4, each with a non-empty \"action\" and an allowed \"actor\".",
+        "actionsOnlyAsk": "Suggest exactly 4 distinct next actions for what happens after this chapter. Reply with exactly one JSON object and nothing else:\n{\"actions\":[{\"actor\":\"<character name>\",\"action\":\"<what they do next>\",\"thought\":\"<what they think, or empty>\"}]}"
     },
     "numbers": {
         "minWords": 250,
         "maxWords": 400,
-        "digestCharBudget": 1200
+        "digestCharBudget": 1200,
+        "actionsOnlyProseBudget": 3000
     }
 }

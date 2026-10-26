@@ -1,0 +1,38 @@
+{
+  "id": "scene_length",
+  "title": "Scene Length",
+  "selection": "single",
+  "promptLabel": "Scene Length",
+  "options": [
+    {
+      "id": "scene_len_brief",
+      "label": "Brief scenes (200–350 words)",
+      "prompt": "Brief scene (200–350 words)",
+      "description": "A tight scene: one clear exchange or action that lands its turn quickly.",
+      "category": "scene_length",
+      "minWords": 200,
+      "maxWords": 350,
+      "paragraphGuidance": "3–5 short paragraphs"
+    },
+    {
+      "id": "scene_len_standard",
+      "label": "Standard scenes (400–900 words)",
+      "prompt": "Standard scene (400–900 words)",
+      "description": "Room for a full scene shape: an opening in motion, rising conflict, a turn and a hook.",
+      "category": "scene_length",
+      "minWords": 400,
+      "maxWords": 900,
+      "paragraphGuidance": "5–10 developed paragraphs"
+    },
+    {
+      "id": "scene_len_long",
+      "label": "Long scenes (1,000–1,600 words)",
+      "prompt": "Long scene (1,000–1,600 words)",
+      "description": "An extended scene with several exchanges, set pieces or reversals.",
+      "category": "scene_length",
+      "minWords": 1000,
+      "maxWords": 1600,
+      "paragraphGuidance": "10–18 developed paragraphs"
+    }
+  ]
+}

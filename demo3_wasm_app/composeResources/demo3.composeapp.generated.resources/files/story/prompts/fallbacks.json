@@ -4,7 +4,6 @@
         "chapterTitle": "Chapter {number}: {choice}",
         "untitledChapterNode": "Chapter {number}: Untitled",
         "directBranch": "Direct Branch",
-        "firstSceneTitle": "Scene 1: Inciting Beat",
         "customTropeDescription": "User-defined narrative archetype"
     }
 }
