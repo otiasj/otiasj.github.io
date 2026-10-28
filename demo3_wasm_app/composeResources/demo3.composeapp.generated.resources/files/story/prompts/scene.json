@@ -26,6 +26,7 @@
         "chapterGoal": "Chapter goal: {goal}",
         "nextScene": "\nNext scene (lead toward it, but do not write it): {title} — {summary}",
         "sceneLength": "\nScene length: write {minWords}–{maxWords} words, {paragraphGuidance}.",
-        "sceneShape": "Shape the scene: open in motion, inside the point-of-view character's goal; escalate the conflict; land the turn; end on a hook that leads into what comes next. Do not end on a summary or a reflection that restates the scene."
+        "sceneShape": "Shape the scene: open in motion, inside the point-of-view character's goal; escalate the conflict; land the turn; end on a hook that leads into what comes next. Do not end on a summary or a reflection that restates the scene.",
+        "sceneBeat": "Story beat: {label} — {directive}"
     }
 }

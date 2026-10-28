@@ -24,6 +24,10 @@
         "chapterBeatsHeading": "This chapter's beats (each scene serves one, in order; every beat gets at least one scene):",
         "chapterAsk": "\nWrite exactly {scenes} scenes. In each, a point-of-view character wants something, a conflict blocks it, and a turn leaves the situation changed; only 2-3 characters are present. Answer with ONE JSON object:",
         "chapterShape": "{\"scenes\": [{\"title\": \"<scene title>\", \"beat\": \"<beat id from this chapter's beats>\", \"setting\": \"<where it happens>\", \"description\": \"<what the point-of-view character wants and what happens>\", \"conflict\": \"<what blocks them>\", \"turn\": \"<the shift that ends the scene in a new situation>\", \"subtext\": \"<what is left unsaid>\", \"pov\": \"<character name>\", \"cast\": [\"<names of the 2-3 characters present>\"]}]}",
-        "chapterRetry": "Your previous answer had {previous} complete scenes; write exactly {scenes}, each with a title and a description."
+        "chapterRetry": "Your previous answer had {previous} complete scenes; write exactly {scenes}, each with a title and a description.",
+        "endingFinalLine": "Ending (this scene reaches it): {value}",
+        "storySoFarHeading": "\nThe story so far, as planned (continue it; do not repeat it):",
+        "storySoFarChapter": "- Chapter {number}: {title} — {goal}",
+        "storySoFarScene": "- {chapter}.{number} {title}: {summary}"
     }
 }

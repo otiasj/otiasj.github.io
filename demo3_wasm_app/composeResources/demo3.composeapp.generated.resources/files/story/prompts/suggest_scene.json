@@ -28,6 +28,7 @@
         "tagsOption": "{id} = {label}",
         "tagsHeading": "\nScene tags you may choose from (id = label), by section:",
         "jsonPart.pov": "\"pov\": \"<name of the point-of-view character, from the characters above>\"",
-        "jsonPart.cast": "\"cast\": [\"<names of the 2-3 characters present in this scene, the point-of-view character included>\"]"
+        "jsonPart.cast": "\"cast\": [\"<names of the 2-3 characters present in this scene, the point-of-view character included>\"]",
+        "beatLine": "\nThis scene serves the story beat: {label} — {directive}"
     }
 }
