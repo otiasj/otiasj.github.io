@@ -3,33 +3,39 @@
     android:height="32dp"
     android:viewportWidth="32"
     android:viewportHeight="32">
-  <!-- T-shirt (top-left) -->
   <path
-      android:strokeWidth="1.8"
-      android:pathData="M8,4 C9.2,5.2 11.3,5.2 12.5,4 L16.8,6.5 L18.2,9.5 L15.5,11 L15,16.5 H5.5 L5,11 L2.3,9.5 L3.7,6.5 Z"
-      android:strokeColor="#FF000000"
+      android:strokeWidth="1"
+      android:pathData="M7.32609,3L2.37795,5.14286C2.24439,5.1998 2.12521,5.27914 2.02732,5.37628C1.92943,5.47342 1.85478,5.58643 1.80771,5.70874C1.76063,5.83106 1.74207,5.96026 1.75308,6.08884C1.7641,6.21742 1.80448,6.34283 1.87189,6.45779L4.17727,10.4026C4.24401,10.5174 4.33634,10.6197 4.44894,10.7035C4.56153,10.7873 4.69217,10.8509 4.8333,10.8908C4.97444,10.9306 5.12329,10.9459 5.27126,10.9356C5.41923,10.9254 5.5634,10.8899 5.69546,10.8312L6.42643,10.5V18H14.0736V10.5L14.8045,10.8312C14.9366,10.8899 15.0808,10.9254 15.2287,10.9356C15.3767,10.9459 15.5256,10.9306 15.6667,10.8908C15.8078,10.8509 15.9385,10.7873 16.0511,10.7035C16.1637,10.6197 16.256,10.5174 16.3227,10.4026L18.6281,6.45779C18.6955,6.34283 18.7359,6.21742 18.7469,6.08884C18.7579,5.96026 18.7394,5.83106 18.6923,5.70874C18.6452,5.58643 18.5706,5.47342 18.4727,5.37628C18.3748,5.27914 18.2556,5.1998 18.1221,5.14286L13.1739,3C12.4992,4.55844 11.487,5.33766 10.25,5.33766C9.01296,5.33766 8.00084,4.55844 7.32609,3Z"
+      android:strokeColor="#FF47403C"
       android:fillColor="#00000000"
       android:strokeLineCap="round"
       android:strokeLineJoin="round"/>
-  <!-- Jeans (bottom-right) -->
   <path
-      android:strokeWidth="1.8"
-      android:pathData="M14.5,12 H27.5 C28.3,12 29,12.7 29,13.5 V27.5 C29,28.3 28.3,29 27.5,29 H23 C22.4,29 22,28.6 22,28 V19.5 H20 V28 C20,28.6 19.6,29 19,29 H14.5 C13.7,29 13,28.3 13,27.5 V13.5 C13,12.7 13.7,12 14.5,12 Z"
-      android:strokeColor="#FF000000"
+      android:strokeWidth="1"
+      android:pathData="M28.0413,11.7582C28.3175,11.7582 28.5413,11.982 28.5413,12.2582V28.3578C28.5413,28.6937 28.4078,29.0167 28.1702,29.2543C27.9327,29.4915 27.6105,29.6244 27.2747,29.6244H25.1644C24.8569,29.6229 24.5606,29.5099 24.3304,29.306C24.1008,29.1026 23.9523,28.8231 23.9134,28.5189L23.2493,23.4164L22.5863,28.5189C22.5474,28.8229 22.3996,29.1026 22.1702,29.306C21.9401,29.5099 21.6428,29.6229 21.3353,29.6244H19.2249C18.8891,29.6244 18.5669,29.4916 18.3294,29.2543C18.0919,29.0167 17.9583,28.6937 17.9583,28.3578V12.2582C17.9583,11.982 18.1822,11.7582 18.4583,11.7582H28.0413Z"
+      android:strokeColor="#FF47403C"
       android:fillColor="#00000000"
       android:strokeLineCap="round"
       android:strokeLineJoin="round"/>
-  <!-- Waistband tie / details -->
   <path
-      android:strokeWidth="1.8"
-      android:pathData="M18,14.5 L19,17.5"
-      android:strokeColor="#FF000000"
+      android:strokeWidth="1"
+      android:pathData="M18.4583,15.1332H28.0417"
+      android:strokeColor="#FF47403C"
       android:fillColor="#00000000"
-      android:strokeLineCap="round"/>
+      android:strokeLineCap="round"
+      android:strokeLineJoin="round"/>
   <path
-      android:strokeWidth="1.8"
-      android:pathData="M24,14.5 L23,17.5"
-      android:strokeColor="#FF000000"
+      android:strokeWidth="1"
+      android:pathData="M20.9501,15.1332L20.1834,18.1998M25.5501,15.1332L26.3168,18.1998"
+      android:strokeColor="#FF47403C"
       android:fillColor="#00000000"
-      android:strokeLineCap="round"/>
+      android:strokeLineCap="round"
+      android:strokeLineJoin="round"/>
+  <path
+      android:strokeWidth="1"
+      android:pathData="M23.2501,12.5729C23.8702,12.573 24.3731,13.0758 24.3731,13.696C24.3731,14.316 23.8702,14.8189 23.2501,14.819C22.63,14.819 22.1271,14.3161 22.127,13.696C22.127,13.0758 22.6299,12.5729 23.2501,12.5729Z"
+      android:strokeColor="#FF47403C"
+      android:fillColor="#00000000"
+      android:strokeLineCap="round"
+      android:strokeLineJoin="round"/>
 </vector>
