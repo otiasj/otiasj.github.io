@@ -15,7 +15,7 @@
         "premiseQuoted": "Story Premise: \"{premise}\"",
         "charactersHeading": "\nCharacters:",
         "characterLine": "- {name} ({role}){marker}: Traits: {traits}. Personality: [{radar}]. Motivation: {motivation}. Flaw: {flaw}",
-        "personalityRadar": "Ruthlessness: {ruthlessness}%, Cynicism: {cynicism}%, Loyalty: {loyalty}%, Empathy: {empathy}%",
+        "personalityRadar": "Agency: {agency}%, Moral Flexibility: {moralFlexibility}%, Volatility: {volatility}%, Social Warmth: {socialWarmth}%, Intellect: {intellect}%, Vulnerability: {vulnerability}%",
         "tropesHeading": "\nLiterary Tropes & Motifs:",
         "activeTropesHeading": "\nActive Literary Tropes:",
         "tropeLine": "- {trope}",

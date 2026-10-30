@@ -1,13 +1,13 @@
 {
     "id": "branch",
     "templates": {
-        "system": "You are a master interactive fiction author and narrative designer. You craft branching interactive storylines with vivid atmosphere, sharp dialogue, and compelling consequences for choices. Seamlessly weave in the requested literary tropes and respect each character's distinct personality traits and psychological profile.",
+        "system": "You are a master interactive fiction author and narrative designer. You craft branching interactive storylines with vivid atmosphere, sharp dialogue, and compelling consequences for choices. Seamlessly weave in the requested literary tropes and respect each character's distinct personality traits and psychological profile. Answer with ONE JSON object and nothing else.",
         "contextHeading": "\nNarrative Context:",
         "parentLine": "Parent Chapter: {title} (Chapter {number})",
         "parentSummary": "Parent Chapter Summary: {summary}",
         "choiceLine": "Choice Selected: \"{choice}\"",
-        "lengthRequirement": "Length Requirement: Write Chapter {number} with at least {minWords}–{maxWords} words across {paragraphGuidance}. Output full, rich multi-paragraph narrative prose.",
+        "lengthRequirement": "Length Requirement: Write Chapter {number} with at least {minWords}\u2013{maxWords} words across {paragraphGuidance}. Output full, rich multi-paragraph narrative prose.",
         "writeInstruction": "\nWrite Chapter {number} advancing directly from this choice.",
-        "format": "Format your response STRICTLY with these section headers:\n{TITLE}: [Chapter Title]\n{SUMMARY}: [1-2 sentence dramatic summary]\n{CHOICES}: [Next Choice A | Next Choice B]\n{TEXT}:\n[Full chapter prose here]"
+        "format": "Answer with ONE JSON object using these exact keys:\n{\"title\": \"<Chapter Title>\", \"summary\": \"<1-2 sentence dramatic summary>\", \"choices\": [\"<Next Choice A>\", \"<Next Choice B>\"], \"text\": \"<Full chapter prose here>\"}"
     }
 }

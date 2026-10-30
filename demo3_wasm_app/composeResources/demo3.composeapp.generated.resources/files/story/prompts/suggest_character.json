@@ -1,20 +1,20 @@
 {
     "id": "suggest_character",
     "templates": {
-        "system": "You are a creative writing character designer. Respond strictly in KEY: VALUE format.",
+        "system": "You are a creative writing character designer. Answer with ONE JSON object and nothing else.",
         "roleLine": "Role to create: {role}",
         "existingLine": "Existing characters (never reuse any of these names): {characters}",
         "existingItem": "{name} ({role})",
         "contrastLine": "Make this character clearly different from the existing ones: contrasting traits, motivation and flaw, so they pull against each other.",
         "nameInstruction": "\nInvent a distinctive, concrete name appropriate for this story premise and role. Never output placeholders like [Character Name] or [companion name].",
         "nameConstraint": "Name inspiration (a loose hint, not a rule; the story's genre and tone win if they clash): {origin}-inspired, the first name starts with the letter {letter}.",
-        "formatHeading": "Respond ONLY with the following lines (no preamble, no markdown asterisks):",
-        "hint.NAME": "{NAME}: An evocative character name",
-        "hint.TRAITS": "{TRAITS}: 2-3 distinctive personality traits",
-        "hint.MOTIVATION": "{MOTIVATION}: Core desire or goal",
-        "hint.FLAW": "{FLAW}: Significant internal conflict or fatal flaw",
+        "formatHeading": "Respond with ONE JSON object using these exact keys (no preamble, no markdown formatting outside the JSON):",
+        "hint.NAME": "\"name\": \"<an evocative character name>\"",
+        "hint.TRAITS": "\"traits\": \"<2-3 distinctive personality traits>\"",
+        "hint.MOTIVATION": "\"motivation\": \"<core desire or goal>\"",
+        "hint.FLAW": "\"flaw\": \"<significant internal conflict or fatal flaw>\"",
         "knownHeading": "\nDetails already chosen:",
         "knownLine": "{key}: {value}",
-        "completeInstruction": "\nSome details of this character are missing. Decide only the missing ones so they fit the story and the details already chosen. Never output placeholders like [Character Name]."
+        "completeInstruction": "\nSome details of this character are missing. Decide only the missing ones so they fit the story and the details already chosen. Never output placeholders like [Character Name]. Answer with ONE JSON object:"
     }
 }

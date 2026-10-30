@@ -1,7 +1,7 @@
 {
     "id": "brainstorm",
     "templates": {
-        "system": "You are a master fiction author, narrative designer, and creative writing consultant. Generate high-quality, genre-appropriate story ideas strictly in the requested section format.",
+        "system": "You are a master fiction author, narrative designer, and creative writing consultant. Generate high-quality, genre-appropriate story ideas. Answer with ONE JSON object and nothing else.",
         "contextHeading": "Story Context:",
         "genreLine": "Genre: {value}",
         "toneLine": "Tone: {value}",
@@ -18,9 +18,9 @@
         "varietyItem": "{number}. {value}",
         "varietyNameValue": "{origin}-inspired, starting with the letter {letter}",
         "varietyPremiseValue": "setting: {setting}; inciting incident: {incident}; central conflict: {conflict}; twist: {twist}",
-        "instructions": "\nGenerate a creative brainstorm batch tailored to this story. Provide diverse, evocative, ready-to-use ideas. Never use generic placeholders like [Title] or [Character Name].\nRespond strictly with these exact section headers and hyphenated bullet lists (no markdown bolding, no conversational intro/outro):",
-        "identitySections": "{TITLES}:\n- [Title 1]\n- [Title 2]\n- ... (provide 10 distinctive titles)\n{PREMISES}:\n- [1-2 sentence dramatic premise]\n- ... (provide 5 compelling premises)",
-        "castSections": "{NAMES}:\n- [Distinctive character name]\n- ... (provide 10 evocative character names)\n{MOTIVATIONS}:\n- [Deep, actionable character goal or desire]\n- ... (provide 6 distinctive motivations)\n{FLAWS}:\n- [Internal psychological conflict or fatal flaw]\n- ... (provide 6 distinctive character flaws)",
-        "sceneSections": "{SCENE_TITLES}:\n- [Dramatic chapter or scene beat title]\n- ... (provide 6 scene titles)\n{SCENE_SETTINGS}:\n- [Atmospheric, sensory setting or location]\n- ... (provide 6 atmospheric settings)"
+        "instructions": "\nGenerate a creative brainstorm batch tailored to this story. Provide diverse, evocative, ready-to-use ideas. Never use generic placeholders like [Title] or [Character Name]. Answer with ONE JSON object:",
+        "identitySections": "{\"titles\": [\"<title 1>\", \"<title 2>\", \"... (10 distinctive titles)\"], \"premises\": [\"<1-2 sentence dramatic premise>\", \"... (5 compelling premises)\"]}",
+        "castSections": "{\"characterNames\": [\"<distinctive character name>\", \"... (10 evocative character names)\"], \"motivations\": [\"<deep, actionable character goal or desire>\", \"... (6 distinctive motivations)\"], \"flaws\": [\"<internal psychological conflict or fatal flaw>\", \"... (6 distinctive character flaws)\"]}",
+        "sceneSections": "{\"sceneTitles\": [\"<dramatic chapter or scene beat title>\", \"... (6 scene titles)\"], \"sceneSettings\": [\"<atmospheric, sensory setting or location>\", \"... (6 atmospheric settings)\"]}"
     }
 }

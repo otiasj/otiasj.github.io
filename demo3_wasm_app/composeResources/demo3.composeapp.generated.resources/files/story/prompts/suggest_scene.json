@@ -1,22 +1,22 @@
 {
     "id": "suggest_scene",
     "templates": {
-        "system": "You are a narrative outline architect. Design the next scene beat. Respond strictly in KEY: VALUE format.",
+        "system": "You are a narrative outline architect. Design the next scene beat. Answer with ONE JSON object and nothing else.",
         "currentScenesHeading": "Current Scenes:",
         "sceneLine": "{number}. {title} ({setting}) - {description}",
-        "formatHeading": "\nSuggest the next dramatic scene beat. Respond ONLY with:",
-        "hint.TITLE": "{TITLE}: [Scene Title]",
-        "hint.SETTING": "{SETTING}: [Location/Setting]",
-        "hint.TWIST": "{TWIST}: [Obstacle, Mystery, or Confrontation]",
-        "hint.DESCRIPTION": "{DESCRIPTION}: [Action and events in this scene beat]",
+        "formatHeading": "\nSuggest the next dramatic scene beat. Answer with ONE JSON object using these exact keys:",
+        "hint.TITLE": "\"title\": \"<scene title>\"",
+        "hint.SETTING": "\"setting\": \"<location/setting>\"",
+        "hint.TWIST": "\"twist\": \"<obstacle, mystery, or confrontation>\"",
+        "hint.DESCRIPTION": "\"description\": \"<action and events in this scene beat>\"",
         "knownHeading": "\nScene beat so far:",
         "knownLine": "{key}: {value}",
-        "completeInstruction": "\nSome details of this scene beat are missing. Decide only the missing ones so they fit the story and the details already chosen. Respond ONLY with:",
-        "tagsSystem": "You are a narrative outline architect. Design the next scene beat, choose fitting scene tags from the catalog, and write the scene's subtext and turn. Answer with KEY: VALUE lines, then one JSON object.",
+        "completeInstruction": "\nSome details of this scene beat are missing. Decide only the missing ones so they fit the story and the details already chosen. Answer with ONE JSON object:",
+        "tagsSystem": "You are a narrative outline architect. Design the next scene beat, choose fitting scene tags from the catalog, and write the scene's subtext and turn. Answer with ONE JSON object and nothing else.",
         "castLine": "- {name} ({role}): {traits}",
         "previousSceneHeading": "\nPrevious scene (continue from it, do not repeat it):",
         "previousSceneLine": "{title} ({setting}) - {summary}",
-        "tagsIntro": "\nThen, on new lines, answer with ONE JSON object (section ids as keys, tag ids from the list as values):",
+        "tagsIntro": "\nAnswer with ONE JSON object:",
         "completeTagsIntro": "\nSome parts of this scene are missing. Decide only the missing ones so they fit the story and the scene beat so far. Answer with ONE JSON object:",
         "jsonPart.tags": "\"tags\": {\"<section id>\": [\"<tag id>\"]}",
         "jsonPart.subtext": "\"subtext\": \"<what the characters leave unsaid: secrets and tension under the surface>\"",
@@ -29,6 +29,6 @@
         "tagsHeading": "\nScene tags you may choose from (id = label), by section:",
         "jsonPart.pov": "\"pov\": \"<name of the point-of-view character, from the characters above>\"",
         "jsonPart.cast": "\"cast\": [\"<names of the 2-3 characters present in this scene, the point-of-view character included>\"]",
-        "beatLine": "\nThis scene serves the story beat: {label} — {directive}"
+        "beatLine": "\nThis scene serves the story beat: {label} \u2014 {directive}"
     }
 }

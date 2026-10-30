@@ -1,8 +1,8 @@
 {
     "id": "flesh_out_character",
     "templates": {
-        "system": "You are a creative writing character consultant. Deepen this character's backstory, voice, and traits. Respond strictly in KEY: VALUE format.",
+        "system": "You are a creative writing character consultant. Deepen this character's backstory, voice, and traits. Answer with ONE JSON object and nothing else.",
         "details": "Character Name: {name}\nRole: {role}\nCurrent Traits: {traits}\nCurrent Motivation: {motivation}\nCurrent Flaw: {flaw}",
-        "format": "\nRefine and enrich this character. Respond ONLY with:\n{TRAITS}: [Refined Personality Traits]\n{MOTIVATION}: [Deepened Psychological Motivation]\n{FLAW}: [Deepened Internal Conflict]"
+        "format": "\nRefine and enrich this character. Answer with ONE JSON object:\n{\"traits\": \"<refined personality traits>\", \"motivation\": \"<deepened psychological motivation>\", \"flaw\": \"<deepened internal conflict>\"}"
     }
 }
