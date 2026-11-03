@@ -19,6 +19,7 @@
         "stagingLine": "- {prefix}: {value}",
         "customDirectivesHeading": "\nCustom Directives (these take precedence over every other instruction, including length):",
         "continuity": "\nWhat just happened (end of the previous scene) — do not repeat or restate it; continue from here:\n{summary}",
+        "previousRecap": "\nWhat the previous scene established: {recap}",
         "previousDraftHeading": "\nPrevious Scene Draft:",
         "reviseInstruction": "\nPlease revise and output the improved scene prose incorporating these instructions.",
         "writeInstruction": "\nPlease write the narrative prose for this scene beat only. Do not recap or restate earlier scenes.",
@@ -27,6 +28,13 @@
         "nextScene": "\nNext scene (lead toward it, but do not write it): {title} — {summary}",
         "sceneLength": "\nScene length: write {minWords}–{maxWords} words, {paragraphGuidance}.",
         "sceneShape": "Shape the scene: open in motion, inside the point-of-view character's goal; escalate the conflict; land the turn; end on a hook that leads into what comes next. Do not end on a summary or a reflection that restates the scene.",
-        "sceneBeat": "Story beat: {label} — {directive}"
+        "sceneBeat": "Story beat: {label} — {directive}",
+        "outputProse": "\nOutput format: put the prose inside <prose> and </prose>, and write nothing outside the tags.",
+        "outputProseRecap": "\nOutput format: put the prose inside <prose> and </prose>. After </prose>, add <recap>one sentence: what happened in this scene and what changed</recap>. Write nothing else outside these tags.",
+        "continueCutOff": "\nYour previous answer was cut off before </prose>. Its text ends like this:\n{partial}\nContinue from exactly where it stopped, without repeating any of it, in a new <prose> tag.",
+        "outputProseContinue": "\nOutput format: your answer already starts inside <prose>. Continue the prose, close it with </prose>, and write nothing after it.",
+        "outputProseContinueRecap": "\nOutput format: your answer already starts inside <prose>. Continue the prose and close it with </prose>. After </prose>, add <recap>one sentence: what happened in this whole scene and what changed</recap>. Write nothing else after it.",
+        "continuePrefilled": "\nYour previous answer was cut off before </prose>. It is repeated at the start of your answer: continue it from exactly where it stops, without repeating any of it.",
+        "writingStyle": "Writing style: {style}"
     }
 }

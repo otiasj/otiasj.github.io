@@ -27,7 +27,7 @@ Does NOT own: LLM model training, multimodal vision features, or user authentica
 
 ## Key Types
 
-**Core models & ViewModel:** `StoryFormState`, `StoryParameters`, `StoryProject`, `NarrativeNode`, `ChapterItem`, `SceneItem`. **ViewModel & routing:** `StoryGeneratorViewModel`, `StoryGeneratorScreen`, `StoryGeneratorComponent` (DI). **UI state & screens:** `StoryGeneratorUiState` (sealed interface), `StoryGeneratorContent` (multi-pane layout). **Domain models:** `StoryGenre`, `StoryTone`, `NarrativePerspective`, `NarrativeTense`, `StoryLength`, `CharacterRole`, `CharacterItem`, `LiteraryTrope`, `TropeCategory`. **Prompting:** `StoryPromptBuilder` (assembles prompts, handles chapter/scene ordering), `PromptTemplates` / `PromptCatalog` (templated prompt text), `ResponseKeys` (response header tokens). **Export:** `StoryExportEngine` (Markdown export with YAML frontmatter, word count, metadata). **LLM integration:** `StoryLlmGateway` (interface), `LmStudioStoryService` (HTTP streaming), `StoryLlmDefaults` (endpoints). **Use cases:** `GenerateStoryUseCase`, `BranchChapterUseCase`, `RefineChapterUseCase`, `SuggestCharacterUseCase`, `FleshOutCharacterUseCase`, `SuggestSceneUseCase`, `FleshOutSceneUseCase`, `GenerateSceneUseCase`, `CheckConnectionUseCase`. **UI components:** `StoryCharacterCard`, `StoryCharacterRadar`, `StoryCharactersSection`, `StoryCoreParamsSection`, `StoryExportDialog`, `StoryPromptInspectorDialog`, `StoryManuscriptReaderPane`, `StoryOutlinePane`, `StoryBranchDialog`, `StoryRefineDialog`, `StoryNodeEditDialog`, `StorySceneCard`, `StoryScenesSection`, `PromptSectionView`.
+**Core models & ViewModel:** `StoryFormState`, `StoryParameters`, `StoryProject`, `NarrativeNode`, `ChapterItem`, `SceneItem`. **ViewModel & routing:** `StoryGeneratorViewModel`, `StoryGeneratorScreen`, `StoryGeneratorComponent` (DI). **UI state & screens:** `StoryGeneratorUiState` (sealed interface), `StoryGeneratorContent` (multi-pane layout). **Domain models:** `StoryGenre`, `StoryTone`, `NarrativePerspective`, `NarrativeTense`, `StoryLength`, `CharacterRole`, `CharacterItem`, `LiteraryTrope`, `TropeCategory`. **Prompting:** `StoryPromptBuilder` (assembles prompts, handles chapter/scene ordering), `PromptTemplates` / `PromptCatalog` (templated prompt text), `ResponseKeys` (response header tokens). **Export:** `StoryExportEngine` (Markdown export with YAML frontmatter, word count, metadata). **LLM integration:** `StoryLlmGateway` (interface), `LmStudioStoryService` (HTTP streaming), `StoryLlmDefaults` (endpoints). **Use cases:** `BranchChapterUseCase`, `RefineChapterUseCase`, `SuggestCharacterUseCase`, `FleshOutCharacterUseCase`, `SuggestSceneUseCase`, `FleshOutSceneUseCase`, `GenerateSceneUseCase`, `CheckConnectionUseCase`. **UI components:** `StoryCharacterCard`, `StoryCharacterRadar`, `StoryCharactersSection`, `StoryCoreParamsSection`, `StoryExportDialog`, `StoryPromptInspectorDialog`, `StoryManuscriptReaderPane`, `StoryOutlinePane`, `StorySceneCard`, `StoryScenesSection`, `PromptSectionView`.
 
 ## Dependencies
 
@@ -40,19 +40,19 @@ Does NOT own: LLM model training, multimodal vision features, or user authentica
 User interaction (form input)
      │
      ▼
-StoryGeneratorViewModel.generateStory()
+StoryGeneratorViewModel.generateScene()
      │
      ├─ validate form state
      │
-     ├─ invoke GenerateStoryUseCase(formState)
+     ├─ invoke GenerateSceneUseCase(form, chapter, scene)
      │       │
      │       ▼
-     │   StoryLlmGateway.generateStory(prompt)
+     │   StoryLlmGateway.sendChatCompletion(prompt)
      │       │
      │       ├─ build prompt (StoryPromptBuilder)
      │       │
      │       ▼
-     │   LmStudioStoryService.generateStory() [HTTP POST]
+     │   LmStudioStoryService.sendChatCompletion() [HTTP POST]
      │       │
      │       ├─ stream response
      │       │

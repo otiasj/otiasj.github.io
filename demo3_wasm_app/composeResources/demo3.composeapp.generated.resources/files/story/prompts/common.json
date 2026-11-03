@@ -23,6 +23,8 @@
         "refinementHeading": "\nRefinement Request:",
         "chapterLabel": "Chapter {number}",
         "defaultCharacterPrompt": "Invent compelling characters with distinct personalities, motivations, flaws, and roles that naturally fit the story premise and genre.",
-        "defaultScenePrompt": "Structure engaging scene beats with rising tension, key revelations, dramatic pacing, and narrative twists that naturally fit the story premise and genre."
+        "defaultScenePrompt": "Structure engaging scene beats with rising tension, key revelations, dramatic pacing, and narrative twists that naturally fit the story premise and genre.",
+        "tropesLine": "Tropes: {tropes}",
+        "authorGuidance": "Author's guidance (follow it): {guidance}"
     }
 }
