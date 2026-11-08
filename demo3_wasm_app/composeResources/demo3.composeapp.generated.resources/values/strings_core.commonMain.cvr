@@ -160,6 +160,15 @@ string|status_unchecked|VW5jaGVja2Vk
 string|time_relative_am_pm|JTEkZDolMiRzICUzJHM=
 string|time_relative_am|QU0=
 string|time_relative_date_format|JTEkcyAlMiRk
+string|time_relative_days_ago|JTEkZCBkYXlzIGFnbw==
+string|time_relative_hours_ago|JTEkZCBob3VycyBhZ28=
 string|time_relative_just_now|anVzdCBub3c=
 string|time_relative_minutes_ago|JTEkZCBtaW51dGVzIGFnbw==
+string|time_relative_months_ago|JTEkZCBtb250aHMgYWdv
+string|time_relative_one_day_ago|MSBkYXkgYWdv
+string|time_relative_one_hour_ago|MSBob3VyIGFnbw==
+string|time_relative_one_minute_ago|MSBtaW51dGUgYWdv
+string|time_relative_one_month_ago|MSBtb250aCBhZ28=
+string|time_relative_one_year_ago|MSB5ZWFyIGFnbw==
 string|time_relative_pm|UE0=
+string|time_relative_years_ago|JTEkZCB5ZWFycyBhZ28=

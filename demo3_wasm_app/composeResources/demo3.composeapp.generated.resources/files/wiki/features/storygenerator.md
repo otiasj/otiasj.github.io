@@ -14,7 +14,7 @@ spec_status: locked
 
 ## Purpose
 
-AI-powered story writing tool that generates narrative content using local LLM backends (LM Studio, Ollama). Users define story parameters (genre, tone, length, perspective), populate a cast of characters, seed scenes with literary tropes, then generate and iteratively refine the narrative through branching, character development, and scene composition.
+AI-powered story writing tool that generates narrative content using local LLM backends (LM Studio, Ollama). Users define story parameters (genre, tone, length, perspective), populate a cast of characters, seed scenes with literary tropes, then plan a story spine, chapters and scenes and draft each scene's prose (one micro-arc segment at a time), revising scenes as needed.
 
 Package: `com.otiasj.features.storygenerator`
 Path: `Applications/Demo3/composeApp/src/commonMain/kotlin/com/otiasj/features/storygenerator/`
@@ -27,7 +27,7 @@ Does NOT own: LLM model training, multimodal vision features, or user authentica
 
 ## Key Types
 
-**Core models & ViewModel:** `StoryFormState`, `StoryParameters`, `StoryProject`, `NarrativeNode`, `ChapterItem`, `SceneItem`. **ViewModel & routing:** `StoryGeneratorViewModel`, `StoryGeneratorScreen`, `StoryGeneratorComponent` (DI). **UI state & screens:** `StoryGeneratorUiState` (sealed interface), `StoryGeneratorContent` (multi-pane layout). **Domain models:** `StoryGenre`, `StoryTone`, `NarrativePerspective`, `NarrativeTense`, `StoryLength`, `CharacterRole`, `CharacterItem`, `LiteraryTrope`, `TropeCategory`. **Prompting:** `StoryPromptBuilder` (assembles prompts, handles chapter/scene ordering), `PromptTemplates` / `PromptCatalog` (templated prompt text), `ResponseKeys` (response header tokens). **Export:** `StoryExportEngine` (Markdown export with YAML frontmatter, word count, metadata). **LLM integration:** `StoryLlmGateway` (interface), `LmStudioStoryService` (HTTP streaming), `StoryLlmDefaults` (endpoints). **Use cases:** `BranchChapterUseCase`, `RefineChapterUseCase`, `SuggestCharacterUseCase`, `FleshOutCharacterUseCase`, `SuggestSceneUseCase`, `FleshOutSceneUseCase`, `GenerateSceneUseCase`, `CheckConnectionUseCase`. **UI components:** `StoryCharacterCard`, `StoryCharacterRadar`, `StoryCharactersSection`, `StoryCoreParamsSection`, `StoryExportDialog`, `StoryPromptInspectorDialog`, `StoryManuscriptReaderPane`, `StoryOutlinePane`, `StorySceneCard`, `StoryScenesSection`, `PromptSectionView`.
+**Core models & ViewModel:** `StoryFormState`, `StoryParameters`, `StoryProject`, `NarrativeNode`, `ChapterItem`, `SceneItem`, `PersonalityTraits`. **ViewModel & routing:** `StoryGeneratorViewModel`, `StoryGeneratorScreen`, `StoryGeneratorComponent` (DI). **UI state & screens:** `StoryGeneratorUiState` (sealed interface), `StoryGeneratorContent` (multi-pane layout). **Domain models:** `StoryGenre`, `StoryTone`, `NarrativePerspective`, `NarrativeTense`, `StoryLength`, `CharacterRole`, `CharacterItem`, `LiteraryTrope`, `TropeCategory`. **Prompting:** `StoryPromptBuilder` (assembles prompts, handles chapter/scene ordering), `PromptTemplates` / `PromptCatalog` (templated prompt text), `ResponseKeys` (response header tokens). **Export:** `StoryExportEngine` (Markdown export with YAML frontmatter, word count, metadata). **LLM integration:** `StoryLlmGateway` (interface), `UnifiedStoryLlmGateway` (multi-backend support), `LmStudioStoryService` (HTTP streaming), `StoryLlmDefaults` (endpoints), `StoryLlmPolicy` (reasoning effort targeting). **Use cases:** `PlanSpineUseCase`, `PlanChapterUseCase`, `PlanSceneUseCase`, `SuggestCharacterUseCase`, `FleshOutCharacterUseCase`, `SuggestSceneUseCase`, `FleshOutSceneUseCase`, `GenerateSceneUseCase`, `DraftSceneUseCase`, `CheckConnectionUseCase`. **UI components:** `StoryCharacterCard`, `StoryCharacterRadar`, `StoryCharactersSection`, `StoryCoreParamsSection`, `StoryExportDialog`, `StoryPromptInspectorDialog`, `StoryManuscriptReaderPane`, `StoryOutlinePane`, `StorySceneCard`, `StoryScenesSection`, `PromptSectionView`, `StoryTagDialogs`.
 
 ## Dependencies
 
@@ -36,50 +36,31 @@ Does NOT own: LLM model training, multimodal vision features, or user authentica
 
 ## Data Flow
 
+The story is built top-down. There is no single "generate the whole story" call: each step is its own foreground AI job started from `StoryGeneratorViewModel`.
+
 ```
-User interaction (form input)
+planSpine()        PlanSpineUseCase    one call: logline, conflict, ending, arc, chapter outlines (replaces chapters/scenes; asks first via StoryConfirmation.ReplaceSpine)
      │
-     ▼
-StoryGeneratorViewModel.generateScene()
+planChapter(id)    PlanChapterUseCase  one call per chapter: its scenes (ChapterReplan keeps staged/written scenes)
      │
-     ├─ validate form state
+planScene(c, s)    PlanSceneUseCase    one call: the scene's micro-arc (3-5 SceneSegment, each with a purpose and word target)
      │
-     ├─ invoke GenerateSceneUseCase(form, chapter, scene)
-     │       │
-     │       ▼
-     │   StoryLlmGateway.sendChatCompletion(prompt)
-     │       │
-     │       ├─ build prompt (StoryPromptBuilder)
-     │       │
-     │       ▼
-     │   LmStudioStoryService.sendChatCompletion() [HTTP POST]
-     │       │
-     │       ├─ stream response
-     │       │
-     │       ▼
-     │   parse response (StoryResponseParser)
-     │       │
-     │       ▼
-     │   emit story chunks to Flow
-     │
-     ├─ collect chunks; update state
-     │
-     ▼
-StoryGeneratorUiState.Success(story, characters, scenes)
-     │
-     ▼
-UI renders manuscript, narrative tree, outline
-     │
-     ├─ user selects branch/refine/export
-     │
-     └─ invoke corresponding use case
+generateScene()    DraftSceneUseCase   one prose call per segment without prose (plans the micro-arc first when none),
+     │                                 continuing from the text just before it; assembles SceneItem.prose + recap, status Drafted
+     │             (GenerateSceneUseCase: whole scene in one call, used for a refine (refinementInstruction) or when no
+     │              DraftSceneUseCase is wired)
+writeChapterScenes(id)  the chapter's unwritten scenes, in order, as one job (each carries the previous ending)
 ```
+
+Every step goes through `startForegroundJob`, which allows one `RunningAiJob` at a time (a second start is refused). The use cases call `StoryLlmGateway`, which queues each request on the app-wide `LlmRequestQueue`. Results are written with `commit` into the latest state, so edits made while a job runs survive. `redraftSegment()` redrafts one segment through `DraftSceneUseCase.draftSegment`, flagging later written segments stale.
+
+**Cancellation:** `cancelGeneration()` cancels the job's coroutine, which cancels its queued or running `LlmRequestQueue` request. The job's scenes get their earlier `SceneStatus` back, segments already written stay, and no error is shown. A job that is cancelled writes nothing more (`commit` ignores it). `resetForm()` cancels the running job too.
 
 ## Request Queue Integration
 
 Every story LLM call goes through the app-wide `LlmRequestQueue` (see `Applications/Demo3/docs/llm_request_queue_plan.md`), so it shows in LLM settings -> Requests.
 
-- **Foreground vs Background:** user actions (generate story/chapter/scene, refine, branch, flesh out, suggest character/scene, Play turns) are Foreground jobs; brainstorm fills (`BrainstormSuggestionsUseCase.fill`) are Background jobs with coalesce key `storygenerator.brainstorm.<Group>`. Labels come from `strings_story_generator.xml` (`story_job_*`) through `StoryJobLabels.current`, which the screen sets (English defaults pinned equal by `StoryUiStringsTest`).
+- **Foreground vs Background:** user actions (plan spine/chapter/scene, write scene/chapter, redraft segment, flesh out, suggest character/scene, Play turns) are Foreground jobs; brainstorm fills (`BrainstormSuggestionsUseCase.fill`) are Background jobs with coalesce key `storygenerator.brainstorm.<Group>`. Labels come from `strings_story_generator.xml` (`story_job_*`) through `StoryJobLabels.current`, which the screen sets (English defaults pinned equal by `StoryUiStringsTest`).
 - **Dispatch-time prompt:** `StoryLlmGateway.sendQueued(config, job, accept, build)` calls `build` when the job leaves the queue; the `StoryPrompt.context` (the `SuggestionContextKey` the prompt answers) comes back on the `StoryCompletion`. The 120 s `SUGGESTION_CALL_TIMEOUT_MS` deadline starts at dispatch.
 - **Context change:** a Queued fill is absorbed by a new request for the group (queue entry keeps its place, `updates++`); a Running fill is never cancelled: still-valid lists are kept, an all-stale result marks its entry `Superseded` and a refreshed fill is queued.
 - **Lanes:** unified pipeline calls use the target's lane; `LmStudioStoryService` waits on `TargetRef(endpointUrl, "lm-studio")`.
@@ -97,6 +78,25 @@ Every story LLM call goes through the app-wide `LlmRequestQueue` (see `Applicati
 ## Suggest scene: tags, subtext and turn
 
 `SuggestSceneUseCase` (given the form and `PromptCatalog`) uses `buildSuggestSceneTagsPrompt`: the beat as KEY: VALUE lines plus one JSON object `{tags, subtext, turn}`, with story context and the scene sections' `id = label` lists in the prompt. `SceneTagSuggestionParser` maps tags back to catalog ids (id or label, case-insensitive; unknown dropped; single sections 1, multi at most 3, total at most 8) and the subtext and turn land in `fieldValues` (`subtext`, `the_turn`); missing parts are asked once more (`buildCompleteSceneTagsPrompt`), else left blank. It only ever adds a new scene, so a user's scenes and tags are never modified. Opt-in live test: `STORY_SUGGEST_SCENE_LIVE=1 STORY_LIVE_MODEL=<id> ./gradlew :composeApp:desktopTest --tests "*SuggestSceneLiveTest*" --rerun`.
+
+## Reasoning Effort Configuration
+
+Story generation calls use `StoryLlmPolicy` to target specific reasoning effort:
+- **Brainstorm (low):** Character/scene suggestions use minimal reasoning for speed
+- **Scene generation (medium):** Scene content generation balances quality and latency
+- **Planning and scene drafting:** use `StoryLlmDefaults.STORY_DEFAULT_REASONING_EFFORT` unless `LmStudioConfig.reasoningEffort` is set
+- **Play turn (high):** Interactive play-chapter turns use extended reasoning for narrative coherence
+
+Configured via `LlmJobSpec.reasoningEffort` in `UnifiedStoryLlmGateway.sendQueued()`.
+
+## Character Personality Radar
+
+Characters are visualized with a 6-axis personality radar (`StoryCharacterRadar` component):
+- **Archetype traits:** Calculated from character role, description, and core values
+- **Interactive rays:** Tappable radar segments show character background and voice
+- **Radar metrics:** Dynamism, Complexity, Growth Potential, Relatability, Distinctiveness, Agency
+
+The radar is rendered with Material 3 colors and supports light/dark theme.
 
 ## Export & Persistence
 
@@ -130,7 +130,20 @@ Every story LLM call goes through the app-wide `LlmRequestQueue` (see `Applicati
 - **Manual testing** on Desktop (via the embedded LM Studio launcher).
 - **Scene state machine tests** verify transitions between OutlineOnly → Staged → Generating → Drafted → Revised states.
 
-## Recent Changes (October 2026)
+## Recent Changes (November 2026)
+
+**Refined Story Generator UI and Test Coverage (2026-11-02)** — Incremental refinements to the Story Generator feature including enhanced test coverage, UI component improvements, and string resource updates. Key changes:
+- **End-to-End and Instrumented Tests**: `StoryGeneratorEndToEndInstrumentedUiTest` and `StoryGeneratorLiveIntegrationScreenshotTest` added for comprehensive platform-specific testing.
+- **ViewModel Refinements**: `StoryGeneratorViewModel` updated with improved action handling, state transitions, and error management.
+- **Component Enhancements**: `StoryManuscriptReaderPane`, `StoryOutlinePane`, `StoryScenesSection`, and `StorySpineCard` components improved for better UI consistency and responsiveness.
+- **New Actions Component**: `StoryGeneratorActions.kt` centralizes action handling for story operations.
+- **Content Pane Refactoring**: `StoryGeneratorContent.kt` refactored for clearer separation of concerns and improved layout management.
+- **String Resources**: New localization entries in `strings_story_generator.xml` for manuscript reader, scene management, and UI feedback.
+- **Test Coverage**: `StoryGeneratorViewModelSceneTest`, `StoryGeneratorViewModelSuggestSceneTest`, `StoryGeneratorViewModelTest` added in `commonTest`.
+- **Desktop UI Tests**: `StoryBeatsTabUiTest`, `StoryManuscriptReaderUiTest`, `StoryUiStringsTest`, and `StoryGeneratorBugSweepVerificationTest` for comprehensive desktop validation.
+- **Version Bump**: Android version bumped to 1.5.2 (code 64).
+
+## Previous Changes (October 2026)
 
 **Interactive Play (beat-based arc) — Fully integrated** — A choose-your-own-adventure entered from a scene (see the Recap section below; there is no standalone Play tab) whose structure lives in code. `domain/arc/` holds `ArcTemplate`/`BeatSpec` (roles SETUP → EARLY_QUEST → COMPLICATION… → CLIMAX → RESOLUTION), the pure `ArcDirector` (turn window per beat + LLM `BEAT_COMPLETE` hint, forced advance at `maxTurns`, so a run is bounded by Σ maxTurns) and `ArcTemplateValidator`. Five genre-neutral arcs (`quest`, `heist`, `investigation`, `escape`, `rescue`) live in `composeResources/files/story/arcs/*.json`, loaded by `data/arc/ArcTemplateRepository` (invalid → in-code Quest default). `StartPlayUseCase`/`PlayTurnUseCase` build `buildPlayTurnPrompt` (path digest + Setup `StoryFacts`), parse with `parsePlayTurnResponse` (no choices on RESOLUTION) and stamp `TurnTelemetry`. Play routes through `PlatformAiStoryGateway` (ordered `backendIds`, on-device first; when no resolved target answers it falls back to the direct LM Studio service at the story's `LmStudioConfig` endpoint as Story mode does, unless `backendIds` is on-device only, and the error names every attempt); Story mode keeps its gateway. UI: `ui/play/PlayViewModel` + stateless `PlayContent` (`PlayUiState` Loading/Recap/Success/Error). Node ids are now UUIDs (`NodeIds`). `PlayStoryContext` provides access to current story form/catalog during Play arc selection. `StoryGeneratorComponent` wires `playViewModel`, `playTurnUseCase`, and `playGateway`. Opt-in live test: `STORY_PLAY_LIVE=1 STORY_PLAY_MODEL=<id> ./gradlew :composeApp:desktopTest --tests "*LivePlaythroughTest*" --rerun`. Plan, results and findings: `.wiki/apps/demo3/features/storygenerator.md (consolidated from story_generator_interactive_play_plan.md)`.
 
@@ -151,7 +164,7 @@ Every story LLM call goes through the app-wide `LlmRequestQueue` (see `Applicati
 
 **Scene Staging & Scenography Templates** — New `SceneStagingPane` component enables users to visually compose scenes before generation. Scenes now have `SceneStatus` enum (OutlineOnly, Staged, Generating, Drafted, Revised) to track their narrative state. `ScenographyTemplate` domain model defines literary staging frameworks (cinematography angles, dramatic structure templates), surfaced via JSON catalog. `GenerateSceneUseCase` now accepts scenography context for more structured, repeatable generation. Unit tests verify scene state transitions and template prompt injection.
 
-**Resource-Driven Cancelation & Cleanup** — `GenerateSceneUseCase` now supports atomic prefetch cancelation with guaranteed cleanup on error. Prevents orphaned LLM requests and ensures ViewModel state stays consistent when users cancel mid-generation. Streaming flows are wrapped in cancellable supervisors; cleanup lambdas reset dialog flags atomically.
+**Foreground AI jobs & Cancel** — `StoryGeneratorViewModel` runs one foreground AI job at a time (`ForegroundAiJob`, exposed as `runningJob`; the form's `isGenerating` / `generatingSceneId` / `generationStatus` derive from it): a second start is refused and every AI button is disabled meanwhile. `cancelGeneration()` (Cancel beside the generating status and in Staging, Stop writing in the chapter header) cancels the coroutine and so its queued or running `LlmRequestQueue` request, restores the scene's earlier status, keeps segments already written and shows no error; results merge into the latest state, so edits made while a job runs survive.
 
 **Model resolution fallback** — `LmStudioStoryService.resolveModel()` now returns `String?` instead of defaulting to "default" model. When the configured model is blank, it scans available models and filters out embedding models, returning null if none are suitable. Calling code (`sendChatCompletion`) treats null as a hard failure (returns `Result.failure(NoModelLoadedException())`), preventing silent fallback to an invalid model.
 

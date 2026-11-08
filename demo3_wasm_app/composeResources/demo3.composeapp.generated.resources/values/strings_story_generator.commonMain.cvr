@@ -133,7 +133,6 @@ string|story_export_untitled|VW50aXRsZWQgU3Rvcnk=
 string|story_generation_cancel|Q2FuY2Vs
 string|story_generator_description|Q3JhZnQgc3RvcmllcyB3aXRoIGxvY2FsIExNIFN0dWRpbyBBSQ==
 string|story_generator_title|U3RvcnkgR2VuZXJhdG9y
-string|story_job_branch_chapter|QnJhbmNoIGNoYXB0ZXI=
 string|story_job_cast_suggestions|Q2hhcmFjdGVyIG5hbWUgc3VnZ2VzdGlvbnM=
 string|story_job_chat|Q2hhdCByZXF1ZXN0
 string|story_job_draft_segment|V3JpdGUgc2NlbmUgc2VnbWVudA==
@@ -145,7 +144,6 @@ string|story_job_plan_chapter|UGxhbiBjaGFwdGVy
 string|story_job_plan_scene|UGxhbiBzY2VuZQ==
 string|story_job_plan_spine|UGxhbiBzdG9yeQ==
 string|story_job_play_turn|UGxheSB0dXJu
-string|story_job_refine_chapter|UmVmaW5lIGNoYXB0ZXI=
 string|story_job_scene_suggestions|U2NlbmUgc3VnZ2VzdGlvbnM=
 string|story_job_suggest_character|U3VnZ2VzdCBjaGFyYWN0ZXI=
 string|story_job_suggest_scene|U3VnZ2VzdCBzY2VuZQ==
