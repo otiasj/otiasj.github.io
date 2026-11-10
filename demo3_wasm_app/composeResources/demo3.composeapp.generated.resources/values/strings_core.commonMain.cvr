@@ -97,6 +97,7 @@ string|landing_page_image_content_description|TGFuZGluZyBwYWdlIGltYWdl
 string|login|TG9naW4=
 string|no_connection_message|WW914oCZcmUgb2ZmbGluZS4gQ2hlY2sgeW91ciBpbnRlcm5ldCBjb25uZWN0aW9uIGFuZCB0cnkgYWdhaW4u
 string|no_connection_title|Tm8gY29ubmVjdGlvbg==
+string|outfit_share_desc|U2hhcmU=
 string|paging_grid_loading|TG9hZGluZyAuLi4=
 string|password_confirm_label|Q29uZmlybSBwYXNzd29yZA==
 string|password_field_label|UGFzc3dvcmQ=

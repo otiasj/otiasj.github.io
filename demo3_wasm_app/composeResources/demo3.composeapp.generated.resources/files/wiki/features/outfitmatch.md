@@ -32,7 +32,7 @@ Validated on: **Android emulator** and **physical iOS device** (iPhone 17 / iOS 
 
 Entry is the **hanger / Checkroom icon** in the top bar of the Revivle outfit detail screen
 (`features/outfits/ui/OutfitDetailScreen.kt` → `onNavigateToOutfitMatch(imageUrl)`), wired in
-`app/plugins/RevivlePlugin.kt`.
+`app/AppShell.kt`.
 
 Route object is `@Serializable OutfitMatchRoute(val imageUrl: String)`; registered via
 `NavGraphBuilder.outfitMatchScreenRoute()` in `OutfitMatchScreen.kt`. Navigation:
