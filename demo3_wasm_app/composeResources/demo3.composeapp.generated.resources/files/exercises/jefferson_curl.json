@@ -1,0 +1,50 @@
+{
+  "id": "jefferson_curl",
+  "status": "complete",
+  "display_name": "Slow rolling forward bend",
+  "also_known_as": ["Jefferson curl"],
+  "description": "A controlled spinal articulation movement developing hamstring length and sequential spinal flexion strength under gentle load.",
+  "setup": "Stand tall with feet hip-width apart on a flat floor, knees straight with soft micro-bend, and arms hanging freely.",
+  "steps": [
+    "Tuck chin down toward chest and slowly round through cervical spine.",
+    "Continue rolling downward vertebra by vertebra through mid back and lower spine, letting arms dangle.",
+    "Descend until maximum comfortable hamstring and spinal stretch is achieved at bottom.",
+    "Reverse smoothly by stacking lower back, upper back, shoulders, and head back to tall standing."
+  ],
+  "cues": [
+    "Move one individual vertebra at a time",
+    "Keep leg muscles gently active and knees soft"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Rushing the movement and hinging from hips with a flat back",
+      "fix": "Focus entirely on rounding and unrolling the spine like a curling rope"
+    },
+    {
+      "mistake": "Bending knees excessively during the bottom stretch",
+      "fix": "Keep legs relatively straight to allow hamstrings and calves to lengthen safely"
+    }
+  ],
+  "rep_standard": "Controlled segmented descent down to active range, unrolling smoothly to vertical posture",
+  "is_hold": false,
+  "easier_id": "seated_forward_fold",
+  "harder_id": null,
+  "equipment": ["floor"],
+  "primary_muscles": ["hamstrings", "lower_back"],
+  "secondary_muscles": ["glutes", "calves"],
+  "visual": {
+    "movement_id": "jefferson_curl.move",
+    "poses": [
+      {
+        "id": "jefferson_curl.pose.start",
+        "label": "Upright Standing Stance",
+        "role": "start"
+      },
+      {
+        "id": "jefferson_curl.pose.end",
+        "label": "Segmented Forward Roll Bottom",
+        "role": "end"
+      }
+    ]
+  }
+}

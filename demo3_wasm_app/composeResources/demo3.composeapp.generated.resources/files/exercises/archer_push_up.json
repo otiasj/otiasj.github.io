@@ -1,0 +1,49 @@
+{
+  "id": "archer_push_up",
+  "status": "complete",
+  "display_name": "Archer Push Up",
+  "also_known_as": ["Side-to-side push up"],
+  "description": "An advanced unilateral push up variation where one arm presses while the opposite arm extends out straight as a stabilizer.",
+  "setup": "Get into a wide push up plank position on the floor with fingers pointed slightly outward.",
+  "steps": [
+    "Lower your chest toward one hand while sliding the opposite arm straight out to the side.",
+    "Pause briefly with chest hovering just above your working hand.",
+    "Press strongly through the working palm to return back to the center plank."
+  ],
+  "cues": [
+    "Keep your torso rigid without twisting your hips",
+    "Treat the straight arm as a kickstand for balance"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Hips rotating open toward the extended arm",
+      "fix": "Brace core and keep both hip bones square to the ground throughout the movement"
+    },
+    {
+      "mistake": "Bending the extended arm excessively",
+      "fix": "Keep the non-working arm fully straight, resting on your palm or fingertips"
+    }
+  ],
+  "rep_standard": "Full lockout at center top, working chest hovers 1 inch off the ground at bottom",
+  "is_hold": false,
+  "easier_id": "paused_push_up",
+  "harder_id": null,
+  "equipment": ["floor"],
+  "primary_muscles": ["chest"],
+  "secondary_muscles": ["triceps", "front_delts", "core"],
+  "visual": {
+    "movement_id": "archer_push_up.move",
+    "poses": [
+      {
+        "id": "archer_push_up.pose.start",
+        "label": "Wide Plank Support",
+        "role": "start"
+      },
+      {
+        "id": "archer_push_up.pose.end",
+        "label": "Low Working Side Press",
+        "role": "end"
+      }
+    ]
+  }
+}

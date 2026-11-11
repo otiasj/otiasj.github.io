@@ -1,0 +1,63 @@
+{
+  "id": "table_row",
+  "status": "complete",
+  "display_name": "Under-table body row",
+  "also_known_as": [
+    "Inverted row",
+    "Australian pull-up"
+  ],
+  "description": "A beginner-friendly horizontal bodyweight pull utilizing a sturdy table edge or low bar to build back strength.",
+  "setup": "Lie face up under a sturdy table, gripping the edge with hands shoulder-width apart, heels planted on the floor, and body straight.",
+  "steps": [
+    "Brace your core and squeeze glutes so your body forms a straight ramp from heels to shoulders.",
+    "Pull your chest up toward the table edge by driving elbows back.",
+    "Touch your chest lightly to the underside of the table edge.",
+    "Lower yourself smoothly back to straight arms under control."
+  ],
+  "cues": [
+    "Squeeze shoulder blades together at the top of the pull",
+    "Keep hips elevated and body rigid like a reverse plank"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Sagging hips and pulling only with the arms",
+      "fix": "Squeeze glutes and abs to keep torso and legs in a rigid straight line"
+    },
+    {
+      "mistake": "Reaching with the chin instead of touching chest to table",
+      "fix": "Keep neck neutral and pull until chest contacts the table edge"
+    }
+  ],
+  "rep_standard": "Begins with arms fully straight and body elevated off floor, pulls until chest contacts table edge, and returns to full arm extension.",
+  "is_hold": false,
+  "easier_id": "doorframe_row",
+  "harder_id": "negative_pull_up",
+  "equipment": [
+    "chair_or_bench"
+  ],
+  "primary_muscles": [
+    "lats",
+    "rear_delts",
+    "biceps"
+  ],
+  "secondary_muscles": [
+    "traps",
+    "forearms",
+    "core"
+  ],
+  "visual": {
+    "movement_id": "table_row.move",
+    "poses": [
+      {
+        "id": "table_row.pose.start",
+        "label": "Hanging beneath table",
+        "role": "start"
+      },
+      {
+        "id": "table_row.pose.end",
+        "label": "Chest to table edge",
+        "role": "end"
+      }
+    ]
+  }
+}

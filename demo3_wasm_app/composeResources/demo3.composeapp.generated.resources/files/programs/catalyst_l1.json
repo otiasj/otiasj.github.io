@@ -1,0 +1,307 @@
+{
+  "id": "catalyst_l1",
+  "title": "Move faster · Level 1",
+  "tagline": "Fast-paced bodyweight circuits that raise your heart rate.",
+  "days_per_week": 3,
+  "sessions": [
+    {
+      "day_number": 1,
+      "name": "Cardio Kickoff Circuit",
+      "exercises": [
+        {
+          "exercise_id": "jumping_jack",
+          "name": "Jumping Jack",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "20 reps",
+          "rep_min": 15,
+          "rep_max": 20,
+          "tempo": "Rhythmic hops",
+          "rest_seconds": 30,
+          "cue": "Light springy hops on balls of feet"
+        },
+        {
+          "exercise_id": "arm_circles",
+          "name": "Arm Circles",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Dynamic circles",
+          "rest_seconds": 30,
+          "cue": "Elevate shoulder warmth and joint mobility"
+        },
+        {
+          "exercise_id": "bodyweight_squat",
+          "name": "Bodyweight Squat",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "12–15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "2s down, 1s up",
+          "rest_seconds": 45,
+          "cue": "Drop hips to parallel, maintain brisk steady pace"
+        },
+        {
+          "exercise_id": "incline_push_up",
+          "name": "Incline Push Up",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s down, 1s up",
+          "rest_seconds": 45,
+          "cue": "Crisp lockout, keep body plank rigid"
+        },
+        {
+          "exercise_id": "reverse_lunge",
+          "name": "Reverse Lunge",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "10–12 reps",
+          "rep_min": 10,
+          "rep_max": 12,
+          "tempo": "Step back, drive up",
+          "rest_seconds": 45,
+          "cue": "Step back smoothly, keep front heel down"
+        },
+        {
+          "exercise_id": "slow_mountain_climber",
+          "name": "Slow Mountain Climber",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "12–16 reps",
+          "rep_min": 12,
+          "rep_max": 16,
+          "tempo": "Controlled march",
+          "rest_seconds": 45,
+          "cue": "Drive knee to chest with flat back posture"
+        },
+        {
+          "exercise_id": "child_pose",
+          "name": "Child Pose",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Restorative hold",
+          "rest_seconds": 30,
+          "cue": "Bring heart rate down with slow deep belly breaths"
+        },
+        {
+          "exercise_id": "chest_doorway_stretch",
+          "name": "Chest Doorway Stretch",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Gentle static hold",
+          "rest_seconds": 30,
+          "cue": "Open up chest and shoulders"
+        }
+      ]
+    },
+    {
+      "day_number": 2,
+      "name": "Agility & Core Burn",
+      "exercises": [
+        {
+          "exercise_id": "cat_cow",
+          "name": "Cat Cow",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Slow fluid wave",
+          "rest_seconds": 30,
+          "cue": "Gentle spine activation before circuit work"
+        },
+        {
+          "exercise_id": "jumping_jack",
+          "name": "Jumping Jack",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "20 reps",
+          "rep_min": 15,
+          "rep_max": 20,
+          "tempo": "Rhythmic hops",
+          "rest_seconds": 30,
+          "cue": "Smooth breathing with overhead arm reach"
+        },
+        {
+          "exercise_id": "squat_thrust",
+          "name": "Squat Thrust",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Snap to plank, snap in",
+          "rest_seconds": 45,
+          "cue": "Kick feet back to solid plank, snap feet forward"
+        },
+        {
+          "exercise_id": "glute_bridge",
+          "name": "Glute Bridge",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "12–15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Quick up, 1s squeeze",
+          "rest_seconds": 45,
+          "cue": "Squeeze glutes at peak height"
+        },
+        {
+          "exercise_id": "wall_push_up",
+          "name": "Wall Push Up",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "12–15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Piston rhythm",
+          "rest_seconds": 45,
+          "cue": "Brisk pressing tempo with full lockout"
+        },
+        {
+          "exercise_id": "slow_mountain_climber",
+          "name": "Slow Mountain Climber",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "12–16 reps",
+          "rep_min": 12,
+          "rep_max": 16,
+          "tempo": "Controlled march",
+          "rest_seconds": 45,
+          "cue": "Keep hips low and steady as knees march"
+        },
+        {
+          "exercise_id": "seated_forward_fold",
+          "name": "Seated Forward Fold",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Relaxed fold",
+          "rest_seconds": 30,
+          "cue": "Fold over straight legs and lengthen hamstrings"
+        },
+        {
+          "exercise_id": "child_pose",
+          "name": "Child Pose",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Restorative hold",
+          "rest_seconds": 30,
+          "cue": "Recover normal respiratory rate"
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "name": "Endurance Ladder & Leg Drive",
+      "exercises": [
+        {
+          "exercise_id": "arm_circles",
+          "name": "Arm Circles",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Dynamic circles",
+          "rest_seconds": 30,
+          "cue": "Loosen up upper extremities"
+        },
+        {
+          "exercise_id": "jumping_jack",
+          "name": "Jumping Jack",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "20 reps",
+          "rep_min": 15,
+          "rep_max": 20,
+          "tempo": "Rhythmic hops",
+          "rest_seconds": 30,
+          "cue": "Raise core temperature"
+        },
+        {
+          "exercise_id": "bodyweight_squat",
+          "name": "Bodyweight Squat",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "12–15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Steady rhythm",
+          "rest_seconds": 45,
+          "cue": "Full parallel depth with snappy turnaround"
+        },
+        {
+          "exercise_id": "reverse_lunge",
+          "name": "Reverse Lunge",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "10–12 reps",
+          "rep_min": 10,
+          "rep_max": 12,
+          "tempo": "Alternating steps",
+          "rest_seconds": 45,
+          "cue": "Alternate legs smoothly, chest stays high"
+        },
+        {
+          "exercise_id": "incline_push_up",
+          "name": "Incline Push Up",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s down, 1s up",
+          "rest_seconds": 45,
+          "cue": "Touch chest firmly to bench on every rep"
+        },
+        {
+          "exercise_id": "plank",
+          "name": "Plank",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "25–35s hold",
+          "hold_seconds": 35,
+          "tempo": "Rigid hold",
+          "rest_seconds": 45,
+          "cue": "Squeeze glutes and brace abs against fatigue"
+        },
+        {
+          "exercise_id": "chest_doorway_stretch",
+          "name": "Chest Doorway Stretch",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Gentle static hold",
+          "rest_seconds": 30,
+          "cue": "Open anterior shoulders"
+        },
+        {
+          "exercise_id": "seated_forward_fold",
+          "name": "Seated Forward Fold",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Relaxed fold",
+          "rest_seconds": 30,
+          "cue": "Gentle stretch down back of legs"
+        }
+      ]
+    }
+  ]
+}

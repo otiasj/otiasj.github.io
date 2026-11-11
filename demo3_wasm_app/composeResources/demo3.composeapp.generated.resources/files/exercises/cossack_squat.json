@@ -1,0 +1,49 @@
+{
+  "id": "cossack_squat",
+  "status": "complete",
+  "display_name": "Side-to-side lunge",
+  "also_known_as": ["Cossack squat"],
+  "description": "A frontal plane unilateral squat that improves hip adductor flexibility, ankle dorsiflexion, and single-leg quadricep strength.",
+  "setup": "Take a very wide standing stance (roughly twice shoulder width) with toes angled slightly outward.",
+  "steps": [
+    "Shift your weight over to one side, bending working knee while keeping opposite leg completely straight.",
+    "Sink hips deep into the working heel while rotating straight leg's toes up toward ceiling.",
+    "Drive through working heel to press back up to tall center standing position."
+  ],
+  "cues": [
+    "Keep working heel pinned to the floor",
+    "Stay as upright through the torso as mobility allows"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Working heel elevating high off the floor",
+      "fix": "Limit squat depth until ankle mobility improves or hold a counterweight/pole for balance"
+    },
+    {
+      "mistake": "Excessive forward rounding through thoracic and lumbar spine",
+      "fix": "Open chest, extend arms forward, and hinge hips backward rather than slumping"
+    }
+  ],
+  "rep_standard": "Working hip crease descends below knee with opposite leg fully straight, returning to center lockout",
+  "is_hold": false,
+  "easier_id": "step_down",
+  "harder_id": null,
+  "equipment": ["floor"],
+  "primary_muscles": ["quads", "adductors", "glutes"],
+  "secondary_muscles": ["hamstrings", "calves"],
+  "visual": {
+    "movement_id": "cossack_squat.move",
+    "poses": [
+      {
+        "id": "cossack_squat.pose.start",
+        "label": "Wide Standing Center Stance",
+        "role": "start"
+      },
+      {
+        "id": "cossack_squat.pose.end",
+        "label": "Deep Unilateral Lateral Squat",
+        "role": "end"
+      }
+    ]
+  }
+}

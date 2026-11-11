@@ -1,0 +1,56 @@
+{
+  "id": "plank",
+  "status": "complete",
+  "display_name": "Forearm plank",
+  "also_known_as": [
+    "Elbow plank",
+    "Prone plank"
+  ],
+  "description": "A foundational isometric core exercise building full-body tension and spinal stability.",
+  "setup": "Lie face down and prop yourself on your forearms with elbows directly under shoulders and feet together.",
+  "steps": [
+    "Tuck your toes and lift your knees and torso until your body forms a straight line from head to heels.",
+    "Squeeze your glutes and pull your navel up toward your spine.",
+    "Press your forearms firmly into the floor to keep your upper back active and broad.",
+    "Breathe steadily while holding rigid tension without letting hips sag."
+  ],
+  "cues": [
+    "Pull elbows toward toes isometrically to light up your abs",
+    "Keep a neutral neck looking down at your hands"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Sagging lower back and hips dipping toward the floor",
+      "fix": "Tuck pelvis into posterior tilt and squeeze glutes hard"
+    },
+    {
+      "mistake": "Piking hips high in the air to take load off the core",
+      "fix": "Lower hips until body is aligned in a flat horizontal line"
+    }
+  ],
+  "rep_standard": "Timer starts once body forms a rigid straight line on forearms, and stops immediately if hips sag or pike.",
+  "is_hold": true,
+  "easier_id": "wall_push_up",
+  "harder_id": "hanging_knee_raise",
+  "equipment": [
+    "floor"
+  ],
+  "primary_muscles": [
+    "core"
+  ],
+  "secondary_muscles": [
+    "front_delts",
+    "glutes",
+    "quads"
+  ],
+  "visual": {
+    "movement_id": "plank.move",
+    "poses": [
+      {
+        "id": "plank.pose.hold",
+        "label": "Forearm plank hold",
+        "role": "hold"
+      }
+    ]
+  }
+}

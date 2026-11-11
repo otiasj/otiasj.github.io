@@ -1,0 +1,62 @@
+{
+  "id": "pull_up",
+  "status": "complete",
+  "display_name": "Full pull-up",
+  "also_known_as": [
+    "Strict overhand pull-up"
+  ],
+  "description": "The ultimate upper-body bodyweight pulling movement for developing broad back and arm strength.",
+  "setup": "Hang from an overhead bar with an overhand grip slightly wider than shoulder-width and arms completely straight.",
+  "steps": [
+    "Initiate the pull by drawing shoulder blades down and back.",
+    "Pull elbows down toward your hips while driving chest up toward the bar.",
+    "Continue pulling until your chin clears the top edge of the bar.",
+    "Lower yourself under control back to a complete dead hang before initiating the next rep."
+  ],
+  "cues": [
+    "Think of driving your elbows into your back pockets",
+    "Keep legs glued together and abs tight to prevent swinging"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Kicking legs or kipping hips to generate momentum",
+      "fix": "Keep core braced and body stiff from head to toe for strict reps"
+    },
+    {
+      "mistake": "Cutting the range of motion short at the top or bottom",
+      "fix": "Clear chin fully over the bar and reach full straight arm lockout at bottom"
+    }
+  ],
+  "rep_standard": "Begins from a dead hang with straight arms and locked elbows, requires chin clearly over the bar at the top, and returns to full extension without swinging.",
+  "is_hold": false,
+  "easier_id": "negative_pull_up",
+  "harder_id": null,
+  "equipment": [
+    "pull_up_bar"
+  ],
+  "primary_muscles": [
+    "lats",
+    "biceps"
+  ],
+  "secondary_muscles": [
+    "forearms",
+    "rear_delts",
+    "traps",
+    "core"
+  ],
+  "visual": {
+    "movement_id": "pull_up.move",
+    "poses": [
+      {
+        "id": "pull_up.pose.hanging",
+        "label": "Start: hanging with straight arms",
+        "role": "start"
+      },
+      {
+        "id": "pull_up.pose.top",
+        "label": "Top: chin clearly above the bar",
+        "role": "end"
+      }
+    ]
+  }
+}

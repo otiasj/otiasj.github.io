@@ -1,0 +1,60 @@
+{
+  "id": "single_leg_glute_bridge",
+  "status": "complete",
+  "display_name": "Single-leg hip bridge",
+  "also_known_as": [
+    "Single-leg glute bridge"
+  ],
+  "description": "A unilateral posterior chain exercise targeting glutes and hamstrings while developing hip level balance.",
+  "setup": "Lie flat on your back with knees bent and feet flat on the floor, then lift one leg straight into the air.",
+  "steps": [
+    "Press down firmly through the working heel on the floor.",
+    "Drive your hips upward until your knee, hip, and shoulder form a straight line.",
+    "Squeeze the working glute hard at the peak for a one-second pause.",
+    "Lower your hips under control back to the floor."
+  ],
+  "cues": [
+    "Push through the heel rather than toes of the planted foot",
+    "Keep both hip bones level and parallel to the ceiling at the top"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Letting non-working hip drop or rotate down",
+      "fix": "Brace core and keep both hip points evenly elevated"
+    },
+    {
+      "mistake": "Overarching lower back instead of squeezing glutes",
+      "fix": "Stop when hip forms a straight diagonal line with ribcage pulled down"
+    }
+  ],
+  "rep_standard": "Begins with hips touching the floor, extends working hip until fully straight alignment with shoulders, and lowers back down.",
+  "is_hold": false,
+  "easier_id": "glute_bridge",
+  "harder_id": null,
+  "equipment": [
+    "floor"
+  ],
+  "primary_muscles": [
+    "glutes",
+    "hamstrings"
+  ],
+  "secondary_muscles": [
+    "core",
+    "lower_back"
+  ],
+  "visual": {
+    "movement_id": "single_leg_glute_bridge.move",
+    "poses": [
+      {
+        "id": "single_leg_glute_bridge.pose.start",
+        "label": "Lying one leg raised",
+        "role": "start"
+      },
+      {
+        "id": "single_leg_glute_bridge.pose.end",
+        "label": "Single hip bridge extension",
+        "role": "end"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "slow_push_up",
+  "status": "complete",
+  "display_name": "Slow push-up",
+  "also_known_as": [
+    "Tempo push-up"
+  ],
+  "description": "A push-up performed with a slow tempo to maximize time under tension and build solid chest strength.",
+  "setup": "Start in a high plank position with hands slightly wider than shoulder-width, glutes squeezed, and abs braced.",
+  "steps": [
+    "Lower your chest toward the floor slowly over three full seconds.",
+    "Tap chest lightly or hover one inch above the ground without losing tension.",
+    "Press back up to top lockout over a controlled two-second count."
+  ],
+  "cues": [
+    "Maintain a strict three-second descent cadence on every rep",
+    "Keep whole body rigid like a moving board from ears to heels"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Speeding up halfway down to escape the burn",
+      "fix": "Count three slow Mississippi seconds from top to bottom"
+    },
+    {
+      "mistake": "Leading with the chin or dropping head early",
+      "fix": "Keep neck packed and neutral so chest touches down first"
+    }
+  ],
+  "rep_standard": "Must take a full 3 seconds to lower and 2 seconds to press up, reaching chest within 1 inch of floor and full elbow lockout.",
+  "is_hold": false,
+  "easier_id": "incline_push_up",
+  "harder_id": "paused_push_up",
+  "equipment": [
+    "floor"
+  ],
+  "primary_muscles": [
+    "chest"
+  ],
+  "secondary_muscles": [
+    "triceps",
+    "front_delts",
+    "core"
+  ],
+  "visual": {
+    "movement_id": "slow_push_up.move",
+    "poses": [
+      {
+        "id": "slow_push_up.pose.start",
+        "label": "Plank lockout",
+        "role": "start"
+      },
+      {
+        "id": "slow_push_up.pose.end",
+        "label": "Bottom chest hover",
+        "role": "end"
+      }
+    ]
+  }
+}

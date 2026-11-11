@@ -1,0 +1,4946 @@
+{
+  "schema_version": 1,
+  "generator_fields": {
+    "naming_convention": null,
+    "file_format": null,
+    "dimensions_px": null,
+    "max_file_size_kb": null,
+    "background": null,
+    "style_reference": null
+  },
+  "poses": [
+    {
+      "id": "archer_push_up.pose.start",
+      "exercise_id": "archer_push_up",
+      "label": "Wide Plank Support",
+      "role": "start",
+      "body_position": {
+        "summary": "Wide Plank Support for Archer Push Up",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~180\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "three_quarter",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "archer_push_up.pose.end",
+      "exercise_id": "archer_push_up",
+      "label": "Low Working Side Press",
+      "role": "end",
+      "body_position": {
+        "summary": "Low Working Side Press for Archer Push Up",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "three_quarter",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "arm_circles.pose.start",
+      "exercise_id": "arm_circles",
+      "label": "T-Pose Arms Extended",
+      "role": "start",
+      "body_position": {
+        "summary": "T-Pose Arms Extended for Arm Circles",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "front",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "front_delts",
+          "side_delts"
+        ],
+        "secondary": [
+          "rear_delts",
+          "traps"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "arm_circles.pose.end",
+      "exercise_id": "arm_circles",
+      "label": "Circle Apex Rotation",
+      "role": "end",
+      "body_position": {
+        "summary": "Circle Apex Rotation for Arm Circles",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "front",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "front_delts",
+          "side_delts"
+        ],
+        "secondary": [
+          "rear_delts",
+          "traps"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "bench_dip.pose.start",
+      "exercise_id": "bench_dip",
+      "label": "Top Support Lockout",
+      "role": "start",
+      "body_position": {
+        "summary": "Top Support Lockout for Bench Dip",
+        "orientation": "seated",
+        "joints": {
+          "elbow": "~180\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "heels"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "triceps"
+        ],
+        "secondary": [
+          "chest",
+          "front_delts"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "bench_dip.pose.end",
+      "exercise_id": "bench_dip",
+      "label": "Bottom 90-Degree Dip",
+      "role": "end",
+      "body_position": {
+        "summary": "Bottom 90-Degree Dip for Bench Dip",
+        "orientation": "seated",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "heels"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "triceps"
+        ],
+        "secondary": [
+          "chest",
+          "front_delts"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "bodyweight_squat.pose.top",
+      "exercise_id": "bodyweight_squat",
+      "label": "Tall Standing Lockout",
+      "role": "start",
+      "body_position": {
+        "summary": "Tall Standing Lockout for Bodyweight Squat",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~180\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~180\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "bodyweight_squat.pose.bottom",
+      "exercise_id": "bodyweight_squat",
+      "label": "Deep Parallel Squat",
+      "role": "end",
+      "body_position": {
+        "summary": "Deep Parallel Squat for Bodyweight Squat",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "box_single_leg_squat.pose.start",
+      "exercise_id": "box_single_leg_squat",
+      "label": "Single Leg Tall Stand",
+      "role": "start",
+      "body_position": {
+        "summary": "Single Leg Tall Stand for Box Single Leg Squat",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "calves",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "box_single_leg_squat.pose.end",
+      "exercise_id": "box_single_leg_squat",
+      "label": "Seated Box Contact",
+      "role": "end",
+      "body_position": {
+        "summary": "Seated Box Contact for Box Single Leg Squat",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "calves",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "bulgarian_split_squat.pose.start",
+      "exercise_id": "bulgarian_split_squat",
+      "label": "Elevated Split Stance",
+      "role": "start",
+      "body_position": {
+        "summary": "Elevated Split Stance for Bulgarian Split Squat",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "bulgarian_split_squat.pose.end",
+      "exercise_id": "bulgarian_split_squat",
+      "label": "Deep Parallel Split Squat",
+      "role": "end",
+      "body_position": {
+        "summary": "Deep Parallel Split Squat for Bulgarian Split Squat",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "burpee.pose.start",
+      "exercise_id": "burpee",
+      "label": "Standing Ready Position",
+      "role": "start",
+      "body_position": {
+        "summary": "Standing Ready Position for Burpee",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~180\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "chest",
+          "core"
+        ],
+        "secondary": [
+          "glutes",
+          "front_delts",
+          "triceps",
+          "calves"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "burpee.pose.end",
+      "exercise_id": "burpee",
+      "label": "Overhead Jump Apex",
+      "role": "end",
+      "body_position": {
+        "summary": "Overhead Jump Apex for Burpee",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~180\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "chest",
+          "core"
+        ],
+        "secondary": [
+          "glutes",
+          "front_delts",
+          "triceps",
+          "calves"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "cat_cow.pose.start",
+      "exercise_id": "cat_cow",
+      "label": "Cow Spinal Extension",
+      "role": "start",
+      "body_position": {
+        "summary": "Cow Spinal Extension for Cat Cow",
+        "orientation": "kneeling",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "knees",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "front",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "lower_back",
+          "core"
+        ],
+        "secondary": [
+          "traps",
+          "glutes"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "cat_cow.pose.end",
+      "exercise_id": "cat_cow",
+      "label": "Cat Spinal Flexion",
+      "role": "end",
+      "body_position": {
+        "summary": "Cat Spinal Flexion for Cat Cow",
+        "orientation": "kneeling",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "knees",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "front",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "lower_back",
+          "core"
+        ],
+        "secondary": [
+          "traps",
+          "glutes"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "chair_squat.pose.start",
+      "exercise_id": "chair_squat",
+      "label": "Tall Standing Front of Chair",
+      "role": "start",
+      "body_position": {
+        "summary": "Tall Standing Front of Chair for Chair Squat",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~180\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "chair_squat.pose.end",
+      "exercise_id": "chair_squat",
+      "label": "Feather Touch Chair Contact",
+      "role": "end",
+      "body_position": {
+        "summary": "Feather Touch Chair Contact for Chair Squat",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "chest_doorway_stretch.pose.hold",
+      "exercise_id": "chest_doorway_stretch",
+      "label": "Doorway Forward Chest Opening",
+      "role": "hold",
+      "body_position": {
+        "summary": "Doorway Forward Chest Opening for Chest Doorway Stretch",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "three_quarter",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "wall"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "chest",
+          "front_delts"
+        ],
+        "secondary": [
+          "biceps"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "child_pose.pose.hold",
+      "exercise_id": "child_pose",
+      "label": "Prone Rest with Arms Extended",
+      "role": "hold",
+      "body_position": {
+        "summary": "Prone Rest with Arms Extended for Child Pose",
+        "orientation": "kneeling",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "shins",
+          "forehead",
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "lower_back",
+          "lats"
+        ],
+        "secondary": [
+          "glutes",
+          "quads"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "cossack_squat.pose.start",
+      "exercise_id": "cossack_squat",
+      "label": "Wide Standing Center Stance",
+      "role": "start",
+      "body_position": {
+        "summary": "Wide Standing Center Stance for Side-to-side lunge",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~180\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "three_quarter",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "adductors",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "calves"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "cossack_squat.pose.end",
+      "exercise_id": "cossack_squat",
+      "label": "Deep Unilateral Lateral Squat",
+      "role": "end",
+      "body_position": {
+        "summary": "Deep Unilateral Lateral Squat for Side-to-side lunge",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "three_quarter",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "adductors",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "calves"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "dead_hang.pose.hold",
+      "exercise_id": "dead_hang",
+      "label": "Full Passive Overhead Hang",
+      "role": "hold",
+      "body_position": {
+        "summary": "Full Passive Overhead Hang for Dead Hang",
+        "orientation": "hanging",
+        "joints": {
+          "elbow": "~180\u00b0",
+          "shoulder": "~180\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "pull_up_bar"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "forearms",
+          "lats"
+        ],
+        "secondary": [
+          "traps",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "doorframe_row.pose.start",
+      "exercise_id": "doorframe_row",
+      "label": "Lean Back Arms Extended",
+      "role": "start",
+      "body_position": {
+        "summary": "Lean Back Arms Extended for Doorframe Row",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "wall"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "rear_delts"
+        ],
+        "secondary": [
+          "biceps",
+          "traps",
+          "forearms"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "doorframe_row.pose.end",
+      "exercise_id": "doorframe_row",
+      "label": "Chest to Frame Peak Pull",
+      "role": "end",
+      "body_position": {
+        "summary": "Chest to Frame Peak Pull for Doorframe Row",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "wall"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "rear_delts"
+        ],
+        "secondary": [
+          "biceps",
+          "traps",
+          "forearms"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "glute_bridge.pose.start",
+      "exercise_id": "glute_bridge",
+      "label": "Supine Floor Setup",
+      "role": "start",
+      "body_position": {
+        "summary": "Supine Floor Setup for Glute Bridge",
+        "orientation": "supine",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "back",
+          "palms",
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "lower_back",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "glute_bridge.pose.end",
+      "exercise_id": "glute_bridge",
+      "label": "Full Hip Extension Peak",
+      "role": "end",
+      "body_position": {
+        "summary": "Full Hip Extension Peak for Glute Bridge",
+        "orientation": "supine",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "upper_back",
+          "palms",
+          "heels"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "lower_back",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "hanging_knee_raise.pose.start",
+      "exercise_id": "hanging_knee_raise",
+      "label": "Dead Hang Still Support",
+      "role": "start",
+      "body_position": {
+        "summary": "Dead Hang Still Support for Hanging Knee Raise",
+        "orientation": "hanging",
+        "joints": {
+          "elbow": "~180\u00b0",
+          "shoulder": "~180\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "pull_up_bar"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "core",
+          "hip_flexors"
+        ],
+        "secondary": [
+          "forearms",
+          "lats"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "hanging_knee_raise.pose.end",
+      "exercise_id": "hanging_knee_raise",
+      "label": "Knees Tucked to Chest",
+      "role": "end",
+      "body_position": {
+        "summary": "Knees Tucked to Chest for Hanging Knee Raise",
+        "orientation": "hanging",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~180\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "pull_up_bar"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "core",
+          "hip_flexors"
+        ],
+        "secondary": [
+          "forearms",
+          "lats"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "high_knees.pose.hold",
+      "exercise_id": "high_knees",
+      "label": "High Knee Running Drive",
+      "role": "hold",
+      "body_position": {
+        "summary": "High Knee Running Drive for High Knees",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "front",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "hip_flexors",
+          "calves",
+          "quads"
+        ],
+        "secondary": [
+          "core",
+          "glutes"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "incline_push_up.pose.start",
+      "exercise_id": "incline_push_up",
+      "label": "Elevated Plank Lockout",
+      "role": "start",
+      "body_position": {
+        "summary": "Elevated Plank Lockout for Incline Push Up",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~180\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~180\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "incline_push_up.pose.end",
+      "exercise_id": "incline_push_up",
+      "label": "Chest to Incline Contact",
+      "role": "end",
+      "body_position": {
+        "summary": "Chest to Incline Contact for Incline Push Up",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "jefferson_curl.pose.start",
+      "exercise_id": "jefferson_curl",
+      "label": "Upright Standing Stance",
+      "role": "start",
+      "body_position": {
+        "summary": "Upright Standing Stance for Slow rolling forward bend",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~180\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "hamstrings",
+          "lower_back"
+        ],
+        "secondary": [
+          "glutes",
+          "calves"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "jefferson_curl.pose.end",
+      "exercise_id": "jefferson_curl",
+      "label": "Segmented Forward Roll Bottom",
+      "role": "end",
+      "body_position": {
+        "summary": "Segmented Forward Roll Bottom for Slow rolling forward bend",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "hamstrings",
+          "lower_back"
+        ],
+        "secondary": [
+          "glutes",
+          "calves"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "jumping_jack.pose.start",
+      "exercise_id": "jumping_jack",
+      "label": "Feet Together Arms at Sides",
+      "role": "start",
+      "body_position": {
+        "summary": "Feet Together Arms at Sides for Jumping Jack",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "front",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "calves",
+          "side_delts"
+        ],
+        "secondary": [
+          "quads",
+          "glutes",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "jumping_jack.pose.end",
+      "exercise_id": "jumping_jack",
+      "label": "Wide Stance Arms Overhead",
+      "role": "end",
+      "body_position": {
+        "summary": "Wide Stance Arms Overhead for Jumping Jack",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~180\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "front",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "calves",
+          "side_delts"
+        ],
+        "secondary": [
+          "quads",
+          "glutes",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "mountain_climber.pose.start",
+      "exercise_id": "mountain_climber",
+      "label": "Solid High Plank Setup",
+      "role": "start",
+      "body_position": {
+        "summary": "Solid High Plank Setup for Mountain Climber",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~180\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "core",
+          "hip_flexors"
+        ],
+        "secondary": [
+          "front_delts",
+          "quads",
+          "triceps"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "mountain_climber.pose.end",
+      "exercise_id": "mountain_climber",
+      "label": "Knee Driven to Chest",
+      "role": "end",
+      "body_position": {
+        "summary": "Knee Driven to Chest for Mountain Climber",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "core",
+          "hip_flexors"
+        ],
+        "secondary": [
+          "front_delts",
+          "quads",
+          "triceps"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "negative_pull_up.pose.start",
+      "exercise_id": "negative_pull_up",
+      "label": "Top chin over bar",
+      "role": "start",
+      "body_position": {
+        "summary": "Top chin over bar for Slow lowering from the bar",
+        "orientation": "hanging",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~180\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "pull_up_bar",
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "biceps"
+        ],
+        "secondary": [
+          "forearms",
+          "rear_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "negative_pull_up.pose.end",
+      "exercise_id": "negative_pull_up",
+      "label": "Full bottom extension",
+      "role": "end",
+      "body_position": {
+        "summary": "Full bottom extension for Slow lowering from the bar",
+        "orientation": "hanging",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~180\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "pull_up_bar",
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "biceps"
+        ],
+        "secondary": [
+          "forearms",
+          "rear_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "paused_push_up.pose.start",
+      "exercise_id": "paused_push_up",
+      "label": "Plank lockout",
+      "role": "start",
+      "body_position": {
+        "summary": "Plank lockout for Paused push-up",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~180\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~180\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "paused_push_up.pose.end",
+      "exercise_id": "paused_push_up",
+      "label": "Bottom pause hover",
+      "role": "end",
+      "body_position": {
+        "summary": "Bottom pause hover for Paused push-up",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "paused_squat.pose.start",
+      "exercise_id": "paused_squat",
+      "label": "Tall standing posture",
+      "role": "start",
+      "body_position": {
+        "summary": "Tall standing posture for Paused bodyweight squat",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~180\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "paused_squat.pose.end",
+      "exercise_id": "paused_squat",
+      "label": "Deep squat pause",
+      "role": "end",
+      "body_position": {
+        "summary": "Deep squat pause for Paused bodyweight squat",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "pike_push_up.pose.start",
+      "exercise_id": "pike_push_up",
+      "label": "Inverted V pike",
+      "role": "start",
+      "body_position": {
+        "summary": "Inverted V pike for hips-high shoulder push-up",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "front_delts",
+          "triceps"
+        ],
+        "secondary": [
+          "chest",
+          "traps",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "pike_push_up.pose.end",
+      "exercise_id": "pike_push_up",
+      "label": "Head tap tripod",
+      "role": "end",
+      "body_position": {
+        "summary": "Head tap tripod for hips-high shoulder push-up",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "front_delts",
+          "triceps"
+        ],
+        "secondary": [
+          "chest",
+          "traps",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "plank.pose.hold",
+      "exercise_id": "plank",
+      "label": "Forearm plank hold",
+      "role": "hold",
+      "body_position": {
+        "summary": "Forearm plank hold for Forearm plank",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~180\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "forearms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "core"
+        ],
+        "secondary": [
+          "front_delts",
+          "glutes",
+          "quads"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "pull_up.pose.hanging",
+      "exercise_id": "pull_up",
+      "label": "Start: hanging with straight arms",
+      "role": "start",
+      "body_position": {
+        "summary": "Start: hanging with straight arms for Full pull-up",
+        "orientation": "hanging",
+        "joints": {
+          "elbow": "~180\u00b0",
+          "shoulder": "~180\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~180\u00b0"
+        },
+        "contacts": [
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "pull_up_bar"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "biceps"
+        ],
+        "secondary": [
+          "forearms",
+          "rear_delts",
+          "traps",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "pull_up.pose.top",
+      "exercise_id": "pull_up",
+      "label": "Top: chin clearly above the bar",
+      "role": "end",
+      "body_position": {
+        "summary": "Top: chin clearly above the bar for Full pull-up",
+        "orientation": "hanging",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~180\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "pull_up_bar"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "biceps"
+        ],
+        "secondary": [
+          "forearms",
+          "rear_delts",
+          "traps",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "reverse_lunge.pose.start",
+      "exercise_id": "reverse_lunge",
+      "label": "Standing tall",
+      "role": "start",
+      "body_position": {
+        "summary": "Standing tall for Step-back lunge",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~180\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "calves",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "reverse_lunge.pose.end",
+      "exercise_id": "reverse_lunge",
+      "label": "Bottom lunge position",
+      "role": "end",
+      "body_position": {
+        "summary": "Bottom lunge position for Step-back lunge",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "calves",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "scapular_pull_up.pose.start",
+      "exercise_id": "scapular_pull_up",
+      "label": "Passive dead hang",
+      "role": "start",
+      "body_position": {
+        "summary": "Passive dead hang for Shoulder blade squeeze on the bar",
+        "orientation": "hanging",
+        "joints": {
+          "elbow": "~180\u00b0",
+          "shoulder": "~180\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "pull_up_bar"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "traps"
+        ],
+        "secondary": [
+          "forearms",
+          "rear_delts"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "scapular_pull_up.pose.end",
+      "exercise_id": "scapular_pull_up",
+      "label": "Active scapular elevation",
+      "role": "end",
+      "body_position": {
+        "summary": "Active scapular elevation for Shoulder blade squeeze on the bar",
+        "orientation": "hanging",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~180\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "pull_up_bar"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "traps"
+        ],
+        "secondary": [
+          "forearms",
+          "rear_delts"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "seated_forward_fold.pose.hold",
+      "exercise_id": "seated_forward_fold",
+      "label": "Forward fold hold",
+      "role": "hold",
+      "body_position": {
+        "summary": "Forward fold hold for Seated hamstring stretch",
+        "orientation": "seated",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "glutes",
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "hamstrings",
+          "lower_back"
+        ],
+        "secondary": [
+          "calves"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "seated_leg_lift.pose.start",
+      "exercise_id": "seated_leg_lift",
+      "label": "Seated pike posture",
+      "role": "start",
+      "body_position": {
+        "summary": "Seated pike posture for Seated straight-leg lift",
+        "orientation": "seated",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "glutes",
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "hip_flexors",
+          "core"
+        ],
+        "secondary": [
+          "quads"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "seated_leg_lift.pose.end",
+      "exercise_id": "seated_leg_lift",
+      "label": "Legs lifted compression",
+      "role": "end",
+      "body_position": {
+        "summary": "Legs lifted compression for Seated straight-leg lift",
+        "orientation": "seated",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "glutes",
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "hip_flexors",
+          "core"
+        ],
+        "secondary": [
+          "quads"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "single_leg_glute_bridge.pose.start",
+      "exercise_id": "single_leg_glute_bridge",
+      "label": "Lying one leg raised",
+      "role": "start",
+      "body_position": {
+        "summary": "Lying one leg raised for Single-leg hip bridge",
+        "orientation": "supine",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "back",
+          "palms",
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "glutes",
+          "hamstrings"
+        ],
+        "secondary": [
+          "core",
+          "lower_back"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "single_leg_glute_bridge.pose.end",
+      "exercise_id": "single_leg_glute_bridge",
+      "label": "Single hip bridge extension",
+      "role": "end",
+      "body_position": {
+        "summary": "Single hip bridge extension for Single-leg hip bridge",
+        "orientation": "supine",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "upper_back",
+          "palms",
+          "heels"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "glutes",
+          "hamstrings"
+        ],
+        "secondary": [
+          "core",
+          "lower_back"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "slow_mountain_climber.pose.start",
+      "exercise_id": "slow_mountain_climber",
+      "label": "Tall plank position",
+      "role": "start",
+      "body_position": {
+        "summary": "Tall plank position for Slow knee-to-chest plank",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~180\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "core",
+          "hip_flexors"
+        ],
+        "secondary": [
+          "front_delts",
+          "quads"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "slow_mountain_climber.pose.end",
+      "exercise_id": "slow_mountain_climber",
+      "label": "Slow knee tuck to chest",
+      "role": "end",
+      "body_position": {
+        "summary": "Slow knee tuck to chest for Slow knee-to-chest plank",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "core",
+          "hip_flexors"
+        ],
+        "secondary": [
+          "front_delts",
+          "quads"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "slow_push_up.pose.start",
+      "exercise_id": "slow_push_up",
+      "label": "Plank lockout",
+      "role": "start",
+      "body_position": {
+        "summary": "Plank lockout for Slow push-up",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~180\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~180\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "slow_push_up.pose.end",
+      "exercise_id": "slow_push_up",
+      "label": "Bottom chest hover",
+      "role": "end",
+      "body_position": {
+        "summary": "Bottom chest hover for Slow push-up",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "split_squat_jump.pose.start",
+      "exercise_id": "split_squat_jump",
+      "label": "Lunge takeoff stance",
+      "role": "start",
+      "body_position": {
+        "summary": "Lunge takeoff stance for Jumping lunge switch",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes",
+          "calves"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "split_squat_jump.pose.end",
+      "exercise_id": "split_squat_jump",
+      "label": "Opposite leg lunge landing",
+      "role": "end",
+      "body_position": {
+        "summary": "Opposite leg lunge landing for Jumping lunge switch",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes",
+          "calves"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "squat_jump.pose.start",
+      "exercise_id": "squat_jump",
+      "label": "Squat loading depth",
+      "role": "start",
+      "body_position": {
+        "summary": "Squat loading depth for Squat jump",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes",
+          "calves"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "squat_jump.pose.end",
+      "exercise_id": "squat_jump",
+      "label": "Airborne jump peak",
+      "role": "end",
+      "body_position": {
+        "summary": "Airborne jump peak for Squat jump",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes",
+          "calves"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "squat_thrust.pose.start",
+      "exercise_id": "squat_thrust",
+      "label": "Standing start",
+      "role": "start",
+      "body_position": {
+        "summary": "Standing start for Step-back burpee",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~180\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "core"
+        ],
+        "secondary": [
+          "front_delts",
+          "glutes",
+          "triceps"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "squat_thrust.pose.end",
+      "exercise_id": "squat_thrust",
+      "label": "Plank thrust extension",
+      "role": "end",
+      "body_position": {
+        "summary": "Plank thrust extension for Step-back burpee",
+        "orientation": "prone",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~180\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "toes"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "floor"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "core"
+        ],
+        "secondary": [
+          "front_delts",
+          "glutes",
+          "triceps"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "step_down.pose.start",
+      "exercise_id": "step_down",
+      "label": "Step top balance",
+      "role": "start",
+      "body_position": {
+        "summary": "Step top balance for Slow heel tap from a step",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "calves",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "step_down.pose.end",
+      "exercise_id": "step_down",
+      "label": "Bottom heel tap",
+      "role": "end",
+      "body_position": {
+        "summary": "Bottom heel tap for Slow heel tap from a step",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "calves",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "table_row.pose.start",
+      "exercise_id": "table_row",
+      "label": "Hanging beneath table",
+      "role": "start",
+      "body_position": {
+        "summary": "Hanging beneath table for Under-table body row",
+        "orientation": "supine",
+        "joints": {
+          "elbow": "~180\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "heels"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "rear_delts",
+          "biceps"
+        ],
+        "secondary": [
+          "traps",
+          "forearms",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "table_row.pose.end",
+      "exercise_id": "table_row",
+      "label": "Chest to table edge",
+      "role": "end",
+      "body_position": {
+        "summary": "Chest to table edge for Under-table body row",
+        "orientation": "supine",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "heels"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "rear_delts",
+          "biceps"
+        ],
+        "secondary": [
+          "traps",
+          "forearms",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "tuck_l_sit.pose.hold",
+      "exercise_id": "tuck_l_sit",
+      "label": "Tuck L-sit support hold",
+      "role": "hold",
+      "body_position": {
+        "summary": "Tuck L-sit support hold for Supported tucked knee hold",
+        "orientation": "seated",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms"
+        ]
+      },
+      "camera": {
+        "view": "three_quarter",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "chair_or_bench"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "core",
+          "hip_flexors",
+          "triceps"
+        ],
+        "secondary": [
+          "front_delts",
+          "quads"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "wall_push_up.pose.start",
+      "exercise_id": "wall_push_up",
+      "label": "Arms extended against wall",
+      "role": "start",
+      "body_position": {
+        "summary": "Arms extended against wall for Wall push-up",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "wall"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "wall_push_up.pose.end",
+      "exercise_id": "wall_push_up",
+      "label": "Chest lowered toward wall",
+      "role": "end",
+      "body_position": {
+        "summary": "Chest lowered toward wall for Wall push-up",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "palms",
+          "feet"
+        ]
+      },
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "wall"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "wall_slide.pose.start",
+      "exercise_id": "wall_slide",
+      "label": "Goalpost W start",
+      "role": "start",
+      "body_position": {
+        "summary": "Goalpost W start for Wall arm slide",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~45\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet",
+          "back",
+          "elbows",
+          "wrists"
+        ]
+      },
+      "camera": {
+        "view": "front",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "wall"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "rear_delts",
+          "traps"
+        ],
+        "secondary": [
+          "side_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "wall_slide.pose.end",
+      "exercise_id": "wall_slide",
+      "label": "Overhead Y reach",
+      "role": "end",
+      "body_position": {
+        "summary": "Overhead Y reach for Wall arm slide",
+        "orientation": "standing",
+        "joints": {
+          "elbow": "~90\u00b0",
+          "shoulder": "~180\u00b0",
+          "hip": "~90\u00b0",
+          "knee": "~90\u00b0"
+        },
+        "contacts": [
+          "feet",
+          "back",
+          "elbows",
+          "wrists"
+        ]
+      },
+      "camera": {
+        "view": "front",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "equipment_shown": [
+        "wall"
+      ],
+      "highlight_muscles": {
+        "primary": [
+          "rear_delts",
+          "traps"
+        ],
+        "secondary": [
+          "side_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    }
+  ],
+  "movements": [
+    {
+      "id": "archer_push_up.move",
+      "exercise_id": "archer_push_up",
+      "pose_sequence": [
+        "archer_push_up.pose.start",
+        "archer_push_up.pose.end",
+        "archer_push_up.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "archer_push_up.pose.start",
+          "to": "archer_push_up.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "archer_push_up.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "archer_push_up.pose.end",
+          "to": "archer_push_up.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "three_quarter",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "arm_circles.move",
+      "exercise_id": "arm_circles",
+      "pose_sequence": [
+        "arm_circles.pose.start",
+        "arm_circles.pose.end",
+        "arm_circles.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "arm_circles.pose.start",
+          "to": "arm_circles.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "arm_circles.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "arm_circles.pose.end",
+          "to": "arm_circles.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "front",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "front_delts",
+          "side_delts"
+        ],
+        "secondary": [
+          "rear_delts",
+          "traps"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "bench_dip.move",
+      "exercise_id": "bench_dip",
+      "pose_sequence": [
+        "bench_dip.pose.start",
+        "bench_dip.pose.end",
+        "bench_dip.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "bench_dip.pose.start",
+          "to": "bench_dip.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "bench_dip.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "bench_dip.pose.end",
+          "to": "bench_dip.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "triceps"
+        ],
+        "secondary": [
+          "chest",
+          "front_delts"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "bodyweight_squat.move",
+      "exercise_id": "bodyweight_squat",
+      "pose_sequence": [
+        "bodyweight_squat.pose.top",
+        "bodyweight_squat.pose.bottom",
+        "bodyweight_squat.pose.top"
+      ],
+      "phases": [
+        {
+          "from": "bodyweight_squat.pose.top",
+          "to": "bodyweight_squat.pose.bottom",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "bodyweight_squat.pose.bottom",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "bodyweight_squat.pose.bottom",
+          "to": "bodyweight_squat.pose.top",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "box_single_leg_squat.move",
+      "exercise_id": "box_single_leg_squat",
+      "pose_sequence": [
+        "box_single_leg_squat.pose.start",
+        "box_single_leg_squat.pose.end",
+        "box_single_leg_squat.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "box_single_leg_squat.pose.start",
+          "to": "box_single_leg_squat.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "box_single_leg_squat.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "box_single_leg_squat.pose.end",
+          "to": "box_single_leg_squat.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "calves",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "bulgarian_split_squat.move",
+      "exercise_id": "bulgarian_split_squat",
+      "pose_sequence": [
+        "bulgarian_split_squat.pose.start",
+        "bulgarian_split_squat.pose.end",
+        "bulgarian_split_squat.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "bulgarian_split_squat.pose.start",
+          "to": "bulgarian_split_squat.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "bulgarian_split_squat.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "bulgarian_split_squat.pose.end",
+          "to": "bulgarian_split_squat.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "burpee.move",
+      "exercise_id": "burpee",
+      "pose_sequence": [
+        "burpee.pose.start",
+        "burpee.pose.end",
+        "burpee.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "burpee.pose.start",
+          "to": "burpee.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "burpee.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "burpee.pose.end",
+          "to": "burpee.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "chest",
+          "core"
+        ],
+        "secondary": [
+          "glutes",
+          "front_delts",
+          "triceps",
+          "calves"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "cat_cow.move",
+      "exercise_id": "cat_cow",
+      "pose_sequence": [
+        "cat_cow.pose.start",
+        "cat_cow.pose.end",
+        "cat_cow.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "cat_cow.pose.start",
+          "to": "cat_cow.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "cat_cow.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "cat_cow.pose.end",
+          "to": "cat_cow.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "front",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "lower_back",
+          "core"
+        ],
+        "secondary": [
+          "traps",
+          "glutes"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "chair_squat.move",
+      "exercise_id": "chair_squat",
+      "pose_sequence": [
+        "chair_squat.pose.start",
+        "chair_squat.pose.end",
+        "chair_squat.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "chair_squat.pose.start",
+          "to": "chair_squat.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "chair_squat.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "chair_squat.pose.end",
+          "to": "chair_squat.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "chest_doorway_stretch.move",
+      "exercise_id": "chest_doorway_stretch",
+      "pose_sequence": [
+        "chest_doorway_stretch.pose.hold"
+      ],
+      "phases": [
+        {
+          "from": "chest_doorway_stretch.pose.hold",
+          "to": "chest_doorway_stretch.pose.hold",
+          "type": "isometric",
+          "duration_s": 30,
+          "notes": "Maintain static Doorway Forward Chest Opening with core braced"
+        }
+      ],
+      "loop": "once",
+      "camera": {
+        "view": "three_quarter",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "chest",
+          "front_delts"
+        ],
+        "secondary": [
+          "biceps"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "child_pose.move",
+      "exercise_id": "child_pose",
+      "pose_sequence": [
+        "child_pose.pose.hold"
+      ],
+      "phases": [
+        {
+          "from": "child_pose.pose.hold",
+          "to": "child_pose.pose.hold",
+          "type": "isometric",
+          "duration_s": 30,
+          "notes": "Maintain static Prone Rest with Arms Extended with core braced"
+        }
+      ],
+      "loop": "once",
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "lower_back",
+          "lats"
+        ],
+        "secondary": [
+          "glutes",
+          "quads"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "cossack_squat.move",
+      "exercise_id": "cossack_squat",
+      "pose_sequence": [
+        "cossack_squat.pose.start",
+        "cossack_squat.pose.end",
+        "cossack_squat.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "cossack_squat.pose.start",
+          "to": "cossack_squat.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "cossack_squat.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "cossack_squat.pose.end",
+          "to": "cossack_squat.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "three_quarter",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "adductors",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "calves"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "dead_hang.move",
+      "exercise_id": "dead_hang",
+      "pose_sequence": [
+        "dead_hang.pose.hold"
+      ],
+      "phases": [
+        {
+          "from": "dead_hang.pose.hold",
+          "to": "dead_hang.pose.hold",
+          "type": "isometric",
+          "duration_s": 30,
+          "notes": "Maintain static Full Passive Overhead Hang with core braced"
+        }
+      ],
+      "loop": "once",
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "forearms",
+          "lats"
+        ],
+        "secondary": [
+          "traps",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "doorframe_row.move",
+      "exercise_id": "doorframe_row",
+      "pose_sequence": [
+        "doorframe_row.pose.start",
+        "doorframe_row.pose.end",
+        "doorframe_row.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "doorframe_row.pose.start",
+          "to": "doorframe_row.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "doorframe_row.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "doorframe_row.pose.end",
+          "to": "doorframe_row.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "rear_delts"
+        ],
+        "secondary": [
+          "biceps",
+          "traps",
+          "forearms"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "glute_bridge.move",
+      "exercise_id": "glute_bridge",
+      "pose_sequence": [
+        "glute_bridge.pose.start",
+        "glute_bridge.pose.end",
+        "glute_bridge.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "glute_bridge.pose.start",
+          "to": "glute_bridge.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "glute_bridge.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "glute_bridge.pose.end",
+          "to": "glute_bridge.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "lower_back",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "hanging_knee_raise.move",
+      "exercise_id": "hanging_knee_raise",
+      "pose_sequence": [
+        "hanging_knee_raise.pose.start",
+        "hanging_knee_raise.pose.end",
+        "hanging_knee_raise.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "hanging_knee_raise.pose.start",
+          "to": "hanging_knee_raise.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "hanging_knee_raise.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "hanging_knee_raise.pose.end",
+          "to": "hanging_knee_raise.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "core",
+          "hip_flexors"
+        ],
+        "secondary": [
+          "forearms",
+          "lats"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "high_knees.move",
+      "exercise_id": "high_knees",
+      "pose_sequence": [
+        "high_knees.pose.hold"
+      ],
+      "phases": [
+        {
+          "from": "high_knees.pose.hold",
+          "to": "high_knees.pose.hold",
+          "type": "isometric",
+          "duration_s": 30,
+          "notes": "Maintain static High Knee Running Drive with core braced"
+        }
+      ],
+      "loop": "once",
+      "camera": {
+        "view": "front",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "hip_flexors",
+          "calves",
+          "quads"
+        ],
+        "secondary": [
+          "core",
+          "glutes"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "incline_push_up.move",
+      "exercise_id": "incline_push_up",
+      "pose_sequence": [
+        "incline_push_up.pose.start",
+        "incline_push_up.pose.end",
+        "incline_push_up.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "incline_push_up.pose.start",
+          "to": "incline_push_up.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "incline_push_up.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "incline_push_up.pose.end",
+          "to": "incline_push_up.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "jefferson_curl.move",
+      "exercise_id": "jefferson_curl",
+      "pose_sequence": [
+        "jefferson_curl.pose.start",
+        "jefferson_curl.pose.end",
+        "jefferson_curl.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "jefferson_curl.pose.start",
+          "to": "jefferson_curl.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "jefferson_curl.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "jefferson_curl.pose.end",
+          "to": "jefferson_curl.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "hamstrings",
+          "lower_back"
+        ],
+        "secondary": [
+          "glutes",
+          "calves"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "jumping_jack.move",
+      "exercise_id": "jumping_jack",
+      "pose_sequence": [
+        "jumping_jack.pose.start",
+        "jumping_jack.pose.end",
+        "jumping_jack.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "jumping_jack.pose.start",
+          "to": "jumping_jack.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "jumping_jack.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "jumping_jack.pose.end",
+          "to": "jumping_jack.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "front",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "calves",
+          "side_delts"
+        ],
+        "secondary": [
+          "quads",
+          "glutes",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "mountain_climber.move",
+      "exercise_id": "mountain_climber",
+      "pose_sequence": [
+        "mountain_climber.pose.start",
+        "mountain_climber.pose.end",
+        "mountain_climber.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "mountain_climber.pose.start",
+          "to": "mountain_climber.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "mountain_climber.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "mountain_climber.pose.end",
+          "to": "mountain_climber.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "core",
+          "hip_flexors"
+        ],
+        "secondary": [
+          "front_delts",
+          "quads",
+          "triceps"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "negative_pull_up.move",
+      "exercise_id": "negative_pull_up",
+      "pose_sequence": [
+        "negative_pull_up.pose.start",
+        "negative_pull_up.pose.end",
+        "negative_pull_up.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "negative_pull_up.pose.start",
+          "to": "negative_pull_up.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "negative_pull_up.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "negative_pull_up.pose.end",
+          "to": "negative_pull_up.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "biceps"
+        ],
+        "secondary": [
+          "forearms",
+          "rear_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "paused_push_up.move",
+      "exercise_id": "paused_push_up",
+      "pose_sequence": [
+        "paused_push_up.pose.start",
+        "paused_push_up.pose.end",
+        "paused_push_up.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "paused_push_up.pose.start",
+          "to": "paused_push_up.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "paused_push_up.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "paused_push_up.pose.end",
+          "to": "paused_push_up.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "paused_squat.move",
+      "exercise_id": "paused_squat",
+      "pose_sequence": [
+        "paused_squat.pose.start",
+        "paused_squat.pose.end",
+        "paused_squat.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "paused_squat.pose.start",
+          "to": "paused_squat.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "paused_squat.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "paused_squat.pose.end",
+          "to": "paused_squat.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "pike_push_up.move",
+      "exercise_id": "pike_push_up",
+      "pose_sequence": [
+        "pike_push_up.pose.start",
+        "pike_push_up.pose.end",
+        "pike_push_up.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "pike_push_up.pose.start",
+          "to": "pike_push_up.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "pike_push_up.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "pike_push_up.pose.end",
+          "to": "pike_push_up.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "front_delts",
+          "triceps"
+        ],
+        "secondary": [
+          "chest",
+          "traps",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "plank.move",
+      "exercise_id": "plank",
+      "pose_sequence": [
+        "plank.pose.hold"
+      ],
+      "phases": [
+        {
+          "from": "plank.pose.hold",
+          "to": "plank.pose.hold",
+          "type": "isometric",
+          "duration_s": 30,
+          "notes": "Maintain static Forearm plank hold with core braced"
+        }
+      ],
+      "loop": "once",
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "core"
+        ],
+        "secondary": [
+          "front_delts",
+          "glutes",
+          "quads"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "pull_up.move",
+      "exercise_id": "pull_up",
+      "pose_sequence": [
+        "pull_up.pose.hanging",
+        "pull_up.pose.top",
+        "pull_up.pose.hanging"
+      ],
+      "phases": [
+        {
+          "from": "pull_up.pose.hanging",
+          "to": "pull_up.pose.top",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "pull_up.pose.top",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "pull_up.pose.top",
+          "to": "pull_up.pose.hanging",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "biceps"
+        ],
+        "secondary": [
+          "forearms",
+          "rear_delts",
+          "traps",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "reverse_lunge.move",
+      "exercise_id": "reverse_lunge",
+      "pose_sequence": [
+        "reverse_lunge.pose.start",
+        "reverse_lunge.pose.end",
+        "reverse_lunge.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "reverse_lunge.pose.start",
+          "to": "reverse_lunge.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "reverse_lunge.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "reverse_lunge.pose.end",
+          "to": "reverse_lunge.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "hamstrings",
+          "calves",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "scapular_pull_up.move",
+      "exercise_id": "scapular_pull_up",
+      "pose_sequence": [
+        "scapular_pull_up.pose.start",
+        "scapular_pull_up.pose.end",
+        "scapular_pull_up.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "scapular_pull_up.pose.start",
+          "to": "scapular_pull_up.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "scapular_pull_up.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "scapular_pull_up.pose.end",
+          "to": "scapular_pull_up.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "eye",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "traps"
+        ],
+        "secondary": [
+          "forearms",
+          "rear_delts"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "seated_forward_fold.move",
+      "exercise_id": "seated_forward_fold",
+      "pose_sequence": [
+        "seated_forward_fold.pose.hold"
+      ],
+      "phases": [
+        {
+          "from": "seated_forward_fold.pose.hold",
+          "to": "seated_forward_fold.pose.hold",
+          "type": "isometric",
+          "duration_s": 30,
+          "notes": "Maintain static Forward fold hold with core braced"
+        }
+      ],
+      "loop": "once",
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "hamstrings",
+          "lower_back"
+        ],
+        "secondary": [
+          "calves"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "seated_leg_lift.move",
+      "exercise_id": "seated_leg_lift",
+      "pose_sequence": [
+        "seated_leg_lift.pose.start",
+        "seated_leg_lift.pose.end",
+        "seated_leg_lift.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "seated_leg_lift.pose.start",
+          "to": "seated_leg_lift.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "seated_leg_lift.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "seated_leg_lift.pose.end",
+          "to": "seated_leg_lift.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "hip_flexors",
+          "core"
+        ],
+        "secondary": [
+          "quads"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "single_leg_glute_bridge.move",
+      "exercise_id": "single_leg_glute_bridge",
+      "pose_sequence": [
+        "single_leg_glute_bridge.pose.start",
+        "single_leg_glute_bridge.pose.end",
+        "single_leg_glute_bridge.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "single_leg_glute_bridge.pose.start",
+          "to": "single_leg_glute_bridge.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "single_leg_glute_bridge.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "single_leg_glute_bridge.pose.end",
+          "to": "single_leg_glute_bridge.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "glutes",
+          "hamstrings"
+        ],
+        "secondary": [
+          "core",
+          "lower_back"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "slow_mountain_climber.move",
+      "exercise_id": "slow_mountain_climber",
+      "pose_sequence": [
+        "slow_mountain_climber.pose.start",
+        "slow_mountain_climber.pose.end",
+        "slow_mountain_climber.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "slow_mountain_climber.pose.start",
+          "to": "slow_mountain_climber.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "slow_mountain_climber.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "slow_mountain_climber.pose.end",
+          "to": "slow_mountain_climber.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "core",
+          "hip_flexors"
+        ],
+        "secondary": [
+          "front_delts",
+          "quads"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "slow_push_up.move",
+      "exercise_id": "slow_push_up",
+      "pose_sequence": [
+        "slow_push_up.pose.start",
+        "slow_push_up.pose.end",
+        "slow_push_up.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "slow_push_up.pose.start",
+          "to": "slow_push_up.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "slow_push_up.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "slow_push_up.pose.end",
+          "to": "slow_push_up.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "split_squat_jump.move",
+      "exercise_id": "split_squat_jump",
+      "pose_sequence": [
+        "split_squat_jump.pose.start",
+        "split_squat_jump.pose.end",
+        "split_squat_jump.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "split_squat_jump.pose.start",
+          "to": "split_squat_jump.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "split_squat_jump.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "split_squat_jump.pose.end",
+          "to": "split_squat_jump.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes",
+          "calves"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "squat_jump.move",
+      "exercise_id": "squat_jump",
+      "pose_sequence": [
+        "squat_jump.pose.start",
+        "squat_jump.pose.end",
+        "squat_jump.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "squat_jump.pose.start",
+          "to": "squat_jump.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "squat_jump.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "squat_jump.pose.end",
+          "to": "squat_jump.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes",
+          "calves"
+        ],
+        "secondary": [
+          "hamstrings",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "squat_thrust.move",
+      "exercise_id": "squat_thrust",
+      "pose_sequence": [
+        "squat_thrust.pose.start",
+        "squat_thrust.pose.end",
+        "squat_thrust.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "squat_thrust.pose.start",
+          "to": "squat_thrust.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "squat_thrust.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "squat_thrust.pose.end",
+          "to": "squat_thrust.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "core"
+        ],
+        "secondary": [
+          "front_delts",
+          "glutes",
+          "triceps"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "step_down.move",
+      "exercise_id": "step_down",
+      "pose_sequence": [
+        "step_down.pose.start",
+        "step_down.pose.end",
+        "step_down.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "step_down.pose.start",
+          "to": "step_down.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "step_down.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "step_down.pose.end",
+          "to": "step_down.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "quads",
+          "glutes"
+        ],
+        "secondary": [
+          "calves",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "table_row.move",
+      "exercise_id": "table_row",
+      "pose_sequence": [
+        "table_row.pose.start",
+        "table_row.pose.end",
+        "table_row.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "table_row.pose.start",
+          "to": "table_row.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "table_row.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "table_row.pose.end",
+          "to": "table_row.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "lats",
+          "rear_delts",
+          "biceps"
+        ],
+        "secondary": [
+          "traps",
+          "forearms",
+          "core"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "tuck_l_sit.move",
+      "exercise_id": "tuck_l_sit",
+      "pose_sequence": [
+        "tuck_l_sit.pose.hold"
+      ],
+      "phases": [
+        {
+          "from": "tuck_l_sit.pose.hold",
+          "to": "tuck_l_sit.pose.hold",
+          "type": "isometric",
+          "duration_s": 30,
+          "notes": "Maintain static Tuck L-sit support hold with core braced"
+        }
+      ],
+      "loop": "once",
+      "camera": {
+        "view": "three_quarter",
+        "height": "floor",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "core",
+          "hip_flexors",
+          "triceps"
+        ],
+        "secondary": [
+          "front_delts",
+          "quads"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "wall_push_up.move",
+      "exercise_id": "wall_push_up",
+      "pose_sequence": [
+        "wall_push_up.pose.start",
+        "wall_push_up.pose.end",
+        "wall_push_up.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "wall_push_up.pose.start",
+          "to": "wall_push_up.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "wall_push_up.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "wall_push_up.pose.end",
+          "to": "wall_push_up.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "side",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "chest"
+        ],
+        "secondary": [
+          "triceps",
+          "front_delts"
+        ]
+      },
+      "asset_path": null
+    },
+    {
+      "id": "wall_slide.move",
+      "exercise_id": "wall_slide",
+      "pose_sequence": [
+        "wall_slide.pose.start",
+        "wall_slide.pose.end",
+        "wall_slide.pose.start"
+      ],
+      "phases": [
+        {
+          "from": "wall_slide.pose.start",
+          "to": "wall_slide.pose.end",
+          "type": "eccentric",
+          "duration_s": 2,
+          "notes": "Controlled transition into target depth"
+        },
+        {
+          "at": "wall_slide.pose.end",
+          "type": "pause",
+          "duration_s": 1,
+          "notes": "Brief isometric pause at peak range"
+        },
+        {
+          "from": "wall_slide.pose.end",
+          "to": "wall_slide.pose.start",
+          "type": "concentric",
+          "duration_s": 1,
+          "notes": "Dynamic return to starting position"
+        }
+      ],
+      "loop": "loop",
+      "camera": {
+        "view": "front",
+        "height": "waist",
+        "framing": "full_body"
+      },
+      "highlight_muscles": {
+        "primary": [
+          "rear_delts",
+          "traps"
+        ],
+        "secondary": [
+          "side_delts",
+          "core"
+        ]
+      },
+      "asset_path": null
+    }
+  ]
+}

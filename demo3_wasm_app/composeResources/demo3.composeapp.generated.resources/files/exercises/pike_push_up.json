@@ -1,0 +1,60 @@
+{
+  "id": "pike_push_up",
+  "status": "complete",
+  "display_name": "hips-high shoulder push-up",
+  "also_known_as": [
+    "Pike push-up"
+  ],
+  "description": "An inverted bodyweight pressing movement focusing vertical pushing strength on the shoulders and triceps.",
+  "setup": "Form an inverted V-shape with hands shoulder-width on the floor, hips pushed high toward the ceiling, and legs straight.",
+  "steps": [
+    "Shift your weight slightly forward onto your hands while looking toward your feet.",
+    "Lower the crown of your head diagonally forward to touch the floor in front of your fingertips.",
+    "Press firmly through your palms diagonally backward to return to the pike peak."
+  ],
+  "cues": [
+    "Form a tripod between your head and two hands at the bottom",
+    "Push the floor away actively at the top to shrug your shoulders into your ears"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Dropping head straight down between hands instead of forward",
+      "fix": "Aim the crown of your head ahead of your fingertips forming an equilateral triangle"
+    },
+    {
+      "mistake": "Flaring elbows wide out to the sides",
+      "fix": "Keep elbows angled 45 degrees back toward your body"
+    }
+  ],
+  "rep_standard": "Begins in high pike with arms straight, head taps ground forward of hands, and finishes with head pushed through shoulders back to peak.",
+  "is_hold": false,
+  "easier_id": "wall_slide",
+  "harder_id": null,
+  "equipment": [
+    "floor"
+  ],
+  "primary_muscles": [
+    "front_delts",
+    "triceps"
+  ],
+  "secondary_muscles": [
+    "chest",
+    "traps",
+    "core"
+  ],
+  "visual": {
+    "movement_id": "pike_push_up.move",
+    "poses": [
+      {
+        "id": "pike_push_up.pose.start",
+        "label": "Inverted V pike",
+        "role": "start"
+      },
+      {
+        "id": "pike_push_up.pose.end",
+        "label": "Head tap tripod",
+        "role": "end"
+      }
+    ]
+  }
+}

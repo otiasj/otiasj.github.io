@@ -1,0 +1,60 @@
+{
+  "id": "reverse_lunge",
+  "status": "complete",
+  "display_name": "Step-back lunge",
+  "also_known_as": [
+    "Reverse lunge"
+  ],
+  "description": "A joint-friendly unilateral leg exercise that targets quads, hamstrings, and glutes with high stability.",
+  "setup": "Stand tall with feet hip-width apart, hands on hips or clasped at chest level.",
+  "steps": [
+    "Take a controlled step backward with one leg onto the ball of your rear foot.",
+    "Lower your hips until both knees are bent at roughly 90-degree angles and rear knee hovers above the floor.",
+    "Push firmly through the front heel to drive back up to the starting position."
+  ],
+  "cues": [
+    "Keep your front knee stacked directly above your ankle",
+    "Maintain an upright torso with weight distributed through the front heel"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Slamming back knee onto the hard floor",
+      "fix": "Control descent and gently tap or hover the knee one inch off the ground"
+    },
+    {
+      "mistake": "Stepping backward directly in line with front foot like a tightrope",
+      "fix": "Keep feet hip-width apart like train tracks for balance"
+    }
+  ],
+  "rep_standard": "Begins standing tall with hips extended, rear knee hovers or light taps floor, and finishes with return to standing feet together.",
+  "is_hold": false,
+  "easier_id": "bodyweight_squat",
+  "harder_id": "split_squat_jump",
+  "equipment": [
+    "floor"
+  ],
+  "primary_muscles": [
+    "quads",
+    "glutes"
+  ],
+  "secondary_muscles": [
+    "hamstrings",
+    "calves",
+    "core"
+  ],
+  "visual": {
+    "movement_id": "reverse_lunge.move",
+    "poses": [
+      {
+        "id": "reverse_lunge.pose.start",
+        "label": "Standing tall",
+        "role": "start"
+      },
+      {
+        "id": "reverse_lunge.pose.end",
+        "label": "Bottom lunge position",
+        "role": "end"
+      }
+    ]
+  }
+}

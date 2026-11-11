@@ -1,0 +1,49 @@
+{
+  "id": "jumping_jack",
+  "status": "complete",
+  "display_name": "Jumping Jack",
+  "also_known_as": ["Side-straddle hop"],
+  "description": "A classic whole-body cardiovascular warmup movement warming calves, shoulders, and elevating heart rate.",
+  "setup": "Stand with feet together and arms resting comfortably along your sides.",
+  "steps": [
+    "Jump lightly into the air, spreading feet out wider than shoulders.",
+    "Simultaneously sweep arms overhead in wide circular arcs until hands touch or meet above head.",
+    "Jump again to bring feet back together while lowering arms smoothly back to sides."
+  ],
+  "cues": [
+    "Land softly on balls of feet with knees springy",
+    "Keep rhythmic tempo and steady breathing"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Landing with stiff locked knees and heavy flat foot impact",
+      "fix": "Maintain slight bend in knees to absorb force quietly through calves"
+    },
+    {
+      "mistake": "Incomplete arm range of motion stopping at chest level",
+      "fix": "Raise hands fully above head for complete shoulder elevation warmup"
+    }
+  ],
+  "rep_standard": "Feet spread beyond shoulder width with hands reaching overhead, returning to feet together at sides",
+  "is_hold": false,
+  "easier_id": null,
+  "harder_id": "high_knees",
+  "equipment": ["floor"],
+  "primary_muscles": ["calves", "side_delts"],
+  "secondary_muscles": ["quads", "glutes", "core"],
+  "visual": {
+    "movement_id": "jumping_jack.move",
+    "poses": [
+      {
+        "id": "jumping_jack.pose.start",
+        "label": "Feet Together Arms at Sides",
+        "role": "start"
+      },
+      {
+        "id": "jumping_jack.pose.end",
+        "label": "Wide Stance Arms Overhead",
+        "role": "end"
+      }
+    ]
+  }
+}

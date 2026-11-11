@@ -1,0 +1,49 @@
+{
+  "id": "cat_cow",
+  "status": "complete",
+  "display_name": "Cat Cow",
+  "also_known_as": ["Cat-camel stretch", "Spinal wave"],
+  "description": "A quadruped mobility movement alternating spinal flexion and extension to release spinal stiffness and activate core musculature.",
+  "setup": "Start on hands and knees with wrists directly under shoulders and knees under hips in table position.",
+  "steps": [
+    "Inhale, drop belly toward the floor, tilt pelvis anteriorly, and look gently upward (Cow pose).",
+    "Exhale, press hands into floor, round spine upward toward the ceiling, and tuck chin to chest (Cat pose).",
+    "Flow fluidly between both positions, coordinating breath with spinal articulation."
+  ],
+  "cues": [
+    "Move vertebra by vertebra through the entire spine",
+    "Push the floor away with your palms at the top of Cat"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Cranking neck excessively backward during Cow",
+      "fix": "Keep cervical spine long, gazing softly forward rather than forcing neck back"
+    },
+    {
+      "mistake": "Bending elbows during spinal transitions",
+      "fix": "Keep arms straight and locked, driving movement through shoulders and spine"
+    }
+  ],
+  "rep_standard": "One complete cycle of full spinal extension (Cow) and full flexion (Cat) counts as one repetition",
+  "is_hold": false,
+  "easier_id": null,
+  "harder_id": null,
+  "equipment": ["floor"],
+  "primary_muscles": ["lower_back", "core"],
+  "secondary_muscles": ["traps", "glutes"],
+  "visual": {
+    "movement_id": "cat_cow.move",
+    "poses": [
+      {
+        "id": "cat_cow.pose.start",
+        "label": "Cow Spinal Extension",
+        "role": "start"
+      },
+      {
+        "id": "cat_cow.pose.end",
+        "label": "Cat Spinal Flexion",
+        "role": "end"
+      }
+    ]
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "id": "longevity_l1",
+  "title": "Move better · Level 1",
+  "tagline": "Joint-friendly strength, posture, and mobility control.",
+  "days_per_week": 3,
+  "sessions": [
+    {
+      "day_number": 1,
+      "name": "Scapular Control & Hip Awakening",
+      "exercises": [
+        {
+          "exercise_id": "cat_cow",
+          "name": "Cat Cow",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Slow fluid wave",
+          "rest_seconds": 30,
+          "cue": "Segmental movement from tailbone to head"
+        },
+        {
+          "exercise_id": "arm_circles",
+          "name": "Arm Circles",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Controlled circles",
+          "rest_seconds": 30,
+          "cue": "Gentle rotator cuff and shoulder warm up"
+        },
+        {
+          "exercise_id": "scapular_pull_up",
+          "name": "Scapular Pull Up",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s pull, 2s hold, 2s release",
+          "rest_seconds": 60,
+          "cue": "Keep arms straight, pull shoulder blades down and back"
+        },
+        {
+          "exercise_id": "glute_bridge",
+          "name": "Glute Bridge",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "10–12 reps",
+          "rep_min": 10,
+          "rep_max": 12,
+          "tempo": "2s up, 2s squeeze",
+          "rest_seconds": 60,
+          "cue": "Press through heels, lock hips out without arching back"
+        },
+        {
+          "exercise_id": "dead_hang",
+          "name": "Dead Hang",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "20–30s hold",
+          "hold_seconds": 30,
+          "tempo": "Steady hold",
+          "rest_seconds": 60,
+          "cue": "Let gravity decompress spinal discs completely"
+        },
+        {
+          "exercise_id": "chair_squat",
+          "name": "Chair Squat",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "10–12 reps",
+          "rep_min": 10,
+          "rep_max": 12,
+          "tempo": "3s down, 1s up",
+          "rest_seconds": 60,
+          "cue": "Sit hips back with tall chest, light touch on seat"
+        },
+        {
+          "exercise_id": "chest_doorway_stretch",
+          "name": "Chest Doorway Stretch",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Gentle static hold",
+          "rest_seconds": 30,
+          "cue": "Deep diaphragmatic breaths expanding ribcage"
+        },
+        {
+          "exercise_id": "child_pose",
+          "name": "Child Pose",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Restorative hold",
+          "rest_seconds": 30,
+          "cue": "Sink hips to heels, relaxing lower back completely"
+        }
+      ]
+    },
+    {
+      "day_number": 2,
+      "name": "Posture Correction & Core Alignment",
+      "exercises": [
+        {
+          "exercise_id": "arm_circles",
+          "name": "Arm Circles",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Controlled circles",
+          "rest_seconds": 30,
+          "cue": "Smooth circular motion with relaxed trap muscles"
+        },
+        {
+          "exercise_id": "cat_cow",
+          "name": "Cat Cow",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Slow fluid wave",
+          "rest_seconds": 30,
+          "cue": "Segmental spinal articulation"
+        },
+        {
+          "exercise_id": "wall_slide",
+          "name": "Wall Slide",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "3s up, 3s down",
+          "rest_seconds": 60,
+          "cue": "Keep wrists and elbows flat against wall as you slide"
+        },
+        {
+          "exercise_id": "doorframe_row",
+          "name": "Doorframe Row",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "10–12 reps",
+          "rep_min": 10,
+          "rep_max": 12,
+          "tempo": "2s pull, 1s pause",
+          "rest_seconds": 60,
+          "cue": "Retract scapulae and pull chest toward doorframe"
+        },
+        {
+          "exercise_id": "wall_push_up",
+          "name": "Wall Push Up",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "10–12 reps",
+          "rep_min": 10,
+          "rep_max": 12,
+          "tempo": "3s down, 1s up",
+          "rest_seconds": 60,
+          "cue": "Maintain straight plank alignment without sagging"
+        },
+        {
+          "exercise_id": "plank",
+          "name": "Plank",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "20–30s hold",
+          "hold_seconds": 30,
+          "tempo": "Braced static hold",
+          "rest_seconds": 60,
+          "cue": "Tuck pelvis slightly to protect lower back"
+        },
+        {
+          "exercise_id": "seated_forward_fold",
+          "name": "Seated Forward Fold",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Relaxed fold",
+          "rest_seconds": 30,
+          "cue": "Slowly fold over thighs to decompress spine"
+        },
+        {
+          "exercise_id": "child_pose",
+          "name": "Child Pose",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Restorative hold",
+          "rest_seconds": 30,
+          "cue": "Deep nasal breathing into kidneys and lats"
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "name": "Joint Mobility & Whole-Body Restoration",
+      "exercises": [
+        {
+          "exercise_id": "cat_cow",
+          "name": "Cat Cow",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Slow fluid wave",
+          "rest_seconds": 30,
+          "cue": "Coordinate breath with spinal curves"
+        },
+        {
+          "exercise_id": "arm_circles",
+          "name": "Arm Circles",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Controlled circles",
+          "rest_seconds": 30,
+          "cue": "Wide circular movement through shoulder girdle"
+        },
+        {
+          "exercise_id": "glute_bridge",
+          "name": "Glute Bridge",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "12–15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "2s up, 2s squeeze",
+          "rest_seconds": 60,
+          "cue": "Squeeze glutes at top with level hips"
+        },
+        {
+          "exercise_id": "wall_slide",
+          "name": "Wall Slide",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "3s up, 3s down",
+          "rest_seconds": 60,
+          "cue": "Feel middle back and serratus muscles engaging"
+        },
+        {
+          "exercise_id": "dead_hang",
+          "name": "Dead Hang",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "25–35s hold",
+          "hold_seconds": 35,
+          "tempo": "Steady hold",
+          "rest_seconds": 60,
+          "cue": "Full passive hang without swaying"
+        },
+        {
+          "exercise_id": "chair_squat",
+          "name": "Chair Squat",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "10–12 reps",
+          "rep_min": 10,
+          "rep_max": 12,
+          "tempo": "3s down, 1s up",
+          "rest_seconds": 60,
+          "cue": "Smooth controlled sit and rise"
+        },
+        {
+          "exercise_id": "chest_doorway_stretch",
+          "name": "Chest Doorway Stretch",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Gentle static hold",
+          "rest_seconds": 30,
+          "cue": "Open anterior shoulders"
+        },
+        {
+          "exercise_id": "seated_forward_fold",
+          "name": "Seated Forward Fold",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Relaxed fold",
+          "rest_seconds": 30,
+          "cue": "Relaxed hamstring elongation"
+        }
+      ]
+    }
+  ]
+}

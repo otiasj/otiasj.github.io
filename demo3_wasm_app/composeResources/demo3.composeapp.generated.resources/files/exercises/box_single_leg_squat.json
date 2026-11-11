@@ -1,0 +1,49 @@
+{
+  "id": "box_single_leg_squat",
+  "status": "complete",
+  "display_name": "Box Single Leg Squat",
+  "also_known_as": ["Box pistol squat", "Single leg box squat"],
+  "description": "A unilateral squat progression targeting unilateral leg strength, hip stability, and ankle mobility using a chair or bench for depth control.",
+  "setup": "Stand balanced on one foot directly in front of a chair or box with opposite leg extended straight forward.",
+  "steps": [
+    "Extend arms forward for counter-balance and brace your core.",
+    "Hinge hips back and bend working knee with control until buttocks touch the box lightly.",
+    "Pause momentarily without offloading weight onto the box, then press through whole foot to stand up."
+  ],
+  "cues": [
+    "Descend with control without collapsing onto the box",
+    "Drive through working midfoot and heel"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Rocking torso aggressively back and forth to gain momentum off the box",
+      "fix": "Keep torso braced with steady forward lean, powering up purely from leg drive"
+    },
+    {
+      "mistake": "Working knee buckling inward upon ascent",
+      "fix": "Keep kneecap aligned directly over second toe throughout rep"
+    }
+  ],
+  "rep_standard": "Light tap on the box without sitting back or bouncing, standing to complete unilateral lockout",
+  "is_hold": false,
+  "easier_id": "bulgarian_split_squat",
+  "harder_id": null,
+  "equipment": ["chair_or_bench"],
+  "primary_muscles": ["quads", "glutes"],
+  "secondary_muscles": ["hamstrings", "calves", "core"],
+  "visual": {
+    "movement_id": "box_single_leg_squat.move",
+    "poses": [
+      {
+        "id": "box_single_leg_squat.pose.start",
+        "label": "Single Leg Tall Stand",
+        "role": "start"
+      },
+      {
+        "id": "box_single_leg_squat.pose.end",
+        "label": "Seated Box Contact",
+        "role": "end"
+      }
+    ]
+  }
+}

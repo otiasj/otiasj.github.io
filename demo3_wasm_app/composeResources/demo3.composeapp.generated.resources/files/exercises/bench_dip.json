@@ -1,0 +1,49 @@
+{
+  "id": "bench_dip",
+  "status": "complete",
+  "display_name": "Bench Dip",
+  "also_known_as": ["Chair dip", "Box dip"],
+  "description": "An upper body pressing exercise using a chair or bench to build tricep strength and shoulder extension stability.",
+  "setup": "Sit on the edge of a sturdy chair or bench, place hands next to hips with fingers gripping the forward edge, and step feet forward.",
+  "steps": [
+    "Slide hips off the bench surface while keeping your chest open and torso upright.",
+    "Lower your body by bending at the elbows until upper arms are roughly parallel to the floor.",
+    "Press firmly down through your palms to return to full arm extension."
+  ],
+  "cues": [
+    "Keep hips close to the bench as you descend",
+    "Drive through the heels of your hands to lock out elbows"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Drifting hips too far away from the bench",
+      "fix": "Keep your back brushing lightly against the edge of the seat to protect anterior shoulders"
+    },
+    {
+      "mistake": "Shoulders rolling forward into rounding posture",
+      "fix": "Pin shoulder blades down and back, maintaining proud chest throughout"
+    }
+  ],
+  "rep_standard": "Elbows reach at least 90 degrees at bottom, complete elbow extension at top",
+  "is_hold": false,
+  "easier_id": "incline_push_up",
+  "harder_id": "paused_push_up",
+  "equipment": ["chair_or_bench"],
+  "primary_muscles": ["triceps"],
+  "secondary_muscles": ["chest", "front_delts"],
+  "visual": {
+    "movement_id": "bench_dip.move",
+    "poses": [
+      {
+        "id": "bench_dip.pose.start",
+        "label": "Top Support Lockout",
+        "role": "start"
+      },
+      {
+        "id": "bench_dip.pose.end",
+        "label": "Bottom 90-Degree Dip",
+        "role": "end"
+      }
+    ]
+  }
+}

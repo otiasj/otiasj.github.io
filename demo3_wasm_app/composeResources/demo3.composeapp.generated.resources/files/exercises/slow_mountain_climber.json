@@ -1,0 +1,60 @@
+{
+  "id": "slow_mountain_climber",
+  "status": "complete",
+  "display_name": "Slow knee-to-chest plank",
+  "also_known_as": [
+    "Slow mountain climber"
+  ],
+  "description": "A deliberate plank variation driving knees forward with strict core control and hip flexor engagement.",
+  "setup": "Assume a tall push-up plank position with hands under shoulders, feet hip-width apart, and core braced.",
+  "steps": [
+    "Slowly drive one knee forward toward your chest without letting hips pike or drop.",
+    "Pause with knee tucked tightly for one full second.",
+    "Slowly return the foot back to the starting plank position.",
+    "Repeat the controlled movement with the opposite leg."
+  ],
+  "cues": [
+    "Move at a slow deliberate pace instead of sprinting",
+    "Keep hips level and steady as if balancing a glass of water on your lower back"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Bouncing hips up and down rapidly",
+      "fix": "Lock core in place so only the leg moves while hips remain frozen"
+    },
+    {
+      "mistake": "Dragging toes across the floor",
+      "fix": "Lift foot cleanly off the floor throughout the entire tuck"
+    }
+  ],
+  "rep_standard": "Begins in straight push-up plank, brings knee close to chest with a one-second pause, and returns foot cleanly to start.",
+  "is_hold": false,
+  "easier_id": "plank",
+  "harder_id": "mountain_climber",
+  "equipment": [
+    "floor"
+  ],
+  "primary_muscles": [
+    "core",
+    "hip_flexors"
+  ],
+  "secondary_muscles": [
+    "front_delts",
+    "quads"
+  ],
+  "visual": {
+    "movement_id": "slow_mountain_climber.move",
+    "poses": [
+      {
+        "id": "slow_mountain_climber.pose.start",
+        "label": "Tall plank position",
+        "role": "start"
+      },
+      {
+        "id": "slow_mountain_climber.pose.end",
+        "label": "Slow knee tuck to chest",
+        "role": "end"
+      }
+    ]
+  }
+}

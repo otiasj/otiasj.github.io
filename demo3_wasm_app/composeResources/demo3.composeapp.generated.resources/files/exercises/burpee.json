@@ -1,0 +1,49 @@
+{
+  "id": "burpee",
+  "status": "complete",
+  "display_name": "Burpee",
+  "also_known_as": ["Full body burpee"],
+  "description": "A high-intensity conditioning movement combining a squat, plank kick-out, chest-to-floor drop, and vertical jump.",
+  "setup": "Stand with feet shoulder-width apart and arms hanging naturally at your sides.",
+  "steps": [
+    "Drop hips down and place both hands flat on the floor in front of your feet.",
+    "Jump or step feet back into a push up plank and lower chest to touch floor.",
+    "Press up, snap feet back toward hands into squat stance, and jump upward with hands overhead."
+  ],
+  "cues": [
+    "Snap feet forward wide to land on flat feet",
+    "Exhale forcefully as you press off the ground and jump"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Sagging lower back as hips kick out into plank",
+      "fix": "Squeeze glutes and abs to keep spine rigid throughout plank transitions"
+    },
+    {
+      "mistake": "Landing stiff-legged on toe balls after the jump",
+      "fix": "Land softly with knees slightly bent to absorb impact through legs"
+    }
+  ],
+  "rep_standard": "Chest touches floor at bottom, both feet leave floor with arms clapping or reaching overhead at top",
+  "is_hold": false,
+  "easier_id": "squat_thrust",
+  "harder_id": null,
+  "equipment": ["floor"],
+  "primary_muscles": ["quads", "chest", "core"],
+  "secondary_muscles": ["glutes", "front_delts", "triceps", "calves"],
+  "visual": {
+    "movement_id": "burpee.move",
+    "poses": [
+      {
+        "id": "burpee.pose.start",
+        "label": "Standing Ready Position",
+        "role": "start"
+      },
+      {
+        "id": "burpee.pose.end",
+        "label": "Overhead Jump Apex",
+        "role": "end"
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "split_squat_jump",
+  "status": "complete",
+  "display_name": "Jumping lunge switch",
+  "also_known_as": [
+    "Split squat jump"
+  ],
+  "description": "An explosive plyometric lunge switching legs in mid-air to build dynamic lower-body power and agility.",
+  "setup": "Begin in a staggered lunge stance with both knees bent at roughly 90 degrees and torso tall.",
+  "steps": [
+    "Lower into a lunge, loading weight through your front midfoot.",
+    "Drive explosively through both feet upward into the air.",
+    "Switch your front and back legs in mid-air.",
+    "Land softly on balls of feet and immediately absorb into the next lunge depth."
+  ],
+  "cues": [
+    "Land softly like a cat by flexing your ankles and knees",
+    "Use your arms in opposition to aid vertical propulsion and balance"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Slamming the back knee into the ground on landing",
+      "fix": "Absorb landing smoothly and stop back knee one inch above the ground"
+    },
+    {
+      "mistake": "Landing stiff-legged with knees locked",
+      "fix": "Immediately cushion the landing by yielding into a deep lunge"
+    }
+  ],
+  "rep_standard": "Begins in lunge depth, leaves the floor with both feet simultaneously, switches stance in air, and lands softly into deep lunge.",
+  "is_hold": false,
+  "easier_id": "reverse_lunge",
+  "harder_id": null,
+  "equipment": [
+    "floor"
+  ],
+  "primary_muscles": [
+    "quads",
+    "glutes",
+    "calves"
+  ],
+  "secondary_muscles": [
+    "hamstrings",
+    "core"
+  ],
+  "visual": {
+    "movement_id": "split_squat_jump.move",
+    "poses": [
+      {
+        "id": "split_squat_jump.pose.start",
+        "label": "Lunge takeoff stance",
+        "role": "start"
+      },
+      {
+        "id": "split_squat_jump.pose.end",
+        "label": "Opposite leg lunge landing",
+        "role": "end"
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "incline_push_up",
+  "status": "complete",
+  "display_name": "Incline Push Up",
+  "also_known_as": ["Elevated push up", "Bench push up"],
+  "description": "A beginner push up progression elevating hands onto a bench or sturdy chair to reduce load while training pressing mechanics.",
+  "setup": "Place palms shoulder-width apart on the edge of a sturdy bench or chair and step feet back into a straight arm plank.",
+  "steps": [
+    "Establish rigid plank line from head to heels with glutes and core squeezed.",
+    "Bend elbows back at 45 degrees, lowering chest toward the edge of the elevated surface.",
+    "Touch chest lightly to bench, pause for a split second, and press back up to lockout."
+  ],
+  "cues": [
+    "Keep body as rigid as a solid wooden board",
+    "Point elbows back like an arrow rather than out like a T"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Hips sagging toward the bench during descent",
+      "fix": "Squeeze glutes and pull navel to spine before starting each rep"
+    },
+    {
+      "mistake": "Reaching chin to bench instead of chest",
+      "fix": "Keep neck neutral and focus on touching center chest to edge"
+    }
+  ],
+  "rep_standard": "Chest touches elevated surface, elbows reach full lockout at top",
+  "is_hold": false,
+  "easier_id": "wall_push_up",
+  "harder_id": "slow_push_up",
+  "equipment": ["chair_or_bench"],
+  "primary_muscles": ["chest"],
+  "secondary_muscles": ["triceps", "front_delts", "core"],
+  "visual": {
+    "movement_id": "incline_push_up.move",
+    "poses": [
+      {
+        "id": "incline_push_up.pose.start",
+        "label": "Elevated Plank Lockout",
+        "role": "start"
+      },
+      {
+        "id": "incline_push_up.pose.end",
+        "label": "Chest to Incline Contact",
+        "role": "end"
+      }
+    ]
+  }
+}

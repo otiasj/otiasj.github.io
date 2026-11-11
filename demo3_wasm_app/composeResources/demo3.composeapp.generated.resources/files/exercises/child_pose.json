@@ -1,0 +1,45 @@
+{
+  "id": "child_pose",
+  "status": "complete",
+  "display_name": "Child Pose",
+  "also_known_as": ["Balasana", "Resting forward bend"],
+  "description": "A grounding yoga and mobility posture that gently elongates the latissimus dorsi, lumbar spine, and hip extensors.",
+  "setup": "Kneel on the floor with big toes touching and knees separated slightly wider than torso width.",
+  "steps": [
+    "Sit hips back onto your heels and lengthen spine upward.",
+    "Fold forward at the hips, walking hands out along floor until forehead rests gently on mat.",
+    "Extend fingertips forward to lengthen through lats while sinking hips deeply toward heels.",
+    "Breathe deeply into ribcage and lower back for assigned duration."
+  ],
+  "cues": [
+    "Sink hips heavy toward heels on every exhale",
+    "Reach fingers forward while relaxing armpits toward floor"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Holding breath or shallow chest breathing",
+      "fix": "Focus on slow belly breaths, feeling back ribs expand"
+    },
+    {
+      "mistake": "Hips popping up high into air due to tight ankles or hips",
+      "fix": "Place a folded towel under hips or widen knees slightly for comfort"
+    }
+  ],
+  "rep_standard": "Maintain static hold with relaxed neck and deep nasal breathing for full assigned duration",
+  "is_hold": true,
+  "easier_id": null,
+  "harder_id": null,
+  "equipment": ["floor"],
+  "primary_muscles": ["lower_back", "lats"],
+  "secondary_muscles": ["glutes", "quads"],
+  "visual": {
+    "movement_id": "child_pose.move",
+    "poses": [
+      {
+        "id": "child_pose.pose.hold",
+        "label": "Prone Rest with Arms Extended",
+        "role": "hold"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "doorframe_row",
+  "status": "complete",
+  "display_name": "Doorframe Row",
+  "also_known_as": ["Corner row", "Wall jamb pull"],
+  "description": "An accessible bodyweight horizontal pull using a sturdy doorframe or vertical pillar to train back and bicep mechanics.",
+  "setup": "Stand close facing a sturdy doorframe, gripping the edge of the frame with one or both hands at chest level, placing toes near the base.",
+  "steps": [
+    "Lean upper body backward until arms are fully extended and weight is supported on heels.",
+    "Engage lats and retract shoulder blades toward your spine.",
+    "Pull your chest firmly toward the frame until hands contact ribs or chest.",
+    "Lower back down with smooth control until arms reach full extension."
+  ],
+  "cues": [
+    "Lead the pull with elbows driving behind you",
+    "Keep torso as straight and rigid as a plank"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Piking hips back instead of maintaining straight body line",
+      "fix": "Squeeze glutes and abs so entire body moves as one unified lever"
+    },
+    {
+      "mistake": "Yanking with arms before engaging shoulder blades",
+      "fix": "Initiate each repetition by pinching shoulder blades together first"
+    }
+  ],
+  "rep_standard": "Chest approaches doorframe at peak contraction, arms reach full extension at bottom",
+  "is_hold": false,
+  "easier_id": null,
+  "harder_id": "table_row",
+  "equipment": ["wall"],
+  "primary_muscles": ["lats", "rear_delts"],
+  "secondary_muscles": ["biceps", "traps", "forearms"],
+  "visual": {
+    "movement_id": "doorframe_row.move",
+    "poses": [
+      {
+        "id": "doorframe_row.pose.start",
+        "label": "Lean Back Arms Extended",
+        "role": "start"
+      },
+      {
+        "id": "doorframe_row.pose.end",
+        "label": "Chest to Frame Peak Pull",
+        "role": "end"
+      }
+    ]
+  }
+}

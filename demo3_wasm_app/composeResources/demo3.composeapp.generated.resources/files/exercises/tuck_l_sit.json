@@ -1,0 +1,56 @@
+{
+  "id": "tuck_l_sit",
+  "status": "complete",
+  "display_name": "Supported tucked knee hold",
+  "also_known_as": [
+    "Tuck L-sit"
+  ],
+  "description": "An isometric core and triceps support hold performed between two sturdy chairs or benches.",
+  "setup": "Sit between two chairs or parallel benches with hands resting flat on the edges and shoulders pressed down.",
+  "steps": [
+    "Depress your shoulders and push down hard through your palms to lift your hips off the seat.",
+    "Pull your knees tightly up into your chest with toes pointed.",
+    "Keep arms locked straight and chest elevated proudly.",
+    "Breathe steadily and hold the tucked hover motionless."
+  ],
+  "cues": [
+    "Push the chair seats down into the floor to keep shoulders away from ears",
+    "Compress knees as close to your chest as possible"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Shrugging shoulders into ears with bent elbows",
+      "fix": "Lock elbows completely straight and actively push shoulders down"
+    },
+    {
+      "mistake": "Letting feet or knees sag toward the floor",
+      "fix": "Engage hip flexors and lower abs to keep knees tightly tucked high"
+    }
+  ],
+  "rep_standard": "Timer runs while body is completely supported on palms with arms straight, hips suspended in air, and knees tucked into chest.",
+  "is_hold": true,
+  "easier_id": "seated_leg_lift",
+  "harder_id": null,
+  "equipment": [
+    "chair_or_bench"
+  ],
+  "primary_muscles": [
+    "core",
+    "hip_flexors",
+    "triceps"
+  ],
+  "secondary_muscles": [
+    "front_delts",
+    "quads"
+  ],
+  "visual": {
+    "movement_id": "tuck_l_sit.move",
+    "poses": [
+      {
+        "id": "tuck_l_sit.pose.hold",
+        "label": "Tuck L-sit support hold",
+        "role": "hold"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "wall_push_up",
+  "status": "complete",
+  "display_name": "Wall push-up",
+  "also_known_as": [
+    "Standing wall press"
+  ],
+  "description": "The gentlest beginner push-up progression teaching proper pushing mechanics and upper-body control against a wall.",
+  "setup": "Stand arm's length facing a wall with feet hip-width apart and palms flat on the wall at shoulder height.",
+  "steps": [
+    "Step back slightly onto the balls of your feet to lean gently into the wall.",
+    "Bend your elbows to lower your chest toward the wall in a straight plank posture.",
+    "Gently tap forehead or chest close to the wall.",
+    "Press firmly through your palms to return to full arm extension."
+  ],
+  "cues": [
+    "Keep your body straight like an angled board from heels to head",
+    "Keep elbows tucked diagonally at 45 degrees rather than flared out"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Bending at the hips and leaving glutes behind",
+      "fix": "Tuck pelvis and move whole body toward wall as a single rigid unit"
+    },
+    {
+      "mistake": "Placing hands too high on the wall",
+      "fix": "Align hands at shoulder height or slightly below chest line"
+    }
+  ],
+  "rep_standard": "Begins with arms extended against wall, lowers until nose or chest is within two inches of wall, and pushes back to full lockout.",
+  "is_hold": false,
+  "easier_id": null,
+  "harder_id": "incline_push_up",
+  "equipment": [
+    "wall"
+  ],
+  "primary_muscles": [
+    "chest"
+  ],
+  "secondary_muscles": [
+    "triceps",
+    "front_delts"
+  ],
+  "visual": {
+    "movement_id": "wall_push_up.move",
+    "poses": [
+      {
+        "id": "wall_push_up.pose.start",
+        "label": "Arms extended against wall",
+        "role": "start"
+      },
+      {
+        "id": "wall_push_up.pose.end",
+        "label": "Chest lowered toward wall",
+        "role": "end"
+      }
+    ]
+  }
+}

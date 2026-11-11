@@ -1,0 +1,44 @@
+{
+  "id": "dead_hang",
+  "status": "complete",
+  "display_name": "Dead Hang",
+  "also_known_as": ["Passive bar hang"],
+  "description": "An overhead hanging isometric exercise that decompresses the spine, stretches lat fibers, and builds foundational grip endurance.",
+  "setup": "Reach up and grip an overhead pull up bar with an overhand (pronated) grip slightly wider than shoulder width.",
+  "steps": [
+    "Step off the bench or ground with feet clear of the floor.",
+    "Allow full body weight to hang passively from the bar, letting shoulders elevate naturally toward ears.",
+    "Maintain relaxed belly breathing and steady grip without swinging for assigned duration."
+  ],
+  "cues": [
+    "Wrap thumbs completely around the bar for secure grip",
+    "Breathe slowly and allow gravity to lengthen your spine"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Swinging uncontrollably or kicking legs",
+      "fix": "Cross ankles and gently engage lower abs to keep body motionless"
+    },
+    {
+      "mistake": "Tensing neck muscles excessively",
+      "fix": "Let head hang neutrally between arms and relax neck"
+    }
+  ],
+  "rep_standard": "Feet completely off ground with arms fully extended for the unbroken target duration",
+  "is_hold": true,
+  "easier_id": null,
+  "harder_id": "scapular_pull_up",
+  "equipment": ["pull_up_bar"],
+  "primary_muscles": ["forearms", "lats"],
+  "secondary_muscles": ["traps", "core"],
+  "visual": {
+    "movement_id": "dead_hang.move",
+    "poses": [
+      {
+        "id": "dead_hang.pose.hold",
+        "label": "Full Passive Overhead Hang",
+        "role": "hold"
+      }
+    ]
+  }
+}

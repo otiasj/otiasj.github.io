@@ -1,0 +1,49 @@
+{
+  "id": "bodyweight_squat",
+  "status": "complete",
+  "display_name": "Bodyweight Squat",
+  "also_known_as": ["Air squat"],
+  "description": "The foundational lower body compound movement training knee flexion, hip mobility, and quadricep and glute power.",
+  "setup": "Stand with feet shoulder-width apart, toes turned slightly out (5-15 degrees), and chest elevated.",
+  "steps": [
+    "Initiate movement by sending hips back and bending knees simultaneously.",
+    "Descend until hip crease dips level with or slightly below knees.",
+    "Drive feet into the ground and extend knees and hips to return to tall standing position."
+  ],
+  "cues": [
+    "Track knees out in line with toes",
+    "Keep full foot planted with weight balanced over midfoot"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Knees caving inward (valgus collapse)",
+      "fix": "Actively push knees outward against an imaginary resistance band"
+    },
+    {
+      "mistake": "Heels lifting off floor during descent",
+      "fix": "Screw feet into the ground and shift center of mass slightly into midfoot and heel"
+    }
+  ],
+  "rep_standard": "Hip crease breaks parallel with top of knees at bottom, full hip and knee lockout at top",
+  "is_hold": false,
+  "easier_id": "chair_squat",
+  "harder_id": "paused_squat",
+  "equipment": ["floor"],
+  "primary_muscles": ["quads", "glutes"],
+  "secondary_muscles": ["hamstrings", "core"],
+  "visual": {
+    "movement_id": "bodyweight_squat.move",
+    "poses": [
+      {
+        "id": "bodyweight_squat.pose.top",
+        "label": "Tall Standing Lockout",
+        "role": "start"
+      },
+      {
+        "id": "bodyweight_squat.pose.bottom",
+        "label": "Deep Parallel Squat",
+        "role": "end"
+      }
+    ]
+  }
+}

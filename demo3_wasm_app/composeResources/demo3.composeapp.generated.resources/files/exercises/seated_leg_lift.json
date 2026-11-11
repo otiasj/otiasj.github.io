@@ -1,0 +1,59 @@
+{
+  "id": "seated_leg_lift",
+  "status": "complete",
+  "display_name": "Seated straight-leg lift",
+  "also_known_as": [
+    "Seated pike leg lift"
+  ],
+  "description": "An active compression exercise strengthening hip flexors and lower abdominals while seated on the floor.",
+  "setup": "Sit upright on the floor with legs extended straight together and palms placed flat on the floor beside your thighs.",
+  "steps": [
+    "Press palms into the floor and brace your abdominals.",
+    "Point your toes and lift both straight legs several inches off the floor.",
+    "Pause for a brief count at the peak height.",
+    "Lower legs with control back to the floor without slamming."
+  ],
+  "cues": [
+    "Point toes and lock knees straight throughout the lift",
+    "Lean forward slightly rather than falling back onto your tailbone"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Leaning far back to compensate for weak hip flexors",
+      "fix": "Keep torso upright or slightly angled forward over your thighs"
+    },
+    {
+      "mistake": "Bending knees during the lift",
+      "fix": "Keep quads squeezed tight and legs completely straight"
+    }
+  ],
+  "rep_standard": "Begins with heels on the floor, lifts both straight legs clearly off the ground without leaning back, and returns under control.",
+  "is_hold": false,
+  "easier_id": "plank",
+  "harder_id": "tuck_l_sit",
+  "equipment": [
+    "floor"
+  ],
+  "primary_muscles": [
+    "hip_flexors",
+    "core"
+  ],
+  "secondary_muscles": [
+    "quads"
+  ],
+  "visual": {
+    "movement_id": "seated_leg_lift.move",
+    "poses": [
+      {
+        "id": "seated_leg_lift.pose.start",
+        "label": "Seated pike posture",
+        "role": "start"
+      },
+      {
+        "id": "seated_leg_lift.pose.end",
+        "label": "Legs lifted compression",
+        "role": "end"
+      }
+    ]
+  }
+}

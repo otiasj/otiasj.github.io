@@ -1,0 +1,306 @@
+{
+  "id": "catalyst_l3",
+  "title": "Move faster · Level 3",
+  "tagline": "Peak anaerobic capacity, split-squat jumps, and high-intensity burpees.",
+  "days_per_week": 3,
+  "sessions": [
+    {
+      "day_number": 1,
+      "name": "Anaerobic Power & Plyo Capacity",
+      "exercises": [
+        {
+          "exercise_id": "jumping_jack",
+          "name": "Jumping Jack",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "30 reps",
+          "rep_min": 25,
+          "rep_max": 30,
+          "tempo": "Fast hops",
+          "rest_seconds": 30,
+          "cue": "Speed up foot transitions on floor"
+        },
+        {
+          "exercise_id": "arm_circles",
+          "name": "Arm Circles",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Dynamic circles",
+          "rest_seconds": 30,
+          "cue": "Ensure complete shoulder mobility"
+        },
+        {
+          "exercise_id": "split_squat_jump",
+          "name": "Split Squat Jump",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Explosive scissor jump",
+          "rest_seconds": 45,
+          "cue": "Jump straight up, switch legs in mid-air, absorb soft landing"
+        },
+        {
+          "exercise_id": "burpee",
+          "name": "Burpee",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Rapid continuous cycles",
+          "rest_seconds": 45,
+          "cue": "Max speed floor rebound and overhead reach"
+        },
+        {
+          "exercise_id": "mountain_climber",
+          "name": "Mountain Climber",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "20–24 reps",
+          "rep_min": 20,
+          "rep_max": 24,
+          "tempo": "Full sprint cadence",
+          "rest_seconds": 30,
+          "cue": "Sprint knees hard with hips clamped flat"
+        },
+        {
+          "exercise_id": "high_knees",
+          "name": "High Knees",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "20–30s hold",
+          "hold_seconds": 30,
+          "tempo": "Max cadence pump",
+          "rest_seconds": 45,
+          "cue": "Drive knees above waist height with furious arm pumps"
+        },
+        {
+          "exercise_id": "child_pose",
+          "name": "Child Pose",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Restorative hold",
+          "rest_seconds": 30,
+          "cue": "Slow nasal inhalation, full mouth exhalations"
+        },
+        {
+          "exercise_id": "chest_doorway_stretch",
+          "name": "Chest Doorway Stretch",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Gentle static hold",
+          "rest_seconds": 30,
+          "cue": "Let pectorals lengthen after high pressing output"
+        }
+      ]
+    },
+    {
+      "day_number": 2,
+      "name": "Explosive Lower & Calisthenics Volume",
+      "exercises": [
+        {
+          "exercise_id": "cat_cow",
+          "name": "Cat Cow",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Slow fluid wave",
+          "rest_seconds": 30,
+          "cue": "Thoracic mobilization"
+        },
+        {
+          "exercise_id": "jumping_jack",
+          "name": "Jumping Jack",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "30 reps",
+          "rep_min": 25,
+          "rep_max": 30,
+          "tempo": "Fast hops",
+          "rest_seconds": 30,
+          "cue": "Fast elastic rhythm"
+        },
+        {
+          "exercise_id": "squat_jump",
+          "name": "Squat Jump",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "10–12 reps",
+          "rep_min": 10,
+          "rep_max": 12,
+          "tempo": "Explosive rebound",
+          "rest_seconds": 45,
+          "cue": "Push the ceiling away on every jump rep"
+        },
+        {
+          "exercise_id": "paused_push_up",
+          "name": "Paused Push Up",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s down, 2s pause, 1s up",
+          "rest_seconds": 45,
+          "cue": "Dead stop hover, then violent press to lockout"
+        },
+        {
+          "exercise_id": "split_squat_jump",
+          "name": "Split Squat Jump",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Scissor jump",
+          "rest_seconds": 45,
+          "cue": "Stay balanced through mid-air leg switches"
+        },
+        {
+          "exercise_id": "hanging_knee_raise",
+          "name": "Hanging Knee Raise",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "10–12 reps",
+          "rep_min": 10,
+          "rep_max": 12,
+          "tempo": "Fast up, controlled down",
+          "rest_seconds": 45,
+          "cue": "Tuck knees hard to ribcage"
+        },
+        {
+          "exercise_id": "seated_forward_fold",
+          "name": "Seated Forward Fold",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Relaxed fold",
+          "rest_seconds": 30,
+          "cue": "Sink into deep hamstring lengthening"
+        },
+        {
+          "exercise_id": "child_pose",
+          "name": "Child Pose",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Restorative hold",
+          "rest_seconds": 30,
+          "cue": "Calm your breathing completely"
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "name": "Metabolic Gauntlet Finale",
+      "exercises": [
+        {
+          "exercise_id": "arm_circles",
+          "name": "Arm Circles",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Dynamic circles",
+          "rest_seconds": 30,
+          "cue": "Comprehensive shoulder warmup"
+        },
+        {
+          "exercise_id": "jumping_jack",
+          "name": "Jumping Jack",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "30 reps",
+          "rep_min": 25,
+          "rep_max": 30,
+          "tempo": "Fast hops",
+          "rest_seconds": 30,
+          "cue": "Maximize hop tempo"
+        },
+        {
+          "exercise_id": "burpee",
+          "name": "Burpee",
+          "phase": "main",
+          "sets": 4,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Unbroken flow",
+          "rest_seconds": 45,
+          "cue": "Fast floor drop, high vertical jump"
+        },
+        {
+          "exercise_id": "mountain_climber",
+          "name": "Mountain Climber",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "20–24 reps",
+          "rep_min": 20,
+          "rep_max": 24,
+          "tempo": "Sprint pace",
+          "rest_seconds": 30,
+          "cue": "Drive knees through chest with iron core"
+        },
+        {
+          "exercise_id": "split_squat_jump",
+          "name": "Split Squat Jump",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Scissor plyo",
+          "rest_seconds": 45,
+          "cue": "Explosive vertical switch without pause"
+        },
+        {
+          "exercise_id": "high_knees",
+          "name": "High Knees",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "25–35s hold",
+          "hold_seconds": 35,
+          "tempo": "Max cadence pump",
+          "rest_seconds": 45,
+          "cue": "Sprint in place with high knee drive to finish"
+        },
+        {
+          "exercise_id": "chest_doorway_stretch",
+          "name": "Chest Doorway Stretch",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Gentle static hold",
+          "rest_seconds": 30,
+          "cue": "Reopen chest and anterior shoulders"
+        },
+        {
+          "exercise_id": "seated_forward_fold",
+          "name": "Seated Forward Fold",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Relaxed fold",
+          "rest_seconds": 30,
+          "cue": "Decompress posterior chain"
+        }
+      ]
+    }
+  ]
+}

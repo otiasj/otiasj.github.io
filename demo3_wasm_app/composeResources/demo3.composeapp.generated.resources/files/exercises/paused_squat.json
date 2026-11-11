@@ -1,0 +1,59 @@
+{
+  "id": "paused_squat",
+  "status": "complete",
+  "display_name": "Paused bodyweight squat",
+  "also_known_as": [
+    "Isometric squat pause"
+  ],
+  "description": "A bodyweight squat holding at parallel depth to build hip stability and bottom-end leg drive.",
+  "setup": "Stand with feet shoulder-width apart, toes turned slightly outward, and arms outstretched or held in front of your chest.",
+  "steps": [
+    "Hinge at your hips and bend your knees to lower smoothly until thighs are parallel to the ground.",
+    "Freeze motionless at the bottom position for two full seconds while maintaining tension.",
+    "Drive through your midfoot and heels to return to a tall standing position."
+  ],
+  "cues": [
+    "Chest stays upright and knees track in line with toes",
+    "Stay braced in the hole without relaxing your core or hips"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Bouncing out of the hole without a genuine pause",
+      "fix": "Come to a complete dead stop for two seconds before driving up"
+    },
+    {
+      "mistake": "Collapsing chest forward during the bottom hold",
+      "fix": "Keep your collarbone proud and spine tall throughout"
+    }
+  ],
+  "rep_standard": "Begins at full standing hip extension, pauses two seconds at parallel thigh depth, and finishes back at full standing lockout.",
+  "is_hold": false,
+  "easier_id": "bodyweight_squat",
+  "harder_id": "bulgarian_split_squat",
+  "equipment": [
+    "floor"
+  ],
+  "primary_muscles": [
+    "quads",
+    "glutes"
+  ],
+  "secondary_muscles": [
+    "hamstrings",
+    "core"
+  ],
+  "visual": {
+    "movement_id": "paused_squat.move",
+    "poses": [
+      {
+        "id": "paused_squat.pose.start",
+        "label": "Tall standing posture",
+        "role": "start"
+      },
+      {
+        "id": "paused_squat.pose.end",
+        "label": "Deep squat pause",
+        "role": "end"
+      }
+    ]
+  }
+}

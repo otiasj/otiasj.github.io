@@ -1,0 +1,45 @@
+{
+  "id": "high_knees",
+  "status": "complete",
+  "display_name": "High Knees",
+  "also_known_as": ["Running in place high knees"],
+  "description": "A high-cadence cardiovascular conditioning movement driving hip flexor power, calf springiness, and core stability.",
+  "setup": "Stand tall with feet hip-width apart and arms bent at 90 degrees at your sides ready to pump.",
+  "steps": [
+    "Drive right knee rapidly upward toward chest until thigh reaches parallel with floor.",
+    "Quickly switch legs on the balls of feet, driving left knee up while right foot springs off floor.",
+    "Maintain a fast rhythmic cadence, pumping opposite arms with opposite knees.",
+    "Sustain rapid, upright pacing for the full target duration."
+  ],
+  "cues": [
+    "Stay light and bouncy on balls of feet",
+    "Keep torso tall without leaning backward"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Leaning upper body backward as fatigue sets in",
+      "fix": "Lean torso slightly forward from the ankles and brace core to maintain forward drive"
+    },
+    {
+      "mistake": "Heavy flat-footed stomping",
+      "fix": "Land softly and spring immediately off balls of feet like jumping rope"
+    }
+  ],
+  "rep_standard": "Maintain continuous rhythmic high-knee pumping above hip level for the full assigned duration",
+  "is_hold": true,
+  "easier_id": "jumping_jack",
+  "harder_id": null,
+  "equipment": ["floor"],
+  "primary_muscles": ["hip_flexors", "calves", "quads"],
+  "secondary_muscles": ["core", "glutes"],
+  "visual": {
+    "movement_id": "high_knees.move",
+    "poses": [
+      {
+        "id": "high_knees.pose.hold",
+        "label": "High Knee Running Drive",
+        "role": "hold"
+      }
+    ]
+  }
+}

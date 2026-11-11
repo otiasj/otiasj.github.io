@@ -1,0 +1,63 @@
+{
+  "id": "negative_pull_up",
+  "status": "complete",
+  "display_name": "Slow lowering from the bar",
+  "also_known_as": [
+    "Negative pull-up",
+    "Eccentric pull-up"
+  ],
+  "description": "A controlled lowering movement from the top of a pull-up to build upper body pulling strength.",
+  "setup": "Place a chair or bench under the pull-up bar so you can step up to the top position with your chin comfortably above the bar.",
+  "steps": [
+    "Step or jump up to position your chin over the pull-up bar with an overhand grip.",
+    "Step off the support and briefly hold your chest close to the bar.",
+    "Lower yourself slowly and under control over 3 to 5 seconds until your arms are fully straight.",
+    "Step back onto the platform and reset before the next repetition."
+  ],
+  "cues": [
+    "Keep your shoulders drawn down and chest lifted throughout the descent",
+    "Count three full seconds from top to full bottom extension"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Dropping quickly during the bottom half of the descent",
+      "fix": "Resist gravity evenly all the way until elbows are fully extended"
+    },
+    {
+      "mistake": "Shrugging shoulders up toward the ears",
+      "fix": "Pack shoulder blades back and down away from your neck"
+    }
+  ],
+  "rep_standard": "Begins with chin held over the bar and completes only when arms reach full extension at the dead hang.",
+  "is_hold": false,
+  "easier_id": "table_row",
+  "harder_id": "pull_up",
+  "equipment": [
+    "pull_up_bar",
+    "chair_or_bench"
+  ],
+  "primary_muscles": [
+    "lats",
+    "biceps"
+  ],
+  "secondary_muscles": [
+    "forearms",
+    "rear_delts",
+    "core"
+  ],
+  "visual": {
+    "movement_id": "negative_pull_up.move",
+    "poses": [
+      {
+        "id": "negative_pull_up.pose.start",
+        "label": "Top chin over bar",
+        "role": "start"
+      },
+      {
+        "id": "negative_pull_up.pose.end",
+        "label": "Full bottom extension",
+        "role": "end"
+      }
+    ]
+  }
+}

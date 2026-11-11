@@ -1,0 +1,60 @@
+{
+  "id": "paused_push_up",
+  "status": "complete",
+  "display_name": "Paused push-up",
+  "also_known_as": [
+    "Pause push-up",
+    "Dead-stop push-up"
+  ],
+  "description": "A strict push-up variation with a momentary pause at the bottom to eliminate rebound momentum.",
+  "setup": "Start in a standard push-up plank with hands slightly wider than shoulder-width and body formed in a straight line.",
+  "steps": [
+    "Lower your chest with control until it hovers one inch off the floor.",
+    "Hold motionless at the bottom position for a full one to two seconds without resting on the floor.",
+    "Drive your palms through the floor to return forcefully to the starting plank."
+  ],
+  "cues": [
+    "Maintain strict core tension during the bottom freeze",
+    "Keep elbows tucked at a 45-degree angle to protect your shoulders"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Collapsing hips or resting weight on the floor during the pause",
+      "fix": "Hover one inch above the ground while keeping glutes and abs tight"
+    },
+    {
+      "mistake": "Rushing out of the bottom pause before one full second",
+      "fix": "Count one thousand and one before pressing up"
+    }
+  ],
+  "rep_standard": "Begins at top plank lockout, requires a clear one-second static pause at bottom chest hover, and finishes at full lockout.",
+  "is_hold": false,
+  "easier_id": "slow_push_up",
+  "harder_id": "archer_push_up",
+  "equipment": [
+    "floor"
+  ],
+  "primary_muscles": [
+    "chest"
+  ],
+  "secondary_muscles": [
+    "triceps",
+    "front_delts",
+    "core"
+  ],
+  "visual": {
+    "movement_id": "paused_push_up.move",
+    "poses": [
+      {
+        "id": "paused_push_up.pose.start",
+        "label": "Plank lockout",
+        "role": "start"
+      },
+      {
+        "id": "paused_push_up.pose.end",
+        "label": "Bottom pause hover",
+        "role": "end"
+      }
+    ]
+  }
+}

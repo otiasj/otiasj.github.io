@@ -1,0 +1,49 @@
+{
+  "id": "chair_squat",
+  "status": "complete",
+  "display_name": "Chair Squat",
+  "also_known_as": ["Box squat to chair", "Assisted sit-to-stand"],
+  "description": "An introductory squat pattern using a chair for depth guidance and confidence while teaching proper hip hinge mechanics.",
+  "setup": "Stand a few inches in front of a standard stable chair with feet hip-width apart and toes pointing straight or slightly turned out.",
+  "steps": [
+    "Reach arms out in front for counterbalance and initiate movement by reaching hips back.",
+    "Lower down until buttocks lightly graze the chair seat without resting your full bodyweight.",
+    "Drive through feet and stand straight up, squeezing glutes at the top."
+  ],
+  "cues": [
+    "Sit back into your hips rather than sliding knees forward",
+    "Keep chest upright and eyes forward"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Collapsing into the chair and relaxing core muscles",
+      "fix": "Touch chair seat feather-lightly and reverse direction immediately"
+    },
+    {
+      "mistake": "Shifting weight solely onto toes during ascent",
+      "fix": "Keep heels pinned firmly to the ground and push through whole foot"
+    }
+  ],
+  "rep_standard": "Glutes touch chair seat lightly without sitting down, standing to full upright extension",
+  "is_hold": false,
+  "easier_id": null,
+  "harder_id": "bodyweight_squat",
+  "equipment": ["chair_or_bench"],
+  "primary_muscles": ["quads", "glutes"],
+  "secondary_muscles": ["hamstrings", "core"],
+  "visual": {
+    "movement_id": "chair_squat.move",
+    "poses": [
+      {
+        "id": "chair_squat.pose.start",
+        "label": "Tall Standing Front of Chair",
+        "role": "start"
+      },
+      {
+        "id": "chair_squat.pose.end",
+        "label": "Feather Touch Chair Contact",
+        "role": "end"
+      }
+    ]
+  }
+}

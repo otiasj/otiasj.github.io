@@ -1,0 +1,45 @@
+{
+  "id": "chest_doorway_stretch",
+  "status": "complete",
+  "display_name": "Chest Doorway Stretch",
+  "also_known_as": ["Pectoral stretch", "Doorway chest opener"],
+  "description": "A restorative static stretch using a doorframe or wall corner to open anterior shoulders and counteract rounded upper back posture.",
+  "setup": "Stand inside an open doorway, bending one or both elbows to 90 degrees and resting forearms against the frame at shoulder height.",
+  "steps": [
+    "Place forearms flat against the door jamb with elbow aligned with chest height.",
+    "Step one foot through the doorway while keeping torso tall and core engaged.",
+    "Gently shift bodyweight forward until a comfortable opening stretch is felt across chest and front shoulders.",
+    "Hold the position steadily while taking deep diaphragmatic breaths."
+  ],
+  "cues": [
+    "Breathe deeply into your chest expansion",
+    "Keep shoulders relaxed away from ears"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Arching lower back to force torso further forward",
+      "fix": "Brace abs to keep ribs down so stretch stays focused in pectoral fibers"
+    },
+    {
+      "mistake": "Pressing into sharp joint pain at anterior shoulder",
+      "fix": "Adjust elbow height slightly lower or step back slightly until stretch is comfortable"
+    }
+  ],
+  "rep_standard": "Maintain static hold with stable posture and calm breathing for full assigned duration",
+  "is_hold": true,
+  "easier_id": null,
+  "harder_id": null,
+  "equipment": ["wall"],
+  "primary_muscles": ["chest", "front_delts"],
+  "secondary_muscles": ["biceps"],
+  "visual": {
+    "movement_id": "chest_doorway_stretch.move",
+    "poses": [
+      {
+        "id": "chest_doorway_stretch.pose.hold",
+        "label": "Doorway Forward Chest Opening",
+        "role": "hold"
+      }
+    ]
+  }
+}

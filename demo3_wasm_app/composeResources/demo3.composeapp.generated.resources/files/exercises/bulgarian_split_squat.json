@@ -1,0 +1,49 @@
+{
+  "id": "bulgarian_split_squat",
+  "status": "complete",
+  "display_name": "Bulgarian Split Squat",
+  "also_known_as": ["Rear foot elevated split squat"],
+  "description": "An elevated split squat placing high unilateral demand on front quadriceps, glutes, and pelvic stabilizers.",
+  "setup": "Stand roughly two feet in front of a chair or bench, resting the top of your rear foot laces-down on the bench surface.",
+  "steps": [
+    "Position lead foot flat on floor and torso inclined slightly forward.",
+    "Lower your back knee vertically toward the floor until front thigh reaches parallel.",
+    "Press firmly through lead heel and midfoot to return to top standing position."
+  ],
+  "cues": [
+    "Drop back knee straight down rather than lunging forward",
+    "Keep front knee tracking over middle toes"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Placing lead foot too close to the bench causing heel lift",
+      "fix": "Hop front foot further forward to maintain flat front foot and comfortable knee angle"
+    },
+    {
+      "mistake": "Arching lower back excessively when descending",
+      "fix": "Tuck pelvis slightly and brace abs to keep spine neutral"
+    }
+  ],
+  "rep_standard": "Front thigh reaches parallel to the floor, full extension of front leg at top",
+  "is_hold": false,
+  "easier_id": "reverse_lunge",
+  "harder_id": "box_single_leg_squat",
+  "equipment": ["chair_or_bench"],
+  "primary_muscles": ["quads", "glutes"],
+  "secondary_muscles": ["hamstrings", "core"],
+  "visual": {
+    "movement_id": "bulgarian_split_squat.move",
+    "poses": [
+      {
+        "id": "bulgarian_split_squat.pose.start",
+        "label": "Elevated Split Stance",
+        "role": "start"
+      },
+      {
+        "id": "bulgarian_split_squat.pose.end",
+        "label": "Deep Parallel Split Squat",
+        "role": "end"
+      }
+    ]
+  }
+}

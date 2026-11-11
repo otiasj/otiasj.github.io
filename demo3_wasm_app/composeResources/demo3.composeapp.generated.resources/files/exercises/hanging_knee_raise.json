@@ -1,0 +1,49 @@
+{
+  "id": "hanging_knee_raise",
+  "status": "complete",
+  "display_name": "Hanging Knee Raise",
+  "also_known_as": ["Bar knee tuck"],
+  "description": "An overhead hanging core exercise emphasizing lower abdominals, hip flexor control, and grip endurance.",
+  "setup": "Hang from an overhead pull up bar with overhand grip and legs straight down beneath hips.",
+  "steps": [
+    "Depress shoulders slightly and brace abdomen to eliminate body swing.",
+    "Flex hips and curl knees smoothly upward toward chest until thighs break 90 degrees.",
+    "Pause momentarily at peak contraction, then lower legs with slow control back to straight hang."
+  ],
+  "cues": [
+    "Roll pelvis upward toward ribs rather than just swinging legs",
+    "Keep ribs pinned down and control the descent"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Using momentum and swinging wildly from the shoulders",
+      "fix": "Reset completely at the bottom of each rep, keeping lats active"
+    },
+    {
+      "mistake": "Arching lower back sharply as legs descend",
+      "fix": "Maintain slight hollow body tension in abdominals even at dead bottom"
+    }
+  ],
+  "rep_standard": "Knees rise above hip height at top, legs return to dead hang without swinging",
+  "is_hold": false,
+  "easier_id": "plank",
+  "harder_id": "tuck_l_sit",
+  "equipment": ["pull_up_bar"],
+  "primary_muscles": ["core", "hip_flexors"],
+  "secondary_muscles": ["forearms", "lats"],
+  "visual": {
+    "movement_id": "hanging_knee_raise.move",
+    "poses": [
+      {
+        "id": "hanging_knee_raise.pose.start",
+        "label": "Dead Hang Still Support",
+        "role": "start"
+      },
+      {
+        "id": "hanging_knee_raise.pose.end",
+        "label": "Knees Tucked to Chest",
+        "role": "end"
+      }
+    ]
+  }
+}

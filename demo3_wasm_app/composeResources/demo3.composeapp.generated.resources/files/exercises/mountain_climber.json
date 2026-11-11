@@ -1,0 +1,49 @@
+{
+  "id": "mountain_climber",
+  "status": "complete",
+  "display_name": "Mountain Climber",
+  "also_known_as": ["Running plank"],
+  "description": "A dynamic plank-based conditioning exercise strengthening core stability and hip flexors under elevated cardiovascular demands.",
+  "setup": "Begin in a tall push up plank with hands shoulder-width apart, arms straight, and body forming straight line from head to heels.",
+  "steps": [
+    "Drive right knee rapidly in toward chest without touching right foot to floor.",
+    "Quickly drive right leg back to plank while driving left knee vigorously toward chest.",
+    "Continue alternating legs in a swift, controlled running rhythm while keeping upper body stable."
+  ],
+  "cues": [
+    "Keep hips level with shoulders throughout running pace",
+    "Press hands firmly through floor to stabilize shoulder girdle"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Hips bouncing high up into the air during switches",
+      "fix": "Brace abdominals firmly to maintain flat tabletop back posture"
+    },
+    {
+      "mistake": "Shoulders drifting back behind wrists",
+      "fix": "Keep shoulders stacked directly over wrists to maintain pressing tension"
+    }
+  ],
+  "rep_standard": "Each completed right and left knee drive pair counts as one repetition",
+  "is_hold": false,
+  "easier_id": "slow_mountain_climber",
+  "harder_id": null,
+  "equipment": ["floor"],
+  "primary_muscles": ["core", "hip_flexors"],
+  "secondary_muscles": ["front_delts", "quads", "triceps"],
+  "visual": {
+    "movement_id": "mountain_climber.move",
+    "poses": [
+      {
+        "id": "mountain_climber.pose.start",
+        "label": "Solid High Plank Setup",
+        "role": "start"
+      },
+      {
+        "id": "mountain_climber.pose.end",
+        "label": "Knee Driven to Chest",
+        "role": "end"
+      }
+    ]
+  }
+}

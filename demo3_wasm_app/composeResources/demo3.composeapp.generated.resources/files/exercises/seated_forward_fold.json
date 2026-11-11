@@ -1,0 +1,54 @@
+{
+  "id": "seated_forward_fold",
+  "status": "complete",
+  "display_name": "Seated hamstring stretch",
+  "also_known_as": [
+    "Seated forward fold"
+  ],
+  "description": "A seated flexibility hold that lengthens the posterior chain from hamstrings to the lower back.",
+  "setup": "Sit upright on the floor with legs extended straight in front of you and toes pointing upward.",
+  "steps": [
+    "Inhale and reach your spine tall through the crown of your head.",
+    "Hinge forward from your hips, leading with your chest toward your shins.",
+    "Rest your hands comfortably on your shins, ankles, or feet.",
+    "Breathe deeply into your belly and hold the gentle stretch."
+  ],
+  "cues": [
+    "Hinge at the hips rather than rounding heavily through upper back",
+    "Exhale to relax deeper into the stretch with each breath"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Aggressively jerking forward to reach feet",
+      "fix": "Move smoothly into position and hold statically without bouncing"
+    },
+    {
+      "mistake": "Bending knees excessively off the floor",
+      "fix": "Keep legs straight with only a micro-bend if hamstrings are very tight"
+    }
+  ],
+  "rep_standard": "Timer runs while holding static forward fold position with legs extended and torso relaxed toward thighs.",
+  "is_hold": true,
+  "easier_id": null,
+  "harder_id": "jefferson_curl",
+  "equipment": [
+    "floor"
+  ],
+  "primary_muscles": [
+    "hamstrings",
+    "lower_back"
+  ],
+  "secondary_muscles": [
+    "calves"
+  ],
+  "visual": {
+    "movement_id": "seated_forward_fold.move",
+    "poses": [
+      {
+        "id": "seated_forward_fold.pose.hold",
+        "label": "Forward fold hold",
+        "role": "hold"
+      }
+    ]
+  }
+}

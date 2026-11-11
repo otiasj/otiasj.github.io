@@ -1,0 +1,307 @@
+{
+  "id": "longevity_l2",
+  "title": "Move better · Level 2",
+  "tagline": "Unilateral hip balance, multi-planar lunges, and controlled hangs.",
+  "days_per_week": 3,
+  "sessions": [
+    {
+      "day_number": 1,
+      "name": "Knee Resilience & Unilateral Pelvic Stability",
+      "exercises": [
+        {
+          "exercise_id": "cat_cow",
+          "name": "Cat Cow",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Slow fluid wave",
+          "rest_seconds": 30,
+          "cue": "Segmental mobility through spine"
+        },
+        {
+          "exercise_id": "arm_circles",
+          "name": "Arm Circles",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Controlled circles",
+          "rest_seconds": 30,
+          "cue": "Warm shoulder complex thoroughly"
+        },
+        {
+          "exercise_id": "step_down",
+          "name": "Step Down",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "3s down, 1s up",
+          "rest_seconds": 60,
+          "cue": "Tap heel softly to floor, keep working knee tracked over toes"
+        },
+        {
+          "exercise_id": "cossack_squat",
+          "name": "Side-to-side lunge",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s down, 1s up",
+          "rest_seconds": 60,
+          "cue": "Sink into heel, keep straight leg toes pointing toward ceiling"
+        },
+        {
+          "exercise_id": "single_leg_glute_bridge",
+          "name": "Single Leg Glute Bridge",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s up, 1s squeeze",
+          "rest_seconds": 60,
+          "cue": "Drive through working heel, lock pelvis level at peak"
+        },
+        {
+          "exercise_id": "scapular_pull_up",
+          "name": "Scapular Pull Up",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s pull, 2s hold",
+          "rest_seconds": 60,
+          "cue": "Pull scapulae down without bending elbows"
+        },
+        {
+          "exercise_id": "chest_doorway_stretch",
+          "name": "Chest Doorway Stretch",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Gentle static hold",
+          "rest_seconds": 30,
+          "cue": "Gentle chest expansion in doorframe"
+        },
+        {
+          "exercise_id": "child_pose",
+          "name": "Child Pose",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Restorative hold",
+          "rest_seconds": 30,
+          "cue": "Decompress spine and lats"
+        }
+      ]
+    },
+    {
+      "day_number": 2,
+      "name": "Posterior Chain Mobility & Scapular Range",
+      "exercises": [
+        {
+          "exercise_id": "arm_circles",
+          "name": "Arm Circles",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Controlled circles",
+          "rest_seconds": 30,
+          "cue": "Large circles forward and back"
+        },
+        {
+          "exercise_id": "cat_cow",
+          "name": "Cat Cow",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Slow fluid wave",
+          "rest_seconds": 30,
+          "cue": "Full spinal flexion and extension"
+        },
+        {
+          "exercise_id": "step_down",
+          "name": "Step Down",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "3s down, 1s up",
+          "rest_seconds": 60,
+          "cue": "Control the descent, hips square"
+        },
+        {
+          "exercise_id": "doorframe_row",
+          "name": "Doorframe Row",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "10–12 reps",
+          "rep_min": 10,
+          "rep_max": 12,
+          "tempo": "2s pull, 1s squeeze",
+          "rest_seconds": 60,
+          "cue": "Retract scapulae firmly at top"
+        },
+        {
+          "exercise_id": "single_leg_glute_bridge",
+          "name": "Single Leg Glute Bridge",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s up, 1s squeeze",
+          "rest_seconds": 60,
+          "cue": "Squeeze glute at top without hip rotation"
+        },
+        {
+          "exercise_id": "dead_hang",
+          "name": "Dead Hang",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "30–40s hold",
+          "hold_seconds": 40,
+          "tempo": "Steady hold",
+          "rest_seconds": 60,
+          "cue": "Completely passive hang to decompress discs"
+        },
+        {
+          "exercise_id": "seated_forward_fold",
+          "name": "Seated Forward Fold",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Relaxed fold",
+          "rest_seconds": 30,
+          "cue": "Ease hamstrings and spinal erectors"
+        },
+        {
+          "exercise_id": "child_pose",
+          "name": "Child Pose",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Restorative hold",
+          "rest_seconds": 30,
+          "cue": "Nasal breathing into kidneys"
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "name": "Integrated Multi-Planar Joint Health",
+      "exercises": [
+        {
+          "exercise_id": "cat_cow",
+          "name": "Cat Cow",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Slow fluid wave",
+          "rest_seconds": 30,
+          "cue": "Full wave from tailbone to crown"
+        },
+        {
+          "exercise_id": "arm_circles",
+          "name": "Arm Circles",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Controlled circles",
+          "rest_seconds": 30,
+          "cue": "Smooth continuous arm rotation"
+        },
+        {
+          "exercise_id": "cossack_squat",
+          "name": "Side-to-side lunge",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s down, 1s up",
+          "rest_seconds": 60,
+          "cue": "Sink into hip capsule with flat foot"
+        },
+        {
+          "exercise_id": "scapular_pull_up",
+          "name": "Scapular Pull Up",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s pull, 2s hold",
+          "rest_seconds": 60,
+          "cue": "Full scapular depression at bar"
+        },
+        {
+          "exercise_id": "step_down",
+          "name": "Step Down",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "3s down, 1s up",
+          "rest_seconds": 60,
+          "cue": "Slow eccentric knee control"
+        },
+        {
+          "exercise_id": "single_leg_glute_bridge",
+          "name": "Single Leg Glute Bridge",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s up, 1s squeeze",
+          "rest_seconds": 60,
+          "cue": "Squeeze glute at top, hips horizontal"
+        },
+        {
+          "exercise_id": "chest_doorway_stretch",
+          "name": "Chest Doorway Stretch",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Gentle static hold",
+          "rest_seconds": 30,
+          "cue": "Gentle doorway stretch"
+        },
+        {
+          "exercise_id": "seated_forward_fold",
+          "name": "Seated Forward Fold",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Relaxed fold",
+          "rest_seconds": 30,
+          "cue": "Full hamstring and spinal release"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "step_down",
+  "status": "complete",
+  "display_name": "Slow heel tap from a step",
+  "also_known_as": [
+    "Step-down"
+  ],
+  "description": "A controlled single-leg eccentric exercise improving quad strength, knee tracking, and balance.",
+  "setup": "Stand on a sturdy low step or bench with one foot planted on the edge and the other foot hovering off the side.",
+  "steps": [
+    "Shift your weight onto the standing leg with hands out in front for balance.",
+    "Slowly bend the standing knee and push hips back to lower the hovering foot.",
+    "Gently tap the floor with the hovering heel without shifting weight onto it.",
+    "Push through the midfoot of the standing leg to return to full extension."
+  ],
+  "cues": [
+    "Keep the standing knee tracking directly over your second toe",
+    "Tap the ground lightly like touching eggshells with your heel"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Pushing off the floor with the bottom foot",
+      "fix": "Keep heel light and do all the work with the elevated leg"
+    },
+    {
+      "mistake": "Standing knee caving inward toward midline",
+      "fix": "Engage glute medius to keep knee aligned over your toes"
+    }
+  ],
+  "rep_standard": "Begins standing on top of step, lowers with control until free heel taps floor, and returns to full single-leg standing extension.",
+  "is_hold": false,
+  "easier_id": "chair_squat",
+  "harder_id": "cossack_squat",
+  "equipment": [
+    "chair_or_bench"
+  ],
+  "primary_muscles": [
+    "quads",
+    "glutes"
+  ],
+  "secondary_muscles": [
+    "calves",
+    "core"
+  ],
+  "visual": {
+    "movement_id": "step_down.move",
+    "poses": [
+      {
+        "id": "step_down.pose.start",
+        "label": "Step top balance",
+        "role": "start"
+      },
+      {
+        "id": "step_down.pose.end",
+        "label": "Bottom heel tap",
+        "role": "end"
+      }
+    ]
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "id": "longevity_l3",
+  "title": "Move better · Level 3",
+  "tagline": "End-range spinal mobility, Jefferson curls, and compression holds.",
+  "days_per_week": 3,
+  "sessions": [
+    {
+      "day_number": 1,
+      "name": "End-Range Spine Flexion & Deep Hip Mobility",
+      "exercises": [
+        {
+          "exercise_id": "cat_cow",
+          "name": "Cat Cow",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Slow fluid wave",
+          "rest_seconds": 30,
+          "cue": "Full segmental articulation through spine"
+        },
+        {
+          "exercise_id": "arm_circles",
+          "name": "Arm Circles",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Controlled circles",
+          "rest_seconds": 30,
+          "cue": "Warm rotator cuffs thoroughly"
+        },
+        {
+          "exercise_id": "jefferson_curl",
+          "name": "Slow rolling forward bend",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "5–6 reps",
+          "rep_min": 5,
+          "rep_max": 6,
+          "tempo": "5s roll down, 5s roll up",
+          "rest_seconds": 90,
+          "cue": "Segment vertebra by vertebra, knees soft, unroll slowly"
+        },
+        {
+          "exercise_id": "cossack_squat",
+          "name": "Side-to-side lunge",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s down, 1s up",
+          "rest_seconds": 60,
+          "cue": "Deep frontal plane hip mobility, heels flat"
+        },
+        {
+          "exercise_id": "seated_leg_lift",
+          "name": "Seated Leg Lift",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "10–12 reps",
+          "rep_min": 10,
+          "rep_max": 12,
+          "tempo": "1s lift, 1s hold, 1s down",
+          "rest_seconds": 60,
+          "cue": "Hands forward on floor, compress abs to lift legs"
+        },
+        {
+          "exercise_id": "tuck_l_sit",
+          "name": "Tuck L-Sit",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "15–20s hold",
+          "hold_seconds": 20,
+          "tempo": "Depression hold",
+          "rest_seconds": 90,
+          "cue": "Active scapular depression, lift hips off ground"
+        },
+        {
+          "exercise_id": "chest_doorway_stretch",
+          "name": "Chest Doorway Stretch",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Gentle static hold",
+          "rest_seconds": 30,
+          "cue": "Deep diaphragmatic chest stretch"
+        },
+        {
+          "exercise_id": "child_pose",
+          "name": "Child Pose",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Restorative hold",
+          "rest_seconds": 30,
+          "cue": "Lengthen lumbar spine and relax hips"
+        }
+      ]
+    },
+    {
+      "day_number": 2,
+      "name": "Posterior Chain Strength & Active Compression",
+      "exercises": [
+        {
+          "exercise_id": "arm_circles",
+          "name": "Arm Circles",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Controlled circles",
+          "rest_seconds": 30,
+          "cue": "Large circles forward and back"
+        },
+        {
+          "exercise_id": "cat_cow",
+          "name": "Cat Cow",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Slow fluid wave",
+          "rest_seconds": 30,
+          "cue": "Spinal wave from tailbone to crown"
+        },
+        {
+          "exercise_id": "jefferson_curl",
+          "name": "Slow rolling forward bend",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "5–6 reps",
+          "rep_min": 5,
+          "rep_max": 6,
+          "tempo": "5s roll down, 5s roll up",
+          "rest_seconds": 90,
+          "cue": "Curl down chin to chest, unroll slowly back to tall posture"
+        },
+        {
+          "exercise_id": "scapular_pull_up",
+          "name": "Scapular Pull Up",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s pull, 2s hold",
+          "rest_seconds": 60,
+          "cue": "Depress scapulae actively from dead hang"
+        },
+        {
+          "exercise_id": "seated_leg_lift",
+          "name": "Seated Leg Lift",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "10–12 reps",
+          "rep_min": 10,
+          "rep_max": 12,
+          "tempo": "1s lift, 1s hold",
+          "rest_seconds": 60,
+          "cue": "Point toes, lift straight legs through hip flexors"
+        },
+        {
+          "exercise_id": "dead_hang",
+          "name": "Dead Hang",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "30–45s hold",
+          "hold_seconds": 45,
+          "tempo": "Steady hold",
+          "rest_seconds": 60,
+          "cue": "Decompress entire spinal column"
+        },
+        {
+          "exercise_id": "seated_forward_fold",
+          "name": "Seated Forward Fold",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Relaxed fold",
+          "rest_seconds": 30,
+          "cue": "Relaxed hamstring elongation"
+        },
+        {
+          "exercise_id": "child_pose",
+          "name": "Child Pose",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Restorative hold",
+          "rest_seconds": 30,
+          "cue": "Quiet diaphragmatic breathing"
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "name": "Advanced Whole-Body Structural Longevity",
+      "exercises": [
+        {
+          "exercise_id": "cat_cow",
+          "name": "Cat Cow",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "Slow fluid wave",
+          "rest_seconds": 30,
+          "cue": "Full spine mobilization"
+        },
+        {
+          "exercise_id": "arm_circles",
+          "name": "Arm Circles",
+          "phase": "warmup",
+          "sets": 2,
+          "target_reps": "15 reps",
+          "rep_min": 12,
+          "rep_max": 15,
+          "tempo": "Controlled circles",
+          "rest_seconds": 30,
+          "cue": "Activate shoulder and scapular stabilizers"
+        },
+        {
+          "exercise_id": "cossack_squat",
+          "name": "Side-to-side lunge",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s down, 1s up",
+          "rest_seconds": 60,
+          "cue": "Deep hip adductor and ankle mobility"
+        },
+        {
+          "exercise_id": "jefferson_curl",
+          "name": "Slow rolling forward bend",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "5–6 reps",
+          "rep_min": 5,
+          "rep_max": 6,
+          "tempo": "5s roll down, 5s roll up",
+          "rest_seconds": 90,
+          "cue": "Smooth controlled spinal roll with soft knees"
+        },
+        {
+          "exercise_id": "tuck_l_sit",
+          "name": "Tuck L-Sit",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "15–20s hold",
+          "hold_seconds": 20,
+          "tempo": "Depression hold",
+          "rest_seconds": 90,
+          "cue": "Compress knees to chest, push ground away"
+        },
+        {
+          "exercise_id": "scapular_pull_up",
+          "name": "Scapular Pull Up",
+          "phase": "main",
+          "sets": 3,
+          "target_reps": "8–10 reps",
+          "rep_min": 8,
+          "rep_max": 10,
+          "tempo": "2s pull, 2s hold",
+          "rest_seconds": 60,
+          "cue": "Depress shoulder blades smoothly"
+        },
+        {
+          "exercise_id": "chest_doorway_stretch",
+          "name": "Chest Doorway Stretch",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Gentle static hold",
+          "rest_seconds": 30,
+          "cue": "Doorway pectoral stretch"
+        },
+        {
+          "exercise_id": "seated_forward_fold",
+          "name": "Seated Forward Fold",
+          "phase": "cooldown",
+          "sets": 2,
+          "target_reps": "30s hold",
+          "hold_seconds": 30,
+          "tempo": "Relaxed fold",
+          "rest_seconds": 30,
+          "cue": "Decompress posterior chain"
+        }
+      ]
+    }
+  ]
+}

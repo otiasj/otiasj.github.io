@@ -1,0 +1,61 @@
+{
+  "id": "squat_jump",
+  "status": "complete",
+  "display_name": "Squat jump",
+  "also_known_as": [
+    "Jump squat"
+  ],
+  "description": "A dynamic plyometric exercise transitioning from a bodyweight squat into a maximal vertical jump.",
+  "setup": "Stand with feet shoulder-width apart, toes pointing forward or slightly out, and arms relaxed at your sides.",
+  "steps": [
+    "Lower into a quarter to half squat while swinging arms back.",
+    "Explode upward through ankles, knees, and hips, swinging arms toward the ceiling.",
+    "Extend fully at the peak of the jump with toes pointed downward.",
+    "Land softly through toes and midfoot, immediately absorbing into the next squat descent."
+  ],
+  "cues": [
+    "Explode vertically with triple extension at hips, knees, and ankles",
+    "Absorb your landing silently through hips and knees"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Landing with straight knees and flat feet",
+      "fix": "Cushion impact by rolling from toe to heel into a bent-knee squat"
+    },
+    {
+      "mistake": "Knees caving inward on takeoff or landing",
+      "fix": "Track knees actively outward over toes throughout the movement"
+    }
+  ],
+  "rep_standard": "Begins from squat depth, fully leaves the ground with feet extended, and lands softly directly into the next squat cushion.",
+  "is_hold": false,
+  "easier_id": "bodyweight_squat",
+  "harder_id": "split_squat_jump",
+  "equipment": [
+    "floor"
+  ],
+  "primary_muscles": [
+    "quads",
+    "glutes",
+    "calves"
+  ],
+  "secondary_muscles": [
+    "hamstrings",
+    "core"
+  ],
+  "visual": {
+    "movement_id": "squat_jump.move",
+    "poses": [
+      {
+        "id": "squat_jump.pose.start",
+        "label": "Squat loading depth",
+        "role": "start"
+      },
+      {
+        "id": "squat_jump.pose.end",
+        "label": "Airborne jump peak",
+        "role": "end"
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "squat_thrust",
+  "status": "complete",
+  "display_name": "Step-back burpee",
+  "also_known_as": [
+    "Squat thrust"
+  ],
+  "description": "A low-impact full-body conditioning movement moving between a deep squat and a push-up plank.",
+  "setup": "Stand tall with feet shoulder-width apart and arms hanging naturally at your sides.",
+  "steps": [
+    "Drop down into a squat and place your palms flat on the floor in front of your feet.",
+    "Step or kick both feet back together into a strong push-up plank position.",
+    "Step or jump your feet back forward outside of your hands.",
+    "Stand tall and extend hips fully to return to starting position."
+  ],
+  "cues": [
+    "Brace core firmly as feet kick back into the plank",
+    "Plant palms flat on the floor to protect your wrists"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Hips sagging below parallel when in the back plank",
+      "fix": "Squeeze glutes and abs to keep plank straight without arching spine"
+    },
+    {
+      "mistake": "Standing up with a rounded hunched back",
+      "fix": "Lift chest and push hips through to stand with tall posture"
+    }
+  ],
+  "rep_standard": "Begins standing, hands reach floor, feet extend into a rigid plank, and finishes back at full standing hip extension.",
+  "is_hold": false,
+  "easier_id": "bodyweight_squat",
+  "harder_id": "burpee",
+  "equipment": [
+    "floor"
+  ],
+  "primary_muscles": [
+    "quads",
+    "core"
+  ],
+  "secondary_muscles": [
+    "front_delts",
+    "glutes",
+    "triceps"
+  ],
+  "visual": {
+    "movement_id": "squat_thrust.move",
+    "poses": [
+      {
+        "id": "squat_thrust.pose.start",
+        "label": "Standing start",
+        "role": "start"
+      },
+      {
+        "id": "squat_thrust.pose.end",
+        "label": "Plank thrust extension",
+        "role": "end"
+      }
+    ]
+  }
+}

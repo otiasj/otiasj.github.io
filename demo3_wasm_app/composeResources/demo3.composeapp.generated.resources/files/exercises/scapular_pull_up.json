@@ -1,0 +1,60 @@
+{
+  "id": "scapular_pull_up",
+  "status": "complete",
+  "display_name": "Shoulder blade squeeze on the bar",
+  "also_known_as": [
+    "Scapular pull-up"
+  ],
+  "description": "A targeted pull-up bar exercise that strengthens scapular depressors and sets the foundation for strict pull-ups.",
+  "setup": "Hang from a pull-up bar with an overhand grip at shoulder-width, arms fully straight in a relaxed dead hang.",
+  "steps": [
+    "Without bending your elbows, draw your shoulder blades down and back.",
+    "Lift your chest slightly toward the bar while keeping your arms locked.",
+    "Hold the contracted active hang at the top for one second.",
+    "Smoothly relax your shoulders to return to the dead hang position."
+  ],
+  "cues": [
+    "Keep elbows locked straight like steel rods throughout",
+    "Pull shoulder blades down into your back pockets"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Bending elbows to pull higher",
+      "fix": "Keep arms completely straight; movement comes purely from shoulder blades"
+    },
+    {
+      "mistake": "Swinging body forward and back",
+      "fix": "Brace abs and squeeze legs together to keep torso still"
+    }
+  ],
+  "rep_standard": "Begins in passive dead hang with straight arms, elevates torso solely through shoulder blade depression, and returns fully to passive hang.",
+  "is_hold": false,
+  "easier_id": "dead_hang",
+  "harder_id": "negative_pull_up",
+  "equipment": [
+    "pull_up_bar"
+  ],
+  "primary_muscles": [
+    "lats",
+    "traps"
+  ],
+  "secondary_muscles": [
+    "forearms",
+    "rear_delts"
+  ],
+  "visual": {
+    "movement_id": "scapular_pull_up.move",
+    "poses": [
+      {
+        "id": "scapular_pull_up.pose.start",
+        "label": "Passive dead hang",
+        "role": "start"
+      },
+      {
+        "id": "scapular_pull_up.pose.end",
+        "label": "Active scapular elevation",
+        "role": "end"
+      }
+    ]
+  }
+}

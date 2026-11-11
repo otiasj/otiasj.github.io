@@ -1,0 +1,60 @@
+{
+  "id": "wall_slide",
+  "status": "complete",
+  "display_name": "Wall arm slide",
+  "also_known_as": [
+    "Scapular wall slide"
+  ],
+  "description": "A postural and mobility movement activating the upper back and lower traps against a flat wall.",
+  "setup": "Stand with back, head, and buttocks flat against a smooth wall, heels a few inches out, with arms forming a goalpost W shape against the wall.",
+  "steps": [
+    "Press wrists, elbows, and lower back gently into the wall surface.",
+    "Slide your arms upward along the wall into a high Y shape.",
+    "Reach overhead as high as you can while maintaining wall contact with elbows and hands.",
+    "Slide your arms back down slowly to the starting W position."
+  ],
+  "cues": [
+    "Keep your lower back flat against the wall without arching your spine",
+    "Maintain contact with the wall through your elbows and wrists"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Arching the lower back to force arms onto the wall",
+      "fix": "Brace abs and keep tailbone and lower back glued against the wall"
+    },
+    {
+      "mistake": "Elbows or wrists peeling forward away from the wall",
+      "fix": "Only reach as high as you can while maintaining complete wall contact"
+    }
+  ],
+  "rep_standard": "Begins in 90-degree W goalpost position against wall, slides smoothly overhead to full extension while maintaining contact, and returns.",
+  "is_hold": false,
+  "easier_id": null,
+  "harder_id": "pike_push_up",
+  "equipment": [
+    "wall"
+  ],
+  "primary_muscles": [
+    "rear_delts",
+    "traps"
+  ],
+  "secondary_muscles": [
+    "side_delts",
+    "core"
+  ],
+  "visual": {
+    "movement_id": "wall_slide.move",
+    "poses": [
+      {
+        "id": "wall_slide.pose.start",
+        "label": "Goalpost W start",
+        "role": "start"
+      },
+      {
+        "id": "wall_slide.pose.end",
+        "label": "Overhead Y reach",
+        "role": "end"
+      }
+    ]
+  }
+}

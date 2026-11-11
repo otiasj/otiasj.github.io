@@ -1,0 +1,49 @@
+{
+  "id": "glute_bridge",
+  "status": "complete",
+  "display_name": "Glute Bridge",
+  "also_known_as": ["Supine hip bridge", "Floor hip thrust"],
+  "description": "A supine hip extension exercise that wakes up gluteal musculature, stabilizes the pelvis, and strengthens hamstrings.",
+  "setup": "Lie faceup on floor with knees bent at 90 degrees, feet flat on the ground hip-width apart, and arms resting along sides.",
+  "steps": [
+    "Press heels firmly into floor and flatten lower back into mat to align pelvis.",
+    "Drive hips upward toward ceiling by squeezing glutes until thighs and torso form straight line.",
+    "Hold top contraction for a 1-second pause, then lower hips with control back to floor."
+  ],
+  "cues": [
+    "Drive through heels rather than balls of feet",
+    "Squeeze glutes at top without arching lower back"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Overextending lumbar spine at top of the bridge",
+      "fix": "Stop hip lift once thighs and torso are in straight line with abs engaged"
+    },
+    {
+      "mistake": "Feeling tension primarily in hamstrings or quads",
+      "fix": "Adjust foot distance closer to glutes and consciously squeeze buttocks before pushing up"
+    }
+  ],
+  "rep_standard": "Hips elevate until thighs align with torso, brief pause at top before gentle ground touch",
+  "is_hold": false,
+  "easier_id": null,
+  "harder_id": "single_leg_glute_bridge",
+  "equipment": ["floor"],
+  "primary_muscles": ["glutes"],
+  "secondary_muscles": ["hamstrings", "lower_back", "core"],
+  "visual": {
+    "movement_id": "glute_bridge.move",
+    "poses": [
+      {
+        "id": "glute_bridge.pose.start",
+        "label": "Supine Floor Setup",
+        "role": "start"
+      },
+      {
+        "id": "glute_bridge.pose.end",
+        "label": "Full Hip Extension Peak",
+        "role": "end"
+      }
+    ]
+  }
+}

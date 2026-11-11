@@ -1,0 +1,49 @@
+{
+  "id": "arm_circles",
+  "status": "complete",
+  "display_name": "Arm Circles",
+  "also_known_as": ["Shoulder circles"],
+  "description": "A dynamic shoulder warmup exercise to lubricate the glenohumeral joint and activate deltoid and upper back musculature.",
+  "setup": "Stand tall with feet hip-width apart and extend both arms straight out to your sides at shoulder height.",
+  "steps": [
+    "Extend arms horizontally with palms facing down and core gently braced.",
+    "Trace controlled circular paths with your fingertips, gradually increasing circle diameter.",
+    "Complete the designated repetitions forward, then reverse the circular rotation backward."
+  ],
+  "cues": [
+    "Keep ribs pulled down and neck relaxed",
+    "Rotate from the shoulder socket rather than swinging your torso"
+  ],
+  "mistakes": [
+    {
+      "mistake": "Shrugging shoulders up to ears",
+      "fix": "Depress shoulder blades down toward your back pockets throughout circles"
+    },
+    {
+      "mistake": "Arching lower back",
+      "fix": "Keep glutes and abs lightly braced to stabilize your spine"
+    }
+  ],
+  "rep_standard": "Each completed full circular revolution counts as one repetition",
+  "is_hold": false,
+  "easier_id": null,
+  "harder_id": null,
+  "equipment": ["floor"],
+  "primary_muscles": ["front_delts", "side_delts"],
+  "secondary_muscles": ["rear_delts", "traps"],
+  "visual": {
+    "movement_id": "arm_circles.move",
+    "poses": [
+      {
+        "id": "arm_circles.pose.start",
+        "label": "T-Pose Arms Extended",
+        "role": "start"
+      },
+      {
+        "id": "arm_circles.pose.end",
+        "label": "Circle Apex Rotation",
+        "role": "end"
+      }
+    ]
+  }
+}
