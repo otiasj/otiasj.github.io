@@ -35,6 +35,7 @@
         "outputProseContinue": "\nOutput format: your answer already starts inside <prose>. Continue the prose, close it with </prose>, and write nothing after it.",
         "outputProseContinueRecap": "\nOutput format: your answer already starts inside <prose>. Continue the prose and close it with </prose>. After </prose>, add <recap>one sentence: what happened in this whole scene and what changed</recap>. Write nothing else after it.",
         "continuePrefilled": "\nYour previous answer was cut off before </prose>. It is repeated at the start of your answer: continue it from exactly where it stops, without repeating any of it.",
+        "repeatedAnswer": "\nYour previous answer only repeated the text so far. Do not copy any of it: write new prose for this segment that continues from where that text ends.",
         "recapOnly": "This scene ends like this:\n{prose}\n\nWrite one sentence: what happened in this scene and what changed. Put it inside <recap> and </recap>, and write nothing else.",
         "writingStyle": "Writing style: {style}"
     }
