@@ -37,6 +37,9 @@
         "continuePrefilled": "\nYour previous answer was cut off before </prose>. It is repeated at the start of your answer: continue it from exactly where it stops, without repeating any of it.",
         "repeatedAnswer": "\nYour previous answer only repeated the text so far. Do not copy any of it: write new prose for this segment that continues from where that text ends.",
         "recapOnly": "This scene ends like this:\n{prose}\n\nWrite one sentence: what happened in this scene and what changed. Put it inside <recap> and </recap>, and write nothing else.",
+        "sceneRecap": "This is the whole scene:\n{prose}\n\nWrite one sentence: what happened in this scene and what changed. Only tell what the text above shows. Put it inside <recap> and </recap>, and write nothing else.",
+        "refineLengthRetry": "\nYour previous rewrite has {words} words, but this request asks for about {target} words. Rewrite the scene again at about {target} words (between {min} and {max}).",
+        "inventedNamesRetry": "\nDo not bring in characters the story does not have. These names are not in the story: {names}. Write the prose again using only the characters named above.",
         "writingStyle": "Writing style: {style}"
     }
 }
