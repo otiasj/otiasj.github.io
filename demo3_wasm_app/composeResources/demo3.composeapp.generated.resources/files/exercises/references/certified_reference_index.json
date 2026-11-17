@@ -1,0 +1,677 @@
+{
+  "total_exercises": 42,
+  "references": {
+    "archer_push_up": [
+      {
+        "role": "start",
+        "db_id": "Pushups",
+        "img_index": 1,
+        "local_file": "archer_push_up_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/archer_push_up_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Pushups",
+        "img_index": 1,
+        "local_file": "archer_push_up_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/archer_push_up_pose_end.jpg"
+      }
+    ],
+    "arm_circles": [
+      {
+        "role": "start",
+        "db_id": "Arm_Circles",
+        "img_index": 0,
+        "local_file": "arm_circles_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/arm_circles_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Arm_Circles",
+        "img_index": 1,
+        "local_file": "arm_circles_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/arm_circles_pose_end.jpg"
+      }
+    ],
+    "bench_dip": [
+      {
+        "role": "start",
+        "db_id": "Bench_Dips",
+        "img_index": 0,
+        "local_file": "bench_dip_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/bench_dip_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Bench_Dips",
+        "img_index": 1,
+        "local_file": "bench_dip_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/bench_dip_pose_end.jpg"
+      }
+    ],
+    "bodyweight_squat": [
+      {
+        "role": "start",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 0,
+        "local_file": "bodyweight_squat_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/bodyweight_squat_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 1,
+        "local_file": "bodyweight_squat_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/bodyweight_squat_pose_end.jpg"
+      }
+    ],
+    "box_single_leg_squat": [
+      {
+        "role": "start",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 1,
+        "local_file": "box_single_leg_squat_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/box_single_leg_squat_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 1,
+        "local_file": "box_single_leg_squat_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/box_single_leg_squat_pose_end.jpg"
+      }
+    ],
+    "bulgarian_split_squat": [
+      {
+        "role": "start",
+        "db_id": "Bodyweight_Walking_Lunge",
+        "img_index": 0,
+        "local_file": "bulgarian_split_squat_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/bulgarian_split_squat_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Bodyweight_Walking_Lunge",
+        "img_index": 1,
+        "local_file": "bulgarian_split_squat_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/bulgarian_split_squat_pose_end.jpg"
+      }
+    ],
+    "burpee": [
+      {
+        "role": "start",
+        "db_id": "Pushups",
+        "img_index": 0,
+        "local_file": "burpee_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/burpee_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Pushups",
+        "img_index": 1,
+        "local_file": "burpee_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/burpee_pose_end.jpg"
+      }
+    ],
+    "cat_cow": [
+      {
+        "role": "start",
+        "db_id": "Cat_Stretch",
+        "img_index": 0,
+        "local_file": "cat_cow_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/cat_cow_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Cat_Stretch",
+        "img_index": 1,
+        "local_file": "cat_cow_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/cat_cow_pose_end.jpg"
+      }
+    ],
+    "chair_squat": [
+      {
+        "role": "start",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 0,
+        "local_file": "chair_squat_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/chair_squat_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 1,
+        "local_file": "chair_squat_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/chair_squat_pose_end.jpg"
+      }
+    ],
+    "chest_doorway_stretch": [
+      {
+        "role": "start",
+        "db_id": "Behind_Head_Chest_Stretch",
+        "img_index": 0,
+        "local_file": "chest_doorway_stretch_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/chest_doorway_stretch_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Behind_Head_Chest_Stretch",
+        "img_index": 1,
+        "local_file": "chest_doorway_stretch_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/chest_doorway_stretch_pose_end.jpg"
+      }
+    ],
+    "child_pose": [
+      {
+        "role": "start",
+        "db_id": "Childs_Pose",
+        "img_index": 0,
+        "local_file": "child_pose_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/child_pose_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Childs_Pose",
+        "img_index": 1,
+        "local_file": "child_pose_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/child_pose_pose_end.jpg"
+      }
+    ],
+    "cossack_squat": [
+      {
+        "role": "start",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 1,
+        "local_file": "cossack_squat_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/cossack_squat_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 1,
+        "local_file": "cossack_squat_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/cossack_squat_pose_end.jpg"
+      }
+    ],
+    "dead_hang": [
+      {
+        "role": "start",
+        "db_id": "Pullups",
+        "img_index": 0,
+        "local_file": "dead_hang_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/dead_hang_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Pullups",
+        "img_index": 0,
+        "local_file": "dead_hang_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/dead_hang_pose_end.jpg"
+      }
+    ],
+    "doorframe_row": [
+      {
+        "role": "start",
+        "db_id": "Inverted_Row",
+        "img_index": 0,
+        "local_file": "doorframe_row_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/doorframe_row_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Inverted_Row",
+        "img_index": 1,
+        "local_file": "doorframe_row_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/doorframe_row_pose_end.jpg"
+      }
+    ],
+    "glute_bridge": [
+      {
+        "role": "start",
+        "db_id": "Butt_Lift_Bridge",
+        "img_index": 0,
+        "local_file": "glute_bridge_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/glute_bridge_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Butt_Lift_Bridge",
+        "img_index": 1,
+        "local_file": "glute_bridge_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/glute_bridge_pose_end.jpg"
+      }
+    ],
+    "hanging_knee_raise": [
+      {
+        "role": "start",
+        "db_id": "Hanging_Leg_Raise",
+        "img_index": 0,
+        "local_file": "hanging_knee_raise_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/hanging_knee_raise_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Hanging_Leg_Raise",
+        "img_index": 1,
+        "local_file": "hanging_knee_raise_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/hanging_knee_raise_pose_end.jpg"
+      }
+    ],
+    "high_knees": [
+      {
+        "role": "start",
+        "db_id": "Mountain_Climbers",
+        "img_index": 0,
+        "local_file": "high_knees_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/high_knees_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Mountain_Climbers",
+        "img_index": 1,
+        "local_file": "high_knees_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/high_knees_pose_end.jpg"
+      }
+    ],
+    "incline_push_up": [
+      {
+        "role": "start",
+        "db_id": "Incline_Push-Up",
+        "img_index": 0,
+        "local_file": "incline_push_up_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/incline_push_up_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Incline_Push-Up",
+        "img_index": 1,
+        "local_file": "incline_push_up_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/incline_push_up_pose_end.jpg"
+      }
+    ],
+    "jefferson_curl": [
+      {
+        "role": "start",
+        "db_id": "Cat_Stretch",
+        "img_index": 1,
+        "local_file": "jefferson_curl_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/jefferson_curl_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Cat_Stretch",
+        "img_index": 0,
+        "local_file": "jefferson_curl_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/jefferson_curl_pose_end.jpg"
+      }
+    ],
+    "jumping_jack": [
+      {
+        "role": "start",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 0,
+        "local_file": "jumping_jack_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/jumping_jack_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 0,
+        "local_file": "jumping_jack_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/jumping_jack_pose_end.jpg"
+      }
+    ],
+    "mountain_climber": [
+      {
+        "role": "start",
+        "db_id": "Mountain_Climbers",
+        "img_index": 0,
+        "local_file": "mountain_climber_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/mountain_climber_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Mountain_Climbers",
+        "img_index": 1,
+        "local_file": "mountain_climber_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/mountain_climber_pose_end.jpg"
+      }
+    ],
+    "negative_pull_up": [
+      {
+        "role": "start",
+        "db_id": "Pullups",
+        "img_index": 1,
+        "local_file": "negative_pull_up_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/negative_pull_up_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Pullups",
+        "img_index": 0,
+        "local_file": "negative_pull_up_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/negative_pull_up_pose_end.jpg"
+      }
+    ],
+    "paused_push_up": [
+      {
+        "role": "start",
+        "db_id": "Pushups",
+        "img_index": 1,
+        "local_file": "paused_push_up_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/paused_push_up_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Pushups",
+        "img_index": 1,
+        "local_file": "paused_push_up_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/paused_push_up_pose_end.jpg"
+      }
+    ],
+    "paused_squat": [
+      {
+        "role": "start",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 1,
+        "local_file": "paused_squat_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/paused_squat_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 1,
+        "local_file": "paused_squat_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/paused_squat_pose_end.jpg"
+      }
+    ],
+    "pike_push_up": [
+      {
+        "role": "start",
+        "db_id": "Pushups",
+        "img_index": 1,
+        "local_file": "pike_push_up_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/pike_push_up_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Pushups",
+        "img_index": 0,
+        "local_file": "pike_push_up_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/pike_push_up_pose_end.jpg"
+      }
+    ],
+    "plank": [
+      {
+        "role": "start",
+        "db_id": "Plank",
+        "img_index": 0,
+        "local_file": "plank_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/plank_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Plank",
+        "img_index": 0,
+        "local_file": "plank_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/plank_pose_end.jpg"
+      }
+    ],
+    "pull_up": [
+      {
+        "role": "start",
+        "db_id": "Pullups",
+        "img_index": 0,
+        "local_file": "pull_up_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/pull_up_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Pullups",
+        "img_index": 1,
+        "local_file": "pull_up_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/pull_up_pose_end.jpg"
+      }
+    ],
+    "reverse_lunge": [
+      {
+        "role": "start",
+        "db_id": "Bodyweight_Walking_Lunge",
+        "img_index": 0,
+        "local_file": "reverse_lunge_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/reverse_lunge_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Bodyweight_Walking_Lunge",
+        "img_index": 1,
+        "local_file": "reverse_lunge_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/reverse_lunge_pose_end.jpg"
+      }
+    ],
+    "scapular_pull_up": [
+      {
+        "role": "start",
+        "db_id": "Scapular_Pull-Up",
+        "img_index": 0,
+        "local_file": "scapular_pull_up_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/scapular_pull_up_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Scapular_Pull-Up",
+        "img_index": 1,
+        "local_file": "scapular_pull_up_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/scapular_pull_up_pose_end.jpg"
+      }
+    ],
+    "seated_forward_fold": [
+      {
+        "role": "start",
+        "db_id": "Behind_Head_Chest_Stretch",
+        "img_index": 0,
+        "local_file": "seated_forward_fold_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/seated_forward_fold_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Behind_Head_Chest_Stretch",
+        "img_index": 1,
+        "local_file": "seated_forward_fold_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/seated_forward_fold_pose_end.jpg"
+      }
+    ],
+    "seated_leg_lift": [
+      {
+        "role": "start",
+        "db_id": "Seated_Leg_Tucks",
+        "img_index": 0,
+        "local_file": "seated_leg_lift_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/seated_leg_lift_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Seated_Leg_Tucks",
+        "img_index": 1,
+        "local_file": "seated_leg_lift_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/seated_leg_lift_pose_end.jpg"
+      }
+    ],
+    "single_leg_glute_bridge": [
+      {
+        "role": "start",
+        "db_id": "Single_Leg_Glute_Bridge",
+        "img_index": 0,
+        "local_file": "single_leg_glute_bridge_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/single_leg_glute_bridge_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Single_Leg_Glute_Bridge",
+        "img_index": 1,
+        "local_file": "single_leg_glute_bridge_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/single_leg_glute_bridge_pose_end.jpg"
+      }
+    ],
+    "slow_mountain_climber": [
+      {
+        "role": "start",
+        "db_id": "Mountain_Climbers",
+        "img_index": 0,
+        "local_file": "slow_mountain_climber_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/slow_mountain_climber_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Mountain_Climbers",
+        "img_index": 1,
+        "local_file": "slow_mountain_climber_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/slow_mountain_climber_pose_end.jpg"
+      }
+    ],
+    "slow_push_up": [
+      {
+        "role": "start",
+        "db_id": "Pushups",
+        "img_index": 0,
+        "local_file": "slow_push_up_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/slow_push_up_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Pushups",
+        "img_index": 1,
+        "local_file": "slow_push_up_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/slow_push_up_pose_end.jpg"
+      }
+    ],
+    "split_squat_jump": [
+      {
+        "role": "start",
+        "db_id": "Freehand_Jump_Squat",
+        "img_index": 0,
+        "local_file": "split_squat_jump_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/split_squat_jump_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Freehand_Jump_Squat",
+        "img_index": 1,
+        "local_file": "split_squat_jump_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/split_squat_jump_pose_end.jpg"
+      }
+    ],
+    "squat_jump": [
+      {
+        "role": "start",
+        "db_id": "Freehand_Jump_Squat",
+        "img_index": 0,
+        "local_file": "squat_jump_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/squat_jump_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Freehand_Jump_Squat",
+        "img_index": 1,
+        "local_file": "squat_jump_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/squat_jump_pose_end.jpg"
+      }
+    ],
+    "squat_thrust": [
+      {
+        "role": "start",
+        "db_id": "Pushups",
+        "img_index": 1,
+        "local_file": "squat_thrust_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/squat_thrust_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Pushups",
+        "img_index": 0,
+        "local_file": "squat_thrust_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/squat_thrust_pose_end.jpg"
+      }
+    ],
+    "step_down": [
+      {
+        "role": "start",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 0,
+        "local_file": "step_down_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/step_down_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Bodyweight_Squat",
+        "img_index": 1,
+        "local_file": "step_down_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/step_down_pose_end.jpg"
+      }
+    ],
+    "table_row": [
+      {
+        "role": "start",
+        "db_id": "Inverted_Row",
+        "img_index": 0,
+        "local_file": "table_row_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/table_row_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Inverted_Row",
+        "img_index": 1,
+        "local_file": "table_row_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/table_row_pose_end.jpg"
+      }
+    ],
+    "tuck_l_sit": [
+      {
+        "role": "start",
+        "db_id": "Seated_Leg_Tucks",
+        "img_index": 1,
+        "local_file": "tuck_l_sit_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/tuck_l_sit_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Seated_Leg_Tucks",
+        "img_index": 1,
+        "local_file": "tuck_l_sit_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/tuck_l_sit_pose_end.jpg"
+      }
+    ],
+    "wall_push_up": [
+      {
+        "role": "start",
+        "db_id": "Pushups",
+        "img_index": 0,
+        "local_file": "wall_push_up_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/wall_push_up_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Pushups",
+        "img_index": 1,
+        "local_file": "wall_push_up_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/wall_push_up_pose_end.jpg"
+      }
+    ],
+    "wall_slide": [
+      {
+        "role": "start",
+        "db_id": "Calf_Stretch_Hands_Against_Wall",
+        "img_index": 0,
+        "local_file": "wall_slide_pose_start.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/wall_slide_pose_start.jpg"
+      },
+      {
+        "role": "end",
+        "db_id": "Calf_Stretch_Hands_Against_Wall",
+        "img_index": 1,
+        "local_file": "wall_slide_pose_end.jpg",
+        "path": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/wall_slide_pose_end.jpg"
+      }
+    ]
+  }
+}

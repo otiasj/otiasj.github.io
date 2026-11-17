@@ -40,6 +40,7 @@
         "sceneRecap": "This is the whole scene:\n{prose}\n\nWrite one sentence: what happened in this scene and what changed. Only tell what the text above shows. Put it inside <recap> and </recap>, and write nothing else.",
         "refineLengthRetry": "\nYour previous rewrite has {words} words, but this request asks for about {target} words. Rewrite the scene again at about {target} words (between {min} and {max}).",
         "inventedNamesRetry": "\nDo not bring in characters the story does not have. These names are not in the story: {names}. Write the prose again using only the characters named above.",
+        "craftNote": "Craft: give each beat one concrete detail from this setting; use plain verbs; at most one comparison per paragraph; show feelings through what characters do and say, not racing hearts or held breath; vary sentence length; avoid paired adjectives and \"it wasn't X; it was Y\". End on something concrete that happens or is said, not on a symbolic image.",
         "writingStyle": "Writing style: {style}"
     }
 }

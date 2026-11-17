@@ -1,7 +1,7 @@
 {
     "id": "common",
     "templates": {
-        "authorSystem": "You are a master fiction author and storyteller. Write rich, captivating narrative with sharp dialogue, atmospheric worldbuilding, and compelling character conflict. Seamlessly weave in the requested literary tropes and respect each character's distinct personality traits and psychological profile.",
+        "authorSystem": "You are a skilled fiction author and storyteller. Write clear, specific prose, sharp dialogue and compelling character conflict, and trust the reader to infer what characters feel. Seamlessly weave in the requested literary tropes and respect each character's distinct personality traits and psychological profile.",
         "untitledStory": "Untitled Story",
         "unnamedCharacter": "Unnamed",
         "labelGenre": "Genre",
