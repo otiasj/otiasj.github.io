@@ -1,11 +1,13 @@
 ---
 type: feature
 title: Linear
-description: 'Linear issue tracker integration: browse, filter, sort, create, and
-  manage Linear issues with inline status/priority changes and a detail pane.'
+description: 'BriefMe Control Center thin client & Linear issue tracker integration:
+  live agent session telemetry, actionable service alerts with native phone notifications,
+  periodic GraphQL polling, project filter pills, recommended todo queue, and full
+  issue browsing/detail pane.'
 sources: [Applications/Demo3/composeApp/src/commonMain/kotlin/com/otiasj/features/linear/]
-tags: [demo3, feature, linear]
-timestamp: '2026-06-19T00:00:00Z'
+tags: [demo3, feature, linear, briefme, daily]
+timestamp: '2026-11-17T00:00:00Z'
 last_commit: f2cd6e83bd1a4d41a96f04fe677922bcdf7b2558
 category: feature
 ---
@@ -13,13 +15,16 @@ category: feature
 # Linear
 
 ## Purpose
-Linear issue tracker integration: browse, filter, sort, create, and manage Linear issues with inline status/priority changes and a detail pane.
+BriefMe Control Center thin client & Linear issue tracker integration (hosted in `DAILY_COLLECTION`): displays live agent session telemetry, actionable service alerts (`waiting-user`, `blocked-limit`, `blocked-auth`, `review`) with cross-platform native phone/desktop notifications (`LinearAlertNotifier`), periodic interval GraphQL polling, Linear project filter pills, recommended next todo queue, and a toggleable `ALL_TICKETS` view with full inline status/priority editing and a three-pane detail layout.
 
 Location: `features/linear/`
 
 ## Responsibility
 
-Owns the full Linear issue management experience: listing issues with client-side filtering (status, assignee, search, sort), creating new issues, updating issue status and priority, managing attachments and labels, viewing issue details, and a two-pane master-detail layout. Does NOT own Jules session orchestration (that belongs to `ideas`) or shared AI-lift UI components.
+Owns the BriefMe Control Center thin client and full Linear issue management experience:
+- **BriefMe Cockpit (`LinearViewMode.COCKPIT`, default)**: Project filter bar with emoji icons and counts, Actionable Service Notifications (`waiting-user`, `blocked-limit`, `blocked-auth`, `review`), Live Tracked Agent Sessions (`working`, `in-progress`, branch/worktree/agent telemetry parsed from labels and status block comments), Recommended Next to Start (`Todo`/`Backlog` priority-sorted queue), custom Canvas `AgentIcon` vector icons (`antigravity`, `claude`, `gemini`, `codex`, `linear`), and one-tap `⎘ Pickup` bundle copy.
+- **Periodic GraphQL Polling & Native Phone Alerts**: Polls Linear GraphQL every `pollIntervalSeconds` (30s default) when `isPollingEnabled` is active, and dispatches native system notifications via `LinearAlertNotifier` (`expect`/`actual`) whenever an issue newly enters an actionable alert state (`demo3://linear` / `NotificationType.LINEAR_ALERT`).
+- **All Tickets (`LinearViewMode.ALL_TICKETS`)**: Classic issue browser with client-side filtering (status, assignee, search, sort), creating new issues, updating issue status and priority, managing attachments and labels, and an `AdaptiveThreePaneLayout` master-detail-review layout.
 
 ## Route & Entry Point
 
@@ -39,18 +44,20 @@ The `LinearScreen` composable can also be used standalone (embedded by the `idea
 | Type | Description |
 |------|-------------|
 | `LinearComponent` | DI component; creates auth provider, API, repository, and ViewModel factories |
-| `LinearAuthTokenProvider` | **Feature-specific auth**: reads `LINEAR_API_KEY` from Clerk unsafe metadata |
+| `LinearProfile` | Profile enum (`REVIVLE` → `LINEAR_API_KEY` / default team `OTI`; `WORK` → `LINEAR_API_WORK_ID` with `LINEAR_API_KEY_WORK` fallback / default team `DNB`) |
+| `LinearAuthTokenProvider` | **Feature-specific auth**: reads `activeProfile.clerkKeyName` (`LINEAR_API_KEY` or `LINEAR_API_WORK_ID`) from Clerk unsafe metadata |
 | `LinearApi` | Ktorfit-generated interface; all operations are GraphQL `POST /graphql` calls (includes `deleteIssue`) |
 | `LinearRepository` / `LinearRepositoryImpl` | Interface + implementation for issues, teams, attachments, labels, viewer; `deleteIssue(issueId): Boolean` added |
 | `IssueDeletePayload` / `IssueDeleteResponse` | Serializable response models for the `issueDelete` GraphQL mutation |
-| `LinearViewModel` | Manages issue list, pagination, filtering, sorting, CRUD operations |
+| `LinearViewModel` | Manages issue list, pagination, filtering, sorting, CRUD operations, BriefMe Cockpit state (`selectedProfile`, `viewMode`, `selectedProjectFilter`, `dismissedAlertIds`, `refreshStage`), periodic polling (`isPollingEnabled`, `pollIntervalSeconds`), and `LinearAlertNotifier` triggers |
 | `LinearDetailViewModel` | (referenced in component) Manages single-issue detail editing |
-| `LinearUiState` (data class) | Holds `issues`, `filters`, `teams`, loading/error state; computes `filteredIssues`, `availableStatuses`, `availableAssignees` as derived properties |
+| `LinearUiState` (data class) | Holds `issues`, `filters`, `teams`, loading/error state, BriefMe Cockpit state; computes `filteredIssues`, `availableStatuses`, `availableAssignees`, `projectFilterEntries`, `actionableAlerts`, `liveSessions`, `recommendedTodo` as derived properties |
 | `LinearFilters` | `status: Set<String>`, `assignee: String?`, `sortBy`, `sortOrder`, `search` |
-| `LinearIssueUiModel` | UI model with id, identifier, title, state, assignee, priority, labels, attachments, GitHub PR info |
+| `LinearIssueUiModel` | UI model with id, identifier, title, state, assignee (`isAssignedToMe`), priority, labels (`parentName`), attachments, GitHub PR info, BriefMe session telemetry (`branchName`, `projectIcon`, `projectColor`, `agentSessionState`, `agentName`, `worktreePath`, `stateDetail`, `resetsAt`), and parsed `subagents: List<LinearSubagentUiModel>` |
+| `LinearAlertNotifier` | Cross-platform `expect object` (`notification/LinearAlertNotifier.kt`) with Android, iOS, Desktop, and WasmJs actuals for system notifications (`notifyAlert`) and native app / external URL launching (`openExternalOrAgent`) |
 
 ### UI Components
-`IssueItem`, `IssueChips`, `IssueSupportingContent`, `IssueTitleRow`, `SortFilterChip`, `CreateIssueDialog`
+`BriefMeCockpitView`, `BriefMeCockpitHeader`, `BriefMeModeSwitcher`, `LiveSessionsHeaderWithFilterDropdown`, `FilterFunnelIcon`, `BriefMeProjectFilterBar`, `ActionableAlertCard`, `LiveSessionCard`, `RecommendedTodoCard`, `AgentIcon`, `IssueItem`, `IssueChips`, `IssueSupportingContent`, `IssueTitleRow`, `SortFilterChip`, `CreateIssueDialog`
 
 `GithubPrChip` and `AttachmentChip` now accept an optional `onClick: (() -> Unit)?` parameter. When provided it overrides the default `uriHandler.openUri(...)` tap — used by the issue detail pane to route PR links into the third pane (`LinearThirdPane.ReviewPr`) instead of the system browser. `IssueSupportingContent` exposes `onGithubPrClick` and `onAttachmentClick` slots that thread down to the chip's `onClick`.
 
@@ -144,6 +151,7 @@ Write tools set `requiresConfirmation = true`. All tools delegate to `LinearRepo
 - [jules](jules.md) -- AI coding assistant sessions
 - [itemdetail](itemdetail.md) -- exemplary sealed-interface UiState pattern
 
-_Last updated: 2026-07-06 — Added `deleteIssue` GraphQL mutation (`IssueDeletePayload`/`IssueDeleteResponse` models, `LinearApi.deleteIssue`, `LinearRepositoryImpl.deleteIssue`, `LinearRepository.deleteIssue`). Multi-select `selectionActions` now dynamically builds one status-change action per available status (`availableStateModels`) plus a "Delete" action, replacing the previous static "Unassign" action._
+_Last updated: 2026-11-17 — Migrated Linear feature from `AI_LIFT_COLLECTION` to `DAILY_COLLECTION` and upgraded `LinearScreen` to the BriefMe Control Center thin client (`BriefMeCockpitComponents.kt`, `LinearViewMode.COCKPIT` / `ALL_TICKETS`, project filter pills, live agent session telemetry parsed from labels & status comment blocks, 30s periodic GraphQL polling, and cross-platform `LinearAlertNotifier` native notifications deep-linking to `demo3://linear`)._
+_Previous: 2026-07-06 — Added `deleteIssue` GraphQL mutation (`IssueDeletePayload`/`IssueDeleteResponse` models, `LinearApi.deleteIssue`, `LinearRepositoryImpl.deleteIssue`, `LinearRepository.deleteIssue`). Multi-select `selectionActions` now dynamically builds one status-change action per available status (`availableStateModels`) plus a "Delete" action, replacing the previous static "Unassign" action._
 _Previous: 2026-06-19 — Added 5 AI tools (`list_linear_issues`, `get_linear_issue`, `list_linear_teams`, `create_linear_issue`, `update_linear_issue`) in `features/linear/tools/`; `LinearIssueDetailScreen` redesigned (status/priority in TopAppBar title, IssueSupportingContent moved to bottom bar)._
 _Previous: 2026-06-01 — Migrated to `AdaptiveThreePaneLayout` (three-pane: issue list / detail / polymorphic Jules-session-or-PR-review). Feature-local `LinearThirdPane` sealed type. Both routes refactored to outbound callbacks. `showCloseIcon` removed from `LinearIssueDetailScreen` — reads `LocalPaneMode` instead. `GithubPrChip` and `AttachmentChip` gained optional `onClick` overrides; `IssueSupportingContent` exposes `onGithubPrClick`/`onAttachmentClick` slots. Fixed Dependencies: `AdaptiveThreePaneLayout` (not `TwoPaneLayout`)._
