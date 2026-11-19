@@ -22,7 +22,7 @@ Location: `features/tasklist/`
 
 **Owns:** A persistent list of `TaskItem` entries. Each item has text, a checked state, an indent level (0 or 1), and a stable UUID. Supports adding items inline, adding after an existing item, reordering (move up/down), indenting (left/right, max 1 level), checking off (strikethrough), and removing items. The full list is persisted on every mutation to `LocalDataSource`.
 
-**Does NOT own:** Any cross-feature orchestration or AI interactions. The feature is a plain todo list — it no longer integrates with `linear`, `jules`, or `ideas` (that coupling, plus the `grillme` ticket-sharpening feature it fed, was removed when the tasklist was simplified back to a pure todo list).
+**Does NOT own:** Any cross-feature orchestration or AI interactions. The feature is a plain todo list — it no longer integrates with `linear` or `ideas` (that coupling, plus the `grillme` ticket-sharpening feature it fed, was removed when the tasklist was simplified back to a pure todo list).
 
 ## Route & Entry Point
 

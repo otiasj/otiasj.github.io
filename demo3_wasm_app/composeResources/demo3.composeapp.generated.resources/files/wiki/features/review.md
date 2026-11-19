@@ -44,7 +44,7 @@ fun ReviewDetailsPane(prId: String, contentPadding, onClose, ...)
 
 The list screen is `ReviewScreen`; the detail screen is `ReviewDetailsScreen`. Both are backed by `ReviewComponent` retrieved from `DiProvider`.
 
-`ReviewDetailsPane` was extracted from `ReviewDetailsScreen` to support embedding as pane 3 in `AdaptiveThreePaneLayout` inside Jules dashboard, Ideas, and Linear. It owns its own VM resolution and `LaunchedEffect(prId) { viewModel.loadPr(prId) }`. `reviewDetailsRoute` is now a ~5-line adapter that delegates to `ReviewDetailsPane`. The pane's `TopAppBar` reads `LocalPaneMode` (provided by `AdaptiveThreePaneLayout` at the pane boundary) and renders a close-X automatically — no `showCloseIcon` parameter needed.
+`ReviewDetailsPane` was extracted from `ReviewDetailsScreen` to support embedding as pane 3 in `AdaptiveThreePaneLayout` inside Ideas and Linear. It owns its own VM resolution and `LaunchedEffect(prId) { viewModel.loadPr(prId) }`. `reviewDetailsRoute` is now a ~5-line adapter that delegates to `ReviewDetailsPane`. The pane's `TopAppBar` reads `LocalPaneMode` (provided by `AdaptiveThreePaneLayout` at the pane boundary) and renders a close-X automatically — no `showCloseIcon` parameter needed.
 
 ## Key Types
 
@@ -141,7 +141,7 @@ review/
 ## Dependencies
 
 - **Core**: `DiProvider`, `AnalyticsModule`, `AnalyticsManager`, `safeCall`, `Error`, `AppScaffold`, `FullScreenLoading`, `ErrorState`
-- **Jules data layer**: `GitHubAPI` (also uses `getWorkflowRuns`, `getRunArtifacts`), `GitHubAuthTokenProvider`, `ClerkUnsafeMetadataDataSourceFactory`
+- **GitHub remote datasource**: `GitHubAPI` (located in `core/data/datasource/remote/github/`, also uses `getWorkflowRuns`, `getRunArtifacts`), `GitHubAuthTokenProvider`, `ClerkUnsafeMetadataDataSourceFactory`
 - **Platform AI**: `AiChatCatalog` (embedded in detail screen with PR context)
 - **Platform HTTP**: `createPlatformHttpClient` with bearer auth for artifact zip downloads
 - **Navigation**: `androidx.navigation`, `kotlinx.serialization`
@@ -185,7 +185,7 @@ All tools are thin wrappers over the existing use cases in `ReviewComponent`.
 
 ## See Also
 
-- [jules](jules.md) — owns `GitHubAPI` used by this feature's repository layer
+- [ideas](ideas.md) — incorporates PR review as third pane in adaptive layouts
 - [linear](linear.md) — another issue-tracker feature with similar list/detail pattern
 - [ai-chat](ai-chat.md) — `AiChatCatalog` embedded in the detail screen
 

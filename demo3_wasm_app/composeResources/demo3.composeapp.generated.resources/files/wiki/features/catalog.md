@@ -128,7 +128,7 @@ For `pushtest/`, Desktop supplies a `StateFlow<List<PushDeviceInfo>>` from the e
 | File | What it tests |
 |------|---------------|
 | `CatalogScreenshotTest.kt` | Screenshot regression for the Catalog collection tab: logs in, navigates to the Catalog collection, waits for `nav_tab_Catalog`, captures screenshots at dashboard, collection, and catalog views. Extends `ScreenshotTestBase`. |
-| `AgentScreenshotTest.kt` | Screenshot regression for the Agent (Jules) tab under the AILift collection: logs in, navigates via `nav_tab_Agent`, captures dashboard/collection/agent screenshots. Extends `ScreenshotTestBase`. |
+| `AgentScreenshotTest.kt` | Screenshot regression for the Agent tab under the AILift collection: logs in, navigates via `nav_tab_Agent`, captures dashboard/collection/agent screenshots. Extends `ScreenshotTestBase`. |
 
 ## See Also
 

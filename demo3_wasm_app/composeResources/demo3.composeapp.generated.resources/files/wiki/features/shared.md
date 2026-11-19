@@ -59,14 +59,14 @@ The AiLift sub-package contains UI-only components (no domain layer). All types 
 | Type | Purpose |
 |---|---|
 | `ActiveSessionIndicator` | Animated pulsing dot (uses `rememberInfiniteTransition`) to show an active AI session. |
-| `PlanGeneratedCard` | Card rendering a `WorkflowPlan` with collapsible `WorkflowPlanStep` rows and an optional approve button; depends on types from `features/jules`. |
+| `PlanGeneratedCard` | Card rendering a `WorkflowPlan` with collapsible `WorkflowPlanStep` rows and an optional approve button; depends on types from `features/shared/ailift`. |
 | `CollapsiblePlanStepRow` | Expandable step row with step-number badge, title, and optional description. |
 | `ActivityEventCards` | Renders individual `WorkflowActivity` event feed items. |
 | `ColoredDiffView` / `DiffUtils` | Diff rendering utilities for displaying code or text changes. |
 | `BranchDropdown` / `SourceDropdown` | Dropdowns for git branch/source selection. |
 | `PriorityIcons` | Icon set for priority levels. |
 | `PullRequestCard` | Card rendering a pull request summary. |
-| `DiffFileRow` | Collapsible row composable showing a single changed file from a diff — filename, `+`/`-` counts, and an expandable diff body with syntax-coloured lines. Extracted from `features/jules` and `features/review` in #589 so both screens share the same component. Accepts `filename: String`, `additions: Int`, `deletions: Int`, and `diffContent: String?`; uses `AnimatedVisibility` for expand/collapse. |
+| `DiffFileRow` | Collapsible row composable showing a single changed file from a diff — filename, `+`/`-` counts, and an expandable diff body with syntax-coloured lines. Extracted in #589 so screens share the same component. Accepts `filename: String`, `additions: Int`, `deletions: Int`, and `diffContent: String?`; uses `AnimatedVisibility` for expand/collapse. |
 
 ## Architecture
 
@@ -89,7 +89,7 @@ shared/ailift/
 └── ui/components/   (UI primitives only)
 ```
 
-The `ailift` sub-package is deliberately shallow — it holds composable building blocks that the `jules` feature (or others) assemble into full screens.
+The `ailift` sub-package is deliberately shallow — it holds composable building blocks that coding session and ideas features assemble into full screens.
 
 ## Data Flow
 
@@ -113,7 +113,6 @@ The `ailift` sub-package is deliberately shallow — it holds composable buildin
 
 - `core` — `AuthTokenProvider`, `ClerkUnsafeMetadataDataSource`, `UserRemoteDataSource`, `AnalyticsManager`, `ViewModel`, `PaginatedResult`, `safeCall`, `ItemPage`, `ItemOwnerInfo`
 - `features/mycloset` — `MyItem`, `MyItemRepository` (item-action use cases only)
-- `features/jules` — `WorkflowPlan`, `WorkflowPlanStep` (AiLift `PlanGeneratedCard` only)
 - `revivle-api-client` — `CommentsApi`, `AuthenticationApi`, generated request/response models
 
 ## Known Issues / Drift
@@ -135,7 +134,7 @@ The `ailift` sub-package is deliberately shallow — it holds composable buildin
 | `shared/revivle/itemactions/ListItemUseCaseTest.kt` | List-for-sale action, including price validation. |
 | `shared/revivle/fakes/FakeAuthenticationApi.kt` | Fake `AuthenticationApi` for comment-layer tests that require an authenticated user context (#522). |
 | `shared/revivle/fakes/FakeRevivleCommentRepository.kt` | In-memory stub for `RevivleCommentRepository` (#522). |
-| `shared/revivle/ui/RevivleCommentsViewModelTest.kt` | `RevivleCommentsViewModel` state transitions: load comments, post comment, delete, user ownership checks, sequential-call timing (#522, added by Jules agent). |
+| `shared/revivle/ui/RevivleCommentsViewModelTest.kt` | `RevivleCommentsViewModel` state transitions: load comments, post comment, delete, user ownership checks, sequential-call timing (#522, added by automated agent). |
 | `shared/revivle/domain/usecase/CreateRevivleCommentUseCaseTest.kt` | Create comment use case: success, API error, auth error paths (#558). |
 | `shared/revivle/domain/usecase/DeleteRevivleCommentUseCaseTest.kt` | Delete use case: success, not-found, permission denied (#558). |
 | `shared/revivle/domain/usecase/GetRevivleCommentsUseCaseTest.kt` | Get comments: pagination, empty list, error propagation (#558). |
@@ -145,7 +144,7 @@ The `ailift` sub-package is deliberately shallow — it holds composable buildin
 ## See Also
 
 - `features/template` — canonical feature skeleton to follow when adding new sub-packages
-- `features/jules` — primary consumer of `shared/ailift/` UI components
+- `features/ideas` — consumer of `shared/ailift/` UI components
 - `features/transactions` — uses `CalculateFeeUseCase` (self-contained); compare with `RevivleCommentsViewModel` for VM patterns
 - `core/data/datasource/remote/auth/` — `AuthTokenProvider`, `ClerkUnsafeMetadataDataSource`
 

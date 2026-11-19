@@ -128,7 +128,7 @@ branchName, baseRef, isStarting)` / `Error`. The new-session flow progresses ins
   `agentBranchName`: `agent/<identifier>-<slug>`, sanitised + word-boundary truncated),
   editable base ref, start button.
 - `SessionStepper` — vertical Worktree/Code/Build/Ready/Merge progress.
-- `SessionChatPane` — embeds `JulesSessionDetailContent` with a `JulesSessionViewModel`
+- `SessionChatPane` — embeds session detail chat content with a session ViewModel
   built over `KoboteRepository(KoboteApi.create("http://$address/"))`, pinned to the
   session's desktop regardless of the global coding-agent provider.
 - `BuildCard` (queued/running/failed + log tail + retry), `ApkReadyCard` (filename +
@@ -160,7 +160,6 @@ branchName, baseRef, isStarting)` / `Error`. The new-session flow progresses ins
 
 ## See Also
 
-- [jules](jules.md) — session chat UI + Kobote wire contract this feature embeds.
 - [linear](linear.md) — issue list slot API reused by the ticket picker.
 - [../desktop-server.md](../desktop-server.md) — the Ktor server hosting the router.
 - [tailscale] Server Detail screen — entry point + OTA Updates card where session APKs land.

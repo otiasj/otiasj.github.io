@@ -199,7 +199,11 @@
           "front_delts"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/bench_dip_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/bench_dip_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/bench_dip_start_M2_T1.webp"
+      }
     },
     {
       "id": "bench_dip.pose.end",
@@ -237,7 +241,11 @@
           "front_delts"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/bench_dip_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/bench_dip_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/bench_dip_end_M2_T1.webp"
+      }
     },
     {
       "id": "bodyweight_squat.pose.top",
@@ -821,7 +829,11 @@
           "calves"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/cossack_squat_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/cossack_squat_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/cossack_squat_start_M2_T1.webp"
+      }
     },
     {
       "id": "cossack_squat.pose.end",
@@ -860,7 +872,11 @@
           "calves"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/cossack_squat_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/cossack_squat_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/cossack_squat_end_M2_T1.webp"
+      }
     },
     {
       "id": "dead_hang.pose.hold",
@@ -1096,7 +1112,11 @@
           "lats"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/hanging_knee_raise_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/hanging_knee_raise_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/hanging_knee_raise_start_M2_T1.webp"
+      }
     },
     {
       "id": "hanging_knee_raise.pose.end",
@@ -1134,7 +1154,11 @@
           "lats"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/hanging_knee_raise_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/hanging_knee_raise_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/hanging_knee_raise_end_M2_T1.webp"
+      }
     },
     {
       "id": "high_knees.pose.hold",
@@ -1525,7 +1549,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/negative_pull_up_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/negative_pull_up_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/negative_pull_up_start_M2_T1.webp"
+      }
     },
     {
       "id": "negative_pull_up.pose.end",
@@ -1565,7 +1593,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/negative_pull_up_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/negative_pull_up_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/negative_pull_up_end_M2_T1.webp"
+      }
     },
     {
       "id": "paused_push_up.pose.start",
@@ -1604,7 +1636,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/paused_push_up_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/paused_push_up_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/paused_push_up_start_M2_T1.webp"
+      }
     },
     {
       "id": "paused_push_up.pose.end",
@@ -1643,7 +1679,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/paused_push_up_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/paused_push_up_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/paused_push_up_end_M2_T1.webp"
+      }
     },
     {
       "id": "paused_squat.pose.start",
@@ -1681,7 +1721,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/paused_squat_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/paused_squat_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/paused_squat_start_M2_T1.webp"
+      }
     },
     {
       "id": "paused_squat.pose.end",
@@ -1719,7 +1763,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/paused_squat_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/paused_squat_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/paused_squat_end_M2_T1.webp"
+      }
     },
     {
       "id": "pike_push_up.pose.start",
@@ -1878,7 +1926,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/pull_up_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/pull_up_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/pull_up_start_M2_T1.webp"
+      }
     },
     {
       "id": "pull_up.pose.top",
@@ -1918,7 +1970,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/pull_up_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/pull_up_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/pull_up_end_M2_T1.webp"
+      }
     },
     {
       "id": "reverse_lunge.pose.start",
@@ -1957,7 +2013,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/reverse_lunge_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/reverse_lunge_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/reverse_lunge_start_M2_T1.webp"
+      }
     },
     {
       "id": "reverse_lunge.pose.end",
@@ -1996,7 +2056,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/reverse_lunge_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/reverse_lunge_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/reverse_lunge_end_M2_T1.webp"
+      }
     },
     {
       "id": "scapular_pull_up.pose.start",
@@ -2148,7 +2212,11 @@
           "quads"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/seated_leg_lift_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/seated_leg_lift_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/seated_leg_lift_start_M2_T1.webp"
+      }
     },
     {
       "id": "seated_leg_lift.pose.end",
@@ -2186,7 +2254,11 @@
           "quads"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/seated_leg_lift_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/seated_leg_lift_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/seated_leg_lift_end_M2_T1.webp"
+      }
     },
     {
       "id": "single_leg_glute_bridge.pose.start",
@@ -2305,7 +2377,11 @@
           "quads"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/slow_mountain_climber_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/slow_mountain_climber_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/slow_mountain_climber_start_M2_T1.webp"
+      }
     },
     {
       "id": "slow_mountain_climber.pose.end",
@@ -2344,7 +2420,11 @@
           "quads"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/slow_mountain_climber_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/slow_mountain_climber_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/slow_mountain_climber_end_M2_T1.webp"
+      }
     },
     {
       "id": "slow_push_up.pose.start",
@@ -2383,7 +2463,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/slow_push_up_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/slow_push_up_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/slow_push_up_start_M2_T1.webp"
+      }
     },
     {
       "id": "slow_push_up.pose.end",
@@ -2422,7 +2506,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/slow_push_up_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/slow_push_up_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/slow_push_up_end_M2_T1.webp"
+      }
     },
     {
       "id": "split_squat_jump.pose.start",
@@ -2539,7 +2627,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/squat_jump_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/squat_jump_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/squat_jump_start_M2_T1.webp"
+      }
     },
     {
       "id": "squat_jump.pose.end",
@@ -2578,7 +2670,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/squat_jump_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/squat_jump_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/squat_jump_end_M2_T1.webp"
+      }
     },
     {
       "id": "squat_thrust.pose.start",
@@ -2617,7 +2713,11 @@
           "triceps"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/squat_thrust_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/squat_thrust_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/squat_thrust_start_M2_T1.webp"
+      }
     },
     {
       "id": "squat_thrust.pose.end",
@@ -2657,7 +2757,11 @@
           "triceps"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/squat_thrust_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/squat_thrust_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/squat_thrust_end_M2_T1.webp"
+      }
     },
     {
       "id": "step_down.pose.start",

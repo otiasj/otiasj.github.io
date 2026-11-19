@@ -57,7 +57,7 @@ This feature has **no `@Serializable` route of its own** — its Compose surface
 | `DesktopAiProxyRouter` | `/api/ai/*` — backends, models, benchmark, Android Studio proxy (`as-status`, `as/command/{name}`), SSE chat sessions with proxied tool-confirmation coordination. |
 | `ToolsRouter` + `McpTokenManager` | `/api/tools`, `/api/tools/execute` — localhost-only, bearer-token-gated. Token mirrored to `~/.demo3/mcp_token` (owner-read only) for local CLI (MCP bridge) clients. |
 | `CodingSessionRouter` + `CodingSessionOrchestrator` | `/api/codingsession` — ticket → worktree → agent → APK → merge state machine (see [`codingsession.md`](./codingsession.md)). |
-| `KoboteRouter` + `KoboteAgentService` | `/v1alpha/*` — self-hosted Claude coding loop that speaks Jules's `v1alpha` wire contract, so mobile treats it as another Jules provider. |
+| `KoboteRouter` + `KoboteAgentService` | `/v1alpha/*` — self-hosted Claude coding loop that speaks the session `v1alpha` wire contract. |
 | `OtaRouter` + `OtaRepository` | `/api/ota/*` — APK folder discovery + signed download. |
 | `DatabaseRouter` + `DatabaseRepository` | `/api/database` — in-memory K/V store for dev tooling. |
 | `BackupRouter` | `/api/backup` — encrypted `AppDatabase` snapshot upload/download. |
@@ -139,7 +139,7 @@ Startup flow: `TailscalePlugin.registerComponents` registers `DesktopServerCompo
 
 - **Own:** `AndroidStudioDirectClient`, `AndroidStudioClientState`, `KoboteAgentService`, `CodingSessionOrchestrator`, `BuildRunner`, `GitHubMergeGateway`, `OtaRepository`, `WorkspaceRepository`, `TokenRegistryRepository`, `DatabaseRepository`, `McpTokenManager`, `TailscaleTcpProxyHandle`, `ProxyToolConfirmationCoordinator`.
 - **Core:** `DiProvider`, `LoggingHttpClient`, `NetworkLogRepository`, `createLocalDataSource`, `Configuration.desktopServerPort`, `BuildKonfig.{DESKTOP_SERVER_PORT, ANDROID_STUDIO_MCP_URL}`, `Log`, `TimeUtils`, `AppDatabase`, `ClerkUnsafeMetadataDataSourceFactory`.
-- **Cross-feature:** pulls `TailscaleComponent` from DI for `sendTokenUseCase`; uses `LinearComponent` (via `LinearIssueTracker`), `GitHubAPI`/`GitHubAuthTokenProvider` (from `features/jules`), `platformBackupManager` (from `features/backup`), `platform.ai.{DesktopLlmBackendRegistry, LlmServerRepository, AiChatClient, ToolConfirmationAware}`, `platform.ai.tools.{ToolRegistry, defaultToolRegistry, commonFeatureTools}`, `platform.auth.DesktopAuthBridge`, `platform.tailscale.ui.{PeerUi, PeerActionState, serverAddress, PeerBackendInfo}`, `tailscale.{TailscaleNode, TailscaleServerSocket}`.
+- **Cross-feature:** pulls `TailscaleComponent` from DI for `sendTokenUseCase`; uses `LinearComponent` (via `LinearIssueTracker`), `GitHubAPI`/`GitHubAuthTokenProvider` (from `core/data/datasource/remote/github`), `platformBackupManager` (from `features/backup`), `platform.ai.{DesktopLlmBackendRegistry, LlmServerRepository, AiChatClient, ToolConfirmationAware}`, `platform.ai.tools.{ToolRegistry, defaultToolRegistry, commonFeatureTools}`, `platform.auth.DesktopAuthBridge`, `platform.tailscale.ui.{PeerUi, PeerActionState, serverAddress, PeerBackendInfo}`, `tailscale.{TailscaleNode, TailscaleServerSocket}`.
 - **Compose Resources:** `Res.string.desktop_server_{android_studio_connection, url_readonly, connection_error, refreshing, refresh_status, refresh, tools_count, no_tools, status_connected, status_connecting, status_disconnected, expand_tools, collapse_tools}` (used by `ConnectedTools.kt`; `AdvancedOptionsCard.kt` hard-codes its own labels — see Drift).
 - **Navigation:** none — no route of its own; UI is embedded in `PeerDetailScreen`.
 
@@ -168,7 +168,7 @@ Startup flow: `TailscalePlugin.registerComponents` registers `DesktopServerCompo
 | `desktopTest/.../codingsession/GitHubRemoteParsingTest.kt` | `git remote -v` output parsed into owner/repo. |
 | `desktopTest/.../workspace/WorkspaceRepositoryTest.kt` | Markdown-backed folder persistence in `~/.kobote/workspace_folders.md`. |
 | `desktopTest/.../kobote/CliAgentEngineTest.kt` | `ClaudeCliAgentEngine` / `AgyCliAgentEngine` shell invocation shape + streaming parsing. |
-| `desktopTest/.../kobote/KoboteSourceParsingTest.kt` | Jules-wire `Source` decode helpers used by `KoboteRouter`. |
+| `desktopTest/.../kobote/KoboteSourceParsingTest.kt` | Session-wire `Source` decode helpers used by `KoboteRouter`. |
 | `desktopTest/.../mcp/AndroidStudioDirectClientTest.kt` | HTTP probe + tool-definition parsing against a mocked `127.0.0.1:9092`. |
 | `desktopTest/.../ota/OtaRepositoryTest.kt` | APK folder scan, semver parse, session-APK matching. |
 | `desktopTest/.../aiproxy/ProxyToolConfirmationCoordinatorTest.kt` | Client-side confirmation coordinator that the `/api/ai/sessions/{id}/confirmations` route drives. |

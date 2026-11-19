@@ -19,7 +19,7 @@ Location: `features/ideas/`
 
 ## Responsibility
 
-Provides a two-pane view (left: issue list, right: session/start-session pane) for browsing Linear issues, creating new ones, filtering/sorting by custom status and assignee, and launching Jules AI sessions. Owns its own domain models, repository, and ViewModel — it no longer directly renders `LinearScreen` as its left pane.
+Provides a two-pane view (left: issue list, right: session/start-session pane) for browsing Linear issues, creating new ones, filtering/sorting by custom status and assignee, and launching AI coding sessions. Owns its own domain models, repository, and ViewModel — it no longer directly renders `LinearScreen` as its left pane.
 
 Also exports standalone composables `CreateIdeaDialog` and `IdeaContent` consumed by `features/tasklist/`.
 
@@ -30,14 +30,14 @@ Also exports standalone composables `CreateIdeaDialog` and `IdeaContent` consume
 object IdeasRoute
 
 fun NavGraphBuilder.ideasScreenRoute(
-    onNavigateToJulesSession, onNavigateToStartSession, onNavigateToJulesArtifacts,
+    onNavigateToSession, onNavigateToStartSession, onNavigateToArtifacts,
     onNavigateToReviewPr, onSessionStarted, onNavigateBack, contentPadding
 )
 ```
 
 `IdeasRouter.kt` — registered via `composable<IdeasRoute>`. Both `ideasScreenRoute` and `ideasStartSessionRoute` now take outbound callbacks instead of a `NavController`, making them nav-graph-agnostic.
 
-The router creates an `IdeasViewModel` via `component.getIdeasViewModel()` and passes it to `IdeasScreen`. Uses `AdaptiveThreePaneLayout` (three panes: idea list / Jules session or start-session pane / PR review pane). On Medium/Expanded, `onNavigateToReviewPr` sets local `selectedPrUrl` state; on Compact it forwards to the route callback. Pane 3 visibility is gated on both `selectedPrUrl != null` and `activeSessionId != null` to prevent stale PR panes appearing during idea selection. `LaunchedEffect(activeSessionId)` clears `selectedPrUrl` when the active session changes.
+The router creates an `IdeasViewModel` via `component.getIdeasViewModel()` and passes it to `IdeasScreen`. Uses `AdaptiveThreePaneLayout` (three panes: idea list / session or start-session pane / PR review pane). On Medium/Expanded, `onNavigateToReviewPr` sets local `selectedPrUrl` state; on Compact it forwards to the route callback. Pane 3 visibility is gated on both `selectedPrUrl != null` and `activeSessionId != null` to prevent stale PR panes appearing during idea selection. `LaunchedEffect(activeSessionId)` clears `selectedPrUrl` when the active session changes.
 
 ## Key Types
 
@@ -61,7 +61,7 @@ The router creates an `IdeasViewModel` via `component.getIdeasViewModel()` and p
 | `UpdateIdeaUseCase` | Updates a Linear issue's `status` and/or `priority`; returns the updated `Idea?` |
 | `GetIdeaLinksUseCase` | Fetches a single `Idea` by id and returns `IdeaLinks?` via `toLinks()` |
 | `OnPrMergedUseCase` | Updates Linear state when a PR merges (called externally) |
-| `IdeasOrchestrator` | Domain orchestrator: creates Jules sessions, attaches them to Linear issues, transitions issue state |
+| `IdeasOrchestrator` | Domain orchestrator: creates coding sessions, attaches them to Linear issues, transitions issue state |
 | `IssueTracker` (interface) | `attachSession`, `markInProgress`, `markDone` |
 | `LinearIssueTracker` | `IssueTracker` implementation via `LinearRepository` |
 | `CreateIdeaDialog` | Exported composable: team picker + title/description fields |
@@ -97,14 +97,14 @@ data class Idea(
 ```kotlin
 data class IdeaLinks(
     val linear: LinearLink,           // always present — the Linear issue
-    val julesSession: JulesSessionLink?,  // present when activeSessionUrl != null
+    val session: SessionLink?,        // present when activeSessionUrl != null
     val review: ReviewLink?,          // present when activeReviewUrl != null
 )
 ```
 
 `Idea.toLinks()` is the factory extension. `GetIdeaLinksUseCase(ideaId)` fetches the idea then calls `toLinks()`.
 
-`IdeaLinksRow` is a row composable rendered in the ideas list: shows a Linear icon chip, an optional Jules-session chip (play icon), and an optional PR/review chip (branch icon). Each chip is clickable and triggers the corresponding `onLinearClick` / `onSessionClick` / `onReviewClick` callback.
+`IdeaLinksRow` is a row composable rendered in the ideas list: shows a Linear icon chip, an optional session chip (play icon), and an optional PR/review chip (branch icon). Each chip is clickable and triggers the corresponding `onLinearClick` / `onSessionClick` / `onReviewClick` callback.
 
 ### `IdeasSecondPane`
 
@@ -113,12 +113,12 @@ Sealed interface controlling the right pane in the three-pane layout:
 ```kotlin
 sealed interface IdeasSecondPane {
     data class LinearDetail(val issue: LinearIssueUiModel) : IdeasSecondPane
-    data class JulesSession(val sessionId: String, val title: String?) : IdeasSecondPane
+    data class Session(val sessionId: String, val title: String?) : IdeasSecondPane
     data class StartSession(val issue: LinearIssueUiModel) : IdeasSecondPane
 }
 ```
 
-`IdeasRouter` selects which pane to show based on user interaction in the list. `LinearDetail` is shown when an idea with no active session is tapped; `StartSession` when the user wants to launch a new session; `JulesSession` when an active session is selected.
+`IdeasRouter` selects which pane to show based on user interaction in the list. `LinearDetail` is shown when an idea with no active session is tapped; `StartSession` when the user wants to launch a new session; `Session` when an active session is selected.
 
 ### `CustomTicketStatus` mapping
 
@@ -170,7 +170,7 @@ IdeasRouter  [callback-based, no NavController]
   [Right pane — unchanged]
   → StartSessionPane → IdeasOrchestrator
       → LinearIssueTracker (LinearRepository)
-      → JulesComponent (session creation)
+      → CodingAgentComponent (session creation)
 ```
 
 `IdeasComponent` wires everything:
@@ -205,13 +205,13 @@ class IdeasComponent {
 ## Dependencies
 
 - **Own**: `LinearIdeaRepository` → `LinearRepository` (from `LinearComponent`)
-- **DI**: `IdeasComponent` takes `LinearComponent` and `JulesComponent` via `DiProvider`
+- **DI**: `IdeasComponent` takes `LinearComponent` and `CodingAgentComponent` via `DiProvider`
 - **Exports to**: `features/tasklist/` (`CreateIdeaDialog`, `IdeaContent`)
 
 ## Known Issues / Drift
 
 - `IdeasViewModel` extends `androidx.lifecycle.ViewModel` directly instead of `core.ui.ViewModel<T>` — no shared analytics or offline flag.
-- `IdeasOrchestrator` still exists for the Jules session-start flow but its `onPrMerged` path appears unused.
+- `IdeasOrchestrator` still exists for the session-start flow but its `onPrMerged` path appears unused.
 - Filter persistence writes to `LocalDataSource` synchronously (via non-suspend `get`/`save`); this is fine for small JSON payloads but bypasses the coroutine conventions used elsewhere.
 
 ## AI Tools
@@ -229,7 +229,7 @@ Write tools set `requiresConfirmation = true`. All tools are thin wrappers over 
 
 ## See Also
 
-- [jules](jules.md) — AI session feature used in the right pane
+- [codingsession](codingsession.md) — AI coding session feature
 - [linear](linear.md) — GraphQL backend for issue data
 - [tasklist](tasklist.md) — imports `CreateIdeaDialog` and `IdeaContent`
 - [demo3-ailift.md](../ailift.md) — broader AIlift system context
@@ -238,7 +238,7 @@ Write tools set `requiresConfirmation = true`. All tools are thin wrappers over 
 
 | Test file | Coverage |
 |---|---|
-| `domain/IdeasOrchestratorTest.kt` | `IdeasOrchestrator.getSources()` success and failure paths; uses `FakeJulesRepository` + `FakeIssueTracker`. |
+| `domain/IdeasOrchestratorTest.kt` | `IdeasOrchestrator.getSources()` success and failure paths; uses `FakeCodingAgentRepository` + `FakeIssueTracker`. |
 | `domain/usecase/IdeaUseCasesTest.kt` | Domain use case unit tests (create, get, teams). |
 | `tools/IdeaToolsTest.kt` | Unit tests for all 4 AI tools (success + error + not-found paths). |
 | `IdeasViewModelTest.kt` | `IdeasViewModel` state transitions; uses updated use cases. |
