@@ -1469,7 +1469,11 @@
           "triceps"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/mountain_climber_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/mountain_climber_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/mountain_climber_start_M2_T1.webp"
+      }
     },
     {
       "id": "mountain_climber.pose.end",
@@ -1509,7 +1513,11 @@
           "triceps"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/mountain_climber_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/mountain_climber_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/mountain_climber_end_M2_T1.webp"
+      }
     },
     {
       "id": "negative_pull_up.pose.start",
