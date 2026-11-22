@@ -437,7 +437,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/bulgarian_split_squat_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/bulgarian_split_squat_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/bulgarian_split_squat_start_M2_T1.webp"
+      }
     },
     {
       "id": "bulgarian_split_squat.pose.end",
@@ -475,7 +479,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/bulgarian_split_squat_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/bulgarian_split_squat_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/bulgarian_split_squat_end_M2_T1.webp"
+      }
     },
     {
       "id": "burpee.pose.start",
@@ -516,7 +524,11 @@
           "calves"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/burpee_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/burpee_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/burpee_start_M2_T1.webp"
+      }
     },
     {
       "id": "burpee.pose.end",
@@ -557,7 +569,11 @@
           "calves"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/burpee_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/burpee_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/burpee_end_M2_T1.webp"
+      }
     },
     {
       "id": "cat_cow.pose.start",
@@ -2557,7 +2573,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/split_squat_jump_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/split_squat_jump_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/split_squat_jump_start_M2_T1.webp"
+      }
     },
     {
       "id": "split_squat_jump.pose.end",
@@ -2596,7 +2616,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/split_squat_jump_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/split_squat_jump_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/split_squat_jump_end_M2_T1.webp"
+      }
     },
     {
       "id": "squat_jump.pose.start",
