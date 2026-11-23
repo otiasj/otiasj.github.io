@@ -2,7 +2,7 @@
   "schema_version": 1,
   "target_archetype": "M2_T1",
   "level": 3,
-  "total_poses": 34,
+  "total_poses": 36,
   "entries": {
     "bench_dip_start_M2_T1": {
       "key": "bench_dip_start_M2_T1",
@@ -658,6 +658,46 @@
       "master_jpeg": "Applications/Demo3/docs/evidence/calisthenics/visuals/M2_T1/split_squat_jump_end.jpg",
       "master_bytes": 59153,
       "webp_bytes": 15138,
+      "verified_m2_t1": true
+    },
+    "tuck_l_sit_start_M2_T1": {
+      "key": "tuck_l_sit_start_M2_T1",
+      "exerciseId": "tuck_l_sit",
+      "exerciseName": "Supported Tucked Knee Hold",
+      "pose": "start",
+      "archetype": "M2_T1",
+      "demographic": "Caucasian Male, Tier 2 Athletic",
+      "level": 4,
+      "status": "COMMITTED",
+      "reference_file": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/tuck_l_sit_pose_start.jpg",
+      "app_asset_path": "files/exercises/visuals/tuck_l_sit_start_M2_T1.webp",
+      "evidence_path": "Applications/Demo3/docs/evidence/calisthenics/visuals/M2_T1/tuck_l_sit_start.jpg",
+      "cloud_timestamp": null,
+      "commit_hash": null,
+      "file_size_bytes": 26448,
+      "master_jpeg": "Applications/Demo3/docs/evidence/calisthenics/visuals/M2_T1/tuck_l_sit_start.jpg",
+      "master_bytes": 314638,
+      "webp_bytes": 26448,
+      "verified_m2_t1": true
+    },
+    "tuck_l_sit_hold_M2_T1": {
+      "key": "tuck_l_sit_hold_M2_T1",
+      "exerciseId": "tuck_l_sit",
+      "exerciseName": "Supported Tucked Knee Hold",
+      "pose": "hold",
+      "archetype": "M2_T1",
+      "demographic": "Caucasian Male, Tier 2 Athletic",
+      "level": 4,
+      "status": "COMMITTED",
+      "reference_file": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/tuck_l_sit_pose_end.jpg",
+      "app_asset_path": "files/exercises/visuals/tuck_l_sit_hold_M2_T1.webp",
+      "evidence_path": "Applications/Demo3/docs/evidence/calisthenics/visuals/M2_T1/tuck_l_sit_hold.jpg",
+      "cloud_timestamp": null,
+      "commit_hash": null,
+      "file_size_bytes": 26538,
+      "master_jpeg": "Applications/Demo3/docs/evidence/calisthenics/visuals/M2_T1/tuck_l_sit_hold.jpg",
+      "master_bytes": 315782,
+      "webp_bytes": 26538,
       "verified_m2_t1": true
     }
   }
