@@ -2,7 +2,7 @@
   "schema_version": 1,
   "target_archetype": "M2_T1",
   "level": 3,
-  "total_poses": 36,
+  "total_poses": 38,
   "entries": {
     "bench_dip_start_M2_T1": {
       "key": "bench_dip_start_M2_T1",
@@ -698,6 +698,46 @@
       "master_jpeg": "Applications/Demo3/docs/evidence/calisthenics/visuals/M2_T1/tuck_l_sit_hold.jpg",
       "master_bytes": 315782,
       "webp_bytes": 26538,
+      "verified_m2_t1": true
+    },
+    "archer_push_up_start_M2_T1": {
+      "key": "archer_push_up_start_M2_T1",
+      "exerciseId": "archer_push_up",
+      "exerciseName": "Archer Push-Up",
+      "pose": "start",
+      "archetype": "M2_T1",
+      "demographic": "Caucasian Male, Tier 2 Athletic",
+      "level": 5,
+      "status": "COMMITTED",
+      "reference_file": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/archer_push_up_pose_start.jpg",
+      "app_asset_path": "files/exercises/visuals/archer_push_up_start_M2_T1.webp",
+      "evidence_path": "Applications/Demo3/docs/evidence/calisthenics/visuals/M2_T1/archer_push_up_start.jpg",
+      "cloud_timestamp": null,
+      "commit_hash": null,
+      "file_size_bytes": 26796,
+      "master_jpeg": "Applications/Demo3/docs/evidence/calisthenics/visuals/M2_T1/archer_push_up_start.jpg",
+      "master_bytes": 92881,
+      "webp_bytes": 26796,
+      "verified_m2_t1": true
+    },
+    "archer_push_up_end_M2_T1": {
+      "key": "archer_push_up_end_M2_T1",
+      "exerciseId": "archer_push_up",
+      "exerciseName": "Archer Push-Up",
+      "pose": "end",
+      "archetype": "M2_T1",
+      "demographic": "Caucasian Male, Tier 2 Athletic",
+      "level": 5,
+      "status": "COMMITTED",
+      "reference_file": "Applications/Demo3/composeApp/src/commonMain/composeResources/files/exercises/references/archer_push_up_pose_end.jpg",
+      "app_asset_path": "files/exercises/visuals/archer_push_up_end_M2_T1.webp",
+      "evidence_path": "Applications/Demo3/docs/evidence/calisthenics/visuals/M2_T1/archer_push_up_end.jpg",
+      "cloud_timestamp": null,
+      "commit_hash": null,
+      "file_size_bytes": 29012,
+      "master_jpeg": "Applications/Demo3/docs/evidence/calisthenics/visuals/M2_T1/archer_push_up_end.jpg",
+      "master_bytes": 421764,
+      "webp_bytes": 29012,
       "verified_m2_t1": true
     }
   }

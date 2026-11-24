@@ -46,7 +46,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/archer_push_up_start_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/archer_push_up_start_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/archer_push_up_start_M2_T1.webp"
+      }
     },
     {
       "id": "archer_push_up.pose.end",
@@ -85,7 +89,11 @@
           "core"
         ]
       },
-      "asset_path": null
+      "asset_path": "files/exercises/visuals/archer_push_up_end_M2_T1.webp",
+      "archetype_assets": {
+        "M2_T1": "files/exercises/visuals/archer_push_up_end_M2_T1.webp",
+        "m2_athletic": "files/exercises/visuals/archer_push_up_end_M2_T1.webp"
+      }
     },
     {
       "id": "arm_circles.pose.start",
